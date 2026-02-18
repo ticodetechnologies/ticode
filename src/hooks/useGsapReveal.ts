@@ -1,0 +1,37 @@
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const useGsapReveal = () => {
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ref.current,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top 80%",
+            once: true,
+          },
+        }
+      );
+    }, ref);
+
+    return () => ctx.revert();
+  }, []);
+
+  return ref;
+};
+
+export default useGsapReveal;

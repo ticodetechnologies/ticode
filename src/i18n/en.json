@@ -1,0 +1,586 @@
+{
+  "home": {
+    "hero": {
+      "badge": "Enterprise Digital Transformation",
+      "headline": {
+        "line1": "Build a",
+        "highlight1": "future-proof",
+        "line2": "enterprise with",
+        "highlight2": "AI-native",
+        "line3": "operations."
+      },
+      "subtext": "Ticode Technologies partners with ambitious enterprises to modernize platforms, unlock AI advantage, and deliver measurable growth across the GCC.",
+      "ctaPrimary": "Start Your Transformation",
+      "ctaSecondary": "Explore AI Solutions",
+      "trustPoints": [
+        "ISO-aligned delivery",
+        "Security-first AI",
+        "Kuwait + GCC scale"
+      ],
+      "stats": [
+        { "value": "240+", "label": "Enterprise Programs" },
+        { "value": "96%", "label": "Client Retention" },
+        { "value": "38%", "label": "Average ROI Lift" },
+        { "value": "18", "label": "Countries Enabled" }
+      ],
+      "benchmark": "Benchmarked against regional transformation programs (2022-2025)"
+    },
+    "trust": {
+      "label": "Trusted By",
+      "title": "Enterprise leaders who demand measurable outcomes.",
+      "subtitle": "We deliver mission-critical transformation programs for finance, telecom, energy, and public sector organizations across the GCC.",
+      "logos": [
+        "Kuwait Finance House",
+        "Ooredoo",
+        "Gulf Bank",
+        "Zain",
+        "NBK",
+        "Saudi Aramco",
+        "Etisalat",
+        "STC",
+        "PIF",
+        "Agility",
+        "Mubadala",
+        "DP World"
+      ]
+    },
+    "aiStory": {
+      "label": "AI Disruption Story",
+      "title": "We orchestrate AI transformation at enterprise speed without compromising trust.",
+      "body": "Our teams combine strategy, engineering, and change management to deliver AI-driven platforms that are secure, explainable, and built for regulated environments.",
+      "points": [
+        "Unified data fabric with AI-ready governance",
+        "AI product squads embedded with enterprise teams",
+        "Accelerated modernization with measurable ROI"
+      ],
+      "cta": "Discover Our Approach",
+      "imageAlt": "AI transformation blueprint",
+      "impactLabel": "AI Impact",
+      "impactText": "4x faster model deployment with governed pipelines."
+    },
+    "capabilities": {
+      "label": "Featured Capabilities",
+      "title": "Transformation programs engineered for enterprise impact.",
+      "subtitle": "Three integrated capability tracks designed to move strategy into execution with measurable, board-ready outcomes.",
+      "items": [
+        {
+          "title": "Core Platform Modernization",
+          "description": "Re-architect legacy estates into cloud-native, composable platforms with zero downtime migration strategies.",
+          "tags": ["Cloud Migration", "API Ecosystems", "DevSecOps"],
+          "outcomeLabel": "Outcome Focus",
+          "outcomeValue": "12-18",
+          "outcomeSuffix": "mo.",
+          "outcomeDesc": "Transformation runway with KPI-linked delivery milestones.",
+          "outcomeLink": "View capability details"
+        },
+        {
+          "title": "AI-First Product Engineering",
+          "description": "Launch AI-powered customer experiences, copilots, and intelligence layers that scale across business units.",
+          "tags": ["LLM Applications", "MLOps", "Experience Design"],
+          "outcomeLabel": "Outcome Focus",
+          "outcomeValue": "12-18",
+          "outcomeSuffix": "mo.",
+          "outcomeDesc": "Transformation runway with KPI-linked delivery milestones.",
+          "outcomeLink": "View capability details"
+        },
+        {
+          "title": "Data & Decision Intelligence",
+          "description": "Create a unified data fabric to fuel predictive analytics, operational visibility, and real-time decisions.",
+          "tags": ["Data Fabric", "Real-Time Insights", "Governance"],
+          "outcomeLabel": "Outcome Focus",
+          "outcomeValue": "12-18",
+          "outcomeSuffix": "mo.",
+          "outcomeDesc": "Transformation runway with KPI-linked delivery milestones.",
+          "outcomeLink": "View capability details"
+        }
+      ]
+    },
+    "industries": {
+      "label": "Industries",
+      "title": "Expertise across the sectors shaping the region.",
+      "subtitle": "We bring deep vertical knowledge and repeatable delivery models to accelerate transformation in complex environments.",
+      "cardLabel": "Industry",
+      "items": [
+        {
+          "title": "Financial Services",
+          "subtitle": "Enterprise transformation",
+          "image": "https://images.unsplash.com/photo-1489641493513-ba4ee84ccea9?auto=format&fit=crop&w=1200&q=80"
+        },
+        {
+          "title": "Energy & Utilities",
+          "subtitle": "Enterprise transformation",
+          "image": "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80"
+        },
+        {
+          "title": "Telecom & Media",
+          "subtitle": "Enterprise transformation",
+          "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+        },
+        {
+          "title": "Public Sector",
+          "subtitle": "Enterprise transformation",
+          "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80"
+        },
+        {
+          "title": "Logistics & Trade",
+          "subtitle": "Enterprise transformation",
+          "image": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80"
+        },
+        {
+          "title": "Retail & Consumer",
+          "subtitle": "Enterprise transformation",
+          "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
+        }
+      ]
+    },
+    "aiCapabilities": {
+      "label": "AI Capabilities",
+      "title": "An enterprise AI stack engineered for speed, security, and scale.",
+      "subtitleLine1": "We combine deep domain expertise with an end-to-end AI delivery pipeline.",
+      "subtitleLine2": "Deliver innovation with governance, speed, and measurable outcomes.",
+      "groups": [
+        {
+          "title": "AI Core",
+          "items": [
+            "AI Strategy & Roadmapping",
+            "Enterprise LLM Platforms",
+            "Conversational AI Assistants",
+            "GenAI Productization"
+          ]
+        },
+        {
+          "title": "Data",
+          "items": [
+            "Predictive Analytics",
+            "Knowledge Graphs",
+            "Secure Data Fabric",
+            "MLOps & Model Governance"
+          ]
+        },
+        {
+          "title": "Automation",
+          "items": [
+            "Intelligent Process Automation",
+            "Computer Vision at Scale",
+            "Responsible AI Compliance"
+          ]
+        },
+        {
+          "title": "Infrastructure",
+          "items": [
+            "Edge AI Deployment"
+          ]
+        }
+      ]
+    },
+    "caseStudies": {
+      "label": "Case Studies",
+      "title": "Enterprise transformations with measurable, board-level results.",
+      "subtitle": "Every engagement is tracked against defined KPIs. Explore how we deliver growth, resilience, and operational excellence.",
+      "impactLabel": "Impact",
+      "items": [
+        {
+          "title": "National Bank AI Risk Engine",
+          "tag": "Financial Services",
+          "metric": "+42% fraud detection accuracy",
+          "image": "https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=1200&q=80",
+          "imageAlt": "Banking AI risk engine"
+        },
+        {
+          "title": "Telecom Omni-Channel Modernization",
+          "tag": "Telecom",
+          "metric": "3.6M self-service interactions",
+          "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=80",
+          "imageAlt": "Telecom network modernization"
+        },
+        {
+          "title": "Smart Port Logistics Control Tower",
+          "tag": "Logistics",
+          "metric": "28% faster shipment throughput",
+          "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+          "imageAlt": "Port logistics control tower"
+        }
+      ]
+    },
+    "finalCta": {
+      "label": "Ready for lift-off",
+      "title": "Accelerate your digital transformation with Ticode Technologies.",
+      "subtitle": "Speak with our enterprise strategists to design a roadmap that delivers measurable ROI in the next 12 months.",
+      "primaryCta": "Book a Strategy Session",
+      "secondaryCta": "View Case Studies"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "industries": "Industries",
+    "aiSolutions": "AI Solutions",
+    "caseStudies": "Case Studies",
+    "insights": "Insights",
+    "about": "About",
+    "contact": "Contact",
+    "bookConsultation": "Book Consultation",
+    "langToggle": "العربية",
+    "serviceLinks": {
+      "itConsulting": "IT Consulting",
+      "aiMachineLearning": "AI & Machine Learning",
+      "aiAgentsVoiceAi": "AI Agents & Voice AI",
+      "intelligentSystemsAutomation": "Intelligent Systems & Automation",
+      "softwareDevelopment": "Software Development",
+      "cloudInfrastructure": "Cloud & Infrastructure",
+      "dataAnalytics": "Data & Analytics",
+      "digitalMarketing": "Digital Marketing",
+      "socialMediaManagement": "Social Media Management",
+      "itStaffing": "IT Staffing",
+      "projectManagement": "Project Management",
+      "softwareTestingQa": "Software Testing & QA",
+      "networkSolutions": "Network Solutions",
+      "domainEmailServices": "Domain & Email Services",
+      "dataEntryServices": "Data Entry Services"
+    },
+    "industryLinks": {
+      "fashion": "Fashion",
+      "sports": "Sports",
+      "education": "Education",
+      "healthcare": "Healthcare",
+      "marketing": "Marketing",
+      "realEstate": "Real Estate",
+      "retail": "Retail",
+      "transportation": "Transportation",
+      "supplyChain": "Supply Chain",
+      "finance": "Finance",
+      "insurance": "Insurance",
+      "legalBusiness": "Legal Business"
+    }
+  },
+  "hero": {
+    "headline": "End-to-End IT, AI & Digital Transformation Solutions",
+    "subtext": "Ticode Technologies delivers enterprise-grade software, AI automation, and scalable digital growth systems for Kuwait and GCC businesses.",
+    "authorityLine": "Serving enterprises, SMEs, and government-driven initiatives across Kuwait and GCC.",
+    "cta1": "Book Consultation",
+    "cta2": "Explore Services",
+    "trustBadges": {
+      "kuwait": "Kuwait-Based",
+      "bilingual": "Bilingual Delivery",
+      "enterprise": "Enterprise-Ready",
+      "aiDriven": "AI-Driven Solutions"
+    }
+  },
+  "trust": {
+    "title": "Trusted Technology Partner",
+    "subtitle": "Delivering measurable outcomes for enterprises across Kuwait and the GCC region.",
+    "metrics": {
+      "projects": { "value": "150+", "label": "Projects Delivered" },
+      "aiSystems": { "value": "40+", "label": "AI Systems Deployed" },
+      "industries": { "value": "12", "label": "Industries Served" },
+      "engagements": { "value": "80+", "label": "Enterprise Engagements" }
+    },
+    "partners": {
+      "clients": "Enterprise Clients",
+      "technology": "Technology Partners",
+      "cloud": "Cloud Platforms"
+    }
+  },
+  "howWeWork": {
+    "title": "Our Engagement Model",
+    "subtitle": "We follow a structured, outcome-driven delivery framework designed for enterprise clarity and long-term scalability.",
+    "steps": {
+      "discovery": { "title": "Discovery & Assessment", "desc": "Comprehensive analysis of business objectives, technical landscape, and strategic priorities." },
+      "architecture": { "title": "Architecture & Strategy", "desc": "Solution design, technology selection, and detailed roadmap aligned to business outcomes." },
+      "implementation": { "title": "Implementation & Integration", "desc": "Agile delivery with iterative builds, quality assurance, and seamless system integration." },
+      "optimization": { "title": "Optimization & Automation", "desc": "Performance tuning, process automation, and continuous improvement for peak efficiency." },
+      "support": { "title": "Continuous Support & Evolution", "desc": "Dedicated support with SLA-backed maintenance, monitoring, and technology evolution." }
+    }
+  },
+  "capabilities": {
+    "title": "Core Capabilities",
+    "subtitle": "Comprehensive technology services engineered for enterprise performance.",
+    "items": {
+      "consulting": { "title": "IT Consulting", "outcome": "Align technology with business strategy.", "desc": "Strategic advisory, digital roadmapping, and transformation planning for enterprises seeking competitive advantage through technology." },
+      "ai": { "title": "AI & Machine Learning", "outcome": "Automate decisions, unlock intelligence.", "desc": "Custom AI models, intelligent automation pipelines, and machine learning systems that transform data into actionable business outcomes." },
+      "automation": { "title": "Intelligent Automation", "outcome": "Eliminate manual processes at scale.", "desc": "End-to-end process automation combining AI, RPA, and workflow optimization to reduce costs and accelerate operations." },
+      "software": { "title": "Software Development", "outcome": "Build scalable digital products.", "desc": "Full-stack custom software, web and mobile applications engineered for performance, security, and long-term scalability." },
+      "cloud": { "title": "Cloud & Infrastructure", "outcome": "Modernize and scale your foundation.", "desc": "Cloud migration, DevOps implementation, and infrastructure architecture designed for reliability and cost optimization." },
+      "data": { "title": "Data & Analytics", "outcome": "Turn data into strategic advantage.", "desc": "Business intelligence platforms, data engineering pipelines, and predictive analytics that drive informed decision-making." },
+      "marketing": { "title": "Digital Marketing", "outcome": "Drive measurable growth.", "desc": "Performance marketing, SEO, and data-driven growth strategies that deliver quantifiable return on investment." },
+      "staffing": { "title": "IT Staffing & PM", "outcome": "Access expert talent on demand.", "desc": "Specialized talent acquisition and enterprise project management ensuring timely delivery of complex technology initiatives." }
+    }
+  },
+  "whyTicode": {
+    "title": "Why Ticode",
+    "subtitle": "Built for enterprises that demand reliability, innovation, and measurable outcomes.",
+    "items": {
+      "enterprise": { "title": "Enterprise-Ready", "desc": "Solutions architected for scale, security, and compliance from day one." },
+      "ai": { "title": "AI-First Strategy", "desc": "Every solution leverages AI for automation, intelligence, and competitive advantage." },
+      "kuwait": { "title": "Kuwait-Based, GCC Reach", "desc": "Deep understanding of regional business dynamics with global technology standards." },
+      "scalable": { "title": "Scalable Architecture", "desc": "Infrastructure designed to grow with your business without reengineering." },
+      "partnership": { "title": "Partnership Approach", "desc": "We operate as an extension of your team, not a transactional vendor." },
+      "bilingual": { "title": "Bilingual Delivery", "desc": "Full service delivery in both English and Arabic across all touchpoints." }
+    }
+  },
+  "industries": {
+    "title": "Industries We Serve",
+    "subtitle": "Sector-specific technology solutions built on deep domain expertise.",
+    "viewSolutions": "View Solutions",
+    "items": {
+      "fashion": { "title": "Fashion", "desc": "Digital commerce, inventory intelligence, and brand technology.", "problem": "Fragmented retail channels and disconnected inventory systems." },
+      "sports": { "title": "Sports", "desc": "Fan engagement platforms, analytics, and performance systems.", "problem": "Limited fan engagement and underutilized performance data." },
+      "education": { "title": "Education", "desc": "LMS platforms, AI tutoring, and institutional management.", "problem": "Outdated learning systems and manual administrative processes." },
+      "healthcare": { "title": "Healthcare", "desc": "Patient systems, telemedicine, and clinical data platforms.", "problem": "Paper-based records and disconnected patient care workflows." },
+      "marketing": { "title": "Marketing", "desc": "MarTech stacks, automation, and campaign intelligence.", "problem": "Low campaign ROI and fragmented marketing technology." },
+      "realEstate": { "title": "Real Estate", "desc": "Property platforms, virtual tours, and CRM systems.", "problem": "Manual property management and slow lead conversion." },
+      "retail": { "title": "Retail", "desc": "Omnichannel commerce, POS integration, and demand forecasting.", "problem": "Disconnected sales channels and inaccurate demand planning." },
+      "transportation": { "title": "Transportation", "desc": "Fleet management, route optimization, and logistics tech.", "problem": "Fleet inefficiency and rising operational costs." },
+      "supplyChain": { "title": "Supply Chain", "desc": "Warehouse automation, tracking systems, and demand planning.", "problem": "Limited supply visibility and high warehousing costs." },
+      "finance": { "title": "Finance", "desc": "FinTech solutions, risk analytics, and regulatory compliance.", "problem": "Manual compliance processes and limited risk visibility." },
+      "insurance": { "title": "Insurance", "desc": "Claims automation, underwriting AI, and policy management.", "problem": "Slow claims processing and high operational overhead." },
+      "legal": { "title": "Legal", "desc": "Document automation, case management, and compliance tools.", "problem": "Manual document review and inefficient case tracking." }
+    }
+  },
+  "aiDiff": {
+    "title": "AI-Driven Enterprise Intelligence",
+    "subtitle": "13 specialized AI capabilities engineered for real business impact.",
+    "intro": "Ticode Technologies designs and deploys advanced AI systems that automate operations, enhance decision-making, and unlock measurable competitive advantage.",
+    "items": {
+      "aiDev": "AI Development",
+      "genAI": "Generative AI",
+      "ml": "Machine Learning",
+      "dl": "Deep Learning",
+      "cv": "Computer Vision",
+      "nlp": "Natural Language Processing",
+      "gpt": "GPT Integration",
+      "rag": "RAG as a Service",
+      "agents": "AI Agents",
+      "voice": "Voice AI",
+      "automation": "AI Automation",
+      "recommend": "Recommendation Systems",
+      "aiot": "AIoT"
+    }
+  },
+  "techEcosystem": {
+    "title": "Technology Ecosystem",
+    "subtitle": "Enterprise-grade platforms and frameworks powering our solutions.",
+    "categories": {
+      "cloud": { "title": "Cloud Platforms", "items": "AWS · Microsoft Azure · Google Cloud · DigitalOcean" },
+      "ai": { "title": "AI Frameworks", "items": "TensorFlow · PyTorch · OpenAI · LangChain · Hugging Face" },
+      "backend": { "title": "Backend Technologies", "items": "Node.js · Python · .NET · Java · Go" },
+      "frontend": { "title": "Frontend Technologies", "items": "React · Next.js · Vue.js · Flutter · React Native" },
+      "data": { "title": "Data & Analytics", "items": "PostgreSQL · MongoDB · Redis · Elasticsearch · Apache Kafka" }
+    }
+  },
+  "calculator": {
+    "title": "Estimate Your Project Investment",
+    "subtitle": "Get an indicative cost range for your technology initiative.",
+    "supportLine": "Receive a preliminary cost range and project roadmap overview.",
+    "cta": "Get Your Estimate"
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "subtitle": "Real-world implementations delivering measurable business outcomes.",
+    "challenge": "Challenge",
+    "strategy": "Strategy",
+    "implementation": "Implementation",
+    "outcome": "Business Impact",
+    "studies": [
+      {
+        "industry": "Retail",
+        "challenge": "A 30-store retail chain with disconnected POS, inventory, and e-commerce systems losing revenue to fragmented operations.",
+        "solution": "Unified commerce platform with AI-driven demand forecasting and real-time inventory synchronization.",
+        "metrics": ["38% revenue increase", "25% cost reduction", "3x marketing ROI"]
+      },
+      {
+        "industry": "Insurance",
+        "challenge": "Processing 10,000+ monthly claims with 7-day average settlement time causing customer dissatisfaction.",
+        "solution": "AI-driven claims triage with automated assessment for standard claims and intelligent routing for complex cases.",
+        "metrics": ["60% auto-settled in 24hrs", "45% cost reduction", "+28 NPS points"]
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Let's Architect Your Digital Future",
+    "subtitle": "Partner with Ticode Technologies to engineer scalable, AI-powered solutions that drive measurable growth.",
+    "supportLine": "Enterprise-ready. AI-driven. Built for Kuwait & GCC growth.",
+    "cta": "Book Consultation"
+  },
+  "footer": {
+    "description": "Enterprise-grade IT, AI, and digital transformation solutions for Kuwait and the GCC region.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "industries": "Industries",
+    "contact": "Contact",
+    "address": "Kuwait City, Kuwait",
+    "email": "info@ticodetech.com",
+    "phone": "+965 XXXX XXXX",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2026 Ticode Technologies. All rights reserved."
+  },
+  "pages": {
+    "services": {
+      "label": "Services",
+      "requestConsultation": "Request Consultation",
+      "challengesTitle": "Business Challenges We Solve",
+      "solutionsTitle": "Our Solutions",
+      "deliveryTitle": "Delivery Model",
+      "techStackTitle": "Technology Stack",
+      "faqTitle": "Frequently Asked Questions",
+      "readyTitle": "Ready to Get Started?",
+      "readyDesc": "Partner with Ticode Technologies to transform your",
+      "delivery": {
+        "discovery": { "step": "Discovery", "desc": "Comprehensive assessment of business requirements, technical landscape, and strategic objectives." },
+        "strategy": { "step": "Strategy", "desc": "Architecture design, technology selection, and detailed roadmap development." },
+        "implementation": { "step": "Implementation", "desc": "Agile delivery with iterative development, testing, and stakeholder reviews." },
+        "optimization": { "step": "Optimization", "desc": "Performance tuning, security hardening, and continuous improvement cycles." },
+        "support": { "step": "Ongoing Support", "desc": "Dedicated support team with SLA-backed maintenance and evolution services." }
+      }
+    },
+    "industries": {
+      "label": "Industries",
+      "challengesTitle": "Industry Challenges",
+      "solutionsTitle": "Our Solutions",
+      "relevantServices": "Relevant Services",
+      "caseStudyTitle": "Case Study",
+      "transformTitle": "Transform Your",
+      "transformDesc": "Partner with Ticode Technologies for industry-leading technology solutions."
+    },
+    "aiSolutions": {
+      "label": "AI Solutions",
+      "headline": "AI-Driven Enterprise Intelligence",
+      "subtitle": "13 specialized AI capabilities engineered for real business impact across Kuwait and GCC enterprises.",
+      "ctaTitle": "Ready to Leverage AI?",
+      "ctaDesc": "Discover how Ticode's AI capabilities can transform your business operations.",
+      "ctaButton": "Book AI Consultation",
+      "items": {
+        "aiDev": { "title": "AI Development", "desc": "Custom AI solution design and development from concept to production deployment." },
+        "genAI": { "title": "Generative AI", "desc": "Content generation, code synthesis, and creative AI solutions powered by large language models." },
+        "ml": { "title": "Machine Learning", "desc": "Supervised, unsupervised, and reinforcement learning models for enterprise applications." },
+        "dl": { "title": "Deep Learning", "desc": "Neural network architectures for complex pattern recognition and decision-making." },
+        "cv": { "title": "Computer Vision", "desc": "Image classification, object detection, and video analytics for quality control and security." },
+        "nlp": { "title": "Natural Language Processing", "desc": "Text analysis, sentiment detection, and language understanding in Arabic and English." },
+        "gpt": { "title": "GPT Integration", "desc": "Enterprise GPT deployment with custom fine-tuning, guardrails, and domain-specific knowledge." },
+        "rag": { "title": "RAG as a Service", "desc": "Retrieval-Augmented Generation systems connecting AI to your proprietary knowledge bases." },
+        "agents": { "title": "AI Agents", "desc": "Autonomous agents that execute multi-step business processes with reasoning capabilities." },
+        "voice": { "title": "Voice AI", "desc": "Natural speech recognition and synthesis for customer service and internal operations." },
+        "automation": { "title": "AI Automation", "desc": "Intelligent process automation combining RPA with AI decision-making capabilities." },
+        "recommend": { "title": "Recommendation Systems", "desc": "Personalized recommendation engines for content, products, and services." },
+        "aiot": { "title": "AIoT", "desc": "AI-powered IoT solutions for smart buildings, industrial monitoring, and connected devices." }
+      }
+    },
+    "caseStudies": {
+      "headline": "Real-World Impact, Measurable Outcomes",
+      "subtitle": "Explore how Ticode Technologies delivers transformative results for enterprises across Kuwait and the GCC.",
+      "ctaTitle": "Let's Build Your Success Story",
+      "studies": [
+        {
+          "title": "Digital Transformation for a Kuwait Retail Group",
+          "industry": "Retail",
+          "challenge": "A 30-store retail chain operating with disconnected POS, inventory, and e-commerce systems losing revenue to fragmented operations.",
+          "strategy": "Unified commerce platform integrating all channels with AI-driven demand forecasting and personalized marketing.",
+          "implementation": "Headless commerce architecture with real-time inventory sync, customer data platform, and automated marketing workflows.",
+          "outcome": "38% increase in cross-channel revenue, 25% reduction in inventory costs, and 3x improvement in marketing ROI within 6 months."
+        },
+        {
+          "title": "AI-Powered Claims Automation for a GCC Insurer",
+          "industry": "Insurance",
+          "challenge": "Processing 10,000+ claims monthly with a 7-day average settlement time causing customer dissatisfaction and high operational costs.",
+          "strategy": "AI-driven claims triage with automated assessment for standard claims and intelligent routing for complex cases.",
+          "implementation": "Document AI for intake, ML models for damage assessment, integration with policy admin and payment systems.",
+          "outcome": "60% of standard claims auto-settled within 24 hours, 45% reduction in processing costs, NPS increased by 28 points."
+        },
+        {
+          "title": "Smart Fleet Management for Kuwait Logistics",
+          "industry": "Transportation",
+          "challenge": "A logistics company with 200+ vehicles struggling with fuel waste, route inefficiency, and limited fleet visibility.",
+          "strategy": "IoT-connected fleet platform with AI-powered route optimization and predictive vehicle maintenance.",
+          "implementation": "GPS telematics hardware, custom fleet management dashboard, mobile driver app, and maintenance prediction engine.",
+          "outcome": "22% reduction in fuel costs, 35% improvement in on-time delivery, and 50% fewer unplanned vehicle breakdowns."
+        },
+        {
+          "title": "Healthcare Digital Platform for Multi-Clinic Provider",
+          "industry": "Healthcare",
+          "challenge": "Eight clinics operating with paper-based patient records and manual appointment scheduling causing long wait times.",
+          "strategy": "Cloud-based EHR with telemedicine integration, patient mobile app, and clinical analytics dashboards.",
+          "implementation": "HIPAA-aligned system with data migration, staff training, and phased rollout across all facilities.",
+          "outcome": "35% reduction in appointment no-shows, 50% faster patient record retrieval, and 40% improvement in physician utilization."
+        }
+      ]
+    },
+    "insights": {
+      "headline": "Expert Perspectives & Industry Analysis",
+      "subtitle": "Thought leadership on technology trends shaping Kuwait and GCC enterprises.",
+      "readMore": "Read more",
+      "articles": [
+        { "title": "How AI Agents Are Transforming Customer Service in the GCC", "category": "AI", "date": "Feb 2026", "summary": "Explore how autonomous AI agents are reducing support costs by 60% while improving customer satisfaction for GCC enterprises." },
+        { "title": "The Enterprise Guide to RAG-as-a-Service", "category": "AI", "date": "Jan 2026", "summary": "Why retrieval-augmented generation is becoming the standard for enterprise knowledge management and how to implement it." },
+        { "title": "Cloud Migration Roadmap for Kuwait Enterprises", "category": "Cloud", "date": "Jan 2026", "summary": "A practical guide to planning and executing cloud migration with minimal disruption for Kuwait-based organizations." },
+        { "title": "SEO vs AEO: Optimizing for the Age of AI Search", "category": "Marketing", "date": "Dec 2025", "summary": "Understanding the shift from traditional SEO to Answer Engine Optimization and what it means for GCC businesses." },
+        { "title": "Building Scalable FinTech Solutions for GCC Compliance", "category": "Finance", "date": "Dec 2025", "summary": "Key architectural considerations for building financial platforms that meet CBK and GCC regulatory requirements." },
+        { "title": "The Future of Voice AI in Arabic-Speaking Markets", "category": "AI", "date": "Nov 2025", "summary": "How advances in Arabic speech recognition are opening new possibilities for voice-first business applications." }
+      ]
+    },
+    "about": {
+      "label": "About Us",
+      "headline": "Engineering the Digital Future of the GCC",
+      "subtitle": "Ticode Technologies is a Kuwait-based enterprise technology company specializing in IT consulting, artificial intelligence, software development, and digital transformation. We partner with organizations across the GCC to architect scalable, AI-powered solutions that drive measurable business growth.",
+      "missionTitle": "Our Mission",
+      "missionDesc": "To empower enterprises across Kuwait and the GCC with intelligent, scalable technology solutions that create lasting competitive advantage and measurable business outcomes.",
+      "storyTitle": "Our Story",
+      "storyDesc": "Founded in Kuwait, Ticode Technologies was built on the conviction that regional businesses deserve the same caliber of technology solutions available to global enterprises. We combine deep regional market understanding with world-class engineering capabilities to deliver solutions that are both technically excellent and culturally relevant.",
+      "approachTitle": "Our Approach",
+      "approachDesc": "We don't just build technology—we engineer business outcomes. Every engagement begins with understanding your strategic objectives and ends with measurable results. Our teams bring expertise across 15 technology disciplines and 12 industry verticals, ensuring that solutions are both technically sound and industry-relevant.",
+      "valuesTitle": "Our Values",
+      "values": {
+        "integrity": { "title": "Enterprise Integrity", "desc": "We build solutions that meet the highest standards of security, compliance, and reliability." },
+        "innovation": { "title": "Innovation First", "desc": "Every solution leverages the latest in AI, cloud, and digital engineering to create competitive advantage." },
+        "regional": { "title": "Regional Expertise", "desc": "Deep understanding of Kuwait and GCC business dynamics combined with global technology standards." },
+        "scalable": { "title": "Scalable Thinking", "desc": "Architecture designed to grow with your business without reengineering from the ground up." },
+        "partnership": { "title": "True Partnership", "desc": "We operate as an extension of your team, not a transactional vendor." },
+        "bilingual": { "title": "Bilingual Excellence", "desc": "Full-service delivery in English and Arabic across all project touchpoints." }
+      },
+      "ctaTitle": "Let's Build Something Great Together"
+    },
+    "contact": {
+      "label": "Contact",
+      "headline": "Book a Consultation",
+      "subtitle": "Tell us about your project and we'll get back to you within 24 hours.",
+      "office": "Office",
+      "email": "Email",
+      "phone": "Phone",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Your full name",
+      "companyName": "Company Name",
+      "companyPlaceholder": "Your company",
+      "industry": "Industry",
+      "industryPlaceholder": "Select industry",
+      "serviceNeeded": "Service Needed",
+      "servicePlaceholder": "Select service",
+      "budget": "Estimated Budget",
+      "budgetPlaceholder": "Select budget",
+      "timeline": "Timeline",
+      "timelinePlaceholder": "Select timeline",
+      "message": "Message",
+      "messagePlaceholder": "Describe your project requirements...",
+      "submit": "Submit Consultation Request",
+      "thankYou": "Thank You",
+      "thankYouDesc": "Your consultation request has been received. Our team will reach out within 24 hours to discuss your project requirements.",
+      "budgetOptions": {
+        "under10k": "Under $10,000",
+        "10k50k": "$10,000 - $50,000",
+        "50k100k": "$50,000 - $100,000",
+        "100kPlus": "$100,000+"
+      },
+      "timelineOptions": {
+        "1to3": "1-3 months",
+        "3to6": "3-6 months",
+        "6to12": "6-12 months",
+        "12plus": "12+ months"
+      }
+    },
+    "calculator": {
+      "title": "Project Investment Estimator",
+      "estimatedRange": "Estimated Investment Range",
+      "currency": "USD · indicative range based on selections",
+      "scheduleCta": "Schedule Detailed Consultation"
+    }
+  }
+}
