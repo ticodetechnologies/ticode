@@ -34,25 +34,25 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="border-t footer-gradient-border bg-base">
+    <footer className="border-t border-white/5 footer-gradient-border bg-[#0B0F19]">
       <div className="container-tight section-padding">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
             <Logo className="mb-4" />
-            <p className="mt-4 text-sm leading-relaxed text-text-muted">
+            <p className="mt-4 text-sm leading-relaxed text-gray-400">
               {t('footer.description')}
             </p>
             <div className="mt-6 space-y-3">
-              <div className="flex items-center gap-2 text-sm text-text-muted">
+              <div className="flex items-center gap-2 text-sm text-gray-400">
                 <MapPin className="h-4 w-4 shrink-0 text-primary" />
                 Kuwait City, Kuwait
               </div>
-              <div className="flex items-center gap-2 text-sm text-text-muted">
+              <div className="flex items-center gap-2 text-sm text-gray-400">
                 <Mail className="h-4 w-4 shrink-0 text-primary" />
                 info@ticodetech.com
               </div>
-              <div className="flex items-center gap-2 text-sm text-text-muted">
+              <div className="flex items-center gap-2 text-sm text-gray-400">
                 <Phone className="h-4 w-4 shrink-0 text-primary" />
                 +965 XXXXXXXX
               </div>
@@ -65,7 +65,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-sm text-text-muted transition-colors hover:text-text-primary">
+                  <Link to={link.to} className="text-sm text-gray-400 transition-colors hover:text-white">
                     {link.label}
                   </Link>
                 </li>
@@ -79,7 +79,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {serviceLinks.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-sm text-text-muted transition-colors hover:text-text-primary">
+                  <Link to={link.to} className="text-sm text-gray-400 transition-colors hover:text-white">
                     {link.label}
                   </Link>
                 </li>
@@ -93,7 +93,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {industryLinksData.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-sm text-text-muted transition-colors hover:text-text-primary">
+                  <Link to={link.to} className="text-sm text-gray-400 transition-colors hover:text-white">
                     {link.label}
                   </Link>
                 </li>
@@ -103,13 +103,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/60 pt-8 sm:flex-row">
-          <p className="text-xs text-text-muted">{t('footer.copyright')}</p>
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 sm:flex-row">
+          <p className="text-xs text-gray-400">{t('footer.copyright')}</p>
           <div className="flex gap-6">
-            <Link to="/privacy" className="text-xs text-text-muted transition-colors hover:text-text-primary">
+            <Link to="/privacy" className="text-xs text-gray-400 transition-colors hover:text-white">
               {t('footer.privacy')}
             </Link>
-            <Link to="/terms" className="text-xs text-text-muted transition-colors hover:text-text-primary">
+            <Link to="/terms" className="text-xs text-gray-400 transition-colors hover:text-white">
               {t('footer.terms')}
             </Link>
           </div>

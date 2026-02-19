@@ -46,7 +46,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/60 bg-base/95 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-[#F8FAFC]/95 backdrop-blur-md">
       <div className="container-tight flex h-16 items-center justify-between lg:h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -55,7 +55,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-1 lg:flex">
-          <Link to="/" className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary">
+          <Link to="/" className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900">
             {t('nav.home')}
           </Link>
 
@@ -65,7 +65,7 @@ const Header = () => {
             onMouseEnter={() => setActiveDropdown('services')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary">
+            <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900">
               {t('nav.services')} <ChevronDown className="h-3.5 w-3.5" />
             </button>
             {activeDropdown === 'services' && (
@@ -91,7 +91,7 @@ const Header = () => {
             onMouseEnter={() => setActiveDropdown('industries')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary">
+            <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900">
               {t('nav.industries')} <ChevronDown className="h-3.5 w-3.5" />
             </button>
             {activeDropdown === 'industries' && (
@@ -111,19 +111,19 @@ const Header = () => {
             )}
           </div>
 
-          <Link to="/ai-solutions" className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary">
+          <Link to="/ai-solutions" className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900">
             {t('nav.aiSolutions')}
           </Link>
-          <Link to="/case-studies" className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary">
+          <Link to="/case-studies" className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900">
             {t('nav.caseStudies')}
           </Link>
-          <Link to="/insights" className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary">
+          <Link to="/insights" className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900">
             {t('nav.insights')}
           </Link>
-          <Link to="/about" className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary">
+          <Link to="/about" className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900">
             {t('nav.about')}
           </Link>
-          <Link to="/contact" className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary">
+          <Link to="/contact" className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900">
             {t('nav.contact')}
           </Link>
         </nav>
@@ -132,7 +132,7 @@ const Header = () => {
         <div className="flex items-center gap-3">
           <button
             onClick={toggleLanguage}
-            className="rounded-md px-3 py-1.5 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+            className="rounded-md px-3 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:text-gray-900"
           >
             {t('nav.langToggle')}
           </button>
@@ -144,7 +144,7 @@ const Header = () => {
             {t('nav.bookConsultation')}
           </Button>
           <button
-            className="lg:hidden text-text-primary"
+            className="lg:hidden text-gray-900"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -154,45 +154,45 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="border-t border-border/60 bg-base lg:hidden">
+        <div className="border-t border-gray-200 bg-[#F8FAFC] lg:hidden">
           <div className="container-tight space-y-1 py-4">
-            <Link to="/" className="block rounded-md px-3 py-2 text-sm font-medium text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>
+            <Link to="/" className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
               {t('nav.home')}
             </Link>
             <details className="group">
-              <summary className="flex cursor-pointer items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-text-secondary hover:text-text-primary">
+              <summary className="flex cursor-pointer items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900">
                 {t('nav.services')} <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
               </summary>
               <div className="space-y-1 ps-4 pt-1">
                 {serviceLinks.map((s) => (
-                  <Link key={s.key} to={`/services/${s.key}`} className="block rounded-md px-3 py-1.5 text-sm text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>
+                  <Link key={s.key} to={`/services/${s.key}`} className="block rounded-md px-3 py-1.5 text-sm text-gray-700 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
                     {s.label}
                   </Link>
                 ))}
               </div>
             </details>
             <details className="group">
-              <summary className="flex cursor-pointer items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-text-secondary hover:text-text-primary">
+              <summary className="flex cursor-pointer items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900">
                 {t('nav.industries')} <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
               </summary>
               <div className="space-y-1 ps-4 pt-1">
                 {industryLinks.map((ind) => (
-                  <Link key={ind.key} to={`/industries/${ind.key}`} className="block rounded-md px-3 py-1.5 text-sm text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>
+                  <Link key={ind.key} to={`/industries/${ind.key}`} className="block rounded-md px-3 py-1.5 text-sm text-gray-700 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
                     {ind.label}
                   </Link>
                 ))}
               </div>
             </details>
-            <Link to="/ai-solutions" className="block rounded-md px-3 py-2 text-sm font-medium text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>
+            <Link to="/ai-solutions" className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
               {t('nav.aiSolutions')}
             </Link>
-            <Link to="/case-studies" className="block rounded-md px-3 py-2 text-sm font-medium text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>
+            <Link to="/case-studies" className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
               {t('nav.caseStudies')}
             </Link>
-            <Link to="/about" className="block rounded-md px-3 py-2 text-sm font-medium text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>
+            <Link to="/about" className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
               {t('nav.about')}
             </Link>
-            <Link to="/contact" className="block rounded-md px-3 py-2 text-sm font-medium text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>
+            <Link to="/contact" className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900" onClick={() => setMobileOpen(false)}>
               {t('nav.contact')}
             </Link>
             <div className="pt-2">

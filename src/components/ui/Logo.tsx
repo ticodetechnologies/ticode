@@ -14,7 +14,7 @@ const Logo = ({ className, iconOnly = false }: LogoProps) => {
             <img
                 src="/logo.png"
                 alt="Ticode Technologies"
-                className={cn("h-10 w-auto object-contain", iconOnly ? "h-10 w-10" : "")}
+                className={cn("h-9 w-auto object-contain md:h-10", iconOnly ? "h-9 w-9 md:h-10 md:w-10" : "")}
             />
         </div>
     );
