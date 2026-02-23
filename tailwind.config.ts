@@ -14,36 +14,36 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        cairo: ['Cairo', 'sans-serif'],
-        heading: ['"Space Grotesk"', 'sans-serif'],
+        heading: ['"Satoshi"', 'system-ui', 'sans-serif'],
+        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
       },
       colors: {
-        base: "hsl(var(--base))",
+        base: "#0B1C2D", // Midnight Base
         surface: {
-          1: "hsl(var(--surface-1))",
+          1: "#0F2A43", // Deep Surface
           2: "hsl(var(--surface-2))",
         },
         text: {
-          primary: "hsl(var(--text-primary))",
-          secondary: "hsl(var(--text-secondary))",
-          muted: "hsl(var(--text-muted))",
+          primary: "#F8FAFC", // Primary Text
+          secondary: "rgba(255, 255, 255, 0.75)", // Secondary Text
+          muted: "rgba(255, 255, 255, 0.5)", // Steel
         },
         brand: {
-          blue: "hsl(var(--brand-blue))",
+          blue: "#2563EB", // Authority Blue
           "blue-dark": "hsl(var(--brand-blue-dark))",
         },
         accent: {
-          cyan: "hsl(var(--accent-cyan))",
+          cyan: "#22D3EE", // Electric Accent
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: "#0B1220",
+        foreground: "#E6EDF5",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#2563EB",
+          foreground: "#E6EDF5",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -54,13 +54,10 @@ export default {
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
+          DEFAULT: "#334155",
           foreground: "hsl(var(--muted-foreground))",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
+
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -70,9 +67,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         navy: {
-          deep: "hsl(var(--navy-deep))",
+          deep: "#0B1220",
           light: "hsl(var(--navy-light))",
-          medium: "hsl(var(--navy-medium))",
+          medium: "#111C2D",
         },
         "blue-accent": "hsl(var(--blue-accent))",
         "blue-glow": "hsl(var(--blue-glow))",
@@ -92,9 +89,9 @@ export default {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "2rem",
+        md: "1.5rem",
+        sm: "1rem",
       },
       keyframes: {
         "accordion-down": {

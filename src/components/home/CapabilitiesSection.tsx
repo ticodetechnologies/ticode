@@ -32,7 +32,7 @@ const CapabilitiesSection = () => {
         <div className="flex flex-col gap-4">
           <p className="text-sm uppercase tracking-[0.3em] text-white/60">{t("home.capabilities.label")}</p>
           <div className="relative">
-            <h2 className="text-4xl md:text-5xl font-semibold text-white font-heading">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white font-heading">
               {t("home.capabilities.title")}
             </h2>
           </div>
@@ -45,11 +45,11 @@ const CapabilitiesSection = () => {
           {items.map((capability, index) => (
             <div
               key={capability.title}
-              className="group flex flex-col gap-8 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 lg:flex-row lg:items-center"
+              className="group flex flex-col gap-8 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_32px_-16px_rgba(37,99,235,0.35)] lg:flex-row lg:items-center"
             >
               <div className="flex-1">
                 <div className={`h-1 w-24 rounded-full bg-gradient-to-r ${gradients[index % gradients.length]}`} />
-                <h3 className="mt-6 text-3xl font-semibold text-white font-heading">
+                <h3 className="mt-6 text-3xl font-semibold tracking-tight text-white font-heading">
                   {capability.title}
                 </h3>
                 <p className="mt-4 text-lg text-white/70 max-w-xl">{capability.description}</p>

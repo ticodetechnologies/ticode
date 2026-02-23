@@ -30,22 +30,22 @@ const IndustryPage = () => {
         <div className="container-tight">
           <motion.div initial="hidden" animate="visible" variants={fadeIn} className="mx-auto max-w-3xl text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary">{t('pages.industries.label')}</p>
-            <h1 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">{industry.headline}</h1>
+            <h1 className="text-3xl font-semibold tracking-tight text-foreground font-heading md:text-4xl lg:text-5xl">{industry.headline}</h1>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{industry.summary}</p>
-            <Button asChild size="lg" className="mt-6">
+            <Button asChild size="lg" className="mt-6 px-10 py-6">
               <Link to="/contact">{t('pages.services.requestConsultation')} <ArrowRight className="ms-2 h-4 w-4" /></Link>
             </Button>
           </motion.div>
         </div>
       </section>
 
-      <section className="section-padding bg-card/50">
+      <section className="section-padding section-bg-tint">
         <div className="container-tight">
-          <h2 className="mb-8 text-center text-2xl font-bold text-foreground">{t('pages.industries.challengesTitle')}</h2>
+          <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight text-foreground font-heading md:text-4xl">{t('pages.industries.challengesTitle')}</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             {industry.challenges.map((c, i) => (
-              <div key={i} className="rounded-lg border border-border bg-card p-5">
-                <h3 className="mb-2 text-sm font-semibold text-foreground">{c.title}</h3>
+              <div key={i} className="rounded-lg border border-border bg-card p-5 transition-all duration-300 hover:shadow-[0_0_22px_-12px_rgba(37,99,235,0.3)]">
+                <h3 className="mb-2 text-sm font-semibold tracking-tight text-foreground font-heading">{c.title}</h3>
                 <p className="text-sm text-muted-foreground">{c.desc}</p>
               </div>
             ))}
@@ -55,13 +55,13 @@ const IndustryPage = () => {
 
       <section className="section-padding">
         <div className="container-tight">
-          <h2 className="mb-8 text-center text-2xl font-bold text-foreground">{t('pages.industries.solutionsTitle')}</h2>
+          <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight text-foreground font-heading md:text-4xl">{t('pages.industries.solutionsTitle')}</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {industry.solutions.map((s, i) => (
               <div key={i} className="flex gap-4">
                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <div>
-                  <h3 className="mb-1 text-sm font-semibold text-foreground">{s.title}</h3>
+                  <h3 className="mb-1 text-sm font-semibold tracking-tight text-foreground font-heading">{s.title}</h3>
                   <p className="text-sm text-muted-foreground">{s.desc}</p>
                 </div>
               </div>
@@ -70,9 +70,9 @@ const IndustryPage = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-card/50">
+      <section className="section-padding section-bg-tint">
         <div className="container-tight">
-          <h2 className="mb-6 text-center text-2xl font-bold text-foreground">{t('pages.industries.relevantServices')}</h2>
+          <h2 className="mb-6 text-center text-3xl font-semibold tracking-tight text-foreground font-heading md:text-4xl">{t('pages.industries.relevantServices')}</h2>
           <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-3">
             {industry.relevantServices.map((s) => (
               <Link key={s} to={`/services/${s}`} className="rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10">
@@ -89,12 +89,12 @@ const IndustryPage = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-card/50">
+      <section className="section-padding section-bg-tint">
         <div className="container-tight max-w-3xl">
-          <h2 className="mb-8 text-center text-2xl font-bold text-foreground">{t('pages.industries.caseStudyTitle')}</h2>
+          <h2 className="mb-8 text-center text-3xl font-semibold tracking-tight text-foreground font-heading md:text-4xl">{t('pages.industries.caseStudyTitle')}</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             {caseKeys.map((k) => (
-              <div key={k} className="rounded-lg border border-border bg-card p-5">
+              <div key={k} className="rounded-lg border border-border bg-card p-5 transition-all duration-300 hover:shadow-[0_0_22px_-12px_rgba(37,99,235,0.3)]">
                 <span className="mb-2 block text-xs font-semibold uppercase text-primary">{t(`caseStudies.${k}`)}</span>
                 <p className="text-sm text-muted-foreground">{industry.caseStudy[k]}</p>
               </div>
@@ -105,9 +105,9 @@ const IndustryPage = () => {
 
       <section className="section-padding gradient-navy">
         <div className="container-tight text-center">
-          <h2 className="text-2xl font-bold text-foreground sm:text-3xl">{t('pages.industries.transformTitle')} {industry.title}</h2>
+          <h2 className="text-5xl font-semibold tracking-tight text-foreground font-heading">{t('pages.industries.transformTitle')} {industry.title}</h2>
           <p className="mx-auto mt-3 max-w-lg text-muted-foreground">{t('pages.industries.transformDesc')}</p>
-          <Button asChild size="lg" className="mt-6">
+          <Button asChild size="lg" className="mt-6 px-12 py-6">
             <Link to="/contact">{t('nav.bookConsultation')}</Link>
           </Button>
         </div>

@@ -1,12 +1,12 @@
 import SEOHead from '@/components/SEOHead';
-import HeroSection from '@/components/home/HeroSection';
-import TrustSection from '@/components/home/TrustSection';
-import CapabilitiesSection from '@/components/home/CapabilitiesSection';
-import IndustriesSection from '@/components/home/IndustriesSection';
-import AIDiffSection from '@/components/home/AIDiffSection';
-import CaseStudiesSection from '@/components/home/CaseStudiesSection';
-import FinalCtaSection from '@/components/home/FinalCtaSection';
-import AICapabilitiesSection from '@/components/home/AICapabilitiesSection';
+import HeroDirective from '@/components/home/HeroDirective';
+import TransformationCollapse from '@/components/home/TransformationCollapse';
+import StrategicPillars from '@/components/home/StrategicPillars';
+import OutcomeMetrics from '@/components/home/OutcomeMetrics';
+import DeliveryFramework from '@/components/home/DeliveryFramework';
+import DomainsSection from '@/components/home/DomainsSection';
+import CaseEvidence from '@/components/home/CaseEvidence';
+import ExecutiveAction from '@/components/home/ExecutiveAction';
 
 const Index = () => {
   return (
@@ -17,14 +17,14 @@ const Index = () => {
         path="/"
         schemaType="Organization"
       />
-      <HeroSection />
-      <TrustSection />
-      <AIDiffSection />
-      <CapabilitiesSection />
-      <IndustriesSection />
-      <AICapabilitiesSection />
-      <CaseStudiesSection />
-      <FinalCtaSection />
+      <HeroDirective />
+      <TransformationCollapse />
+      <StrategicPillars />
+      <OutcomeMetrics />
+      <DeliveryFramework />
+      <DomainsSection />
+      <CaseEvidence />
+      <ExecutiveAction />
     </>
   );
 };

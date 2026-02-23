@@ -39,7 +39,7 @@ const Contact = () => {
           <div className="container-tight">
             <div className="mx-auto max-w-lg text-center">
               <CheckCircle2 className="mx-auto mb-4 h-16 w-16 text-primary" />
-              <h1 className="text-3xl font-bold text-foreground">{t('pages.contact.thankYou')}</h1>
+              <h1 className="text-3xl font-semibold tracking-tight text-foreground font-heading">{t('pages.contact.thankYou')}</h1>
               <p className="mt-3 text-muted-foreground">{t('pages.contact.thankYouDesc')}</p>
             </div>
           </div>
@@ -56,13 +56,13 @@ const Contact = () => {
         <div className="container-tight">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="mx-auto max-w-3xl text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary">{t('pages.contact.label')}</p>
-            <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{t('pages.contact.headline')}</h1>
+            <h1 className="text-3xl font-semibold tracking-tight text-foreground font-heading md:text-4xl">{t('pages.contact.headline')}</h1>
             <p className="mt-3 text-muted-foreground">{t('pages.contact.subtitle')}</p>
           </motion.div>
         </div>
       </section>
 
-      <section className="section-padding bg-card/50">
+      <section className="section-padding section-bg-tint">
         <div className="container-tight">
           <div className="grid gap-12 lg:grid-cols-3">
             <div className="space-y-6">

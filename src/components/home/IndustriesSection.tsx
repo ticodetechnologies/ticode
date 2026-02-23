@@ -50,7 +50,7 @@ const IndustriesSection = () => {
           <p className="text-sm uppercase tracking-[0.3em] text-white/60">{t("home.industries.label")}</p>
           <div className="relative">
             <div className="pointer-events-none absolute -top-8 left-0 h-28 w-36 heading-glow" />
-            <h2 className="text-4xl md:text-5xl font-semibold text-white font-heading">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white font-heading">
               {t("home.industries.title")}
             </h2>
           </div>
@@ -63,7 +63,7 @@ const IndustriesSection = () => {
           {items.map((industry) => (
             <div
               key={industry.title}
-              className="group relative h-64 overflow-hidden rounded-[1.75rem] border border-white/12 shadow-[0_14px_30px_-22px_rgba(6,10,18,0.6)] transition-all duration-300 hover:-translate-y-1 hover:border-[#00C2FF]"
+              className="group relative h-64 overflow-hidden rounded-[1.75rem] border border-white/12 shadow-[0_14px_30px_-22px_rgba(6,10,18,0.6)] transition-all duration-300 hover:-translate-y-1 hover:border-[#00C2FF] hover:shadow-[0_0_28px_-14px_rgba(0,194,255,0.35)]"
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
             >
@@ -75,7 +75,7 @@ const IndustriesSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(5,12,28,0.85)] via-[rgba(5,12,28,0.45)] to-[rgba(5,12,28,0.18)] transition-opacity duration-300 group-hover:opacity-100" />
               <div className="absolute bottom-6 left-6 right-6 transition-transform duration-300 group-hover:-translate-y-1">
                 <p className="text-sm uppercase tracking-[0.3em] text-white/60">{t("home.industries.cardLabel")}</p>
-                <h3 className="mt-2 text-2xl font-bold text-white font-heading">
+                <h3 className="mt-2 text-2xl font-semibold tracking-tight text-white font-heading">
                   {industry.title}
                 </h3>
                 <p className="mt-1 text-sm text-white/70">{industry.subtitle}</p>

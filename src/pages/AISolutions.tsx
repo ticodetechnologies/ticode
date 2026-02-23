@@ -27,19 +27,19 @@ const AISolutions = () => {
         <div className="container-tight">
           <motion.div initial="hidden" animate="visible" variants={fadeIn} custom={0} className="mx-auto max-w-3xl text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary">{t('pages.aiSolutions.label')}</p>
-            <h1 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">{t('pages.aiSolutions.headline')}</h1>
+            <h1 className="text-3xl font-semibold tracking-tight text-foreground font-heading md:text-4xl lg:text-5xl">{t('pages.aiSolutions.headline')}</h1>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{t('pages.aiSolutions.subtitle')}</p>
           </motion.div>
         </div>
       </section>
 
-      <section className="section-padding bg-card/50">
+      <section className="section-padding section-bg-tint">
         <div className="container-tight">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {capKeys.map((key, i) => (
-              <motion.div key={key} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="rounded-lg border border-border bg-card p-6 transition-all hover:border-primary/40">
+              <motion.div key={key} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-[0_0_22px_-12px_rgba(37,99,235,0.3)]">
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">{capIcons[key]}</div>
-                <h3 className="mb-2 text-base font-semibold text-foreground">{t(`pages.aiSolutions.items.${key}.title`)}</h3>
+                <h3 className="mb-2 text-base font-semibold tracking-tight text-foreground font-heading">{t(`pages.aiSolutions.items.${key}.title`)}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{t(`pages.aiSolutions.items.${key}.desc`)}</p>
               </motion.div>
             ))}
@@ -49,9 +49,9 @@ const AISolutions = () => {
 
       <section className="section-padding gradient-navy">
         <div className="container-tight text-center">
-          <h2 className="text-2xl font-bold text-foreground sm:text-3xl">{t('pages.aiSolutions.ctaTitle')}</h2>
+          <h2 className="text-5xl font-semibold tracking-tight text-foreground font-heading">{t('pages.aiSolutions.ctaTitle')}</h2>
           <p className="mx-auto mt-3 max-w-lg text-muted-foreground">{t('pages.aiSolutions.ctaDesc')}</p>
-          <Button asChild size="lg" className="mt-6">
+          <Button asChild size="lg" className="mt-6 px-12 py-6">
             <Link to="/contact">{t('pages.aiSolutions.ctaButton')} <ArrowRight className="ms-2 h-4 w-4" /></Link>
           </Button>
         </div>

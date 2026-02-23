@@ -47,47 +47,72 @@ const EstimationCalculator = ({ fields, baseRate }: Props) => {
   }, [values, fields, baseRate]);
 
   return (
-    <div id="calculator" className="rounded-xl border border-primary/20 bg-card/80 p-8 sm:p-10">
-      <h3 className="mb-8 text-xl font-bold text-foreground">{t('pages.calculator.title')}</h3>
-      <div className="grid gap-6 sm:grid-cols-2">
+    <div id="calculator" className="relative overflow-hidden rounded-2xl border border-white/10 bg-surface-1 p-8 sm:p-12 shadow-2xl">
+      <div className="absolute top-0 right-0 p-6 flex justify-end pointer-events-none">
+        <div className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/20">
+          Internal Estimation Engine // Secure
+        </div>
+      </div>
+
+      <h3 className="mb-2 text-2xl font-black tracking-tight text-white font-heading">
+        Strategic Investment Model
+      </h3>
+      <p className="mb-10 text-sm font-medium text-white/50 leading-relaxed max-w-lg">
+        Configure engagement perimeters below. Final scope requires validation by the Ticode Executive Engineering Board.
+      </p>
+
+      <div className="grid gap-8 sm:grid-cols-2">
         {fields.map((f) => (
-          <div key={f.id} className="space-y-2">
-            <Label className="text-sm text-muted-foreground">{f.label}</Label>
+          <div key={f.id} className="space-y-3">
+            <Label className="text-xs font-bold uppercase tracking-widest text-white/60">{f.label}</Label>
             {f.type === 'select' && f.options && (
               <Select value={values[f.id] as string} onValueChange={(v) => setValues((p) => ({ ...p, [f.id]: v }))}>
-                <SelectTrigger><SelectValue /></SelectTrigger>
-                <SelectContent>
+                <SelectTrigger className="bg-base border-white/10 text-white rounded-lg h-12 hover:border-brand-blue/50 focus:ring-brand-blue transition-colors">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent className="bg-surface-1 border-white/10">
                   {f.options.map((o) => (
-                    <SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>
+                    <SelectItem key={o.value} value={o.value} className="text-white/80 focus:bg-brand-blue/20 focus:text-white">
+                      {o.label}
+                    </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
             )}
             {f.type === 'slider' && (
-              <div className="pt-2">
+              <div className="pt-4">
                 <Slider
                   min={(f as CalculatorField).min}
                   max={(f as CalculatorField).max}
                   step={(f as CalculatorField).step}
                   value={[values[f.id] as number]}
                   onValueChange={([v]) => setValues((p) => ({ ...p, [f.id]: v }))}
+                  className="[&_[role=slider]]:bg-brand-blue [&_[role=slider]]:border-white"
                 />
-                <p className="mt-1 text-sm font-medium text-primary">{values[f.id]}</p>
+                <p className="mt-3 text-sm font-bold text-accent-cyan tracking-wider">{values[f.id]}</p>
               </div>
             )}
           </div>
         ))}
       </div>
 
-      <div className="mt-10 rounded-xl border border-primary/30 bg-primary/10 p-8 text-center">
-        <p className="text-sm text-muted-foreground">{t('pages.calculator.estimatedRange')}</p>
-        <p className="mt-2 text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl">
-          {estimate.isValid ? `$${estimate.low.toLocaleString()} - $${estimate.high.toLocaleString()}` : 'Estimate available after selections'}
+      <div className="mt-12 md:mt-16 rounded-xl border border-white/5 bg-base p-8 md:p-10 relative overflow-hidden group">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.05)_0%,transparent_80%)] opacity-0 transition-opacity duration-1000 group-hover:opacity-100" />
+        <p className="text-[0.70rem] font-bold uppercase tracking-[0.2em] text-white/40 mb-4 text-center md:text-left">
+          Projected Capital Allocation Range
         </p>
-        <p className="mt-1 text-xs text-muted-foreground">{t('pages.calculator.currency')}</p>
-        <Button asChild className="mt-6">
-          <Link to="/contact">{t('pages.calculator.scheduleCta')} <ArrowRight className="ms-2 h-4 w-4" /></Link>
-        </Button>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <p className="font-mono text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] text-white drop-shadow-md relative z-10 text-center md:text-left">
+            {estimate.isValid ? `$${estimate.low.toLocaleString()} - $${estimate.high.toLocaleString()}` : 'Validating Input...'}
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full bg-brand-blue text-white font-bold h-14 px-8 border border-white/10 transition-all hover:bg-brand-blue-dark shadow-[0_5px_20px_rgba(37,99,235,0.3)] hover:-translate-y-1 relative z-10 w-full md:w-auto"
+          >
+            <Link to="/contact">Request Board Review <ArrowRight className="ms-2 h-5 w-5" /></Link>
+          </Button>
+        </div>
       </div>
     </div>
   );

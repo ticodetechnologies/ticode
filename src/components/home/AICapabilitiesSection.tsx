@@ -13,7 +13,7 @@ const AICapabilitiesSection = () => {
   const groups = t("home.aiCapabilities.groups", { returnObjects: true }) as CapabilityGroup[];
 
   return (
-    <section className="section-padding-sm py-24 md:py-32 section-ai-stack-bg relative overflow-hidden">
+    <section className="section-padding section-ai-stack-bg relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 bg-grid-pattern opacity-[0.03]" />
       <div className="pointer-events-none absolute inset-0 bg-[rgba(79,70,229,0.05)]" />
       <div className="pointer-events-none absolute inset-0 noise-overlay" />
@@ -23,7 +23,7 @@ const AICapabilitiesSection = () => {
             <p className="text-sm uppercase tracking-[0.3em] text-foreground/60">{t("home.aiCapabilities.label")}</p>
             <div className="relative">
               <div className="pointer-events-none absolute -top-8 left-0 h-28 w-44 heading-glow" />
-              <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground font-heading max-w-xl">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground font-heading max-w-xl">
                 {t("home.aiCapabilities.title")}
               </h2>
             </div>
@@ -39,7 +39,7 @@ const AICapabilitiesSection = () => {
               {groups.map((group) => (
                 <div
                   key={group.title}
-                  className="rounded-2xl border border-white/10 bg-[#111C2F] p-6"
+                  className="rounded-2xl border border-white/10 bg-[#111C2F] p-6 transition-all duration-300 hover:shadow-[0_0_30px_-16px_rgba(79,70,229,0.35)]"
                 >
                   <p className="text-xs uppercase tracking-[0.4em] text-foreground/60">{group.title}</p>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">

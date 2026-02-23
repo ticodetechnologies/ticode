@@ -48,7 +48,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative z-10 overflow-hidden pb-44 pt-32 lg:pb-52 section-hero-bg">
+    <section className="relative z-10 overflow-hidden pb-56 pt-32 lg:pb-64 section-hero-bg">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-x-0 top-20 mx-auto h-80 w-[460px] hero-glow" />
       </div>
@@ -62,7 +62,7 @@ const HeroSection = () => {
 
           <h1
             ref={headlineRef}
-            className="mt-6 text-5xl sm:text-6xl lg:text-7xl xl:text-[5rem] font-extrabold leading-[1.08] tracking-[-0.005em] text-white font-heading"
+            className="mt-6 text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white font-heading"
           >
             {t("home.hero.headline.line1")}{" "}
             <span className="text-gradient-cyan">{t("home.hero.headline.highlight1")}</span>{" "}
@@ -112,7 +112,7 @@ const HeroSection = () => {
           {stats.map((stat) => (
             <Card
               key={stat.label}
-              className="glass-card-strong border-white/35 bg-white/5 text-center shadow-[0_12px_22px_-16px_rgba(6,10,18,0.6)] transition-all duration-300 hover:border-white/45 hover:-translate-y-1"
+              className="glass-card-strong border-white/35 bg-white/5 text-center shadow-[0_12px_22px_-16px_rgba(6,10,18,0.6)] transition-all duration-300 hover:border-white/45 hover:-translate-y-1 hover:shadow-[0_0_24px_-12px_rgba(0,194,255,0.3)]"
             >
               <CardContent className="p-6">
                 <div className="text-5xl lg:text-6xl font-semibold text-gradient-emerald metric-glow flex items-center justify-center gap-2">

@@ -34,38 +34,40 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="border-t border-white/5 footer-gradient-border bg-[#0B0F19]">
-      <div className="container-tight section-padding">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Brand */}
-          <div>
-            <Logo className="mb-4" />
-            <p className="mt-4 text-sm leading-relaxed text-gray-400">
-              {t('footer.description')}
+    <footer className="mt-20 rounded-t-[3rem] border-t border-white/5 bg-base relative overflow-hidden">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent" />
+      <div className="container-tight section-padding pb-12">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5">
+          {/* Brand & Positioning */}
+          <div className="lg:col-span-2">
+            <Logo className="mb-6" />
+            <p className="max-w-xs text-sm leading-relaxed text-text-primary/60">
+              Sovereign IT & AI Transformation Partner serving Kuwait & the GCC.
+              Engineering enterprise-grade digital infrastructure.
             </p>
-            <div className="mt-6 space-y-3">
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <MapPin className="h-4 w-4 shrink-0 text-primary" />
-                Kuwait City, Kuwait
+            <div className="mt-8 space-y-4">
+              <div className="flex items-center gap-3 text-sm text-text-primary/60">
+                <MapPin className="h-4 w-4 shrink-0 text-brand-blue" />
+                <span>Kuwait City, Kuwait</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <Mail className="h-4 w-4 shrink-0 text-primary" />
-                info@ticodetech.com
+              <div className="flex items-center gap-3 text-sm text-text-primary/60">
+                <Mail className="h-4 w-4 shrink-0 text-brand-blue" />
+                <span>executive@ticodetech.com</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <Phone className="h-4 w-4 shrink-0 text-primary" />
-                +965 XXXXXXXX
+              <div className="flex items-center gap-3 text-sm text-text-primary/60">
+                <Phone className="h-4 w-4 shrink-0 text-brand-blue" />
+                <span dir="ltr">+965 XXXXXXXX</span>
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">{t('footer.quickLinks')}</h4>
-            <ul className="space-y-2">
+            <h4 className="mb-6 text-sm font-semibold uppercase tracking-wider text-text-primary/90">{t('footer.quickLinks')}</h4>
+            <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-sm text-gray-400 transition-colors hover:text-white">
+                  <Link to={link.to} className="text-sm text-text-primary/60 transition-colors hover:text-brand-blue">
                     {link.label}
                   </Link>
                 </li>
@@ -75,11 +77,11 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">{t('footer.services')}</h4>
-            <ul className="space-y-2">
+            <h4 className="mb-6 text-sm font-semibold uppercase tracking-wider text-text-primary/90">{t('footer.services')}</h4>
+            <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-sm text-gray-400 transition-colors hover:text-white">
+                  <Link to={link.to} className="text-sm text-text-primary/60 transition-colors hover:text-brand-blue">
                     {link.label}
                   </Link>
                 </li>
@@ -89,11 +91,11 @@ const Footer = () => {
 
           {/* Industries */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">{t('footer.industries')}</h4>
-            <ul className="space-y-2">
+            <h4 className="mb-6 text-sm font-semibold uppercase tracking-wider text-text-primary/90">{t('footer.industries')}</h4>
+            <ul className="space-y-3">
               {industryLinksData.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-sm text-gray-400 transition-colors hover:text-white">
+                  <Link to={link.to} className="text-sm text-text-primary/60 transition-colors hover:text-brand-blue">
                     {link.label}
                   </Link>
                 </li>
@@ -102,7 +104,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom Bar & Status */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 sm:flex-row">
           <p className="text-xs text-gray-400">{t('footer.copyright')}</p>
           <div className="flex gap-6">

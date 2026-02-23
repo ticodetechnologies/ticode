@@ -23,7 +23,7 @@ const CaseStudiesSection = () => {
         <div className="flex flex-col gap-4">
           <p className="text-sm uppercase tracking-[0.3em] text-white/60">{t("home.caseStudies.label")}</p>
           <div className="relative">
-            <h2 className="text-4xl md:text-5xl font-semibold text-white font-heading">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white font-heading">
               {t("home.caseStudies.title")}
             </h2>
           </div>
@@ -36,7 +36,7 @@ const CaseStudiesSection = () => {
           {studies.map((study) => (
             <div
               key={study.title}
-              className="group relative h-[420px] overflow-hidden rounded-3xl border border-white/10 shadow-[0_18px_42px_-28px_rgba(10,14,22,0.8)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_60px_-40px_rgba(10,14,22,0.7)]"
+              className="group relative h-[420px] overflow-hidden rounded-3xl border border-white/10 shadow-[0_18px_42px_-28px_rgba(10,14,22,0.8)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_60px_-40px_rgba(10,14,22,0.7),0_0_30px_-16px_rgba(37,99,235,0.35)]"
             >
               <img
                 src={study.image}
@@ -51,7 +51,7 @@ const CaseStudiesSection = () => {
                 <Badge className="border border-white/20 bg-white/10 text-xs uppercase tracking-[0.3em] text-white">
                   {study.tag}
                 </Badge>
-                <h3 className="text-2xl font-semibold text-white font-heading">
+                <h3 className="text-2xl font-semibold tracking-tight text-white font-heading">
                   {study.title}
                 </h3>
                 <div className="flex items-center gap-3 text-sm text-emerald-200">
