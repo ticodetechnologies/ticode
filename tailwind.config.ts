@@ -14,36 +14,37 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Satoshi"', 'system-ui', 'sans-serif'],
-        sans: ['"Inter"', 'system-ui', 'sans-serif'],
-        mono: ['"IBM Plex Mono"', 'monospace'],
+        heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
       colors: {
-        base: "#0B1C2D", // Midnight Base
+        base: "#0B1E2D", // Primary Deep Navy
         surface: {
           1: "#0F2A43", // Deep Surface
           2: "hsl(var(--surface-2))",
         },
         text: {
-          primary: "#F8FAFC", // Primary Text
-          secondary: "rgba(255, 255, 255, 0.75)", // Secondary Text
-          muted: "rgba(255, 255, 255, 0.5)", // Steel
+          primary: "#0F172A", // Primary Dark
+          secondary: "#475569", // Secondary Dark
+          muted: "#94A3B8", // Slate 400
+          light: "#F5F7FA", // Soft Neutral Base Light
         },
         brand: {
-          blue: "#2563EB", // Authority Blue
+          blue: "#2F6BFF", // Authority Blue
           "blue-dark": "hsl(var(--brand-blue-dark))",
         },
         accent: {
-          cyan: "#22D3EE", // Electric Accent
+          cyan: "#00C2FF", // Gradient highlight cyan
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#0B1220",
-        foreground: "#E6EDF5",
+        background: "#F5F7FA", // Soft Neutral Base
+        foreground: "#0F172A", // Text Primary
         primary: {
-          DEFAULT: "#2563EB",
-          foreground: "#E6EDF5",
+          DEFAULT: "#2F6BFF",
+          foreground: "#F5F7FA",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -54,8 +55,8 @@ export default {
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "#334155",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "#E2E8F0",
+          foreground: "#475569",
         },
 
         popover: {

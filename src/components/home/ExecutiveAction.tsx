@@ -1,47 +1,66 @@
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ExecutiveAction = () => {
-    return (
-        <section className="relative overflow-hidden bg-base py-32 md:py-48 lg:py-64 border-t border-white/5">
-            {/* Pure Radial Authority Gradient - No Grid Dots */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.08)_0%,transparent_70%)] pointer-events-none" />
+    const sectionRef = useRef<HTMLElement>(null);
 
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.fromTo(
+                ".cta-anim",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    stagger: 0.1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 80%",
+                    }
+                }
+            );
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    return (
+        <section
+            ref={sectionRef}
+            className="relative bg-[#0C1117] py-12 md:py-20 border-b border-[#1F2937] font-sans"
+        >
             <div className="container-tight relative z-10 flex flex-col items-center justify-center text-center">
-                <div className="mb-8 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-accent-cyan">
-                    <span className="relative flex h-2 w-2">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-cyan opacity-75"></span>
-                        <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-cyan"></span>
-                    </span>
+                <div className="cta-anim mb-8 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-widest text-[#6B7280]">
+                    <span className="h-1.5 w-1.5 bg-[#2563EB]" />
                     Executive Command
                 </div>
 
-                <h2 className="font-heading text-5xl font-black tracking-tighter text-white md:text-7xl lg:text-[7.5rem] leading-[0.9] drop-shadow-2xl max-w-5xl">
+                <h2 className="cta-anim text-5xl font-bold tracking-tight text-[#F9FAFB] md:text-7xl lg:text-[7.5rem] leading-none mb-8">
                     Initiate Strategic
-                    <span className="block text-white/50 mt-2">Engagement.</span>
+                    <span className="block text-[#9CA3AF] mt-2">
+                        Engagement.
+                    </span>
                 </h2>
 
-                <p className="mt-12 text-lg md:text-2xl font-medium leading-[1.6] text-white/60 max-w-2xl">
-                    Blueprint your organization's sovereign digital infrastructure with the Ticode Engineering Board.
+                <p className="cta-anim mt-4 text-lg md:text-xl font-medium leading-relaxed text-[#9CA3AF] max-w-2xl">
+                    Execute your organization's sovereign digital architecture with the Ticode Engineering Board.
                 </p>
 
-                <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 w-full">
-                    <Button
-                        asChild
-                        size="lg"
-                        className="group relative overflow-hidden rounded-full bg-brand-blue/90 px-10 py-7 text-lg font-bold text-white transition-all duration-500 hover:scale-[1.03] hover:bg-brand-blue hover:shadow-[0_0_40px_rgba(37,99,235,0.4)] w-full sm:w-auto"
+                <div className="cta-anim mt-16 flex flex-col sm:flex-row items-center justify-center w-full">
+                    <Link
+                        to="/contact"
+                        className="group inline-flex items-center justify-center bg-[#2563EB] text-[#F9FAFB] px-10 py-5 text-base font-semibold transition-colors hover:bg-[#1D4ED8] w-full sm:w-auto"
                     >
-                        <Link to="/contact">
-                            {/* Sliding Tracking Background */}
-                            <span className="absolute inset-0 translate-y-full bg-gradient-to-t from-black/20 to-transparent transition-transform duration-500 group-hover:translate-y-0" />
-
-                            <span className="relative z-10 flex items-center justify-center">
-                                Request Board Review
-                                <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-500 group-hover:translate-x-1" />
-                            </span>
-                        </Link>
-                    </Button>
+                        Schedule Technical Audit
+                        <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
                 </div>
             </div>
         </section>

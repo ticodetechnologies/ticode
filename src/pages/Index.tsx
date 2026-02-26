@@ -1,12 +1,12 @@
 import SEOHead from '@/components/SEOHead';
 import HeroDirective from '@/components/home/HeroDirective';
-import TransformationCollapse from '@/components/home/TransformationCollapse';
+import ITCHallenges from '@/components/services/it-consulting/ITCHallenges';
 import StrategicPillars from '@/components/home/StrategicPillars';
+import DomainsSection from '@/components/home/DomainsSection';
 import OutcomeMetrics from '@/components/home/OutcomeMetrics';
 import DeliveryFramework from '@/components/home/DeliveryFramework';
-import DomainsSection from '@/components/home/DomainsSection';
 import CaseEvidence from '@/components/home/CaseEvidence';
-import ExecutiveAction from '@/components/home/ExecutiveAction';
+import FinalCtaSection from '@/components/home/FinalCtaSection';
 
 const Index = () => {
   return (
@@ -18,13 +18,13 @@ const Index = () => {
         schemaType="Organization"
       />
       <HeroDirective />
-      <TransformationCollapse />
+      <ITCHallenges />
       <StrategicPillars />
+      <DomainsSection />
       <OutcomeMetrics />
       <DeliveryFramework />
-      <DomainsSection />
       <CaseEvidence />
-      <ExecutiveAction />
+      <FinalCtaSection />
     </>
   );
 };

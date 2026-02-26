@@ -1,54 +1,83 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ShieldAlert, SplitSquareVertical, AlertTriangle } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const collapseModules = [
     {
         id: "fragmentation",
-        icon: <SplitSquareVertical className="h-6 w-6 text-brand-blue" />,
         title: "Operational Fragmentation",
-        metric: "40%",
+        metricValue: 40,
+        metricPrefix: "",
+        metricSuffix: "%",
         impact: "Average efficiency leakage from disconnected legacy systems.",
-    },
-    {
-        id: "sovereignty",
-        icon: <ShieldAlert className="h-6 w-6 text-accent-cyan" />,
-        title: "Data Sovereignty Gaps",
-        metric: "Critical",
-        impact: "Non-compliance with GCC data localization exposes the board to regulatory liability.",
+        isCritical: false,
+        progressColor: "bg-brand-blue"
     },
     {
         id: "stagnation",
-        icon: <AlertTriangle className="h-6 w-6 text-red-500" />,
         title: "Transformation Stagnation",
-        metric: "$2M+",
+        metricValue: 2,
+        metricPrefix: "$",
+        metricSuffix: "M+",
         impact: "Annual capital dissolved in siloed consulting efforts failing to deliver ROI.",
+        isCritical: false,
+        progressColor: "bg-accent-cyan"
     },
+    {
+        id: "sovereignty",
+        title: "Data Sovereignty Gaps",
+        metricValue: 0,
+        metricText: "Critical",
+        impact: "Non-compliance with GCC data localization exposes the board to regulatory liability.",
+        isCritical: true,
+        progressColor: "bg-red-500"
+    }
 ];
 
 const TransformationCollapse = () => {
     const containerRef = useRef<HTMLDivElement>(null);
+    const counterRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
             gsap.fromTo(
-                ".collapse-el",
+                ".collapse-anim-item",
                 { opacity: 0, y: 30 },
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 0.8,
+                    duration: 1.2,
                     stagger: 0.15,
-                    ease: "power2.out",
+                    ease: "power3.out",
                     scrollTrigger: {
                         trigger: containerRef.current,
                         start: "top 75%",
-                    },
+                    }
                 }
             );
+
+            gsap.utils.toArray('.collapse-card').forEach((card: any, index: number) => {
+                const counter = counterRefs.current[index];
+                if (!counter) return;
+
+                const target = parseFloat(counter.getAttribute('data-target') || '0');
+                if (target === 0) return;
+
+                // Animate counter on hover
+                card.addEventListener('mouseenter', () => {
+                    gsap.fromTo({ val: 0 }, { val: 0 }, {
+                        val: target,
+                        duration: 1.5,
+                        ease: "power2.out",
+                        onUpdate: function () {
+                            counter.innerText = Math.round(this.targets()[0].val).toString();
+                        }
+                    });
+                });
+            });
+
         }, containerRef);
 
         return () => ctx.revert();
@@ -57,63 +86,69 @@ const TransformationCollapse = () => {
     return (
         <section
             ref={containerRef}
-            className="relative overflow-hidden bg-base py-32 md:py-48 border-t border-white/5"
+            className="relative overflow-hidden bg-base py-32 font-sans border-b border-slate-200"
         >
-            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(37,99,235,0.05)_0%,transparent_60%)] pointer-events-none" />
-
-            <div className="container-tight relative z-10">
-                <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-8">
-                    {/* Left: Bold Structural Statements */}
-                    <div className="lg:col-span-5 flex flex-col justify-center">
-                        <div className="collapse-el mb-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-white/40">
-                            <span className="h-px w-6 bg-brand-blue" />
+            <div className="container-tight relative z-10 w-full">
+                <div className="text-center mb-20">
+                    <div className="collapse-anim-item mx-auto mb-6 flex items-center justify-center gap-3 w-max">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                        </span>
+                        <span className="text-xs font-bold tracking-[0.1em] text-slate-500 uppercase font-mono">
                             Systemic Vulnerability
-                        </div>
-                        <h2 className="collapse-el font-heading text-4xl font-black tracking-tight text-white md:text-5xl lg:text-6xl leading-[1.05]">
-                            Where Enterprise Transformations <br className="hidden lg:block" /><span className="text-white/40">Collapse.</span>
-                        </h2>
-                        <p className="collapse-el mt-8 text-lg font-medium leading-[1.6] text-white/70 max-w-md">
-                            Without authoritative digital governance, organizations face compounding infrastructural decay. Superficial AI integrations fail at the board level.
-                        </p>
+                        </span>
                     </div>
+                    <h2 className="collapse-anim-item text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                        Where Enterprise Transformations <br />
+                        <span className="text-slate-500">Collapse.</span>
+                    </h2>
+                </div>
 
-                    {/* Right: Elevated Impact Modules */}
-                    <div className="lg:col-span-7 flex flex-col gap-6 lg:pl-10">
-                        {collapseModules.map((module) => (
-                            <div
-                                key={module.id}
-                                className="collapse-el group relative overflow-hidden rounded-xl border border-white/10 bg-surface-1 p-6 md:p-8 transition-all duration-500 hover:-translate-y-1 hover:border-white/20 shadow-[0_15px_30px_-10px_rgba(0,0,0,0.5)] bg-gradient-to-r from-surface-1 to-[#0a1829]"
-                            >
-                                <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-brand-blue to-accent-cyan opacity-40 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {collapseModules.map((module, index) => (
+                        <div
+                            key={module.id}
+                            className="collapse-anim-item collapse-card group relative flex flex-col justify-between bg-white border border-slate-200 rounded-[1.5rem] p-8 transition-all duration-400 ease-out hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(47,107,255,0.15)] hover:border-brand-blue/40 overflow-hidden cursor-default"
+                        >
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-blue to-accent-cyan opacity-0 group-hover:opacity-100 transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-out" />
 
-                                <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 pl-2">
-                                    <div className="flex flex-col gap-4">
-                                        <div className="flex items-center gap-4">
-                                            <div className="rounded-lg bg-base p-3 ring-1 ring-white/10 text-white/70">
-                                                {module.icon}
-                                            </div>
-                                            <h3 className="text-xl md:text-2xl font-black tracking-tight text-white">
-                                                {module.title}
-                                            </h3>
-                                        </div>
-                                        <p className="text-sm md:text-base leading-relaxed max-w-md" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>
-                                            {module.impact}
-                                        </p>
-                                    </div>
+                            <div className="relative z-10">
+                                <h3 className="text-xl font-bold tracking-tight text-slate-900 mb-4 group-hover:text-brand-blue transition-colors duration-300">
+                                    {module.title}
+                                </h3>
+                                <p className="text-sm font-medium leading-relaxed text-slate-600 mb-8 min-h-[60px]">
+                                    {module.impact}
+                                </p>
+                            </div>
 
-                                    <div className="flex-shrink-0 text-left md:text-right mt-2 md:mt-0">
-                                        <div className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/40 mb-1">
-                                            Risk Metric
-                                        </div>
-                                        <div className="font-mono text-3xl font-bold text-white drop-shadow-md">
-                                            {module.metric}
-                                        </div>
-                                    </div>
+                            <div className="relative z-10 flex flex-col border-t border-slate-100 pt-6">
+                                <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2 flex items-center gap-2 font-mono">
+                                    {module.isCritical && (
+                                        <span className="relative flex h-2 w-2">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                        </span>
+                                    )}
+                                    Risk Metric
+                                </div>
+
+                                <div className="text-4xl font-mono font-bold tracking-tight text-slate-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-blue group-hover:to-accent-cyan transition-all duration-300">
+                                    {module.metricText ? (
+                                        <span className="text-red-500/90 group-hover:text-red-500 transition-colors drop-shadow-sm">{module.metricText}</span>
+                                    ) : (
+                                        <>
+                                            <span className="text-slate-400/80 text-2xl mr-1">{module.metricPrefix}</span>
+                                            <span ref={(el) => (counterRefs.current[index] = el)} data-target={module.metricValue}>
+                                                {module.metricValue}
+                                            </span>
+                                            <span className="text-slate-400/80 text-2xl ml-1">{module.metricSuffix}</span>
+                                        </>
+                                    )}
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

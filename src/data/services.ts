@@ -61,16 +61,20 @@ export const services: ServiceData[] = [
       { q: 'Can you work alongside our existing IT team?', a: 'Absolutely. We operate as an extension of your team, transferring knowledge and building internal capabilities.' },
     ],
     calculatorFields: [
-      { id: 'scope', label: 'Project Scope', type: 'select', options: [
-        { label: 'Department-level', value: 'dept', multiplier: 1 },
-        { label: 'Division-level', value: 'div', multiplier: 1.8 },
-        { label: 'Enterprise-wide', value: 'enterprise', multiplier: 3 },
-      ]},
-      { id: 'complexity', label: 'Complexity Level', type: 'select', options: [
-        { label: 'Standard', value: 'standard', multiplier: 1 },
-        { label: 'Complex', value: 'complex', multiplier: 1.5 },
-        { label: 'Highly Complex', value: 'high', multiplier: 2.2 },
-      ]},
+      {
+        id: 'scope', label: 'Project Scope', type: 'select', options: [
+          { label: 'Department-level', value: 'dept', multiplier: 1 },
+          { label: 'Division-level', value: 'div', multiplier: 1.8 },
+          { label: 'Enterprise-wide', value: 'enterprise', multiplier: 3 },
+        ]
+      },
+      {
+        id: 'complexity', label: 'Complexity Level', type: 'select', options: [
+          { label: 'Standard', value: 'standard', multiplier: 1 },
+          { label: 'Complex', value: 'complex', multiplier: 1.5 },
+          { label: 'Highly Complex', value: 'high', multiplier: 2.2 },
+        ]
+      },
       { id: 'duration', label: 'Engagement Duration (months)', type: 'slider', min: 1, max: 12, step: 1, defaultValue: 3, multiplierPerUnit: 1 },
     ],
     calculatorBaseRate: 8000,
@@ -102,23 +106,27 @@ export const services: ServiceData[] = [
       { q: 'Can AI integrate with our existing systems?', a: 'Our solutions are built with API-first architecture for seamless integration with ERP, CRM, and legacy systems.' },
     ],
     calculatorFields: [
-      { id: 'modelType', label: 'Model Type', type: 'select', options: [
-        { label: 'Predictive Analytics', value: 'predictive', multiplier: 1 },
-        { label: 'NLP / Text Analysis', value: 'nlp', multiplier: 1.3 },
-        { label: 'Computer Vision', value: 'cv', multiplier: 1.5 },
-        { label: 'Recommendation System', value: 'recommend', multiplier: 1.2 },
-      ]},
-      { id: 'dataVolume', label: 'Data Volume', type: 'select', options: [
-        { label: 'Small (< 100K records)', value: 'small', multiplier: 1 },
-        { label: 'Medium (100K-1M)', value: 'medium', multiplier: 1.4 },
-        { label: 'Large (1M+)', value: 'large', multiplier: 2 },
-      ]},
+      {
+        id: 'modelType', label: 'Model Type', type: 'select', options: [
+          { label: 'Predictive Analytics', value: 'predictive', multiplier: 1 },
+          { label: 'NLP / Text Analysis', value: 'nlp', multiplier: 1.3 },
+          { label: 'Computer Vision', value: 'cv', multiplier: 1.5 },
+          { label: 'Recommendation System', value: 'recommend', multiplier: 1.2 },
+        ]
+      },
+      {
+        id: 'dataVolume', label: 'Data Volume', type: 'select', options: [
+          { label: 'Small (< 100K records)', value: 'small', multiplier: 1 },
+          { label: 'Medium (100K-1M)', value: 'medium', multiplier: 1.4 },
+          { label: 'Large (1M+)', value: 'large', multiplier: 2 },
+        ]
+      },
       { id: 'integration', label: 'Integration Points', type: 'slider', min: 1, max: 8, step: 1, defaultValue: 2, multiplierPerUnit: 0.15 },
     ],
     calculatorBaseRate: 15000,
   },
   {
-    slug: 'ai-agents-voice-ai',
+    slug: 'ai-agents',
     title: 'AI Agents & Voice AI',
     headline: 'Intelligent AI Agents & Voice AI for GCC Businesses',
     summary: 'Deploy autonomous AI agents and conversational voice systems that handle customer interactions, automate workflows, and operate 24/7 in Arabic and English.',
@@ -141,21 +149,25 @@ export const services: ServiceData[] = [
       { q: 'What tasks can AI agents automate?', a: 'From appointment scheduling to order processing, claims handling, and multi-step research tasks.' },
     ],
     calculatorFields: [
-      { id: 'agentType', label: 'Agent Type', type: 'select', options: [
-        { label: 'Text Chatbot', value: 'chat', multiplier: 1 },
-        { label: 'Voice Assistant', value: 'voice', multiplier: 1.6 },
-        { label: 'Multi-modal Agent', value: 'multi', multiplier: 2.2 },
-      ]},
-      { id: 'languages', label: 'Languages', type: 'select', options: [
-        { label: 'English Only', value: 'en', multiplier: 1 },
-        { label: 'English + Arabic', value: 'bilingual', multiplier: 1.4 },
-      ]},
+      {
+        id: 'agentType', label: 'Agent Type', type: 'select', options: [
+          { label: 'Text Chatbot', value: 'chat', multiplier: 1 },
+          { label: 'Voice Assistant', value: 'voice', multiplier: 1.6 },
+          { label: 'Multi-modal Agent', value: 'multi', multiplier: 2.2 },
+        ]
+      },
+      {
+        id: 'languages', label: 'Languages', type: 'select', options: [
+          { label: 'English Only', value: 'en', multiplier: 1 },
+          { label: 'English + Arabic', value: 'bilingual', multiplier: 1.4 },
+        ]
+      },
       { id: 'channels', label: 'Deployment Channels', type: 'slider', min: 1, max: 5, step: 1, defaultValue: 2, multiplierPerUnit: 0.2 },
     ],
     calculatorBaseRate: 12000,
   },
   {
-    slug: 'intelligent-systems-automation',
+    slug: 'intelligent-systems',
     title: 'Intelligent Systems & Automation',
     headline: 'End-to-End Intelligent Automation Solutions',
     summary: 'Streamline operations with AI-driven automation that eliminates manual processes, reduces errors, and accelerates business outcomes across your enterprise.',
@@ -178,11 +190,13 @@ export const services: ServiceData[] = [
     ],
     calculatorFields: [
       { id: 'processCount', label: 'Processes to Automate', type: 'slider', min: 1, max: 20, step: 1, defaultValue: 3, multiplierPerUnit: 1 },
-      { id: 'complexity', label: 'Process Complexity', type: 'select', options: [
-        { label: 'Simple (rule-based)', value: 'simple', multiplier: 1 },
-        { label: 'Moderate (some decisions)', value: 'moderate', multiplier: 1.5 },
-        { label: 'Complex (AI-driven)', value: 'complex', multiplier: 2.5 },
-      ]},
+      {
+        id: 'complexity', label: 'Process Complexity', type: 'select', options: [
+          { label: 'Simple (rule-based)', value: 'simple', multiplier: 1 },
+          { label: 'Moderate (some decisions)', value: 'moderate', multiplier: 1.5 },
+          { label: 'Complex (AI-driven)', value: 'complex', multiplier: 2.5 },
+        ]
+      },
     ],
     calculatorBaseRate: 5000,
   },
@@ -213,23 +227,29 @@ export const services: ServiceData[] = [
       { q: 'Do you build bilingual applications?', a: 'All our applications support full internationalization with Arabic RTL layout and English LTR as standard.' },
     ],
     calculatorFields: [
-      { id: 'projectType', label: 'Project Type', type: 'select', options: [
-        { label: 'Web Application', value: 'web', multiplier: 1 },
-        { label: 'Mobile App', value: 'mobile', multiplier: 1.3 },
-        { label: 'Web + Mobile', value: 'both', multiplier: 2 },
-        { label: 'Enterprise Platform', value: 'enterprise', multiplier: 2.5 },
-      ]},
-      { id: 'complexity', label: 'Complexity', type: 'select', options: [
-        { label: 'Simple (MVP)', value: 'simple', multiplier: 1 },
-        { label: 'Moderate', value: 'moderate', multiplier: 1.8 },
-        { label: 'Complex', value: 'complex', multiplier: 3 },
-      ]},
+      {
+        id: 'projectType', label: 'Project Type', type: 'select', options: [
+          { label: 'Web Application', value: 'web', multiplier: 1 },
+          { label: 'Mobile App', value: 'mobile', multiplier: 1.3 },
+          { label: 'Web + Mobile', value: 'both', multiplier: 2 },
+          { label: 'Enterprise Platform', value: 'enterprise', multiplier: 2.5 },
+        ]
+      },
+      {
+        id: 'complexity', label: 'Complexity', type: 'select', options: [
+          { label: 'Simple (MVP)', value: 'simple', multiplier: 1 },
+          { label: 'Moderate', value: 'moderate', multiplier: 1.8 },
+          { label: 'Complex', value: 'complex', multiplier: 3 },
+        ]
+      },
       { id: 'timeline', label: 'Timeline (months)', type: 'slider', min: 1, max: 18, step: 1, defaultValue: 4, multiplierPerUnit: 1 },
-      { id: 'teamSize', label: 'Team Size', type: 'select', options: [
-        { label: '2-3 developers', value: 'small', multiplier: 1 },
-        { label: '4-6 developers', value: 'medium', multiplier: 1.8 },
-        { label: '7+ developers', value: 'large', multiplier: 3 },
-      ]},
+      {
+        id: 'teamSize', label: 'Team Size', type: 'select', options: [
+          { label: '2-3 developers', value: 'small', multiplier: 1 },
+          { label: '4-6 developers', value: 'medium', multiplier: 1.8 },
+          { label: '7+ developers', value: 'large', multiplier: 3 },
+        ]
+      },
     ],
     calculatorBaseRate: 10000,
   },
@@ -256,16 +276,20 @@ export const services: ServiceData[] = [
       { q: 'Can you ensure data stays in the GCC region?', a: 'Yes, we configure data residency controls to keep data within compliant GCC data centers.' },
     ],
     calculatorFields: [
-      { id: 'migrationScope', label: 'Migration Scope', type: 'select', options: [
-        { label: 'Single Application', value: 'single', multiplier: 1 },
-        { label: 'Multiple Applications', value: 'multi', multiplier: 2.5 },
-        { label: 'Full Data Center', value: 'dc', multiplier: 5 },
-      ]},
-      { id: 'cloudProvider', label: 'Cloud Provider', type: 'select', options: [
-        { label: 'AWS', value: 'aws', multiplier: 1 },
-        { label: 'Azure', value: 'azure', multiplier: 1 },
-        { label: 'Multi-Cloud', value: 'multi', multiplier: 1.5 },
-      ]},
+      {
+        id: 'migrationScope', label: 'Migration Scope', type: 'select', options: [
+          { label: 'Single Application', value: 'single', multiplier: 1 },
+          { label: 'Multiple Applications', value: 'multi', multiplier: 2.5 },
+          { label: 'Full Data Center', value: 'dc', multiplier: 5 },
+        ]
+      },
+      {
+        id: 'cloudProvider', label: 'Cloud Provider', type: 'select', options: [
+          { label: 'AWS', value: 'aws', multiplier: 1 },
+          { label: 'Azure', value: 'azure', multiplier: 1 },
+          { label: 'Multi-Cloud', value: 'multi', multiplier: 1.5 },
+        ]
+      },
     ],
     calculatorBaseRate: 12000,
   },
@@ -294,11 +318,13 @@ export const services: ServiceData[] = [
     calculatorFields: [
       { id: 'dataSource', label: 'Data Sources', type: 'slider', min: 1, max: 15, step: 1, defaultValue: 3, multiplierPerUnit: 0.3 },
       { id: 'dashboards', label: 'Dashboard Count', type: 'slider', min: 1, max: 10, step: 1, defaultValue: 3, multiplierPerUnit: 0.25 },
-      { id: 'analytics', label: 'Analytics Level', type: 'select', options: [
-        { label: 'Descriptive (What happened)', value: 'desc', multiplier: 1 },
-        { label: 'Diagnostic (Why)', value: 'diag', multiplier: 1.3 },
-        { label: 'Predictive (What will happen)', value: 'pred', multiplier: 2 },
-      ]},
+      {
+        id: 'analytics', label: 'Analytics Level', type: 'select', options: [
+          { label: 'Descriptive (What happened)', value: 'desc', multiplier: 1 },
+          { label: 'Diagnostic (Why)', value: 'diag', multiplier: 1.3 },
+          { label: 'Predictive (What will happen)', value: 'pred', multiplier: 2 },
+        ]
+      },
     ],
     calculatorBaseRate: 8000,
   },
@@ -330,22 +356,26 @@ export const services: ServiceData[] = [
       { q: 'How do you measure marketing ROI?', a: 'We implement full-funnel attribution tracking connecting marketing spend to revenue outcomes.' },
     ],
     calculatorFields: [
-      { id: 'channels', label: 'Marketing Channels', type: 'select', options: [
-        { label: 'SEO Only', value: 'seo', multiplier: 1 },
-        { label: 'SEO + PPC', value: 'seo-ppc', multiplier: 1.8 },
-        { label: 'Full-Stack Marketing', value: 'full', multiplier: 3 },
-      ]},
-      { id: 'monthlyBudget', label: 'Monthly Ad Budget (KWD)', type: 'select', options: [
-        { label: 'Under 1,000 KWD', value: 'low', multiplier: 1 },
-        { label: '1,000 - 5,000 KWD', value: 'mid', multiplier: 1.3 },
-        { label: '5,000+ KWD', value: 'high', multiplier: 1.8 },
-      ]},
+      {
+        id: 'channels', label: 'Marketing Channels', type: 'select', options: [
+          { label: 'SEO Only', value: 'seo', multiplier: 1 },
+          { label: 'SEO + PPC', value: 'seo-ppc', multiplier: 1.8 },
+          { label: 'Full-Stack Marketing', value: 'full', multiplier: 3 },
+        ]
+      },
+      {
+        id: 'monthlyBudget', label: 'Monthly Ad Budget (KWD)', type: 'select', options: [
+          { label: 'Under 1,000 KWD', value: 'low', multiplier: 1 },
+          { label: '1,000 - 5,000 KWD', value: 'mid', multiplier: 1.3 },
+          { label: '5,000+ KWD', value: 'high', multiplier: 1.8 },
+        ]
+      },
       { id: 'duration', label: 'Campaign Duration (months)', type: 'slider', min: 3, max: 12, step: 1, defaultValue: 6, multiplierPerUnit: 1 },
     ],
     calculatorBaseRate: 3000,
   },
   {
-    slug: 'social-media-management',
+    slug: 'social-media',
     title: 'Social Media Management',
     headline: 'Strategic Social Media Management for GCC Brands',
     summary: 'Build and grow your brand presence across social platforms with data-driven content strategies, community management, and performance analytics.',
@@ -367,11 +397,13 @@ export const services: ServiceData[] = [
     ],
     calculatorFields: [
       { id: 'platforms', label: 'Platform Count', type: 'slider', min: 1, max: 6, step: 1, defaultValue: 3, multiplierPerUnit: 0.35 },
-      { id: 'contentLevel', label: 'Content Volume', type: 'select', options: [
-        { label: 'Basic (8 posts/month)', value: 'basic', multiplier: 1 },
-        { label: 'Standard (16 posts/month)', value: 'standard', multiplier: 1.6 },
-        { label: 'Premium (30+ posts/month)', value: 'premium', multiplier: 2.5 },
-      ]},
+      {
+        id: 'contentLevel', label: 'Content Volume', type: 'select', options: [
+          { label: 'Basic (8 posts/month)', value: 'basic', multiplier: 1 },
+          { label: 'Standard (16 posts/month)', value: 'standard', multiplier: 1.6 },
+          { label: 'Premium (30+ posts/month)', value: 'premium', multiplier: 2.5 },
+        ]
+      },
     ],
     calculatorBaseRate: 2000,
   },
@@ -397,11 +429,13 @@ export const services: ServiceData[] = [
     ],
     calculatorFields: [
       { id: 'teamSize', label: 'Team Members Needed', type: 'slider', min: 1, max: 15, step: 1, defaultValue: 3, multiplierPerUnit: 1 },
-      { id: 'seniorityLevel', label: 'Seniority Level', type: 'select', options: [
-        { label: 'Junior', value: 'junior', multiplier: 1 },
-        { label: 'Mid-level', value: 'mid', multiplier: 1.5 },
-        { label: 'Senior', value: 'senior', multiplier: 2.2 },
-      ]},
+      {
+        id: 'seniorityLevel', label: 'Seniority Level', type: 'select', options: [
+          { label: 'Junior', value: 'junior', multiplier: 1 },
+          { label: 'Mid-level', value: 'mid', multiplier: 1.5 },
+          { label: 'Senior', value: 'senior', multiplier: 2.2 },
+        ]
+      },
       { id: 'duration', label: 'Engagement Duration (months)', type: 'slider', min: 1, max: 12, step: 1, defaultValue: 6, multiplierPerUnit: 1 },
     ],
     calculatorBaseRate: 3500,
@@ -427,16 +461,18 @@ export const services: ServiceData[] = [
     ],
     calculatorFields: [
       { id: 'projectCount', label: 'Projects to Manage', type: 'slider', min: 1, max: 10, step: 1, defaultValue: 2, multiplierPerUnit: 1 },
-      { id: 'pmLevel', label: 'PM Level', type: 'select', options: [
-        { label: 'Project Manager', value: 'pm', multiplier: 1 },
-        { label: 'Senior PM', value: 'spm', multiplier: 1.5 },
-        { label: 'Program Manager', value: 'pgm', multiplier: 2 },
-      ]},
+      {
+        id: 'pmLevel', label: 'PM Level', type: 'select', options: [
+          { label: 'Project Manager', value: 'pm', multiplier: 1 },
+          { label: 'Senior PM', value: 'spm', multiplier: 1.5 },
+          { label: 'Program Manager', value: 'pgm', multiplier: 2 },
+        ]
+      },
     ],
     calculatorBaseRate: 5000,
   },
   {
-    slug: 'software-testing-qa',
+    slug: 'software-testing',
     title: 'Software Testing & QA',
     headline: 'Comprehensive Software Testing & Quality Assurance',
     summary: 'Ensure software reliability, performance, and security with rigorous testing methodologies and automated quality assurance pipelines.',
@@ -456,16 +492,20 @@ export const services: ServiceData[] = [
       { q: 'Do you support Arabic UI testing?', a: 'Yes, our testing includes RTL layout verification and Arabic content rendering validation.' },
     ],
     calculatorFields: [
-      { id: 'testingType', label: 'Testing Type', type: 'select', options: [
-        { label: 'Functional Testing', value: 'func', multiplier: 1 },
-        { label: 'Functional + Performance', value: 'perf', multiplier: 1.5 },
-        { label: 'Full QA Suite', value: 'full', multiplier: 2.5 },
-      ]},
-      { id: 'automationLevel', label: 'Automation Level', type: 'select', options: [
-        { label: 'Manual Only', value: 'manual', multiplier: 1 },
-        { label: 'Partial Automation', value: 'partial', multiplier: 1.3 },
-        { label: 'Full Automation', value: 'full', multiplier: 1.8 },
-      ]},
+      {
+        id: 'testingType', label: 'Testing Type', type: 'select', options: [
+          { label: 'Functional Testing', value: 'func', multiplier: 1 },
+          { label: 'Functional + Performance', value: 'perf', multiplier: 1.5 },
+          { label: 'Full QA Suite', value: 'full', multiplier: 2.5 },
+        ]
+      },
+      {
+        id: 'automationLevel', label: 'Automation Level', type: 'select', options: [
+          { label: 'Manual Only', value: 'manual', multiplier: 1 },
+          { label: 'Partial Automation', value: 'partial', multiplier: 1.3 },
+          { label: 'Full Automation', value: 'full', multiplier: 1.8 },
+        ]
+      },
     ],
     calculatorBaseRate: 6000,
   },
@@ -490,24 +530,28 @@ export const services: ServiceData[] = [
       { q: 'Do you provide managed network services?', a: 'Yes, we offer fully managed network operations with 24/7 monitoring and SLA-backed support.' },
     ],
     calculatorFields: [
-      { id: 'networkSize', label: 'Network Size', type: 'select', options: [
-        { label: 'Small (1-50 endpoints)', value: 'small', multiplier: 1 },
-        { label: 'Medium (50-200)', value: 'medium', multiplier: 2 },
-        { label: 'Large (200+)', value: 'large', multiplier: 3.5 },
-      ]},
-      { id: 'security', label: 'Security Level', type: 'select', options: [
-        { label: 'Standard', value: 'standard', multiplier: 1 },
-        { label: 'Enhanced', value: 'enhanced', multiplier: 1.5 },
-        { label: 'Enterprise (Zero Trust)', value: 'zero-trust', multiplier: 2.2 },
-      ]},
+      {
+        id: 'networkSize', label: 'Network Size', type: 'select', options: [
+          { label: 'Small (1-50 endpoints)', value: 'small', multiplier: 1 },
+          { label: 'Medium (50-200)', value: 'medium', multiplier: 2 },
+          { label: 'Large (200+)', value: 'large', multiplier: 3.5 },
+        ]
+      },
+      {
+        id: 'security', label: 'Security Level', type: 'select', options: [
+          { label: 'Standard', value: 'standard', multiplier: 1 },
+          { label: 'Enhanced', value: 'enhanced', multiplier: 1.5 },
+          { label: 'Enterprise (Zero Trust)', value: 'zero-trust', multiplier: 2.2 },
+        ]
+      },
     ],
     calculatorBaseRate: 8000,
   },
   {
-    slug: 'domain-email-services',
+    slug: 'domain-email',
     title: 'Domain & Email Services',
     headline: 'Professional Domain & Email Solutions for Businesses',
-    summary: 'Establish a professional digital identity with domain management, enterprise email hosting, and communication infrastructure services.',
+    summary: 'Establish a professional digital identity with domain management (including Kuwait domain names like www.yourbrand.com.kw), enterprise email hosting, and communication infrastructure services.',
     challenges: [
       { title: 'Unprofessional Email', desc: 'Using generic email providers undermining business credibility.' },
       { title: 'Domain Management', desc: 'Complex domain portfolio management across multiple registrars.' },
@@ -524,15 +568,17 @@ export const services: ServiceData[] = [
     ],
     calculatorFields: [
       { id: 'mailboxes', label: 'Email Accounts', type: 'slider', min: 5, max: 500, step: 5, defaultValue: 20, multiplierPerUnit: 0.02 },
-      { id: 'provider', label: 'Email Platform', type: 'select', options: [
-        { label: 'Google Workspace', value: 'google', multiplier: 1 },
-        { label: 'Microsoft 365', value: 'ms365', multiplier: 1.1 },
-      ]},
+      {
+        id: 'provider', label: 'Email Platform', type: 'select', options: [
+          { label: 'Google Workspace', value: 'google', multiplier: 1 },
+          { label: 'Microsoft 365', value: 'ms365', multiplier: 1.1 },
+        ]
+      },
     ],
     calculatorBaseRate: 500,
   },
   {
-    slug: 'data-entry-services',
+    slug: 'data-entry',
     title: 'Data Entry Services',
     headline: 'Professional Data Entry & Digitization Services',
     summary: 'Accurate, efficient data entry and document digitization services that transform unstructured information into organized, actionable business data.',
@@ -553,16 +599,20 @@ export const services: ServiceData[] = [
       { q: 'What accuracy rate do you guarantee?', a: 'We maintain 99.5%+ accuracy with dual-operator verification for critical data.' },
     ],
     calculatorFields: [
-      { id: 'volume', label: 'Monthly Volume (pages)', type: 'select', options: [
-        { label: 'Under 1,000', value: 'low', multiplier: 1 },
-        { label: '1,000 - 10,000', value: 'medium', multiplier: 3 },
-        { label: '10,000+', value: 'high', multiplier: 8 },
-      ]},
-      { id: 'docType', label: 'Document Type', type: 'select', options: [
-        { label: 'Structured (forms)', value: 'structured', multiplier: 1 },
-        { label: 'Semi-structured', value: 'semi', multiplier: 1.5 },
-        { label: 'Unstructured', value: 'unstructured', multiplier: 2 },
-      ]},
+      {
+        id: 'volume', label: 'Monthly Volume (pages)', type: 'select', options: [
+          { label: 'Under 1,000', value: 'low', multiplier: 1 },
+          { label: '1,000 - 10,000', value: 'medium', multiplier: 3 },
+          { label: '10,000+', value: 'high', multiplier: 8 },
+        ]
+      },
+      {
+        id: 'docType', label: 'Document Type', type: 'select', options: [
+          { label: 'Structured (forms)', value: 'structured', multiplier: 1 },
+          { label: 'Semi-structured', value: 'semi', multiplier: 1.5 },
+          { label: 'Unstructured', value: 'unstructured', multiplier: 2 },
+        ]
+      },
     ],
     calculatorBaseRate: 1500,
   },

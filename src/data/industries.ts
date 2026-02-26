@@ -32,16 +32,20 @@ export const industries: IndustryData[] = [
     relevantServices: ['software-development', 'ai-machine-learning', 'digital-marketing', 'data-analytics'],
     caseStudy: { challenge: 'A Kuwait-based fashion retailer with 15 stores struggled with disconnected online-offline experiences.', strategy: 'Unified commerce platform with AI-driven personalization and real-time inventory sync.', implementation: 'Custom e-commerce platform integrated with POS, ERP, and marketing automation over 6 months.', outcome: '45% increase in online revenue and 30% reduction in stockout incidents within the first quarter.' },
     calculatorFields: [
-      { id: 'projectType', label: 'Project Type', type: 'select', options: [
-        { label: 'E-Commerce Platform', value: 'ecom', multiplier: 1.5 },
-        { label: 'Inventory System', value: 'inventory', multiplier: 1 },
-        { label: 'Full Digital Transformation', value: 'full', multiplier: 3 },
-      ]},
-      { id: 'storeCount', label: 'Number of Stores', type: 'select', options: [
-        { label: '1-5 stores', value: 'small', multiplier: 1 },
-        { label: '5-20 stores', value: 'medium', multiplier: 1.5 },
-        { label: '20+ stores', value: 'large', multiplier: 2.5 },
-      ]},
+      {
+        id: 'projectType', label: 'Project Type', type: 'select', options: [
+          { label: 'E-Commerce Platform', value: 'ecom', multiplier: 1.5 },
+          { label: 'Inventory System', value: 'inventory', multiplier: 1 },
+          { label: 'Full Digital Transformation', value: 'full', multiplier: 3 },
+        ]
+      },
+      {
+        id: 'storeCount', label: 'Number of Stores', type: 'select', options: [
+          { label: '1-5 stores', value: 'small', multiplier: 1 },
+          { label: '5-20 stores', value: 'medium', multiplier: 1.5 },
+          { label: '20+ stores', value: 'large', multiplier: 2.5 },
+        ]
+      },
     ],
     calculatorBaseRate: 20000,
   },
@@ -64,15 +68,19 @@ export const industries: IndustryData[] = [
     relevantServices: ['software-development', 'ai-machine-learning', 'data-analytics', 'digital-marketing'],
     caseStudy: { challenge: 'A GCC sports club needed to engage fans digitally beyond match-day attendance.', strategy: 'Gamified mobile platform with real-time stats, social features, and loyalty rewards.', implementation: 'React Native app with real-time data feeds, push notifications, and loyalty engine.', outcome: '200K+ app downloads in 3 months with 65% weekly active user rate.' },
     calculatorFields: [
-      { id: 'projectType', label: 'Project Type', type: 'select', options: [
-        { label: 'Fan Platform', value: 'fan', multiplier: 1.5 },
-        { label: 'Analytics System', value: 'analytics', multiplier: 1.2 },
-        { label: 'Complete Sports Tech', value: 'full', multiplier: 3 },
-      ]},
-      { id: 'scale', label: 'Organization Size', type: 'select', options: [
-        { label: 'Single Club', value: 'single', multiplier: 1 },
-        { label: 'Multi-Club / League', value: 'league', multiplier: 2.5 },
-      ]},
+      {
+        id: 'projectType', label: 'Project Type', type: 'select', options: [
+          { label: 'Fan Platform', value: 'fan', multiplier: 1.5 },
+          { label: 'Analytics System', value: 'analytics', multiplier: 1.2 },
+          { label: 'Complete Sports Tech', value: 'full', multiplier: 3 },
+        ]
+      },
+      {
+        id: 'scale', label: 'Organization Size', type: 'select', options: [
+          { label: 'Single Club', value: 'single', multiplier: 1 },
+          { label: 'Multi-Club / League', value: 'league', multiplier: 2.5 },
+        ]
+      },
     ],
     calculatorBaseRate: 25000,
   },
@@ -95,16 +103,20 @@ export const industries: IndustryData[] = [
     relevantServices: ['software-development', 'ai-machine-learning', 'cloud-infrastructure', 'data-analytics'],
     caseStudy: { challenge: 'A Kuwait university needed to modernize its decade-old student management system.', strategy: 'Cloud-native SIS with AI-driven student success predictions and mobile-first design.', implementation: 'Phased rollout across 5 faculties over 8 months with data migration from legacy system.', outcome: '60% reduction in administrative processing time and 25% improvement in student satisfaction scores.' },
     calculatorFields: [
-      { id: 'institutionType', label: 'Institution Type', type: 'select', options: [
-        { label: 'K-12 School', value: 'k12', multiplier: 1 },
-        { label: 'University', value: 'uni', multiplier: 2 },
-        { label: 'Training Center', value: 'training', multiplier: 0.8 },
-      ]},
-      { id: 'students', label: 'Student Count', type: 'select', options: [
-        { label: 'Under 500', value: 'small', multiplier: 1 },
-        { label: '500-5,000', value: 'medium', multiplier: 1.5 },
-        { label: '5,000+', value: 'large', multiplier: 2.5 },
-      ]},
+      {
+        id: 'institutionType', label: 'Institution Type', type: 'select', options: [
+          { label: 'K-12 School', value: 'k12', multiplier: 1 },
+          { label: 'University', value: 'uni', multiplier: 2 },
+          { label: 'Training Center', value: 'training', multiplier: 0.8 },
+        ]
+      },
+      {
+        id: 'students', label: 'Student Count', type: 'select', options: [
+          { label: 'Under 500', value: 'small', multiplier: 1 },
+          { label: '500-5,000', value: 'medium', multiplier: 1.5 },
+          { label: '5,000+', value: 'large', multiplier: 2.5 },
+        ]
+      },
     ],
     calculatorBaseRate: 18000,
   },
@@ -128,16 +140,20 @@ export const industries: IndustryData[] = [
     relevantServices: ['software-development', 'ai-machine-learning', 'cloud-infrastructure', 'data-analytics'],
     caseStudy: { challenge: 'A multi-clinic healthcare provider in Kuwait needed to unify patient records.', strategy: 'Cloud-based EHR with telemedicine integration and patient mobile app.', implementation: 'HIPAA-aligned system deployed across 8 clinics with staff training and data migration.', outcome: '35% reduction in appointment no-shows and 50% faster patient record retrieval.' },
     calculatorFields: [
-      { id: 'facilityType', label: 'Facility Type', type: 'select', options: [
-        { label: 'Single Clinic', value: 'clinic', multiplier: 1 },
-        { label: 'Multi-Clinic', value: 'multi', multiplier: 2 },
-        { label: 'Hospital', value: 'hospital', multiplier: 3.5 },
-      ]},
-      { id: 'modules', label: 'System Modules', type: 'select', options: [
-        { label: 'EHR Only', value: 'ehr', multiplier: 1 },
-        { label: 'EHR + Telemedicine', value: 'tele', multiplier: 1.6 },
-        { label: 'Full Healthcare Suite', value: 'full', multiplier: 2.5 },
-      ]},
+      {
+        id: 'facilityType', label: 'Facility Type', type: 'select', options: [
+          { label: 'Single Clinic', value: 'clinic', multiplier: 1 },
+          { label: 'Multi-Clinic', value: 'multi', multiplier: 2 },
+          { label: 'Hospital', value: 'hospital', multiplier: 3.5 },
+        ]
+      },
+      {
+        id: 'modules', label: 'System Modules', type: 'select', options: [
+          { label: 'EHR Only', value: 'ehr', multiplier: 1 },
+          { label: 'EHR + Telemedicine', value: 'tele', multiplier: 1.6 },
+          { label: 'Full Healthcare Suite', value: 'full', multiplier: 2.5 },
+        ]
+      },
     ],
     calculatorBaseRate: 30000,
   },
@@ -160,15 +176,19 @@ export const industries: IndustryData[] = [
     relevantServices: ['digital-marketing', 'ai-machine-learning', 'data-analytics', 'social-media-management'],
     caseStudy: { challenge: 'A marketing agency managing 50+ GCC brand accounts needed operational efficiency.', strategy: 'Centralized campaign platform with AI-powered performance optimization.', implementation: 'Custom dashboard integrating 12 marketing tools with automated reporting.', outcome: '40% reduction in reporting time and 22% improvement in average campaign ROAS.' },
     calculatorFields: [
-      { id: 'scope', label: 'Implementation Scope', type: 'select', options: [
-        { label: 'Single Channel', value: 'single', multiplier: 1 },
-        { label: 'Multi-Channel', value: 'multi', multiplier: 2 },
-        { label: 'Full MarTech Stack', value: 'full', multiplier: 3.5 },
-      ]},
-      { id: 'automation', label: 'Automation Level', type: 'select', options: [
-        { label: 'Basic', value: 'basic', multiplier: 1 },
-        { label: 'Advanced (AI-driven)', value: 'advanced', multiplier: 1.8 },
-      ]},
+      {
+        id: 'scope', label: 'Implementation Scope', type: 'select', options: [
+          { label: 'Single Channel', value: 'single', multiplier: 1 },
+          { label: 'Multi-Channel', value: 'multi', multiplier: 2 },
+          { label: 'Full MarTech Stack', value: 'full', multiplier: 3.5 },
+        ]
+      },
+      {
+        id: 'automation', label: 'Automation Level', type: 'select', options: [
+          { label: 'Basic', value: 'basic', multiplier: 1 },
+          { label: 'Advanced (AI-driven)', value: 'advanced', multiplier: 1.8 },
+        ]
+      },
     ],
     calculatorBaseRate: 15000,
   },
@@ -191,16 +211,20 @@ export const industries: IndustryData[] = [
     relevantServices: ['software-development', 'digital-marketing', 'data-analytics', 'cloud-infrastructure'],
     caseStudy: { challenge: 'A Kuwait real estate developer needed a modern digital platform for off-plan sales.', strategy: 'Interactive property platform with 3D tours, online booking, and CRM integration.', implementation: 'Web platform with virtual tours, payment gateway, and lead management system.', outcome: '55% of off-plan units sold through the digital platform within 3 months of launch.' },
     calculatorFields: [
-      { id: 'projectType', label: 'Project Type', type: 'select', options: [
-        { label: 'Property Listing Site', value: 'listing', multiplier: 1 },
-        { label: 'CRM System', value: 'crm', multiplier: 1.2 },
-        { label: 'Full PropTech Platform', value: 'full', multiplier: 2.5 },
-      ]},
-      { id: 'properties', label: 'Property Portfolio Size', type: 'select', options: [
-        { label: 'Under 100 units', value: 'small', multiplier: 1 },
-        { label: '100-1,000 units', value: 'medium', multiplier: 1.5 },
-        { label: '1,000+ units', value: 'large', multiplier: 2.2 },
-      ]},
+      {
+        id: 'projectType', label: 'Project Type', type: 'select', options: [
+          { label: 'Property Listing Site', value: 'listing', multiplier: 1 },
+          { label: 'CRM System', value: 'crm', multiplier: 1.2 },
+          { label: 'Full PropTech Platform', value: 'full', multiplier: 2.5 },
+        ]
+      },
+      {
+        id: 'properties', label: 'Property Portfolio Size', type: 'select', options: [
+          { label: 'Under 100 units', value: 'small', multiplier: 1 },
+          { label: '100-1,000 units', value: 'medium', multiplier: 1.5 },
+          { label: '1,000+ units', value: 'large', multiplier: 2.2 },
+        ]
+      },
     ],
     calculatorBaseRate: 18000,
   },
@@ -224,16 +248,20 @@ export const industries: IndustryData[] = [
     relevantServices: ['software-development', 'ai-machine-learning', 'data-analytics', 'digital-marketing'],
     caseStudy: { challenge: 'A GCC retail chain with 30 stores needed to unify online and offline operations.', strategy: 'Unified commerce platform with real-time inventory sync and AI-driven personalization.', implementation: 'Headless commerce architecture integrated with existing POS and ERP systems.', outcome: '38% increase in cross-channel sales and 25% reduction in inventory carrying costs.' },
     calculatorFields: [
-      { id: 'projectType', label: 'Project Type', type: 'select', options: [
-        { label: 'E-Commerce', value: 'ecom', multiplier: 1.2 },
-        { label: 'POS + Inventory', value: 'pos', multiplier: 1.5 },
-        { label: 'Full Omnichannel', value: 'omni', multiplier: 3 },
-      ]},
-      { id: 'locations', label: 'Store Locations', type: 'select', options: [
-        { label: '1-10', value: 'small', multiplier: 1 },
-        { label: '10-50', value: 'medium', multiplier: 1.8 },
-        { label: '50+', value: 'large', multiplier: 3 },
-      ]},
+      {
+        id: 'projectType', label: 'Project Type', type: 'select', options: [
+          { label: 'E-Commerce', value: 'ecom', multiplier: 1.2 },
+          { label: 'POS + Inventory', value: 'pos', multiplier: 1.5 },
+          { label: 'Full Omnichannel', value: 'omni', multiplier: 3 },
+        ]
+      },
+      {
+        id: 'locations', label: 'Store Locations', type: 'select', options: [
+          { label: '1-10', value: 'small', multiplier: 1 },
+          { label: '10-50', value: 'medium', multiplier: 1.8 },
+          { label: '50+', value: 'large', multiplier: 3 },
+        ]
+      },
     ],
     calculatorBaseRate: 22000,
   },
@@ -253,19 +281,23 @@ export const industries: IndustryData[] = [
       { title: 'Tracking Platform', desc: 'Real-time shipment tracking with customer-facing status updates.' },
       { title: 'Driver Management', desc: 'Digital driver logs, safety scoring, and compliance tracking.' },
     ],
-    relevantServices: ['software-development', 'ai-machine-learning', 'cloud-infrastructure', 'intelligent-systems-automation'],
+    relevantServices: ['software-development', 'ai-machine-learning', 'cloud-infrastructure', 'intelligent-systems'],
     caseStudy: { challenge: 'A Kuwait logistics company with 200+ vehicles needed fleet optimization.', strategy: 'IoT-connected fleet platform with AI-driven route optimization and predictive maintenance.', implementation: 'GPS tracking, telematics integration, and mobile driver app deployed over 4 months.', outcome: '22% reduction in fuel costs and 35% improvement in on-time delivery rates.' },
     calculatorFields: [
-      { id: 'fleetSize', label: 'Fleet Size', type: 'select', options: [
-        { label: 'Under 50 vehicles', value: 'small', multiplier: 1 },
-        { label: '50-200 vehicles', value: 'medium', multiplier: 2 },
-        { label: '200+ vehicles', value: 'large', multiplier: 3.5 },
-      ]},
-      { id: 'features', label: 'Features', type: 'select', options: [
-        { label: 'Tracking Only', value: 'tracking', multiplier: 1 },
-        { label: 'Tracking + Optimization', value: 'optimized', multiplier: 1.6 },
-        { label: 'Full Fleet Management', value: 'full', multiplier: 2.5 },
-      ]},
+      {
+        id: 'fleetSize', label: 'Fleet Size', type: 'select', options: [
+          { label: 'Under 50 vehicles', value: 'small', multiplier: 1 },
+          { label: '50-200 vehicles', value: 'medium', multiplier: 2 },
+          { label: '200+ vehicles', value: 'large', multiplier: 3.5 },
+        ]
+      },
+      {
+        id: 'features', label: 'Features', type: 'select', options: [
+          { label: 'Tracking Only', value: 'tracking', multiplier: 1 },
+          { label: 'Tracking + Optimization', value: 'optimized', multiplier: 1.6 },
+          { label: 'Full Fleet Management', value: 'full', multiplier: 2.5 },
+        ]
+      },
     ],
     calculatorBaseRate: 15000,
   },
@@ -285,18 +317,22 @@ export const industries: IndustryData[] = [
       { title: 'Supplier Portal', desc: 'Digital platform for supplier onboarding, PO management, and performance.' },
       { title: 'Supply Chain Analytics', desc: 'End-to-end visibility dashboards with predictive disruption alerts.' },
     ],
-    relevantServices: ['software-development', 'ai-machine-learning', 'data-analytics', 'intelligent-systems-automation'],
+    relevantServices: ['software-development', 'ai-machine-learning', 'data-analytics', 'intelligent-systems'],
     caseStudy: { challenge: 'A Kuwait distributor with 5 warehouses struggled with inventory accuracy.', strategy: 'Modern WMS with RFID tracking and AI-driven demand forecasting.', implementation: 'Phased rollout with barcode integration, mobile picking, and analytics dashboards.', outcome: '99.2% inventory accuracy (up from 87%) and 40% faster order fulfillment.' },
     calculatorFields: [
-      { id: 'scope', label: 'Project Scope', type: 'select', options: [
-        { label: 'Single Warehouse', value: 'single', multiplier: 1 },
-        { label: 'Multi-Warehouse', value: 'multi', multiplier: 2.5 },
-        { label: 'Full Supply Chain', value: 'full', multiplier: 4 },
-      ]},
-      { id: 'automation', label: 'Automation Level', type: 'select', options: [
-        { label: 'Semi-Automated', value: 'semi', multiplier: 1 },
-        { label: 'Fully Automated', value: 'full', multiplier: 2 },
-      ]},
+      {
+        id: 'scope', label: 'Project Scope', type: 'select', options: [
+          { label: 'Single Warehouse', value: 'single', multiplier: 1 },
+          { label: 'Multi-Warehouse', value: 'multi', multiplier: 2.5 },
+          { label: 'Full Supply Chain', value: 'full', multiplier: 4 },
+        ]
+      },
+      {
+        id: 'automation', label: 'Automation Level', type: 'select', options: [
+          { label: 'Semi-Automated', value: 'semi', multiplier: 1 },
+          { label: 'Fully Automated', value: 'full', multiplier: 2 },
+        ]
+      },
     ],
     calculatorBaseRate: 20000,
   },
@@ -320,16 +356,20 @@ export const industries: IndustryData[] = [
     relevantServices: ['software-development', 'ai-machine-learning', 'cloud-infrastructure', 'data-analytics'],
     caseStudy: { challenge: 'A Kuwait investment firm needed to automate compliance reporting for CBK regulations.', strategy: 'RegTech platform with automated data collection, validation, and report generation.', implementation: 'Integration with trading systems, CRM, and CBK submission portals over 5 months.', outcome: '80% reduction in compliance reporting time and zero regulatory submission errors.' },
     calculatorFields: [
-      { id: 'projectType', label: 'Project Type', type: 'select', options: [
-        { label: 'RegTech / Compliance', value: 'regtech', multiplier: 1.5 },
-        { label: 'Digital Banking', value: 'banking', multiplier: 2.5 },
-        { label: 'Risk Analytics', value: 'risk', multiplier: 2 },
-        { label: 'Payment Platform', value: 'payments', multiplier: 2 },
-      ]},
-      { id: 'compliance', label: 'Compliance Requirements', type: 'select', options: [
-        { label: 'Standard', value: 'standard', multiplier: 1 },
-        { label: 'Enhanced (CBK/CMA)', value: 'enhanced', multiplier: 1.5 },
-      ]},
+      {
+        id: 'projectType', label: 'Project Type', type: 'select', options: [
+          { label: 'RegTech / Compliance', value: 'regtech', multiplier: 1.5 },
+          { label: 'Digital Banking', value: 'banking', multiplier: 2.5 },
+          { label: 'Risk Analytics', value: 'risk', multiplier: 2 },
+          { label: 'Payment Platform', value: 'payments', multiplier: 2 },
+        ]
+      },
+      {
+        id: 'compliance', label: 'Compliance Requirements', type: 'select', options: [
+          { label: 'Standard', value: 'standard', multiplier: 1 },
+          { label: 'Enhanced (CBK/CMA)', value: 'enhanced', multiplier: 1.5 },
+        ]
+      },
     ],
     calculatorBaseRate: 35000,
   },
@@ -349,19 +389,23 @@ export const industries: IndustryData[] = [
       { title: 'Customer Portal', desc: 'Self-service platforms for quotes, policy management, and claims filing.' },
       { title: 'Fraud Detection', desc: 'Pattern recognition and anomaly detection for claims fraud prevention.' },
     ],
-    relevantServices: ['software-development', 'ai-machine-learning', 'data-analytics', 'intelligent-systems-automation'],
+    relevantServices: ['software-development', 'ai-machine-learning', 'data-analytics', 'intelligent-systems'],
     caseStudy: { challenge: 'A Kuwait insurer processing 10,000+ claims monthly needed automation.', strategy: 'AI-driven claims triage with automated assessment for standard claims and smart routing for complex ones.', implementation: 'Integration with policy admin system, document AI, and payment processing.', outcome: '60% of standard claims auto-settled within 24 hours (previously 5-7 days).' },
     calculatorFields: [
-      { id: 'projectType', label: 'Project Type', type: 'select', options: [
-        { label: 'Claims Automation', value: 'claims', multiplier: 1.5 },
-        { label: 'Customer Portal', value: 'portal', multiplier: 1 },
-        { label: 'Full InsurTech Suite', value: 'full', multiplier: 3 },
-      ]},
-      { id: 'policyVolume', label: 'Policy Volume', type: 'select', options: [
-        { label: 'Under 50K policies', value: 'small', multiplier: 1 },
-        { label: '50K-500K', value: 'medium', multiplier: 1.8 },
-        { label: '500K+', value: 'large', multiplier: 2.5 },
-      ]},
+      {
+        id: 'projectType', label: 'Project Type', type: 'select', options: [
+          { label: 'Claims Automation', value: 'claims', multiplier: 1.5 },
+          { label: 'Customer Portal', value: 'portal', multiplier: 1 },
+          { label: 'Full InsurTech Suite', value: 'full', multiplier: 3 },
+        ]
+      },
+      {
+        id: 'policyVolume', label: 'Policy Volume', type: 'select', options: [
+          { label: 'Under 50K policies', value: 'small', multiplier: 1 },
+          { label: '50K-500K', value: 'medium', multiplier: 1.8 },
+          { label: '500K+', value: 'large', multiplier: 2.5 },
+        ]
+      },
     ],
     calculatorBaseRate: 28000,
   },
@@ -381,19 +425,23 @@ export const industries: IndustryData[] = [
       { title: 'Contract AI', desc: 'AI-powered contract review, risk identification, and clause extraction.' },
       { title: 'Legal Billing', desc: 'Automated time tracking, billing, and trust account management.' },
     ],
-    relevantServices: ['software-development', 'ai-machine-learning', 'intelligent-systems-automation', 'data-entry-services'],
+    relevantServices: ['software-development', 'ai-machine-learning', 'intelligent-systems', 'data-entry'],
     caseStudy: { challenge: 'A Kuwait law firm with 50 attorneys needed to modernize case and document management.', strategy: 'Integrated legal practice management with AI-powered document review and Arabic support.', implementation: 'Cloud-based platform with document automation, billing, and client portal.', outcome: '45% reduction in document preparation time and 30% improvement in billing accuracy.' },
     calculatorFields: [
-      { id: 'firmSize', label: 'Firm Size', type: 'select', options: [
-        { label: 'Small (1-10 attorneys)', value: 'small', multiplier: 1 },
-        { label: 'Medium (10-50)', value: 'medium', multiplier: 1.8 },
-        { label: 'Large (50+)', value: 'large', multiplier: 3 },
-      ]},
-      { id: 'modules', label: 'Modules', type: 'select', options: [
-        { label: 'Case Management', value: 'case', multiplier: 1 },
-        { label: 'Case + Document AI', value: 'doc', multiplier: 1.6 },
-        { label: 'Full Legal Suite', value: 'full', multiplier: 2.5 },
-      ]},
+      {
+        id: 'firmSize', label: 'Firm Size', type: 'select', options: [
+          { label: 'Small (1-10 attorneys)', value: 'small', multiplier: 1 },
+          { label: 'Medium (10-50)', value: 'medium', multiplier: 1.8 },
+          { label: 'Large (50+)', value: 'large', multiplier: 3 },
+        ]
+      },
+      {
+        id: 'modules', label: 'Modules', type: 'select', options: [
+          { label: 'Case Management', value: 'case', multiplier: 1 },
+          { label: 'Case + Document AI', value: 'doc', multiplier: 1.6 },
+          { label: 'Full Legal Suite', value: 'full', multiplier: 2.5 },
+        ]
+      },
     ],
     calculatorBaseRate: 20000,
   },

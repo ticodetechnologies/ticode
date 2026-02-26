@@ -11,6 +11,7 @@ import { lazy, Suspense } from "react";
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const ServicePage = lazy(() => import("./pages/ServicePage"));
+const ITConsultingPage = lazy(() => import("./pages/services/ITConsultingPage"));
 const IndustryPage = lazy(() => import("./pages/IndustryPage"));
 const AISolutions = lazy(() => import("./pages/AISolutions"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
@@ -37,6 +38,7 @@ const App = () => (
             <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<Index />} />
+                <Route path="/services/it-consulting" element={<ITConsultingPage />} />
                 <Route path="/services/:slug" element={<ServicePage />} />
                 <Route path="/industries/:slug" element={<IndustryPage />} />
                 <Route path="/ai-solutions" element={<AISolutions />} />

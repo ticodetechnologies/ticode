@@ -1,214 +1,293 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck, Activity, Terminal, Brain, Cloud, Globe, Cpu } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const showcaseItems = [
+    {
+        type: "INDUSTRY",
+        title: "Finance & Banking",
+        metric: "$45M+ Capital Secured",
+        sub: "Tier-1 Risk Mitigation",
+        icon: Activity
+    },
+    {
+        type: "SERVICE",
+        title: "AI Solutions",
+        metric: "12TB/s Data Processed",
+        sub: "Predictive Models Active",
+        icon: Brain
+    },
+    {
+        type: "INDUSTRY",
+        title: "Healthcare Systems",
+        metric: "HIPAA Compliant Nodes",
+        sub: "Zero-Trust Architecture",
+        icon: ShieldCheck
+    },
+    {
+        type: "SERVICE",
+        title: "Cloud Infrastructure",
+        metric: "99.999% Availability",
+        sub: "Geo-Redundant Servers",
+        icon: Cloud
+    },
+    {
+        type: "INDUSTRY",
+        title: "Global Logistics",
+        metric: "Real-Time Tracking",
+        sub: "Automated Supply Chain",
+        icon: Globe
+    },
+    {
+        type: "SERVICE",
+        title: "Custom Software",
+        metric: "High-Performance APIs",
+        sub: "Scalable Microservices",
+        icon: Cpu
+    }
+];
 
 const HeroDirective = () => {
     const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
-    const bgGlowRef = useRef<HTMLDivElement>(null);
-    const networkDotRef = useRef<HTMLDivElement>(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % showcaseItems.length);
+        }, 4000); // 4 seconds per item
+        return () => clearInterval(timer);
+    }, []);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
             gsap.fromTo(
-                ".hero-stagger",
-                { opacity: 0, y: 30 },
+                ".hero-anim-item",
+                { opacity: 0, y: 30, filter: "blur(4px)" },
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 0.9,
+                    filter: "blur(0px)",
+                    duration: 1.2,
                     stagger: 0.15,
-                    ease: "power2.out",
+                    ease: "power3.out",
                 }
             );
 
-            // 1. Network Status Pulse
-            if (networkDotRef.current) {
-                gsap.fromTo(networkDotRef.current,
-                    { scale: 1, opacity: 1 },
-                    {
-                        scale: 1.8,
-                        opacity: 0.2,
-                        duration: 2,
-                        repeat: -1,
-                        yoyo: true,
-                        ease: "sine.inOut"
-                    }
-                );
-            }
-
-            // 3. Background Depth Shift
-            if (bgGlowRef.current) {
-                gsap.to(bgGlowRef.current, {
-                    x: "8%",
-                    y: "12%",
-                    duration: 18,
-                    repeat: -1,
-                    yoyo: true,
-                    ease: "sine.inOut"
-                });
-            }
-
-            // 2. Metric Entrance
             gsap.fromTo(
-                ".metric-entrance",
-                { opacity: 0, y: 10 },
+                ".hero-metrics-panel",
+                { opacity: 0, x: 40 },
                 {
                     opacity: 1,
-                    y: 0,
-                    duration: 1,
-                    stagger: 0.15,
-                    ease: "power2.out",
-                    delay: 0.6
+                    x: 0,
+                    duration: 1.4,
+                    delay: 0.6,
+                    ease: "power3.out"
                 }
             );
+
+            gsap.to(".authority-strip-track", {
+                xPercent: -50,
+                ease: "none",
+                duration: 40,
+                repeat: -1
+            });
         }, containerRef);
 
         return () => ctx.revert();
     }, []);
 
     return (
-        <section className="relative flex min-h-[85vh] items-center overflow-hidden bg-base pt-24 md:pt-36 pb-16 md:pb-20">
-            {/* Immersive Background with Subtle Deep Radial Glow */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(45,107,255,0.15)_0%,transparent_60%)]" />
-                <div className="absolute inset-0 noise-overlay opacity-[0.03]" />
-            </div>
+        <section className="relative flex min-h-[100dvh] items-center overflow-hidden bg-base pt-16 lg:pt-20 pb-8 lg:pb-12 font-sans border-b border-white/5">
+            {/* Soft background grid texture */}
+            <div className="absolute inset-0 texture-grid-navy mix-blend-overlay" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/10 rounded-full blur-[150px] pointer-events-none" />
 
-            <div className="container-tight relative z-10" ref={containerRef}>
-                <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-center pt-8">
+            <div className="container-tight relative z-10 w-full" ref={containerRef}>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center pt-2 lg:pt-4">
                     {/* Left Column: Command Entry */}
-                    <div className="lg:col-span-7 text-left">
-                        {/* Executive Data Strip */}
-                        <div className="hero-stagger mb-8 flex flex-wrap items-center justify-start gap-4 text-[0.65rem] md:text-xs font-bold uppercase tracking-[0.2em] text-accent-cyan">
-                            <div className="flex items-center gap-2">
-                                <span className="relative flex h-2 w-2">
-                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-cyan opacity-75"></span>
-                                    <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-cyan"></span>
-                                </span>
-                                System Operational
-                            </div>
-                            <div className="text-white/20 hidden md:block">—</div>
-                            <div className="text-white/60">GCC Node Active</div>
+                    <div className="lg:col-span-7 flex flex-col justify-center">
+                        <div className="hero-anim-item mb-6 flex items-center gap-3 w-max">
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-cyan opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-cyan"></span>
+                            </span>
+                            <span className="text-xs font-bold tracking-[0.1em] text-slate-300 uppercase font-mono">
+                                System Operational <span className="text-slate-500 mx-2">/</span> GCC Node Active
+                            </span>
                         </div>
 
-                        {/* Dramatic Headline Hierarchy - Sovereign Authority */}
-                        <h1 className="hero-stagger font-heading text-[2.75rem] font-black leading-[1.05] tracking-[-0.02em] text-white md:text-[4.5rem] lg:text-[5.5rem] drop-shadow-2xl">
-                            <span className="block text-white/90">Sovereign Digital</span>
-                            <span className="block bg-gradient-to-r from-brand-blue to-accent-cyan bg-clip-text text-transparent drop-shadow-[0_0_60px_rgba(45,107,255,0.4)]">
-                                Transformation.
+                        {/* Clear, Executive Headline */}
+                        <h1 className="hero-anim-item text-[3.5rem] md:text-5xl lg:text-[4rem] font-extrabold leading-[1] tracking-tight text-white flex flex-col gap-1 pb-2">
+                            <span className="block">Board-Level Digital</span>
+                            <span className="block">Transformation</span>
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent-cyan">
+                                For Risk-Resilient Enterprises.
                             </span>
                         </h1>
 
-                        {/* Executive Summary Line */}
-                        <p className="hero-stagger mt-6 md:mt-8 max-w-xl text-base md:text-lg font-medium leading-[1.65] text-white/80 tracking-normal xl:text-xl">
+                        <p className="hero-anim-item mt-4 max-w-xl text-lg text-slate-300 leading-relaxed font-medium">
                             {t(
                                 "home.hero.subtext",
-                                "Engineered for the enterprise. Built for GCC scale. Absolute security."
+                                "Delivering elite IT consulting, strategic AI implementation, and structurally sound digital transformations for GCC market leaders."
                             )}
                         </p>
 
-                        {/* Actions */}
-                        <div className="hero-stagger mt-8 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:gap-4 w-full sm:w-auto">
-                            <Button
-                                asChild
-                                size="lg"
-                                className="group relative h-auto overflow-hidden rounded-xl bg-brand-blue px-8 py-4 sm:py-6 text-sm sm:text-base font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 active:scale-95 border border-transparent hover:border-white/20 w-full sm:w-auto"
+                        <div className="hero-anim-item mt-6 flex items-center gap-6">
+                            <Link
+                                to="/contact"
+                                className="group relative overflow-hidden inline-flex items-center justify-center bg-gradient-to-r from-brand-blue to-accent-cyan px-8 py-5 text-sm font-bold tracking-wide text-white transition-all shadow-[0_4px_14px_0_rgba(47,107,255,0.39)] hover:shadow-[0_6px_20px_rgba(47,107,255,0.23)] hover:-translate-y-0.5"
                             >
-                                <Link to="/contact">
-                                    <span className="relative z-10 flex items-center">
-                                        {t("home.hero.ctaPrimary", "Contact Partner")}
-                                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                    </span>
-                                    <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-dark to-brand-blue opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                </Link>
-                            </Button>
-                            <Button
-                                asChild
-                                size="lg"
-                                variant="outline"
-                                className="h-auto rounded-xl border border-white/20 bg-transparent px-8 py-4 sm:py-6 text-sm sm:text-base font-bold text-white transition-all duration-300 hover:bg-white/5 hover:border-white/40 hover:-translate-y-1 active:scale-95 w-full sm:w-auto"
-                            >
-                                <Link to="/case-studies">
-                                    <span className="relative z-10 flex items-center justify-center text-white">
-                                        {t("home.hero.ctaSecondary", "View Case Studies")}
-                                    </span>
-                                </Link>
-                            </Button>
+                                <span className="relative z-10 flex items-center">
+                                    {t("home.hero.ctaPrimary", "Initiate Strategic Engagement")}
+                                    <ArrowRight className="ml-3 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                </span>
+                                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                            </Link>
+                        </div>
+
+                        {/* Clean Data Strip */}
+                        <div className="hero-anim-item mt-8 overflow-hidden w-full relative border-t border-white/5 pt-5">
+                            <div className="authority-strip-track flex w-max items-center gap-16 text-sm uppercase tracking-wider text-slate-400 font-medium">
+                                <div className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-brand-blue" /> GCC Compliance</div>
+                                <div className="w-1.5 h-1.5 rounded-full bg-slate-700" />
+                                <div className="flex items-center gap-3"><Activity className="w-4 h-4 text-brand-blue" /> Board-Level Advisory</div>
+                                <div className="w-1.5 h-1.5 rounded-full bg-slate-700" />
+                                <div className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-brand-blue" /> ISO Certified Standards</div>
+                                <div className="w-1.5 h-1.5 rounded-full bg-slate-700" />
+                                <div className="flex items-center gap-3"><Activity className="w-4 h-4 text-brand-blue" /> Strategic Architecture</div>
+                                <div className="w-1.5 h-1.5 rounded-full bg-slate-700" />
+
+                                {/* Duplicate for infinite loop */}
+                                <div className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-brand-blue" /> GCC Compliance</div>
+                                <div className="w-1.5 h-1.5 rounded-full bg-slate-700" />
+                                <div className="flex items-center gap-3"><Activity className="w-4 h-4 text-brand-blue" /> Board-Level Advisory</div>
+                                <div className="w-1.5 h-1.5 rounded-full bg-slate-700" />
+                                <div className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-brand-blue" /> ISO Certified Standards</div>
+                                <div className="w-1.5 h-1.5 rounded-full bg-slate-700" />
+                                <div className="flex items-center gap-3"><Activity className="w-4 h-4 text-brand-blue" /> Strategic Architecture</div>
+                            </div>
+
+                            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0E1A2B] to-transparent pointer-events-none mt-8" />
+                            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#0E1A2B] to-transparent pointer-events-none mt-8" />
                         </div>
                     </div>
 
-                    {/* Right Column: Executive Performance Module */}
-                    <div className="lg:col-span-5 hidden lg:block">
-                        <div className="hero-stagger group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0B1521] p-8 shadow-2xl h-full flex flex-col justify-center min-h-[400px] transition-all duration-[250ms] ease-out hover:-translate-y-1 hover:scale-[1.01] hover:border-white/20">
-                            {/* Inner ambient glow + 4. Hover effect on border */}
-                            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-blue/50 to-transparent transition-opacity duration-[250ms] group-hover:via-accent-cyan/80" />
+                    {/* Right Column: Clear Enterprise Card */}
+                    <div className="lg:col-span-5 hidden lg:block perspective-[1000px]">
+                        <div className="hero-metrics-panel relative bg-[#0D1826]/60 backdrop-blur-3xl border border-white/5 p-6 lg:p-8 rounded-[2rem] h-full flex flex-col justify-center min-h-[380px] shadow-[0_20px_60px_-15px_rgba(47,107,255,0.15)] overflow-hidden group hover:border-brand-blue/30 transition-all duration-700">
 
-                            {/* 3. Background Depth layer */}
-                            <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-2xl">
-                                <div ref={bgGlowRef} className="absolute -inset-[50%] bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.08)_0%,transparent_50%)]" />
-                            </div>
+                            {/* Ambient internal glows */}
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-accent-cyan/10 rounded-full blur-[80px] group-hover:bg-accent-cyan/20 transition-colors duration-700 pointer-events-none" />
+                            <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-blue/5 rounded-full blur-[80px] group-hover:bg-brand-blue/15 transition-colors duration-700 pointer-events-none" />
 
-                            <div className="relative z-10 mb-8 flex items-center justify-between border-b border-white/10 pb-4 transition-colors duration-[250ms] group-hover:border-white/20">
-                                <div className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/40">
-                                    Network Status
+                            <div className="relative z-10 mb-6 flex items-center justify-between border-b border-white/10 pb-5">
+                                <div className="text-xs font-semibold uppercase tracking-widest text-slate-400 font-mono">
+                                    Network Telemetry
                                 </div>
-                                <div className="flex items-center gap-2 text-xs font-mono text-accent-cyan">
-                                    99.999%
-                                    <div className="relative flex h-1.5 w-1.5 items-center justify-center">
-                                        {/* GSAP controlled pulse layer */}
-                                        <div ref={networkDotRef} className="absolute h-full w-full rounded-full bg-accent-cyan shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
-                                        {/* Static core */}
-                                        <div className="absolute h-1 w-1 rounded-full bg-white" />
-                                    </div>
+                                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-white font-mono">
+                                    <Activity className="w-4 h-4 text-accent-cyan animate-pulse-glow" />
+                                    Live Nodes
                                 </div>
                             </div>
 
-                            <div className="relative z-10 space-y-6">
-                                <div>
-                                    <div className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-white/50 mb-1">
-                                        Active Board Implementations
-                                    </div>
-                                    <div className="metric-entrance font-mono text-4xl font-black text-white opacity-0">$45M+</div>
-                                </div>
+                            <div className="relative z-10 w-full flex flex-col gap-2">
+                                {showcaseItems.map((item, idx) => {
+                                    const isActive = currentIndex === idx;
+                                    const Icon = item.icon;
 
-                                <div>
-                                    <div className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-white/50 mb-1">
-                                        Infrastructure Risk Mitigation
-                                    </div>
-                                    <div className="metric-entrance font-mono text-4xl font-black text-white opacity-0">Tier-1</div>
-                                </div>
+                                    return (
+                                        <motion.div
+                                            key={idx}
+                                            layout
+                                            onClick={() => setCurrentIndex(idx)}
+                                            className={`relative flex flex-col rounded-xl border cursor-pointer transition-all duration-500 overflow-hidden group/item
+                                                ${isActive
+                                                    ? 'bg-gradient-to-r from-brand-blue/10 via-[#11223A]/40 to-transparent border-brand-blue/40 shadow-[inset_0px_0px_20px_rgba(47,107,255,0.15)] p-4'
+                                                    : 'border-transparent p-3 hover:bg-white/[0.03] opacity-50 hover:opacity-100 hover:border-white/10'
+                                                }
+                                            `}
+                                        >
+                                            {/* Active Highlight Line */}
+                                            {isActive && (
+                                                <motion.div
+                                                    layoutId="active-indicator"
+                                                    className="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-b from-brand-blue via-accent-cyan to-brand-blue shadow-[0_0_12px_rgba(0,194,255,0.8)]"
+                                                />
+                                            )}
 
-                                <div>
-                                    <div className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-white/50 mb-1">
-                                        Data Sovereignty Compliance
-                                    </div>
-                                    <div className="metric-entrance flex items-center gap-3 opacity-0">
-                                        <div className="font-mono text-4xl font-black text-white">100%</div>
-                                        <ShieldCheck className="h-6 w-6 text-brand-blue" />
-                                    </div>
-                                </div>
+                                            <div className="flex items-center gap-4 relative z-10">
+                                                <div className={`transition-all duration-500 ${isActive ? 'text-accent-cyan drop-shadow-[0_0_8px_rgba(0,194,255,0.8)]' : 'text-slate-500 group-hover/item:text-slate-400'}`}>
+                                                    <Icon className={isActive ? "w-5 h-5" : "w-4 h-4"} />
+                                                </div>
+                                                <div className={`font-mono transition-all duration-500 tracking-tight ${isActive ? 'text-white text-base font-bold drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]' : 'text-slate-400 text-sm group-hover/item:text-slate-300'}`}>
+                                                    {item.title}
+                                                </div>
+
+                                                {isActive && (
+                                                    <div className="ml-auto flex items-center gap-2">
+                                                        <div className="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse" />
+                                                        <span className="text-[10px] font-mono text-accent-cyan uppercase tracking-widest hidden sm:block">
+                                                            Active
+                                                        </span>
+                                                    </div>
+                                                )}
+                                            </div>
+
+                                            <AnimatePresence>
+                                                {isActive && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, height: 0 }}
+                                                        animate={{ opacity: 1, height: 'auto' }}
+                                                        exit={{ opacity: 0, height: 0 }}
+                                                        transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                                                        className="overflow-hidden relative z-10"
+                                                    >
+                                                        <div className="pt-4 pl-9 flex flex-col gap-3">
+                                                            <div className="relative flex items-center gap-3 text-slate-200 group/sub py-2 px-3 rounded-lg bg-white/5 border border-white/10 hover:border-brand-blue/30 transition-all duration-300">
+                                                                <div className="flex items-center justify-center w-6 h-6 rounded bg-brand-blue/10 border border-brand-blue/20 group-hover/sub:border-accent-cyan/50 transition-colors">
+                                                                    <ShieldCheck className="w-3.5 h-3.5 text-accent-cyan" />
+                                                                </div>
+                                                                <span className="font-mono text-[13px] tracking-wide relative">
+                                                                    {item.metric}
+                                                                </span>
+                                                                <div className="absolute inset-0 bg-brand-blue/5 blur-xl opacity-0 group-hover/sub:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                                                            </div>
+                                                            <div className="relative flex items-center gap-3 text-slate-400 group/sub py-2 px-3 rounded-lg bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300">
+                                                                <div className="flex items-center justify-center w-6 h-6 rounded bg-white/5 border border-white/10 group-hover/sub:border-white/20 transition-colors">
+                                                                    <Terminal className="w-3.5 h-3.5 text-slate-400" />
+                                                                </div>
+                                                                <span className="font-mono text-[13px] tracking-wide relative">
+                                                                    {item.sub}
+                                                                </span>
+                                                                <div className="absolute inset-0 bg-white/5 blur-xl opacity-0 group-hover/sub:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                                                            </div>
+                                                        </div>
+
+                                                        {/* Subtle glowing radial background for active content area */}
+                                                        <div className="absolute top-0 right-0 w-32 h-32 bg-brand-blue/10 blur-[40px] rounded-full pointer-events-none" />
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </motion.div>
+                                    )
+                                })}
+                            </div>
+
+                            {/* Cycle Progress Bar */}
+                            <div className="relative z-10 w-full h-1 bg-slate-800/50 mt-6 overflow-hidden rounded-full">
+                                <motion.div
+                                    key={`progress-${currentIndex}`}
+                                    className="h-full bg-gradient-to-r from-brand-blue to-accent-cyan origin-left"
+                                    initial={{ scaleX: 0 }}
+                                    animate={{ scaleX: 1 }}
+                                    transition={{ duration: 4, ease: "linear" }}
+                                />
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                {/* Micro Trust Row - Reduced Spacing to keep above fold */}
-                <div className="hero-stagger mt-12 md:mt-16 border-t border-white/10 pt-6 flex flex-wrap items-center gap-x-8 gap-y-4 text-xs font-bold uppercase tracking-[0.15em] text-white/40">
-                    <div className="flex items-center gap-3 group">
-                        <ShieldCheck className="h-4 w-4 text-surface-2 transition-colors duration-500 group-hover:text-accent-cyan" />
-                        ISO-Aligned Delivery
-                    </div>
-                    <div className="flex items-center gap-3 group">
-                        <ShieldCheck className="h-4 w-4 text-surface-2 transition-colors duration-500 group-hover:text-accent-cyan" />
-                        GCC Regulatory Expertise
-                    </div>
-                    <div className="flex items-center gap-3 group">
-                        <ShieldCheck className="h-4 w-4 text-surface-2 transition-colors duration-500 group-hover:text-accent-cyan" />
-                        Board-Level Advisory
                     </div>
                 </div>
             </div>

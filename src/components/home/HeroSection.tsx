@@ -48,7 +48,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative z-10 overflow-hidden pb-56 pt-32 lg:pb-64 section-hero-bg">
+    <section className="relative z-10 overflow-hidden pb-56 pt-16 lg:pb-64 section-hero-bg">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-x-0 top-20 mx-auto h-80 w-[460px] hero-glow" />
       </div>

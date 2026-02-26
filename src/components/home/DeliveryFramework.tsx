@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslation } from "react-i18next";
@@ -9,139 +9,149 @@ gsap.registerPlugin(ScrollTrigger);
 const DeliveryFramework = () => {
     const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
+    const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
     const steps = [
         {
             id: "discovery",
-            icon: <Eye className="w-6 h-6" />,
+            icon: <Eye className="w-5 h-5" />,
             title: "Discovery",
-            desc: "Audit existing technical debt and map organizational risk.",
+            desc: "Audit technical debt and map organizational risk.",
             number: "01",
         },
         {
             id: "strategy",
-            icon: <Navigation2 className="w-6 h-6" />,
+            icon: <Navigation2 className="w-5 h-5" />,
             title: "Strategy",
-            desc: "Blueprint sovereign architectures aligned with GCC directives.",
+            desc: "Blueprint architectures aligned with GCC directives.",
             number: "02",
         },
         {
             id: "implementation",
-            icon: <Cpu className="w-6 h-6" />,
+            icon: <Cpu className="w-5 h-5" />,
             title: "Implementation",
-            desc: "Deploy proprietary environments with zero business disruption.",
+            desc: "Deploy environments with zero business disruption.",
             number: "03",
         },
         {
             id: "optimization",
-            icon: <RefreshCw className="w-6 h-6" />,
+            icon: <RefreshCw className="w-5 h-5" />,
             title: "Optimization",
-            desc: "Fine-tune AI workloads for maximum operational efficiency.",
+            desc: "Fine-tune workloads for maximum operational yield.",
             number: "04",
         },
         {
             id: "support",
-            icon: <ShieldCheck className="w-6 h-6" />,
+            icon: <ShieldCheck className="w-5 h-5" />,
             title: "Governance",
-            desc: "Continuous sovereign oversight and absolute infrastructure security.",
+            desc: "Continuous sovereign oversight and infrastructure security.",
             number: "05",
         },
     ];
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            const items = gsap.utils.toArray<HTMLElement>(".framework-panel");
+            const cards = cardsRef.current.filter((el): el is HTMLDivElement => el !== null);
 
-            ScrollTrigger.create({
-                trigger: containerRef.current,
-                start: "top 75%",
-                onEnter: () => {
-                    gsap.fromTo(
-                        items,
-                        { opacity: 0, y: 20 },
-                        {
-                            opacity: 1,
-                            y: 0,
-                            duration: 0.8,
-                            stagger: 0.15,
-                            ease: "power2.out"
-                        }
-                    );
+            gsap.fromTo(
+                ".framework-intro",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: "top 75%",
+                    }
+                }
+            );
 
-                    gsap.to(".timeline-fill", {
-                        scaleX: 1,
-                        duration: 1.5,
-                        ease: "power2.inOut",
-                        delay: 0.2
-                    });
-                },
-                once: true,
+            // Sticky Stacking Logic
+            cards.forEach((card, i) => {
+                if (i === 0) return; // First card doesn't need to stack over anything
+
+                gsap.to(cards[i - 1], {
+                    scale: 0.95,
+                    opacity: 0.5,
+                    filter: "blur(2px)",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 80%",
+                        end: "top 20%",
+                        scrub: true,
+                    }
+                });
             });
+
         }, containerRef);
 
         return () => ctx.revert();
     }, []);
 
     return (
-        <section className="relative overflow-hidden bg-gradient-to-b from-base via-surface-1 to-[#0B1524] py-24 md:py-32 lg:py-48 border-t border-white/5" ref={containerRef}>
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_center,rgba(45,107,255,0.03)_0%,transparent_70%)] pointer-events-none" />
+        <section className="relative font-sans bg-[#0E1A2B] py-12 md:py-20 border-b border-white/5" ref={containerRef}>
+            {/* Soft background grid texture */}
+            <div className="absolute inset-0 texture-grid-navy mix-blend-overlay opacity-50" />
+
             <div className="container-tight relative z-10">
-                <div className="mx-auto max-w-4xl text-center mb-16 md:mb-24">
-                    <h2 className="font-heading text-4xl font-black tracking-tighter text-white md:text-5xl lg:text-6xl drop-shadow-md">
-                        Execution Framework.
+                <div className="framework-intro mx-auto max-w-4xl text-center mb-16 md:mb-24">
+                    <div className="mb-8 inline-flex items-center gap-3 w-max mx-auto">
+                        <span className="h-2 w-2 rounded-full bg-accent-cyan" />
+                        <span className="text-xs font-bold tracking-widest text-slate-300 uppercase font-mono">
+                            Methodology
+                        </span>
+                    </div>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Execution <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent-cyan">Framework.</span>
                     </h2>
-                    <p className="mt-6 text-lg md:text-xl text-white/80 leading-relaxed font-medium">
+                    <p className="mt-6 text-lg font-medium text-slate-400 max-w-2xl mx-auto leading-relaxed">
                         {t(
                             "home.delivery.subtext",
-                            "A structured, board-approved methodology for implementing sovereign digital transformations."
+                            "A structured, board-approved timeline for implementing robust digital transformations."
                         )}
                     </p>
                 </div>
 
-                <div className="relative mt-20">
-                    {/* Continuous horizontal line for connecting the process */}
-                    <div className="hidden lg:block absolute top-[1.25rem] left-[10%] w-[80%] h-px bg-white/10 z-0" />
+                <div className="framework-track relative pb-10 max-w-4xl mx-auto space-y-6 lg:space-y-12">
+                    {steps.map((step, index) => (
+                        <div
+                            key={step.id}
+                            ref={(el) => (cardsRef.current[index] = el)}
+                            className="framework-card group sticky top-24 lg:top-32 w-full bg-[#0D1826]/70 backdrop-blur-2xl border border-white/5 p-8 lg:p-12 rounded-[2rem] shadow-[0_20px_50px_-15px_rgba(0,0,0,0.6)] flex flex-col md:flex-row gap-8 items-start md:items-center transform-gpu z-[1] transition-all duration-500 hover:border-brand-blue/30 overflow-hidden"
+                            style={{ top: `calc(6rem + ${index * 2}rem)` }}
+                        >
+                            {/* Glowing Left Edge Line on Hover */}
+                            <div className="absolute left-0 inset-y-0 w-[2px] bg-gradient-to-b from-brand-blue via-accent-cyan to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 shadow-[0_0_15px_rgba(54,224,255,0.5)]" />
 
-                    {/* Animated Fill Line */}
-                    <div className="hidden lg:block absolute top-[1.25rem] left-[10%] w-[80%] h-px z-0">
-                        <div className="timeline-fill absolute top-0 left-0 h-full bg-gradient-to-r from-brand-blue/50 to-white/50 origin-left w-full scale-x-0" />
-                    </div>
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-blue/5 rounded-full blur-[80px] group-hover:bg-accent-cyan/10 transition-colors duration-700 pointer-events-none" />
 
-                    <div className="grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-5 relative z-10">
-                        {steps.map((step) => (
-                            <div
-                                key={step.id}
-                                className="framework-panel flex flex-col relative group opacity-0 lg:pt-14"
-                            >
-                                {/* Timeline Node (Circle on the line) */}
-                                <div className="hidden lg:flex absolute top-[0.95rem] left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#0F2A43] border border-white/30 z-10 transition-all duration-500 group-hover:bg-white group-hover:border-white group-hover:shadow-[0_0_15px_rgba(255,255,255,0.8)]" />
-
-                                {/* Elevated Panel - Strict Structure & High Contrast */}
-                                <div className="relative z-10 flex w-full flex-col h-full rounded-xl border border-white/10 bg-[#0F2A43] p-6 lg:p-8 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-white/20 hover:bg-[#12314F] overflow-hidden">
-
-                                    {/* Subdued Icon */}
-                                    <div className="mb-6 opacity-40 transition-opacity duration-500 group-hover:opacity-100 text-white relative z-10">
-                                        {step.icon}
-                                    </div>
-
-                                    {/* Muted Watermark Number / Step Label */}
-                                    <div className="mb-2 text-xs font-mono font-bold uppercase tracking-[0.2em] text-white/40">
-                                        STEP {step.number}
-                                    </div>
-
-                                    {/* Title (Pure White) */}
-                                    <h3 className="mb-4 text-xl md:text-2xl font-black font-heading tracking-tight text-white relative z-10">
-                                        {step.title}
-                                    </h3>
-
-                                    {/* Description (High Contrast text-white/80) */}
-                                    <p className="text-base leading-relaxed font-medium text-white/80 relative z-10">
-                                        {step.desc}
-                                    </p>
-                                </div>
+                            {/* Graphic/Icon Column */}
+                            <div className="flex-shrink-0 relative flex items-center justify-center w-20 h-20 md:w-28 md:h-28 bg-[#0B1E2D] border border-white/5 rounded-[1.5rem] text-accent-cyan overflow-hidden shadow-inner group-hover:border-brand-blue/30 transition-colors">
+                                <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/10 to-transparent pointer-events-none" />
+                                {React.cloneElement(step.icon as React.ReactElement, { className: "w-8 h-8 md:w-10 md:h-10 relative z-10" })}
                             </div>
-                        ))}
-                    </div>
+
+                            {/* Content Column */}
+                            <div className="flex flex-col flex-1 pl-0 md:pl-4 relative z-10">
+                                <div className="text-xs uppercase font-semibold tracking-widest text-slate-500 mb-3 font-mono group-hover:text-accent-cyan transition-colors">
+                                    Phase {step.number}
+                                </div>
+                                <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-slate-300 transition-all">
+                                    {step.title}
+                                </h3>
+                                <p className="text-base md:text-lg font-medium text-slate-400 leading-relaxed max-w-xl group-hover:text-slate-300 transition-colors">
+                                    {step.desc}
+                                </p>
+                            </div>
+
+                            {/* Ambient Number */}
+                            <div className="absolute top-4 right-8 text-7xl md:text-9xl font-mono font-black text-white/[0.02] select-none pointer-events-none transition-colors group-hover:text-brand-blue/10 duration-700">
+                                {step.number}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

@@ -2,71 +2,88 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslation } from "react-i18next";
-import { Cpu, ShieldAlert, Workflow, ArrowRight, Network } from "lucide-react";
+import { Landmark, HeartPulse, Building2, Zap, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const domainsData = [
+const industriesData = [
     {
-        id: "ai",
-        title: "AI Strategy & Deployment",
-        subtitle: "Sovereign Intelligence",
+        id: "finance",
+        title: "Financial Services",
+        subtitle: "Secure Transactions",
         description:
-            "Design, train, and deploy private AI models hosted within GCC borders, ensuring zero data leakage.",
-        icon: <Cpu className="h-8 w-8 text-brand-blue" />,
-        features: ["Private LLMs", "Agentic Systems", "Predictive Analytics"],
-        link: "/ai-solutions"
+            "Modernize core banking architectures, deploy fraud-detection AI, and ensure absolute compliance with GCC financial regulations.",
+        icon: <Landmark className="h-8 w-8 text-brand-blue/70 transition-colors group-hover:text-brand-blue" />,
+        features: ["Fraud Detection", "Legacy Modernization", "Regulatory Compliance"],
+        link: "/industries"
     },
     {
-        id: "cloud",
-        title: "Cloud Infrastructure",
-        subtitle: "Zero-Trust Layout",
+        id: "healthcare",
+        title: "Healthcare",
+        subtitle: "Data Privacy & Care",
         description:
-            "Architect multi-cloud, high-availability networks designed for absolute redundancy and compliance.",
-        icon: <Workflow className="h-8 w-8 text-brand-blue" />,
-        features: ["Orchestration", "Disaster Recovery", "Infrastructure as Code"],
-        link: "/services/cloud-infrastructure"
+            "Unify patient data systems, integrate predictive health AI, and architect resilient infrastructure resistant to zero-day threats.",
+        icon: <HeartPulse className="h-8 w-8 text-brand-blue/70 transition-colors group-hover:text-brand-blue" />,
+        features: ["Data Unification", "Predictive Care", "Zero-Trust Security"],
+        link: "/industries"
     },
     {
-        id: "governance",
-        title: "Data Governance",
-        subtitle: "Immutable Compliance",
+        id: "government",
+        title: "Public Sector",
+        subtitle: "Sovereign Infrastructure",
         description:
-            "Institute executive data lakes with end-to-end encryption, centralizing fragmented data silos.",
-        icon: <ShieldAlert className="h-8 w-8 text-brand-blue" />,
-        features: ["Master Data", "Data Localization", "Real-time Compliance"],
-        link: "/services/data-analytics"
+            "Engineer massive-scale digital public infrastructure with guaranteed data sovereignty and localized operational control.",
+        icon: <Building2 className="h-8 w-8 text-brand-blue/70 transition-colors group-hover:text-brand-blue" />,
+        features: ["Digital Identity", "Sovereign Cloud", "Citizen Portals"],
+        link: "/industries"
     },
     {
-        id: "integration",
-        title: "Enterprise Integration",
-        subtitle: "Seamless Connectivity",
+        id: "energy",
+        title: "Energy & Utilities",
+        subtitle: "Industrial IoT",
         description:
-            "Unify disparate operational systems into a monolithic, secure enterprise service bus for real-time syncing.",
-        icon: <Network className="h-8 w-8 text-brand-blue" />,
-        features: ["API Gateways", "Event-Driven", "Legacy Modernization"],
-        link: "/services/software-development"
+            "Automate critical grid operations, secure industrial control systems (ICS), and deploy predictive maintenance intelligence.",
+        icon: <Zap className="h-8 w-8 text-brand-blue/70 transition-colors group-hover:text-brand-blue" />,
+        features: ["Grid Automation", "ICS Security", "Predictive Maintenance"],
+        link: "/industries"
     }
 ];
 
 const DomainsSection = () => {
     const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
+    const gridRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
             gsap.fromTo(
-                ".domain-card",
-                { opacity: 0, y: 40 },
+                ".domain-anim-el",
+                { opacity: 0, y: 20 },
                 {
                     opacity: 1,
                     y: 0,
                     stagger: 0.1,
-                    duration: 0.8,
+                    duration: 1,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: containerRef.current,
+                        start: "top 80%",
+                    }
+                }
+            );
+
+            gsap.fromTo(
+                ".domain-anim-card",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    stagger: 0.1,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: gridRef.current,
                         start: "top 80%",
                     }
                 }
@@ -77,53 +94,66 @@ const DomainsSection = () => {
     }, []);
 
     return (
-        <section className="bg-base py-16 md:py-48 lg:py-64" ref={containerRef}>
+        <section className="relative bg-[#0E1A2B] py-12 md:py-20 font-sans border-b border-white/5" ref={containerRef}>
+            {/* Soft background grid texture */}
+            <div className="absolute inset-0 texture-grid-navy mix-blend-overlay opacity-50" />
+
             <div className="container-tight relative z-10">
-                <div className="mb-16 md:mb-28 max-w-4xl text-left">
-                    <h2 className="font-heading text-4xl font-black tracking-[-0.04em] text-white md:text-6xl lg:text-7xl">
-                        Enterprise Transformation Domains.
-                    </h2>
-                    <p className="mt-6 md:mt-10 text-lg md:text-[1.4rem] tracking-tight text-text-primary/70">
-                        {t("home.stack.subtext", "Core operational pillars engineered for sovereign organizational change. Uncompromising scale with localized security.")}
-                    </p>
+                <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-10">
+                    <div className="max-w-3xl">
+                        <div className="domain-anim-el mb-8 flex items-center gap-3 w-max">
+                            <span className="h-2 w-2 rounded-full bg-accent-cyan" />
+                            <span className="text-xs font-bold tracking-widest text-slate-300 uppercase font-mono">
+                                Industries We Serve
+                            </span>
+                        </div>
+                        <h2 className="domain-anim-el text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-5xl leading-tight pb-2">
+                            Sector-Specific <br className="hidden md:block" /> Intelligence.
+                        </h2>
+                    </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-                    {domainsData.map((domain) => (
+                {/* 2x2 Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-[2rem] overflow-hidden shadow-[0_20px_40px_-20px_rgba(0,0,0,0.5)]" ref={gridRef}>
+                    {industriesData.map((industry) => (
                         <Link
-                            key={domain.id}
-                            to={domain.link}
-                            className="domain-card group flex flex-col justify-between rounded-[2.5rem] border border-white/5 bg-surface-1 p-8 md:p-14 transition-all duration-500 hover:-translate-y-3 hover:border-brand-blue/40 hover:bg-surface-2 shadow-xl hover:shadow-[0_40px_80px_-20px_rgba(45,107,255,0.25)]"
+                            key={industry.id}
+                            to={industry.link}
+                            className="domain-anim-card group flex flex-col justify-between bg-[#0E1A2B] p-10 md:p-14 transition-colors hover:bg-[#111C2D] relative overflow-hidden"
                         >
-                            <div className="flex items-start justify-between mb-8 md:mb-10">
-                                <div className="inline-flex rounded-2xl bg-brand-blue/10 p-5 md:p-6 ring-1 ring-brand-blue/20 transition-colors group-hover:bg-brand-blue group-hover:ring-brand-blue/50">
-                                    <div className="text-brand-blue group-hover:text-white transition-colors">
-                                        {domain.icon}
+                            {/* Gradient Border top on Hover */}
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-blue to-accent-cyan transform scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100 z-20" />
+
+                            {/* Inner ambient glow */}
+                            <div className="absolute top-0 right-0 w-48 h-48 bg-brand-blue/10 rounded-full blur-[60px] group-hover:bg-accent-cyan/15 transition-colors duration-700 pointer-events-none z-0" />
+
+                            <div className="relative z-10 mb-10 flex items-start justify-between">
+                                <div className="inline-flex p-4 rounded-2xl bg-white/[0.02] ring-1 ring-white/10 ring-inset shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] transition-all duration-300 group-hover:bg-brand-blue/10 group-hover:ring-brand-blue/30 group-hover:shadow-[0_0_20px_rgba(47,107,255,0.15)]">
+                                    <div className="text-brand-blue group-hover:text-accent-cyan transition-colors">
+                                        {industry.icon}
                                     </div>
                                 </div>
-                                <div className="rounded-full bg-white/5 p-4 text-white transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:bg-brand-blue shadow-lg">
-                                    <ArrowRight className="w-6 h-6" />
+
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-transparent text-white/20 transition-all duration-300 group-hover:bg-brand-blue/10 group-hover:text-accent-cyan">
+                                    <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                                 </div>
                             </div>
 
-                            <div>
-                                <div className="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-accent-cyan mb-3 md:mb-4">
-                                    {domain.subtitle}
-                                </div>
-                                <h3 className="mb-4 md:mb-6 text-2xl md:text-4xl font-black text-white tracking-tight drop-shadow-sm">
-                                    {domain.title}
+                            <div className="relative z-10 flex-grow">
+                                <h3 className="mb-4 text-3xl font-bold tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/80 transition-all">
+                                    {industry.title}
                                 </h3>
-                                <p className="mb-8 md:mb-10 text-base md:text-xl leading-relaxed text-text-primary/70">
-                                    {domain.description}
+                                <p className="mb-10 text-base font-medium leading-[1.7] text-white/60 max-w-md group-hover:text-white/80 transition-colors">
+                                    {industry.description}
                                 </p>
                             </div>
 
-                            <div className="mt-auto border-t border-white/5 pt-6 md:pt-8">
-                                <div className="flex flex-wrap gap-3">
-                                    {domain.features.map((feature, i) => (
+                            <div className="relative z-10 mt-auto pt-4">
+                                <div className="flex flex-wrap gap-2">
+                                    {industry.features.map((feature, i) => (
                                         <div
                                             key={i}
-                                            className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/80"
+                                            className="bg-white/[0.03] border border-white/5 rounded-lg px-3 py-1.5 text-xs font-semibold tracking-wide text-white/50 font-mono transition-all group-hover:bg-white/[0.08] group-hover:text-white group-hover:border-white/10 shadow-sm"
                                         >
                                             {feature}
                                         </div>
