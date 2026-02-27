@@ -1,5 +1,6 @@
 import SEOHead from '@/components/SEOHead';
 import HeroDirective from '@/components/home/HeroDirective';
+import TrustedLogos from '@/components/home/TrustedLogos';
 import ITCHallenges from '@/components/services/it-consulting/ITCHallenges';
 import StrategicPillars from '@/components/home/StrategicPillars';
 import DomainsSection from '@/components/home/DomainsSection';
@@ -18,6 +19,7 @@ const Index = () => {
         schemaType="Organization"
       />
       <HeroDirective />
+      <TrustedLogos />
       <ITCHallenges />
       <StrategicPillars />
       <DomainsSection />

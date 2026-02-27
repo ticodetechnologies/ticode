@@ -1,44 +1,52 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const collapseModules = [
+const baseModules = [
     {
         id: "fragmentation",
-        title: "Operational Fragmentation",
         metricValue: 40,
         metricPrefix: "",
         metricSuffix: "%",
-        impact: "Average efficiency leakage from disconnected legacy systems.",
         isCritical: false,
         progressColor: "bg-brand-blue"
     },
     {
         id: "stagnation",
-        title: "Transformation Stagnation",
         metricValue: 2,
         metricPrefix: "$",
         metricSuffix: "M+",
-        impact: "Annual capital dissolved in siloed consulting efforts failing to deliver ROI.",
         isCritical: false,
         progressColor: "bg-accent-cyan"
     },
     {
         id: "sovereignty",
-        title: "Data Sovereignty Gaps",
         metricValue: 0,
-        metricText: "Critical",
-        impact: "Non-compliance with GCC data localization exposes the board to regulatory liability.",
         isCritical: true,
         progressColor: "bg-red-500"
     }
 ];
 
 const TransformationCollapse = () => {
+    const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
     const counterRefs = useRef<(HTMLSpanElement | null)[]>([]);
+
+    const translatedRiskItems = t("home.risk.items", { returnObjects: true }) as any[];
+
+    // Combine base metric data with translated labels
+    const collapseModules = baseModules.map((base, index) => {
+        const translation = (translatedRiskItems && translatedRiskItems[index]) || {};
+        return {
+            ...base,
+            title: translation.title,
+            impact: translation.impact,
+            metricText: translation.metricText,
+        };
+    });
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -96,12 +104,12 @@ const TransformationCollapse = () => {
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                         </span>
                         <span className="text-xs font-bold tracking-[0.1em] text-slate-500 uppercase font-mono">
-                            Systemic Vulnerability
+                            {t("home.risk.badge")}
                         </span>
                     </div>
                     <h2 className="collapse-anim-item text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-                        Where Enterprise Transformations <br />
-                        <span className="text-slate-500">Collapse.</span>
+                        {t("home.risk.title")} <br />
+                        <span className="text-slate-500">{t("home.risk.titleHighlight")}</span>
                     </h2>
                 </div>
 
@@ -111,7 +119,7 @@ const TransformationCollapse = () => {
                             key={module.id}
                             className="collapse-anim-item collapse-card group relative flex flex-col justify-between bg-white border border-slate-200 rounded-[1.5rem] p-8 transition-all duration-400 ease-out hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(47,107,255,0.15)] hover:border-brand-blue/40 overflow-hidden cursor-default"
                         >
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-blue to-accent-cyan opacity-0 group-hover:opacity-100 transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-out" />
+                            <div className="absolute top-0 start-0 w-full h-1 bg-gradient-to-r from-brand-blue to-accent-cyan opacity-0 group-hover:opacity-100 transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-out" />
 
                             <div className="relative z-10">
                                 <h3 className="text-xl font-bold tracking-tight text-slate-900 mb-4 group-hover:text-brand-blue transition-colors duration-300">
@@ -130,7 +138,7 @@ const TransformationCollapse = () => {
                                             <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                                         </span>
                                     )}
-                                    Risk Metric
+                                    {t("home.risk.riskMetric")}
                                 </div>
 
                                 <div className="text-4xl font-mono font-bold tracking-tight text-slate-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-blue group-hover:to-accent-cyan transition-all duration-300">
@@ -138,11 +146,11 @@ const TransformationCollapse = () => {
                                         <span className="text-red-500/90 group-hover:text-red-500 transition-colors drop-shadow-sm">{module.metricText}</span>
                                     ) : (
                                         <>
-                                            <span className="text-slate-400/80 text-2xl mr-1">{module.metricPrefix}</span>
+                                            <span className="text-slate-400/80 text-2xl me-1">{module.metricPrefix}</span>
                                             <span ref={(el) => (counterRefs.current[index] = el)} data-target={module.metricValue}>
                                                 {module.metricValue}
                                             </span>
-                                            <span className="text-slate-400/80 text-2xl ml-1">{module.metricSuffix}</span>
+                                            <span className="text-slate-400/80 text-2xl ms-1">{module.metricSuffix}</span>
                                         </>
                                     )}
                                 </div>

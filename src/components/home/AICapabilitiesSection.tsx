@@ -22,7 +22,7 @@ const AICapabilitiesSection = () => {
           <div className="flex flex-col gap-4 text-start">
             <p className="text-sm uppercase tracking-[0.3em] text-foreground/60">{t("home.aiCapabilities.label")}</p>
             <div className="relative">
-              <div className="pointer-events-none absolute -top-8 left-0 h-28 w-44 heading-glow" />
+              <div className="pointer-events-none absolute -top-8 start-0 h-28 w-44 heading-glow" />
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground font-heading max-w-xl">
                 {t("home.aiCapabilities.title")}
               </h2>

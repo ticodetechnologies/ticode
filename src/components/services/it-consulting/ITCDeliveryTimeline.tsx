@@ -135,12 +135,12 @@ const ITCDeliveryTimeline = () => {
                 {/* Horizontal Timeline Layout for Desktop, Vertical for Mobile */}
                 <div className="relative hidden lg:block" ref={timelineRef}>
                     {/* Background track */}
-                    <div className="absolute top-[18px] left-[5%] right-[5%] h-[2px] bg-white/5" />
+                    <div className="absolute top-[18px] start-[5%] end-[5%] h-[2px] bg-white/5" />
 
                     {/* Animated Fill Track */}
                     <div
                         ref={progressRef}
-                        className="absolute top-[18px] left-[5%] h-[2px] bg-gradient-to-r from-[#2F6BFF] to-[#00D1B2] w-0 drop-shadow-[0_0_10px_rgba(0,209,178,0.8)]"
+                        className="absolute top-[18px] start-[5%] h-[2px] bg-gradient-to-r from-[#2F6BFF] to-[#00D1B2] w-0 drop-shadow-[0_0_10px_rgba(0,209,178,0.8)]"
                     />
 
                     <div className="flex justify-between relative px-[5%]">
@@ -172,13 +172,13 @@ const ITCDeliveryTimeline = () => {
                 </div>
 
                 {/* Mobile/Tablet Fallback (Vertical) */}
-                <div className="flex flex-col gap-12 lg:hidden ml-6 relative">
-                    <div className="absolute top-0 bottom-0 left-[19px] w-[2px] bg-white/5" />
+                <div className="flex flex-col gap-12 lg:hidden ms-6 relative">
+                    <div className="absolute top-0 bottom-0 start-[19px] w-[2px] bg-white/5" />
 
                     {/* Vertical Animated Progress Line */}
                     <div
                         ref={mobileProgressRef}
-                        className="absolute top-0 left-[19px] w-[2px] bg-gradient-to-b from-[#2F6BFF] to-[#00D1B2] drop-shadow-[0_0_10px_rgba(0,209,178,0.8)]"
+                        className="absolute top-0 start-[19px] w-[2px] bg-gradient-to-b from-[#2F6BFF] to-[#00D1B2] drop-shadow-[0_0_10px_rgba(0,209,178,0.8)]"
                         style={{ height: '0%' }}
                     />
 
@@ -186,9 +186,9 @@ const ITCDeliveryTimeline = () => {
                         <div
                             key={index}
                             ref={(el) => (mobileNodesRef.current[index] = el)}
-                            className="relative pl-16 group"
+                            className="relative ps-16 group"
                         >
-                            <div className="tl-dot absolute top-0 -ml-5 left-[19px] w-10 h-10 rounded-full border border-white/10 bg-[#0B1623] text-[#00D1B2] flex items-center justify-center font-bold font-mono text-sm transition-all duration-500 z-10">
+                            <div className="tl-dot absolute top-0 -ml-5 start-[19px] w-10 h-10 rounded-full border border-white/10 bg-[#0B1623] text-[#00D1B2] flex items-center justify-center font-bold font-mono text-sm transition-all duration-500 z-10">
                                 {index + 1}
                             </div>
                             <div className="tl-text opacity-20 transition-opacity duration-500">

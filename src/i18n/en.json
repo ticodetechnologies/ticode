@@ -1,29 +1,315 @@
 {
   "home": {
     "hero": {
-      "badge": "Enterprise Digital Transformation",
-      "headline": {
-        "line1": "Build a",
-        "highlight1": "future-proof",
-        "line2": "enterprise with",
-        "highlight2": "AI-native",
-        "line3": "operations."
-      },
-      "subtext": "Ticode Technologies partners with ambitious enterprises to modernize platforms, unlock AI advantage, and deliver measurable growth across the GCC.",
+      "systemActive": "System Operational / GCC Node Active",
+      "headlinePrefix": "Board-Level Digital",
+      "headlineMain": "Transformation",
+      "headlineSuffix": "For Risk-Resilient Enterprises.",
+      "subtext": "Delivering elite IT consulting, strategic AI implementation, and structurally sound digital transformations for GCC market leaders.",
       "ctaPrimary": "Start Your Transformation",
-      "ctaSecondary": "Explore AI Solutions",
-      "trustPoints": [
-        "ISO-aligned delivery",
-        "Security-first AI",
-        "Kuwait + GCC scale"
-      ],
-      "stats": [
-        { "value": "240+", "label": "Enterprise Programs" },
-        { "value": "96%", "label": "Client Retention" },
-        { "value": "38%", "label": "Average ROI Lift" },
-        { "value": "18", "label": "Countries Enabled" }
-      ],
-      "benchmark": "Benchmarked against regional transformation programs (2022-2025)"
+      "ctaSecondary": "Explore AI Capabilities",
+      "badge1": "$200M+ Client Value Delivered",
+      "badge2": "100+ Enterprise Deployments",
+      "badge3": "Zero Data Breaches",
+      "strip1": "GCC Compliance",
+      "strip2": "Board-Level Advisory",
+      "strip3": "ISO Certified Standards",
+      "strip4": "Strategic Architecture",
+      "networkTelemetry": "Network Telemetry",
+      "liveNodes": "Live Nodes",
+      "active": "Active",
+      "telemetry": [
+        {
+          "title": "Finance & Banking",
+          "metric": "$45M+ Capital Secured",
+          "sub": "Tier-1 Risk Mitigation"
+        },
+        {
+          "title": "AI Solutions",
+          "metric": "12TB/s Data Processed",
+          "sub": "Predictive Models Active"
+        },
+        {
+          "title": "Healthcare Systems",
+          "metric": "HIPAA Compliant Nodes",
+          "sub": "Zero-Trust Architecture"
+        },
+        {
+          "title": "Cloud Infrastructure",
+          "metric": "99.999% Availability",
+          "sub": "Geo-Redundant Servers"
+        },
+        {
+          "title": "Global Logistics",
+          "metric": "Real-Time Tracking",
+          "sub": "Automated Supply Chain"
+        },
+        {
+          "title": "Custom Software",
+          "metric": "High-Performance APIs",
+          "sub": "Scalable Microservices"
+        }
+      ]
+    },
+    "metrics": {
+      "verifiedImpact": "Verified Executive Impact",
+      "statusLegacy": "Status: Legacy",
+      "statusSovereign": "Status: Sovereign",
+      "items": [
+        {
+          "id": "efficiency",
+          "label": "Enterprise Efficiency Yield",
+          "before": "Fragmented Operations",
+          "after": "Unified Sovereign Architecture"
+        },
+        {
+          "id": "speed",
+          "label": "Speed to Market Acceleration",
+          "before": "Legacy Deployment Cycles",
+          "after": "Accelerated Digital Ecosystems"
+        },
+        {
+          "id": "cost",
+          "label": "Infrastructure Cost Reduction",
+          "before": "Compounding Tech Debt",
+          "after": "Optimized Cloud Spend"
+        }
+      ]
+    },
+    "pillars": {
+      "badge": "What We Deliver",
+      "title": "Enterprise Capabilities",
+      "titleHighlight": "Designed for Outcomes.",
+      "measurableImpact": "Measurable Impact",
+      "executionStandard": "Execution Standard",
+      "exploreDetails": "Explore Details",
+      "items": [
+        {
+          "id": "ai-strategy",
+          "title": "Sovereign AI Subsystems",
+          "outcome": "Deploy localized, proprietary LLMs for secure enterprise workflows.",
+          "metricText": "Faster Data Retrieval",
+          "governance": "100% On-Premise GCC Hosting"
+        },
+        {
+          "id": "cloud-infrastructure",
+          "title": "Resilient Cloud Architecture",
+          "outcome": "Architect zero-trust, high-availability multi-cloud environments.",
+          "metricText": "Service Uptime",
+          "governance": "ISO 27001 Compliant Framework"
+        },
+        {
+          "id": "data-governance",
+          "title": "Executive Data Lakes",
+          "outcome": "Centralize corporate data for unified boardroom analytics and reporting.",
+          "metricText": "Single Source of Truth",
+          "governance": "End-to-End Encryption Layer"
+        }
+      ]
+    },
+    "stack": {
+      "title": "Enterprise Transformation Domains.",
+      "subtext": "Core pillars of sovereign organizational change.",
+      "reviewCapabilities": "Review Capabilities",
+      "keyImplementations": "Key Implementations",
+      "panels": [
+        {
+          "id": "ai",
+          "title": "AI Strategy & Deployment",
+          "subtitle": "Sovereign Intelligence Models",
+          "description": "Design, train, and deploy private AI models hosted within GCC borders, ensuring zero data leakage while accelerating cognitive enterprise capabilities.",
+          "features": [
+            "Private LLM Deployment",
+            "Agentic Workflows",
+            "Predictive Analytics"
+          ]
+        },
+        {
+          "id": "cloud",
+          "title": "Cloud Infrastructure",
+          "subtitle": "Zero-Trust Architecture",
+          "description": "Architect multi-cloud, high-availability networks designed for absolute redundancy, scale, and compliance with national cybersecurity frameworks.",
+          "features": [
+            "Multi-Cloud Orchestration",
+            "Disaster Recovery",
+            "Infrastructure as Code"
+          ]
+        },
+        {
+          "id": "governance",
+          "title": "Data Governance",
+          "subtitle": "Immutable Compliance",
+          "description": "Institute executive data lakes with end-to-end encryption, centralizing fragmented data silos into a single, board-ready source of truth.",
+          "features": [
+            "Master Data Management",
+            "Data Localization",
+            "Real-time Compliance"
+          ]
+        }
+      ]
+    },
+    "risk": {
+      "badge": "Systemic Vulnerability",
+      "title": "Where Enterprise Transformations",
+      "titleHighlight": "Collapse.",
+      "riskMetric": "Risk Metric",
+      "items": [
+        {
+          "id": "fragmentation",
+          "title": "Operational Fragmentation",
+          "impact": "Average efficiency leakage from disconnected legacy systems."
+        },
+        {
+          "id": "stagnation",
+          "title": "Transformation Stagnation",
+          "impact": "Annual capital dissolved in siloed consulting efforts failing to deliver ROI."
+        },
+        {
+          "id": "sovereignty",
+          "title": "Data Sovereignty Gaps",
+          "metricText": "Critical",
+          "impact": "Non-compliance with GCC data localization exposes the board to regulatory liability."
+        }
+      ]
+    },
+    "domains": {
+      "badge": "Industries We Serve",
+      "title": "Sector-Specific Intelligence.",
+      "items": [
+        {
+          "id": "finance",
+          "title": "Financial Services",
+          "subtitle": "Secure Transactions",
+          "description": "Modernize core banking architectures, deploy fraud-detection AI, and ensure absolute compliance with GCC financial regulations.",
+          "features": [
+            "Fraud Detection",
+            "Legacy Modernization",
+            "Regulatory Compliance"
+          ]
+        },
+        {
+          "id": "healthcare",
+          "title": "Healthcare",
+          "subtitle": "Data Privacy & Care",
+          "description": "Unify patient data systems, integrate predictive health AI, and architect resilient infrastructure resistant to zero-day threats.",
+          "features": [
+            "Data Unification",
+            "Predictive Care",
+            "Zero-Trust Security"
+          ]
+        },
+        {
+          "id": "government",
+          "title": "Public Sector",
+          "subtitle": "Sovereign Infrastructure",
+          "description": "Engineer massive-scale digital public infrastructure with guaranteed data sovereignty and localized operational control.",
+          "features": [
+            "Digital Identity",
+            "Sovereign Cloud",
+            "Citizen Portals"
+          ]
+        },
+        {
+          "id": "energy",
+          "title": "Energy & Utilities",
+          "subtitle": "Industrial IoT",
+          "description": "Automate critical grid operations, secure industrial control systems (ICS), and deploy predictive maintenance intelligence.",
+          "features": [
+            "Grid Automation",
+            "ICS Security",
+            "Predictive Maintenance"
+          ]
+        }
+      ]
+    },
+    "delivery": {
+      "badge": "Methodology",
+      "title": "Execution Framework.",
+      "subtext": "A structured, board-approved timeline for implementing robust digital transformations.",
+      "phase": "Phase",
+      "steps": [
+        {
+          "id": "discovery",
+          "title": "Discovery",
+          "desc": "Audit technical debt and map organizational risk."
+        },
+        {
+          "id": "strategy",
+          "title": "Strategy",
+          "desc": "Blueprint architectures aligned with GCC directives."
+        },
+        {
+          "id": "implementation",
+          "title": "Implementation",
+          "desc": "Deploy environments with zero business disruption."
+        },
+        {
+          "id": "optimization",
+          "title": "Optimization",
+          "desc": "Fine-tune workloads for maximum operational yield."
+        },
+        {
+          "id": "support",
+          "title": "Governance",
+          "desc": "Continuous sovereign oversight and infrastructure security."
+        }
+      ]
+    },
+    "evidence": {
+      "badge": "Objective Proof",
+      "title": "Verified Enterprise",
+      "titleHighlight": "Impact.",
+      "accessArchive": "Access Full Archive",
+      "networkState": "Network State",
+      "stateLegacy": "State: Legacy",
+      "stateSovereign": "State: Sovereign",
+      "queryRes": "Query Res",
+      "extract": "Extract: Board Protocol Memo",
+      "quote": "\"The velocity of digital transformation requires an infrastructure that can scale with absolute security. Ticode engineered that foundation.\"",
+      "operationalYield": "Operational Yield",
+      "dataExfiltrationRisk": "Data Exfiltration Risk",
+      "zero": "Zero",
+      "testimonialName": "Ibrahim Al-Rashid",
+      "testimonialRole": "Chief Technology Officer, Top-Tier GCC Bank",
+      "accessFullArchiveBtn": "Access Full Archive"
+    },
+    "cta": {
+      "badge": "Executive Command",
+      "title": "Initiate Strategic",
+      "titleHighlight": "Engagement.",
+      "subtext": "Execute your organization's sovereign digital architecture with the Ticode Engineering Board.",
+      "button": "Schedule Technical Audit"
+    },
+    "itChallenges": {
+      "badge": "Systemic Deficits",
+      "title": "The Cost of Passive",
+      "titleHighlight": "Digital Governance.",
+      "subtext": "Without authoritative digital frameworks, organizations face compounding operational decay and stalled transformation outcomes.",
+      "items": [
+        {
+          "title": "Strategy-Execution Disconnect",
+          "desc": "Digital programs launch without a governance chain from board priorities to portfolio decisions, creating drift and stalled outcomes.",
+          "metricLabel": "Efficiency Leakage"
+        },
+        {
+          "title": "Architecture Debt Compounding",
+          "desc": "Legacy constraints and fragmented platforms erode security, inflate OPEX, and slow decision cycles.",
+          "metricLabel": "Capital Waste"
+        },
+        {
+          "title": "Compliance & Governance Exposure",
+          "desc": "Navigating complex regulatory requirements across GCC jurisdictions without an audit-ready framework.",
+          "textValue": "Critical",
+          "metricLabel": "Exposure Level"
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "Execution Ready",
+      "title": "Accelerate Your",
+      "titleHighlight": "Enterprise.",
+      "subtitle": "Transform your operational capacity with our strategic IT and comprehensive AI solutions.",
+      "primaryCta": "Initiate Strategic Engagement"
     },
     "trust": {
       "label": "Trusted By",
@@ -66,7 +352,11 @@
         {
           "title": "Core Platform Modernization",
           "description": "Re-architect legacy estates into cloud-native, composable platforms with zero downtime migration strategies.",
-          "tags": ["Cloud Migration", "API Ecosystems", "DevSecOps"],
+          "tags": [
+            "Cloud Migration",
+            "API Ecosystems",
+            "DevSecOps"
+          ],
           "outcomeLabel": "Outcome Focus",
           "outcomeValue": "12-18",
           "outcomeSuffix": "mo.",
@@ -76,7 +366,11 @@
         {
           "title": "AI-First Product Engineering",
           "description": "Launch AI-powered customer experiences, copilots, and intelligence layers that scale across business units.",
-          "tags": ["LLM Applications", "MLOps", "Experience Design"],
+          "tags": [
+            "LLM Applications",
+            "MLOps",
+            "Experience Design"
+          ],
           "outcomeLabel": "Outcome Focus",
           "outcomeValue": "12-18",
           "outcomeSuffix": "mo.",
@@ -86,7 +380,11 @@
         {
           "title": "Data & Decision Intelligence",
           "description": "Create a unified data fabric to fuel predictive analytics, operational visibility, and real-time decisions.",
-          "tags": ["Data Fabric", "Real-Time Insights", "Governance"],
+          "tags": [
+            "Data Fabric",
+            "Real-Time Insights",
+            "Governance"
+          ],
           "outcomeLabel": "Outcome Focus",
           "outcomeValue": "12-18",
           "outcomeSuffix": "mo.",
@@ -201,14 +499,21 @@
           "imageAlt": "Port logistics control tower"
         }
       ]
-    },
-    "finalCta": {
-      "label": "Ready for lift-off",
-      "title": "Accelerate your digital transformation with Ticode Technologies.",
-      "subtitle": "Speak with our enterprise strategists to design a roadmap that delivers measurable ROI in the next 12 months.",
-      "primaryCta": "Book a Strategy Session",
-      "secondaryCta": "View Case Studies"
     }
+  },
+  "floatingContact": {
+    "getCallBack": "Get a Call Back",
+    "dialogTitle": "Discuss your Idea",
+    "dialogWith": "with a",
+    "dialogCTO": "CTO!",
+    "fullName": "Full Name",
+    "mobileNumber": "Mobile Number",
+    "businessEmail": "Business Email",
+    "requirements": "Please Share Your Business Requirements",
+    "submitting": "Submitting...",
+    "callMeNow": "Call Me Now!",
+    "requestSubmitted": "Request Submitted",
+    "ctoContact": "Our CTO will contact you shortly."
   },
   "nav": {
     "home": "Home",
@@ -270,10 +575,22 @@
     "title": "Trusted Technology Partner",
     "subtitle": "Delivering measurable outcomes for enterprises across Kuwait and the GCC region.",
     "metrics": {
-      "projects": { "value": "150+", "label": "Projects Delivered" },
-      "aiSystems": { "value": "40+", "label": "AI Systems Deployed" },
-      "industries": { "value": "12", "label": "Industries Served" },
-      "engagements": { "value": "80+", "label": "Enterprise Engagements" }
+      "projects": {
+        "value": "150+",
+        "label": "Projects Delivered"
+      },
+      "aiSystems": {
+        "value": "40+",
+        "label": "AI Systems Deployed"
+      },
+      "industries": {
+        "value": "12",
+        "label": "Industries Served"
+      },
+      "engagements": {
+        "value": "80+",
+        "label": "Enterprise Engagements"
+      }
     },
     "partners": {
       "clients": "Enterprise Clients",
@@ -285,37 +602,102 @@
     "title": "Our Engagement Model",
     "subtitle": "We follow a structured, outcome-driven delivery framework designed for enterprise clarity and long-term scalability.",
     "steps": {
-      "discovery": { "title": "Discovery & Assessment", "desc": "Comprehensive analysis of business objectives, technical landscape, and strategic priorities." },
-      "architecture": { "title": "Architecture & Strategy", "desc": "Solution design, technology selection, and detailed roadmap aligned to business outcomes." },
-      "implementation": { "title": "Implementation & Integration", "desc": "Agile delivery with iterative builds, quality assurance, and seamless system integration." },
-      "optimization": { "title": "Optimization & Automation", "desc": "Performance tuning, process automation, and continuous improvement for peak efficiency." },
-      "support": { "title": "Continuous Support & Evolution", "desc": "Dedicated support with SLA-backed maintenance, monitoring, and technology evolution." }
+      "discovery": {
+        "title": "Discovery & Assessment",
+        "desc": "Comprehensive analysis of business objectives, technical landscape, and strategic priorities."
+      },
+      "architecture": {
+        "title": "Architecture & Strategy",
+        "desc": "Solution design, technology selection, and detailed roadmap aligned to business outcomes."
+      },
+      "implementation": {
+        "title": "Implementation & Integration",
+        "desc": "Agile delivery with iterative builds, quality assurance, and seamless system integration."
+      },
+      "optimization": {
+        "title": "Optimization & Automation",
+        "desc": "Performance tuning, process automation, and continuous improvement for peak efficiency."
+      },
+      "support": {
+        "title": "Continuous Support & Evolution",
+        "desc": "Dedicated support with SLA-backed maintenance, monitoring, and technology evolution."
+      }
     }
   },
   "capabilities": {
     "title": "Core Capabilities",
     "subtitle": "Comprehensive technology services engineered for enterprise performance.",
     "items": {
-      "consulting": { "title": "IT Consulting", "outcome": "Align technology with business strategy.", "desc": "Strategic advisory, digital roadmapping, and transformation planning for enterprises seeking competitive advantage through technology." },
-      "ai": { "title": "AI & Machine Learning", "outcome": "Automate decisions, unlock intelligence.", "desc": "Custom AI models, intelligent automation pipelines, and machine learning systems that transform data into actionable business outcomes." },
-      "automation": { "title": "Intelligent Automation", "outcome": "Eliminate manual processes at scale.", "desc": "End-to-end process automation combining AI, RPA, and workflow optimization to reduce costs and accelerate operations." },
-      "software": { "title": "Software Development", "outcome": "Build scalable digital products.", "desc": "Full-stack custom software, web and mobile applications engineered for performance, security, and long-term scalability." },
-      "cloud": { "title": "Cloud & Infrastructure", "outcome": "Modernize and scale your foundation.", "desc": "Cloud migration, DevOps implementation, and infrastructure architecture designed for reliability and cost optimization." },
-      "data": { "title": "Data & Analytics", "outcome": "Turn data into strategic advantage.", "desc": "Business intelligence platforms, data engineering pipelines, and predictive analytics that drive informed decision-making." },
-      "marketing": { "title": "Digital Marketing", "outcome": "Drive measurable growth.", "desc": "Performance marketing, SEO, and data-driven growth strategies that deliver quantifiable return on investment." },
-      "staffing": { "title": "IT Staffing & PM", "outcome": "Access expert talent on demand.", "desc": "Specialized talent acquisition and enterprise project management ensuring timely delivery of complex technology initiatives." }
+      "consulting": {
+        "title": "IT Consulting",
+        "outcome": "Align technology with business strategy.",
+        "desc": "Strategic advisory, digital roadmapping, and transformation planning for enterprises seeking competitive advantage through technology."
+      },
+      "ai": {
+        "title": "AI & Machine Learning",
+        "outcome": "Automate decisions, unlock intelligence.",
+        "desc": "Custom AI models, intelligent automation pipelines, and machine learning systems that transform data into actionable business outcomes."
+      },
+      "automation": {
+        "title": "Intelligent Automation",
+        "outcome": "Eliminate manual processes at scale.",
+        "desc": "End-to-end process automation combining AI, RPA, and workflow optimization to reduce costs and accelerate operations."
+      },
+      "software": {
+        "title": "Software Development",
+        "outcome": "Build scalable digital products.",
+        "desc": "Full-stack custom software, web and mobile applications engineered for performance, security, and long-term scalability."
+      },
+      "cloud": {
+        "title": "Cloud & Infrastructure",
+        "outcome": "Modernize and scale your foundation.",
+        "desc": "Cloud migration, DevOps implementation, and infrastructure architecture designed for reliability and cost optimization."
+      },
+      "data": {
+        "title": "Data & Analytics",
+        "outcome": "Turn data into strategic advantage.",
+        "desc": "Business intelligence platforms, data engineering pipelines, and predictive analytics that drive informed decision-making."
+      },
+      "marketing": {
+        "title": "Digital Marketing",
+        "outcome": "Drive measurable growth.",
+        "desc": "Performance marketing, SEO, and data-driven growth strategies that deliver quantifiable return on investment."
+      },
+      "staffing": {
+        "title": "IT Staffing & PM",
+        "outcome": "Access expert talent on demand.",
+        "desc": "Specialized talent acquisition and enterprise project management ensuring timely delivery of complex technology initiatives."
+      }
     }
   },
   "whyTicode": {
     "title": "Why Ticode",
     "subtitle": "Built for enterprises that demand reliability, innovation, and measurable outcomes.",
     "items": {
-      "enterprise": { "title": "Enterprise-Ready", "desc": "Solutions architected for scale, security, and compliance from day one." },
-      "ai": { "title": "AI-First Strategy", "desc": "Every solution leverages AI for automation, intelligence, and competitive advantage." },
-      "kuwait": { "title": "Kuwait-Based, GCC Reach", "desc": "Deep understanding of regional business dynamics with global technology standards." },
-      "scalable": { "title": "Scalable Architecture", "desc": "Infrastructure designed to grow with your business without reengineering." },
-      "partnership": { "title": "Partnership Approach", "desc": "We operate as an extension of your team, not a transactional vendor." },
-      "bilingual": { "title": "Bilingual Delivery", "desc": "Full service delivery in both English and Arabic across all touchpoints." }
+      "enterprise": {
+        "title": "Enterprise-Ready",
+        "desc": "Solutions architected for scale, security, and compliance from day one."
+      },
+      "ai": {
+        "title": "AI-First Strategy",
+        "desc": "Every solution leverages AI for automation, intelligence, and competitive advantage."
+      },
+      "kuwait": {
+        "title": "Kuwait-Based, GCC Reach",
+        "desc": "Deep understanding of regional business dynamics with global technology standards."
+      },
+      "scalable": {
+        "title": "Scalable Architecture",
+        "desc": "Infrastructure designed to grow with your business without reengineering."
+      },
+      "partnership": {
+        "title": "Partnership Approach",
+        "desc": "We operate as an extension of your team, not a transactional vendor."
+      },
+      "bilingual": {
+        "title": "Bilingual Delivery",
+        "desc": "Full service delivery in both English and Arabic across all touchpoints."
+      }
     }
   },
   "industries": {
@@ -323,18 +705,66 @@
     "subtitle": "Sector-specific technology solutions built on deep domain expertise.",
     "viewSolutions": "View Solutions",
     "items": {
-      "fashion": { "title": "Fashion", "desc": "Digital commerce, inventory intelligence, and brand technology.", "problem": "Fragmented retail channels and disconnected inventory systems." },
-      "sports": { "title": "Sports", "desc": "Fan engagement platforms, analytics, and performance systems.", "problem": "Limited fan engagement and underutilized performance data." },
-      "education": { "title": "Education", "desc": "LMS platforms, AI tutoring, and institutional management.", "problem": "Outdated learning systems and manual administrative processes." },
-      "healthcare": { "title": "Healthcare", "desc": "Patient systems, telemedicine, and clinical data platforms.", "problem": "Paper-based records and disconnected patient care workflows." },
-      "marketing": { "title": "Marketing", "desc": "MarTech stacks, automation, and campaign intelligence.", "problem": "Low campaign ROI and fragmented marketing technology." },
-      "realEstate": { "title": "Real Estate", "desc": "Property platforms, virtual tours, and CRM systems.", "problem": "Manual property management and slow lead conversion." },
-      "retail": { "title": "Retail", "desc": "Omnichannel commerce, POS integration, and demand forecasting.", "problem": "Disconnected sales channels and inaccurate demand planning." },
-      "transportation": { "title": "Transportation", "desc": "Fleet management, route optimization, and logistics tech.", "problem": "Fleet inefficiency and rising operational costs." },
-      "supplyChain": { "title": "Supply Chain", "desc": "Warehouse automation, tracking systems, and demand planning.", "problem": "Limited supply visibility and high warehousing costs." },
-      "finance": { "title": "Finance", "desc": "FinTech solutions, risk analytics, and regulatory compliance.", "problem": "Manual compliance processes and limited risk visibility." },
-      "insurance": { "title": "Insurance", "desc": "Claims automation, underwriting AI, and policy management.", "problem": "Slow claims processing and high operational overhead." },
-      "legal": { "title": "Legal", "desc": "Document automation, case management, and compliance tools.", "problem": "Manual document review and inefficient case tracking." }
+      "fashion": {
+        "title": "Fashion",
+        "desc": "Digital commerce, inventory intelligence, and brand technology.",
+        "problem": "Fragmented retail channels and disconnected inventory systems."
+      },
+      "sports": {
+        "title": "Sports",
+        "desc": "Fan engagement platforms, analytics, and performance systems.",
+        "problem": "Limited fan engagement and underutilized performance data."
+      },
+      "education": {
+        "title": "Education",
+        "desc": "LMS platforms, AI tutoring, and institutional management.",
+        "problem": "Outdated learning systems and manual administrative processes."
+      },
+      "healthcare": {
+        "title": "Healthcare",
+        "desc": "Patient systems, telemedicine, and clinical data platforms.",
+        "problem": "Paper-based records and disconnected patient care workflows."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "MarTech stacks, automation, and campaign intelligence.",
+        "problem": "Low campaign ROI and fragmented marketing technology."
+      },
+      "realEstate": {
+        "title": "Real Estate",
+        "desc": "Property platforms, virtual tours, and CRM systems.",
+        "problem": "Manual property management and slow lead conversion."
+      },
+      "retail": {
+        "title": "Retail",
+        "desc": "Omnichannel commerce, POS integration, and demand forecasting.",
+        "problem": "Disconnected sales channels and inaccurate demand planning."
+      },
+      "transportation": {
+        "title": "Transportation",
+        "desc": "Fleet management, route optimization, and logistics tech.",
+        "problem": "Fleet inefficiency and rising operational costs."
+      },
+      "supplyChain": {
+        "title": "Supply Chain",
+        "desc": "Warehouse automation, tracking systems, and demand planning.",
+        "problem": "Limited supply visibility and high warehousing costs."
+      },
+      "finance": {
+        "title": "Finance",
+        "desc": "FinTech solutions, risk analytics, and regulatory compliance.",
+        "problem": "Manual compliance processes and limited risk visibility."
+      },
+      "insurance": {
+        "title": "Insurance",
+        "desc": "Claims automation, underwriting AI, and policy management.",
+        "problem": "Slow claims processing and high operational overhead."
+      },
+      "legal": {
+        "title": "Legal",
+        "desc": "Document automation, case management, and compliance tools.",
+        "problem": "Manual document review and inefficient case tracking."
+      }
     }
   },
   "aiDiff": {
@@ -361,11 +791,26 @@
     "title": "Technology Ecosystem",
     "subtitle": "Enterprise-grade platforms and frameworks powering our solutions.",
     "categories": {
-      "cloud": { "title": "Cloud Platforms", "items": "AWS · Microsoft Azure · Google Cloud · DigitalOcean" },
-      "ai": { "title": "AI Frameworks", "items": "TensorFlow · PyTorch · OpenAI · LangChain · Hugging Face" },
-      "backend": { "title": "Backend Technologies", "items": "Node.js · Python · .NET · Java · Go" },
-      "frontend": { "title": "Frontend Technologies", "items": "React · Next.js · Vue.js · Flutter · React Native" },
-      "data": { "title": "Data & Analytics", "items": "PostgreSQL · MongoDB · Redis · Elasticsearch · Apache Kafka" }
+      "cloud": {
+        "title": "Cloud Platforms",
+        "items": "AWS · Microsoft Azure · Google Cloud · DigitalOcean"
+      },
+      "ai": {
+        "title": "AI Frameworks",
+        "items": "TensorFlow · PyTorch · OpenAI · LangChain · Hugging Face"
+      },
+      "backend": {
+        "title": "Backend Technologies",
+        "items": "Node.js · Python · .NET · Java · Go"
+      },
+      "frontend": {
+        "title": "Frontend Technologies",
+        "items": "React · Next.js · Vue.js · Flutter · React Native"
+      },
+      "data": {
+        "title": "Data & Analytics",
+        "items": "PostgreSQL · MongoDB · Redis · Elasticsearch · Apache Kafka"
+      }
     }
   },
   "calculator": {
@@ -386,13 +831,21 @@
         "industry": "Retail",
         "challenge": "A 30-store retail chain with disconnected POS, inventory, and e-commerce systems losing revenue to fragmented operations.",
         "solution": "Unified commerce platform with AI-driven demand forecasting and real-time inventory synchronization.",
-        "metrics": ["38% revenue increase", "25% cost reduction", "3x marketing ROI"]
+        "metrics": [
+          "38% revenue increase",
+          "25% cost reduction",
+          "3x marketing ROI"
+        ]
       },
       {
         "industry": "Insurance",
         "challenge": "Processing 10,000+ monthly claims with 7-day average settlement time causing customer dissatisfaction.",
         "solution": "AI-driven claims triage with automated assessment for standard claims and intelligent routing for complex cases.",
-        "metrics": ["60% auto-settled in 24hrs", "45% cost reduction", "+28 NPS points"]
+        "metrics": [
+          "60% auto-settled in 24hrs",
+          "45% cost reduction",
+          "+28 NPS points"
+        ]
       }
     ]
   },
@@ -413,7 +866,13 @@
     "phone": "+965 XXXX XXXX",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "copyright": "© 2026 Ticode Technologies. All rights reserved."
+    "copyright": "© 2026 Ticode Technologies. All rights reserved.",
+    "location": "Kuwait City, Kuwait",
+    "connect": "Connect"
+  },
+  "notFound": {
+    "message": "Oops! Page not found",
+    "returnHome": "Return to Home"
   },
   "pages": {
     "services": {
@@ -427,11 +886,26 @@
       "readyTitle": "Ready to Get Started?",
       "readyDesc": "Partner with Ticode Technologies to transform your",
       "delivery": {
-        "discovery": { "step": "Discovery", "desc": "Comprehensive assessment of business requirements, technical landscape, and strategic objectives." },
-        "strategy": { "step": "Strategy", "desc": "Architecture design, technology selection, and detailed roadmap development." },
-        "implementation": { "step": "Implementation", "desc": "Agile delivery with iterative development, testing, and stakeholder reviews." },
-        "optimization": { "step": "Optimization", "desc": "Performance tuning, security hardening, and continuous improvement cycles." },
-        "support": { "step": "Ongoing Support", "desc": "Dedicated support team with SLA-backed maintenance and evolution services." }
+        "discovery": {
+          "step": "Discovery",
+          "desc": "Comprehensive assessment of business requirements, technical landscape, and strategic objectives."
+        },
+        "strategy": {
+          "step": "Strategy",
+          "desc": "Architecture design, technology selection, and detailed roadmap development."
+        },
+        "implementation": {
+          "step": "Implementation",
+          "desc": "Agile delivery with iterative development, testing, and stakeholder reviews."
+        },
+        "optimization": {
+          "step": "Optimization",
+          "desc": "Performance tuning, security hardening, and continuous improvement cycles."
+        },
+        "support": {
+          "step": "Ongoing Support",
+          "desc": "Dedicated support team with SLA-backed maintenance and evolution services."
+        }
       }
     },
     "industries": {
@@ -451,19 +925,58 @@
       "ctaDesc": "Discover how Ticode's AI capabilities can transform your business operations.",
       "ctaButton": "Book AI Consultation",
       "items": {
-        "aiDev": { "title": "AI Development", "desc": "Custom AI solution design and development from concept to production deployment." },
-        "genAI": { "title": "Generative AI", "desc": "Content generation, code synthesis, and creative AI solutions powered by large language models." },
-        "ml": { "title": "Machine Learning", "desc": "Supervised, unsupervised, and reinforcement learning models for enterprise applications." },
-        "dl": { "title": "Deep Learning", "desc": "Neural network architectures for complex pattern recognition and decision-making." },
-        "cv": { "title": "Computer Vision", "desc": "Image classification, object detection, and video analytics for quality control and security." },
-        "nlp": { "title": "Natural Language Processing", "desc": "Text analysis, sentiment detection, and language understanding in Arabic and English." },
-        "gpt": { "title": "GPT Integration", "desc": "Enterprise GPT deployment with custom fine-tuning, guardrails, and domain-specific knowledge." },
-        "rag": { "title": "RAG as a Service", "desc": "Retrieval-Augmented Generation systems connecting AI to your proprietary knowledge bases." },
-        "agents": { "title": "AI Agents", "desc": "Autonomous agents that execute multi-step business processes with reasoning capabilities." },
-        "voice": { "title": "Voice AI", "desc": "Natural speech recognition and synthesis for customer service and internal operations." },
-        "automation": { "title": "AI Automation", "desc": "Intelligent process automation combining RPA with AI decision-making capabilities." },
-        "recommend": { "title": "Recommendation Systems", "desc": "Personalized recommendation engines for content, products, and services." },
-        "aiot": { "title": "AIoT", "desc": "AI-powered IoT solutions for smart buildings, industrial monitoring, and connected devices." }
+        "aiDev": {
+          "title": "AI Development",
+          "desc": "Custom AI solution design and development from concept to production deployment."
+        },
+        "genAI": {
+          "title": "Generative AI",
+          "desc": "Content generation, code synthesis, and creative AI solutions powered by large language models."
+        },
+        "ml": {
+          "title": "Machine Learning",
+          "desc": "Supervised, unsupervised, and reinforcement learning models for enterprise applications."
+        },
+        "dl": {
+          "title": "Deep Learning",
+          "desc": "Neural network architectures for complex pattern recognition and decision-making."
+        },
+        "cv": {
+          "title": "Computer Vision",
+          "desc": "Image classification, object detection, and video analytics for quality control and security."
+        },
+        "nlp": {
+          "title": "Natural Language Processing",
+          "desc": "Text analysis, sentiment detection, and language understanding in Arabic and English."
+        },
+        "gpt": {
+          "title": "GPT Integration",
+          "desc": "Enterprise GPT deployment with custom fine-tuning, guardrails, and domain-specific knowledge."
+        },
+        "rag": {
+          "title": "RAG as a Service",
+          "desc": "Retrieval-Augmented Generation systems connecting AI to your proprietary knowledge bases."
+        },
+        "agents": {
+          "title": "AI Agents",
+          "desc": "Autonomous agents that execute multi-step business processes with reasoning capabilities."
+        },
+        "voice": {
+          "title": "Voice AI",
+          "desc": "Natural speech recognition and synthesis for customer service and internal operations."
+        },
+        "automation": {
+          "title": "AI Automation",
+          "desc": "Intelligent process automation combining RPA with AI decision-making capabilities."
+        },
+        "recommend": {
+          "title": "Recommendation Systems",
+          "desc": "Personalized recommendation engines for content, products, and services."
+        },
+        "aiot": {
+          "title": "AIoT",
+          "desc": "AI-powered IoT solutions for smart buildings, industrial monitoring, and connected devices."
+        }
       }
     },
     "caseStudies": {
@@ -510,12 +1023,42 @@
       "subtitle": "Thought leadership on technology trends shaping Kuwait and GCC enterprises.",
       "readMore": "Read more",
       "articles": [
-        { "title": "How AI Agents Are Transforming Customer Service in the GCC", "category": "AI", "date": "Feb 2026", "summary": "Explore how autonomous AI agents are reducing support costs by 60% while improving customer satisfaction for GCC enterprises." },
-        { "title": "The Enterprise Guide to RAG-as-a-Service", "category": "AI", "date": "Jan 2026", "summary": "Why retrieval-augmented generation is becoming the standard for enterprise knowledge management and how to implement it." },
-        { "title": "Cloud Migration Roadmap for Kuwait Enterprises", "category": "Cloud", "date": "Jan 2026", "summary": "A practical guide to planning and executing cloud migration with minimal disruption for Kuwait-based organizations." },
-        { "title": "SEO vs AEO: Optimizing for the Age of AI Search", "category": "Marketing", "date": "Dec 2025", "summary": "Understanding the shift from traditional SEO to Answer Engine Optimization and what it means for GCC businesses." },
-        { "title": "Building Scalable FinTech Solutions for GCC Compliance", "category": "Finance", "date": "Dec 2025", "summary": "Key architectural considerations for building financial platforms that meet CBK and GCC regulatory requirements." },
-        { "title": "The Future of Voice AI in Arabic-Speaking Markets", "category": "AI", "date": "Nov 2025", "summary": "How advances in Arabic speech recognition are opening new possibilities for voice-first business applications." }
+        {
+          "title": "How AI Agents Are Transforming Customer Service in the GCC",
+          "category": "AI",
+          "date": "Feb 2026",
+          "summary": "Explore how autonomous AI agents are reducing support costs by 60% while improving customer satisfaction for GCC enterprises."
+        },
+        {
+          "title": "The Enterprise Guide to RAG-as-a-Service",
+          "category": "AI",
+          "date": "Jan 2026",
+          "summary": "Why retrieval-augmented generation is becoming the standard for enterprise knowledge management and how to implement it."
+        },
+        {
+          "title": "Cloud Migration Roadmap for Kuwait Enterprises",
+          "category": "Cloud",
+          "date": "Jan 2026",
+          "summary": "A practical guide to planning and executing cloud migration with minimal disruption for Kuwait-based organizations."
+        },
+        {
+          "title": "SEO vs AEO: Optimizing for the Age of AI Search",
+          "category": "Marketing",
+          "date": "Dec 2025",
+          "summary": "Understanding the shift from traditional SEO to Answer Engine Optimization and what it means for GCC businesses."
+        },
+        {
+          "title": "Building Scalable FinTech Solutions for GCC Compliance",
+          "category": "Finance",
+          "date": "Dec 2025",
+          "summary": "Key architectural considerations for building financial platforms that meet CBK and GCC regulatory requirements."
+        },
+        {
+          "title": "The Future of Voice AI in Arabic-Speaking Markets",
+          "category": "AI",
+          "date": "Nov 2025",
+          "summary": "How advances in Arabic speech recognition are opening new possibilities for voice-first business applications."
+        }
       ]
     },
     "about": {
@@ -530,12 +1073,30 @@
       "approachDesc": "We don't just build technology—we engineer business outcomes. Every engagement begins with understanding your strategic objectives and ends with measurable results. Our teams bring expertise across 15 technology disciplines and 12 industry verticals, ensuring that solutions are both technically sound and industry-relevant.",
       "valuesTitle": "Our Values",
       "values": {
-        "integrity": { "title": "Enterprise Integrity", "desc": "We build solutions that meet the highest standards of security, compliance, and reliability." },
-        "innovation": { "title": "Innovation First", "desc": "Every solution leverages the latest in AI, cloud, and digital engineering to create competitive advantage." },
-        "regional": { "title": "Regional Expertise", "desc": "Deep understanding of Kuwait and GCC business dynamics combined with global technology standards." },
-        "scalable": { "title": "Scalable Thinking", "desc": "Architecture designed to grow with your business without reengineering from the ground up." },
-        "partnership": { "title": "True Partnership", "desc": "We operate as an extension of your team, not a transactional vendor." },
-        "bilingual": { "title": "Bilingual Excellence", "desc": "Full-service delivery in English and Arabic across all project touchpoints." }
+        "integrity": {
+          "title": "Enterprise Integrity",
+          "desc": "We build solutions that meet the highest standards of security, compliance, and reliability."
+        },
+        "innovation": {
+          "title": "Innovation First",
+          "desc": "Every solution leverages the latest in AI, cloud, and digital engineering to create competitive advantage."
+        },
+        "regional": {
+          "title": "Regional Expertise",
+          "desc": "Deep understanding of Kuwait and GCC business dynamics combined with global technology standards."
+        },
+        "scalable": {
+          "title": "Scalable Thinking",
+          "desc": "Architecture designed to grow with your business without reengineering from the ground up."
+        },
+        "partnership": {
+          "title": "True Partnership",
+          "desc": "We operate as an extension of your team, not a transactional vendor."
+        },
+        "bilingual": {
+          "title": "Bilingual Excellence",
+          "desc": "Full-service delivery in English and Arabic across all project touchpoints."
+        }
       },
       "ctaTitle": "Let's Build Something Great Together"
     },

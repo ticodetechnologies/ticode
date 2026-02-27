@@ -60,7 +60,7 @@ const IndustryStatsStrip = ({ stats }: Props) => {
     return (
         <section ref={containerRef} className="bg-[#0B1521] py-8 border-y border-white/10 relative overflow-hidden z-20">
             {/* Subtle light leak */}
-            <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-blue/10 blur-[100px] pointer-events-none rounded-full" />
+            <div className="absolute top-0 end-1/4 w-96 h-96 bg-brand-blue/10 blur-[100px] pointer-events-none rounded-full" />
 
             <div className="container-tight">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-x divide-white/5">

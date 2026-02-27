@@ -156,7 +156,7 @@ const ITCHero = () => {
                             >
                                 <span className="relative z-10 flex items-center">
                                     Initiate Sovereign Engagement
-                                    <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                                    <ArrowRight className="ms-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                                 </span>
                             </Link>
                         </div>
@@ -166,7 +166,7 @@ const ITCHero = () => {
                         <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#2F6BFF]/5 to-transparent blur-3xl opacity-40" />
 
                         <div className="group/panel relative overflow-hidden rounded-3xl border border-white/5 bg-[#111F2E]/80 backdrop-blur-2xl p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform-gpu lg:rotate-y-[-5deg] lg:rotate-x-[5deg] transition-all duration-500 hover:border-[#00D1B2]/30 hover:shadow-[0_20px_40px_rgba(0,209,178,0.15)] hover:-translate-y-1">
-                            <div className="absolute top-0 right-0 h-[300px] w-[300px] rounded-full bg-[#00D1B2]/5 blur-[80px] pointer-events-none" />
+                            <div className="absolute top-0 end-0 h-[300px] w-[300px] rounded-full bg-[#00D1B2]/5 blur-[80px] pointer-events-none" />
 
                             <div className="flex items-center justify-between mb-8 border-b border-white/5 pb-5 relative z-10">
                                 <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] font-mono text-slate-400">

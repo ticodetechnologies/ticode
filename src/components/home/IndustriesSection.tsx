@@ -49,7 +49,7 @@ const IndustriesSection = () => {
         <div className="flex flex-col gap-4">
           <p className="text-sm uppercase tracking-[0.3em] text-white/60">{t("home.industries.label")}</p>
           <div className="relative">
-            <div className="pointer-events-none absolute -top-8 left-0 h-28 w-36 heading-glow" />
+            <div className="pointer-events-none absolute -top-8 start-0 h-28 w-36 heading-glow" />
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white font-heading">
               {t("home.industries.title")}
             </h2>
@@ -73,7 +73,7 @@ const IndustriesSection = () => {
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(5,12,28,0.85)] via-[rgba(5,12,28,0.45)] to-[rgba(5,12,28,0.18)] transition-opacity duration-300 group-hover:opacity-100" />
-              <div className="absolute bottom-6 left-6 right-6 transition-transform duration-300 group-hover:-translate-y-1">
+              <div className="absolute bottom-6 start-6 end-6 transition-transform duration-300 group-hover:-translate-y-1">
                 <p className="text-sm uppercase tracking-[0.3em] text-white/60">{t("home.industries.cardLabel")}</p>
                 <h3 className="mt-2 text-2xl font-semibold tracking-tight text-white font-heading">
                   {industry.title}

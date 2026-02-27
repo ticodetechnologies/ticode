@@ -132,7 +132,7 @@ const LuxuryHero = ({ industry }: Props) => {
                                 <span className="absolute inset-0 translate-y-full bg-gradient-to-t from-black/20 to-transparent transition-transform duration-300 group-hover:translate-y-0" />
                                 <span className="relative z-10 flex items-center tracking-wide">
                                     Book a Strategy Call
-                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                    <ArrowRight className="ms-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </span>
                             </Link>
 

@@ -11,43 +11,44 @@ const DeliveryFramework = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-    const steps = [
+    const baseSteps = [
         {
             id: "discovery",
             icon: <Eye className="w-5 h-5" />,
-            title: "Discovery",
-            desc: "Audit technical debt and map organizational risk.",
             number: "01",
         },
         {
             id: "strategy",
             icon: <Navigation2 className="w-5 h-5" />,
-            title: "Strategy",
-            desc: "Blueprint architectures aligned with GCC directives.",
             number: "02",
         },
         {
             id: "implementation",
             icon: <Cpu className="w-5 h-5" />,
-            title: "Implementation",
-            desc: "Deploy environments with zero business disruption.",
             number: "03",
         },
         {
             id: "optimization",
             icon: <RefreshCw className="w-5 h-5" />,
-            title: "Optimization",
-            desc: "Fine-tune workloads for maximum operational yield.",
             number: "04",
         },
         {
             id: "support",
             icon: <ShieldCheck className="w-5 h-5" />,
-            title: "Governance",
-            desc: "Continuous sovereign oversight and infrastructure security.",
             number: "05",
         },
     ];
+
+    const translatedSteps = t("home.delivery.steps", { returnObjects: true }) as any[];
+
+    const steps = baseSteps.map((base, index) => {
+        const translation = (translatedSteps && translatedSteps[index]) || {};
+        return {
+            ...base,
+            title: translation.title,
+            desc: translation.desc,
+        };
+    });
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -100,17 +101,14 @@ const DeliveryFramework = () => {
                     <div className="mb-8 inline-flex items-center gap-3 w-max mx-auto">
                         <span className="h-2 w-2 rounded-full bg-accent-cyan" />
                         <span className="text-xs font-bold tracking-widest text-slate-300 uppercase font-mono">
-                            Methodology
+                            {t("home.delivery.badge")}
                         </span>
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                        Execution <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent-cyan">Framework.</span>
+                        {t("home.delivery.title")}
                     </h2>
                     <p className="mt-6 text-lg font-medium text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                        {t(
-                            "home.delivery.subtext",
-                            "A structured, board-approved timeline for implementing robust digital transformations."
-                        )}
+                        {t("home.delivery.subtext")}
                     </p>
                 </div>
 
@@ -123,9 +121,9 @@ const DeliveryFramework = () => {
                             style={{ top: `calc(6rem + ${index * 2}rem)` }}
                         >
                             {/* Glowing Left Edge Line on Hover */}
-                            <div className="absolute left-0 inset-y-0 w-[2px] bg-gradient-to-b from-brand-blue via-accent-cyan to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 shadow-[0_0_15px_rgba(54,224,255,0.5)]" />
+                            <div className="absolute start-0 inset-y-0 w-[2px] bg-gradient-to-b from-brand-blue via-accent-cyan to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 shadow-[0_0_15px_rgba(54,224,255,0.5)]" />
 
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-blue/5 rounded-full blur-[80px] group-hover:bg-accent-cyan/10 transition-colors duration-700 pointer-events-none" />
+                            <div className="absolute top-0 end-0 w-64 h-64 bg-brand-blue/5 rounded-full blur-[80px] group-hover:bg-accent-cyan/10 transition-colors duration-700 pointer-events-none" />
 
                             {/* Graphic/Icon Column */}
                             <div className="flex-shrink-0 relative flex items-center justify-center w-20 h-20 md:w-28 md:h-28 bg-[#0B1E2D] border border-white/5 rounded-[1.5rem] text-accent-cyan overflow-hidden shadow-inner group-hover:border-brand-blue/30 transition-colors">
@@ -134,9 +132,9 @@ const DeliveryFramework = () => {
                             </div>
 
                             {/* Content Column */}
-                            <div className="flex flex-col flex-1 pl-0 md:pl-4 relative z-10">
+                            <div className="flex flex-col flex-1 ps-0 md:ps-4 relative z-10">
                                 <div className="text-xs uppercase font-semibold tracking-widest text-slate-500 mb-3 font-mono group-hover:text-accent-cyan transition-colors">
-                                    Phase {step.number}
+                                    {t("home.delivery.phase")} {step.number}
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-slate-300 transition-all">
                                     {step.title}
@@ -147,7 +145,7 @@ const DeliveryFramework = () => {
                             </div>
 
                             {/* Ambient Number */}
-                            <div className="absolute top-4 right-8 text-7xl md:text-9xl font-mono font-black text-white/[0.02] select-none pointer-events-none transition-colors group-hover:text-brand-blue/10 duration-700">
+                            <div className="absolute top-4 end-8 text-7xl md:text-9xl font-mono font-black text-white/[0.02] select-none pointer-events-none transition-colors group-hover:text-brand-blue/10 duration-700">
                                 {step.number}
                             </div>
                         </div>

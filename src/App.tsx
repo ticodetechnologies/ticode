@@ -18,6 +18,8 @@ const CaseStudies = lazy(() => import("./pages/CaseStudies"));
 const Insights = lazy(() => import("./pages/Insights"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
 
 const queryClient = new QueryClient();
 
@@ -33,7 +35,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           <Layout>
             <Suspense fallback={<Loading />}>
               <Routes>
@@ -46,6 +48,8 @@ const App = () => (
                 <Route path="/insights" element={<Insights />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>

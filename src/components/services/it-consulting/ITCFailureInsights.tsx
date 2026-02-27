@@ -76,7 +76,7 @@ const ITCFailureInsights = () => {
     return (
         <section ref={containerRef} className="relative bg-[#02080D] py-12 md:py-20 overflow-hidden border-t border-b border-white/5">
             {/* Spotlights */}
-            <div className="absolute top-0 right-0 h-[800px] w-[800px] bg-[radial-gradient(circle_at_top_right,rgba(43,179,255,0.05)_0%,transparent_70%)] pointer-events-none" />
+            <div className="absolute top-0 end-0 h-[800px] w-[800px] bg-[radial-gradient(circle_at_top_right,rgba(43,179,255,0.05)_0%,transparent_70%)] pointer-events-none" />
 
             <div className="container-tight relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">

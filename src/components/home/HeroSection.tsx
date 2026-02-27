@@ -83,7 +83,7 @@ const HeroSection = () => {
             >
               <Link to="/contact">
                 {t("home.hero.ctaPrimary")}
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ms-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button

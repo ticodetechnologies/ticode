@@ -158,14 +158,14 @@ const CaseStudies = () => {
 
             {/* Abstract Data Nodes Visual */}
             <div className="hero-visual-element relative w-full h-[200px] max-w-4xl opacity-80 pointer-events-none">
-              <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent"></div>
-              <div className="absolute top-1/2 left-[15%] w-16 h-16 -mt-8 bg-brand-blue/10 border border-brand-blue/30 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="absolute top-1/2 start-0 end-0 h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent"></div>
+              <div className="absolute top-1/2 start-[15%] w-16 h-16 -mt-8 bg-brand-blue/10 border border-brand-blue/30 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-lg">
                 <Activity className="w-6 h-6 text-brand-blue" />
               </div>
-              <div className="absolute top-1/2 left-[50%] -translate-x-1/2 w-24 h-24 -mt-12 bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl flex items-center justify-center shadow-[0_0_40px_rgba(45,107,255,0.15)] z-10">
+              <div className="absolute top-1/2 start-[50%] -translate-x-1/2 w-24 h-24 -mt-12 bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl flex items-center justify-center shadow-[0_0_40px_rgba(45,107,255,0.15)] z-10">
                 <Factory className="w-10 h-10 text-white" />
               </div>
-              <div className="absolute top-1/2 right-[15%] w-16 h-16 -mt-8 bg-emerald-500/10 border border-emerald-500/30 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="absolute top-1/2 end-[15%] w-16 h-16 -mt-8 bg-emerald-500/10 border border-emerald-500/30 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-lg">
                 <CheckCircle2 className="w-6 h-6 text-emerald-400" />
               </div>
             </div>

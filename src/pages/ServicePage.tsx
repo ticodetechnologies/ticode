@@ -181,8 +181,8 @@ const ServicePage = () => {
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-cyan"></span>
                 </span>
                 {t('pages.services.label', 'Service Capability')}
-                <span className="h-px w-6 bg-white/20 ml-2 hidden sm:block" />
-                <span className="text-white/50 ml-2 hidden sm:block">Enterprise Tier</span>
+                <span className="h-px w-6 bg-white/20 ms-2 hidden sm:block" />
+                <span className="text-white/50 ms-2 hidden sm:block">Enterprise Tier</span>
               </div>
 
               <h1 className="font-heading text-4xl font-black leading-[1.1] tracking-[-0.02em] text-white md:text-6xl lg:text-[4rem] drop-shadow-2xl max-w-2xl lg:max-w-3xl">
@@ -284,12 +284,12 @@ const ServicePage = () => {
                   <Link to="/contact">
                     <span className="relative z-10 flex items-center">
                       {t("home.hero.ctaPrimary", "Initiate Engagement")}
-                      <ArrowRight className="ml-3 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      <ArrowRight className="ms-3 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-[#1E40AF] to-brand-blue opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   </Link>
                 </Button>
-                <div className="text-xs font-bold tracking-[0.05em] text-white/40 px-2 text-center sm:text-left leading-relaxed">
+                <div className="text-xs font-bold tracking-[0.05em] text-white/40 px-2 text-center sm:text-start leading-relaxed">
                   Board-ready outcomes,<br className="hidden sm:block" /> measured and governed.
                 </div>
               </div>
@@ -299,7 +299,7 @@ const ServicePage = () => {
             <div className="lg:col-span-5 w-full relative">
               {isSoftwareDev ? (
                 // Custom Engineering/Architecture Visual for Software Dev
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient Glows */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-brand-blue/20 rounded-full blur-[100px] pointer-events-none" />
 
@@ -325,14 +325,14 @@ const ServicePage = () => {
                         <p className="text-[#C678DD]">import <span className="text-[#E5C07B]">{' { '}</span> GCC_Compliance <span className="text-[#E5C07B]">{' } '}</span> from <span className="text-[#98C379]">'@ticode/gov'</span>;</p>
                         <br />
                         <p><span className="text-[#C678DD]">const</span> <span className="text-[#61AFEF]">deployEnterpriseStack</span> = <span className="text-[#C678DD]">async</span> () ={'>'} {' {'}</p>
-                        <p className="pl-4 sm:pl-8"><span className="text-[#C678DD]">await</span> SovereignArch.<span className="text-[#61AFEF]">initialize</span>({' {'}</p>
-                        <p className="pl-8 sm:pl-16 text-[#E06C75]">scale<span className="text-white/50">:</span> <span className="text-[#98C379]">'global_mission_critical'</span>,</p>
-                        <p className="pl-8 sm:pl-16 text-[#E06C75]">security<span className="text-white/50">:</span> GCC_Compliance.<span className="text-[#61AFEF]">ZeroTrustNet</span>(),</p>
-                        <p className="pl-8 sm:pl-16 text-[#E06C75]">uptime<span className="text-white/50">:</span> <span className="text-[#D19A66]">99.999</span></p>
-                        <p className="pl-4 sm:pl-8">{'}'});</p>
+                        <p className="ps-4 sm:ps-8"><span className="text-[#C678DD]">await</span> SovereignArch.<span className="text-[#61AFEF]">initialize</span>({' {'}</p>
+                        <p className="ps-8 sm:ps-16 text-[#E06C75]">scale<span className="text-white/50">:</span> <span className="text-[#98C379]">'global_mission_critical'</span>,</p>
+                        <p className="ps-8 sm:ps-16 text-[#E06C75]">security<span className="text-white/50">:</span> GCC_Compliance.<span className="text-[#61AFEF]">ZeroTrustNet</span>(),</p>
+                        <p className="ps-8 sm:ps-16 text-[#E06C75]">uptime<span className="text-white/50">:</span> <span className="text-[#D19A66]">99.999</span></p>
+                        <p className="ps-4 sm:ps-8">{'}'});</p>
                         <br />
-                        <p className="pl-4 sm:pl-8 text-[#5C6370] italic">{'// Provisioning immutable infrastructure...'}</p>
-                        <p className="pl-4 sm:pl-8"><span className="text-[#C678DD]">return</span> {' {'} status: <span className="text-[#98C379]">'Securely Deployed'</span> {'}'};</p>
+                        <p className="ps-4 sm:ps-8 text-[#5C6370] italic">{'// Provisioning immutable infrastructure...'}</p>
+                        <p className="ps-4 sm:ps-8"><span className="text-[#C678DD]">return</span> {' {'} status: <span className="text-[#98C379]">'Securely Deployed'</span> {'}'};</p>
                         <p>{'}'};</p>
 
                         {/* Ambient Editor Glow */}
@@ -368,7 +368,7 @@ const ServicePage = () => {
                 </div>
               ) : isAIML ? (
                 // Custom Enterprise AI Visual for AI & ML Service
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient Deep Glows */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-blue/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -388,7 +388,7 @@ const ServicePage = () => {
                     </div>
 
                     {/* Data Ingestion Pipeline (Left) */}
-                    <div className="absolute left-[-2rem] sm:left-[-4rem] top-1/3 -translate-y-1/2 flex flex-col sm:flex-row items-start sm:items-center gap-2 z-30">
+                    <div className="absolute start-[-2rem] sm:start-[-4rem] top-1/3 -translate-y-1/2 flex flex-col sm:flex-row items-start sm:items-center gap-2 z-30">
                       <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-[#0B1521]/90 backdrop-blur-md px-3 py-2 shadow-lg">
                           <Database className="h-3 w-3 text-slate-400" />
@@ -411,7 +411,7 @@ const ServicePage = () => {
                     </div>
 
                     {/* Execution Pipeline (Right) */}
-                    <div className="absolute right-[-1.5rem] sm:right-[-3rem] bottom-1/3 translate-y-1/2 flex flex-col sm:flex-row items-end sm:items-center gap-2 z-30">
+                    <div className="absolute end-[-1.5rem] sm:end-[-3rem] bottom-1/3 translate-y-1/2 flex flex-col sm:flex-row items-end sm:items-center gap-2 z-30">
                       <div className="w-12 sm:w-16 border-t border-accent-cyan/40 border-dashed relative hidden sm:block">
                         {/* Flowing particle */}
                         <motion.div
@@ -430,11 +430,11 @@ const ServicePage = () => {
                     </div>
 
                     {/* Floating Badge - Analytics */}
-                    <div className="absolute -top-4 right-0 sm:right-4 rounded-xl border border-brand-blue/30 bg-[#111C2D]/95 backdrop-blur-xl px-4 py-3 shadow-[0_20px_40px_rgba(0,0,0,0.5)] z-40 animate-[fade-in-up_0.5s_ease-out_forwards] delay-300">
+                    <div className="absolute -top-4 end-0 sm:end-4 rounded-xl border border-brand-blue/30 bg-[#111C2D]/95 backdrop-blur-xl px-4 py-3 shadow-[0_20px_40px_rgba(0,0,0,0.5)] z-40 animate-[fade-in-up_0.5s_ease-out_forwards] delay-300">
                       <div className="flex items-center gap-3">
                         <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-brand-blue/20 text-brand-blue">
                           <Cpu className="h-4 w-4" />
-                          <span className="absolute right-0 top-0 flex h-2 w-2">
+                          <span className="absolute end-0 top-0 flex h-2 w-2">
                             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
                             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
                           </span>
@@ -448,7 +448,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               ) : isAIAgents ? (
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient Deep Glows */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-blue/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -466,14 +466,14 @@ const ServicePage = () => {
                     </svg>
 
                     {/* Node 1: Voice Input (Top Left) */}
-                    <div className="absolute top-[20%] left-0 sm:left-[2%] flex items-center gap-3 z-30 animate-[float-slow_4s_ease-in-out_infinite]">
+                    <div className="absolute top-[20%] start-0 sm:start-[2%] flex items-center gap-3 z-30 animate-[float-slow_4s_ease-in-out_infinite]">
                       <div className="flex flex-col items-end gap-2">
                         <div className="flex items-center gap-2 rounded-lg border border-accent-cyan/30 bg-[#0B1521]/90 backdrop-blur-md px-4 py-2.5 shadow-[0_10px_30px_rgba(0,194,255,0.1)] relative overflow-hidden">
                           <div className="absolute inset-0 bg-accent-cyan/10 animate-pulse" />
                           <AudioWaveform className="h-4 w-4 text-accent-cyan relative z-10" />
                           <span className="text-[10px] font-mono text-white font-bold uppercase tracking-widest relative z-10">Audio In</span>
                         </div>
-                        <div className="flex gap-1 pr-2">
+                        <div className="flex gap-1 pe-2">
                           <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan/40 animate-pulse" style={{ animationDelay: '0ms' }} />
                           <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan/70 animate-pulse" style={{ animationDelay: '150ms' }} />
                           <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan animate-pulse" style={{ animationDelay: '300ms' }} />
@@ -482,14 +482,14 @@ const ServicePage = () => {
                     </div>
 
                     {/* Node 2: Context/Memory (Top Right) */}
-                    <div className="absolute top-[20%] right-0 sm:right-[2%] flex items-center gap-3 z-30 animate-[float-slow_5s_ease-in-out_infinite] delay-150">
+                    <div className="absolute top-[20%] end-0 sm:end-[2%] flex items-center gap-3 z-30 animate-[float-slow_5s_ease-in-out_infinite] delay-150">
                       <div className="flex flex-col items-start gap-2">
                         <div className="flex items-center gap-2 rounded-lg border border-brand-blue/40 bg-[#0B1521]/90 backdrop-blur-md px-4 py-2.5 shadow-[0_10px_30px_rgba(37,99,235,0.1)] relative overflow-hidden">
                           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-blue/20 to-transparent animate-pulse" style={{ animationDuration: '3s' }} />
                           <Database className="h-4 w-4 text-brand-blue relative z-10" />
                           <span className="text-[10px] font-mono text-white font-bold uppercase tracking-widest relative z-10">Vector Mem</span>
                         </div>
-                        <div className="flex items-center gap-2 pl-2">
+                        <div className="flex items-center gap-2 ps-2">
                           <span className="text-[9px] font-mono text-slate-400">Retrieval: 12ms</span>
                         </div>
                       </div>
@@ -531,7 +531,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               ) : isDataAnalytics ? (
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient Data Glows */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-accent-cyan/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -539,7 +539,7 @@ const ServicePage = () => {
                   <div className="relative w-full max-w-[450px] aspect-square flex items-center justify-center animate-float-slow mt-8 lg:mt-0">
 
                     {/* Left side Data Sources */}
-                    <div className="absolute left-[2%] top-1/4 sm:top-1/3 flex flex-col gap-8 z-30">
+                    <div className="absolute start-[2%] top-1/4 sm:top-1/3 flex flex-col gap-8 z-30">
 
                       <div className="flex items-center gap-3 relative group">
                         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0B1521] border border-white/20 shadow-lg relative overflow-hidden z-20">
@@ -552,7 +552,7 @@ const ServicePage = () => {
                         </div>
 
                         {/* Data Pipeline Line */}
-                        <div className="absolute left-[30px] top-1/2 -translate-y-1/2 w-24 sm:w-32 border-t border-emerald-500/40 border-dashed -z-10">
+                        <div className="absolute start-[30px] top-1/2 -translate-y-1/2 w-24 sm:w-32 border-t border-emerald-500/40 border-dashed -z-10">
                           <motion.div
                             className="absolute top-1/2 -translate-y-1/2 h-1.5 w-4 bg-emerald-400 rounded-full shadow-[0_0_10px_2px_theme('colors.emerald.400')]"
                             initial={{ left: '0%', opacity: 0 }}
@@ -573,7 +573,7 @@ const ServicePage = () => {
                         </div>
 
                         {/* Data Pipeline Line */}
-                        <div className="absolute left-[30px] top-1/2 -translate-y-1/2 w-24 sm:w-32 border-t border-brand-blue/40 border-dashed -z-10">
+                        <div className="absolute start-[30px] top-1/2 -translate-y-1/2 w-24 sm:w-32 border-t border-brand-blue/40 border-dashed -z-10">
                           <motion.div
                             className="absolute top-1/2 -translate-y-1/2 h-1.5 w-4 bg-brand-blue rounded-full shadow-[0_0_10px_2px_theme('colors.brand.blue')]"
                             initial={{ left: '0%', opacity: 0 }}
@@ -586,7 +586,7 @@ const ServicePage = () => {
                     </div>
 
                     {/* Central Data Warehouse Element */}
-                    <div className="relative z-40 lg:ml-8">
+                    <div className="relative z-40 lg:ms-8">
                       <div className="relative w-40 h-52 sm:w-48 sm:h-64 rounded-2xl border-[1px] border-accent-cyan/40 bg-[#080D14]/90 backdrop-blur-xl flex flex-col overflow-hidden shadow-[0_0_50px_rgba(0,194,255,0.15)] group transition-all duration-500 hover:shadow-[0_0_80px_rgba(0,194,255,0.3)] hover:border-accent-cyan/70">
                         {/* Top Header */}
                         <div className="h-10 border-b border-white/10 flex items-center justify-between px-4 bg-white/[0.02]">
@@ -641,10 +641,10 @@ const ServicePage = () => {
                     </div>
 
                     {/* Output BI Dashboard (Right Side) */}
-                    <div className="absolute right-[5%] top-1/4 sm:top-1/3 z-50 animate-[fade-in-up_0.5s_ease-out_forwards] delay-300">
+                    <div className="absolute end-[5%] top-1/4 sm:top-1/3 z-50 animate-[fade-in-up_0.5s_ease-out_forwards] delay-300">
 
                       {/* Connection from DWH to Dashboard */}
-                      <div className="absolute right-[100%] top-1/2 -translate-y-1/2 w-16 sm:w-24 border-t border-accent-cyan/50 border-dashed -z-10">
+                      <div className="absolute end-[100%] top-1/2 -translate-y-1/2 w-16 sm:w-24 border-t border-accent-cyan/50 border-dashed -z-10">
                         <motion.div
                           className="absolute top-1/2 -translate-y-1/2 h-1.5 w-4 bg-accent-cyan rounded-full shadow-[0_0_10px_2px_theme('colors.accent.cyan')]"
                           initial={{ left: '0%', opacity: 0 }}
@@ -654,7 +654,7 @@ const ServicePage = () => {
                       </div>
 
                       <div className="rounded-xl border border-white/20 bg-[#111C2D]/95 backdrop-blur-md p-4 shadow-[0_30px_60px_rgba(0,0,0,0.6)] flex flex-col gap-3 min-w-[140px] relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-16 h-16 bg-brand-blue/10 rounded-full blur-[20px] pointer-events-none" />
+                        <div className="absolute top-0 end-0 w-16 h-16 bg-brand-blue/10 rounded-full blur-[20px] pointer-events-none" />
 
                         <div className="flex items-center gap-2 border-b border-white/10 pb-2">
                           <BarChart3 className="h-3.5 w-3.5 text-accent-cyan" />
@@ -686,7 +686,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               ) : isIntelligentSystems ? (
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient Industrial Glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-brand-blue/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -735,7 +735,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 2: CI/CD Pipelines (Bottom Right) */}
-                      <div className="absolute bottom-[15%] right-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_30s_linear_infinite_reverse]">
+                      <div className="absolute bottom-[15%] end-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_30s_linear_infinite_reverse]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-3 py-2 shadow-xl backdrop-blur-md transition-all hover:border-brand-blue/30">
                           <div className="flex h-6 w-6 items-center justify-center rounded-md bg-brand-blue/20">
                             <Workflow className="h-3.5 w-3.5 text-brand-blue" />
@@ -748,7 +748,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 3: RPA Bots (Bottom Left) */}
-                      <div className="absolute bottom-[15%] left-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_30s_linear_infinite_reverse]">
+                      <div className="absolute bottom-[15%] start-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_30s_linear_infinite_reverse]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-3 py-2 shadow-xl backdrop-blur-md transition-all hover:border-accent-cyan/30">
                           <div className="flex h-6 w-6 items-center justify-center rounded-md bg-accent-cyan/20 overflow-hidden relative">
                             <div className="absolute inset-0 bg-accent-cyan/20 animate-pulse" />
@@ -780,7 +780,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               ) : isCloudInfra ? (
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient Cloud Glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-sky-500/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -822,7 +822,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 2: Private Cloud Clusters */}
-                      <div className="absolute bottom-[15%] right-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite_reverse]">
+                      <div className="absolute bottom-[15%] end-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite_reverse]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-brand-blue/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-blue/10">
                             <Database className="h-4 w-4 text-brand-blue" />
@@ -835,7 +835,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 3: Edge Compute */}
-                      <div className="absolute bottom-[15%] left-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite_reverse]">
+                      <div className="absolute bottom-[15%] start-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite_reverse]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-accent-cyan/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent-cyan/10">
                             <Laptop className="h-4 w-4 text-accent-cyan" />
@@ -860,7 +860,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               ) : isNetworkSolutions ? (
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient Network Glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
 
@@ -905,7 +905,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 2: Packet Inspection */}
-                      <div className="absolute bottom-[15%] right-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_35s_linear_infinite]">
+                      <div className="absolute bottom-[15%] end-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_35s_linear_infinite]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-[#F43F5E]/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#F43F5E]/10">
                             <Search className="h-4 w-4 text-[#F43F5E]" />
@@ -918,7 +918,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 3: Encrypted Tunnels */}
-                      <div className="absolute bottom-[15%] left-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_35s_linear_infinite]">
+                      <div className="absolute bottom-[15%] start-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_35s_linear_infinite]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-brand-blue/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-blue/10">
                             <Fingerprint className="h-4 w-4 text-brand-blue" />
@@ -945,7 +945,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               ) : isSoftwareTesting ? (
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient QA Glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-[#8B5CF6]/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -988,7 +988,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 2: Integration */}
-                      <div className="absolute bottom-[15%] right-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite_reverse]">
+                      <div className="absolute bottom-[15%] end-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite_reverse]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-brand-blue/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-blue/10">
                             <GitBranch className="h-4 w-4 text-brand-blue" />
@@ -1001,7 +1001,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 3: E2E */}
-                      <div className="absolute bottom-[15%] left-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite_reverse]">
+                      <div className="absolute bottom-[15%] start-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite_reverse]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-accent-cyan/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent-cyan/10">
                             <LayoutDashboard className="h-4 w-4 text-accent-cyan" />
@@ -1024,7 +1024,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               ) : isProjectManagement ? (
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient PM Glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-[#F59E0B]/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -1045,10 +1045,10 @@ const ServicePage = () => {
                     {/* Gantt / Timeline Rows */}
                     <div className="w-full max-w-[340px] flex flex-col gap-6 relative z-20">
                       {/* Vertical line connector */}
-                      <div className="absolute left-[1.35rem] top-2 bottom-2 w-px bg-gradient-to-b from-[#F59E0B] via-brand-blue to-white/10" />
+                      <div className="absolute start-[1.35rem] top-2 bottom-2 w-px bg-gradient-to-b from-[#F59E0B] via-brand-blue to-white/10" />
 
                       {/* Row 1: Workflows */}
-                      <div className="relative flex items-center gap-5 pl-4 z-10">
+                      <div className="relative flex items-center gap-5 ps-4 z-10">
                         <div className="h-3.5 w-3.5 rounded-full border-2 border-[#0B1521] bg-[#F59E0B] relative z-10 shadow-[0_0_10px_rgba(245,158,11,0.5)]" />
                         <div className="flex-1 flex flex-col gap-2 rounded-xl border border-white/5 bg-white/[0.02] p-3 backdrop-blur-sm">
                           <div className="flex justify-between items-center text-[9px] font-mono uppercase tracking-widest text-slate-400">
@@ -1062,7 +1062,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Row 2: Milestones (Animated) */}
-                      <div className="relative flex items-center gap-5 pl-4 z-10">
+                      <div className="relative flex items-center gap-5 ps-4 z-10">
                         <div className="h-3.5 w-3.5 rounded-full border-2 border-[#0B1521] bg-brand-blue relative z-10 shadow-[0_0_10px_rgba(47,107,255,0.5)] animate-pulse" />
                         <div className="flex-1 flex flex-col gap-2 rounded-xl border border-brand-blue/20 bg-brand-blue/5 p-3 backdrop-blur-sm shadow-[inset_0_0_20px_rgba(47,107,255,0.05)]">
                           <div className="flex justify-between items-center text-[9px] font-mono uppercase tracking-widest text-slate-400">
@@ -1071,13 +1071,13 @@ const ServicePage = () => {
                           </div>
                           <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden relative">
                             {/* Animated progress bar */}
-                            <div className="h-full bg-brand-blue rounded-full absolute left-0 top-0 bottom-0 animate-pulse" style={{ width: '65%' }} />
+                            <div className="h-full bg-brand-blue rounded-full absolute start-0 top-0 bottom-0 animate-pulse" style={{ width: '65%' }} />
                           </div>
                         </div>
                       </div>
 
                       {/* Row 3: Resources */}
-                      <div className="relative flex items-center gap-5 pl-4 z-10">
+                      <div className="relative flex items-center gap-5 ps-4 z-10">
                         <div className="h-3.5 w-3.5 rounded-full border-2 border-[#0B1521] bg-white/30 relative z-10" />
                         <div className="flex-1 flex flex-col gap-2 rounded-xl border border-white/5 bg-white/[0.02] p-3 backdrop-blur-sm">
                           <div className="flex justify-between items-center text-[9px] font-mono uppercase tracking-widest text-slate-400">
@@ -1111,7 +1111,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               ) : isITStaffing ? (
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient Staffing Glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-[#EC4899]/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -1154,7 +1154,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 2: Tech Vetting */}
-                      <div className="absolute bottom-[15%] right-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite_reverse]">
+                      <div className="absolute bottom-[15%] end-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite_reverse]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-brand-blue/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-blue/10">
                             <FileSearch className="h-4 w-4 text-brand-blue" />
@@ -1167,7 +1167,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 3: Culture Alignment */}
-                      <div className="absolute bottom-[15%] left-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite_reverse]">
+                      <div className="absolute bottom-[15%] start-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite_reverse]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-accent-cyan/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent-cyan/10">
                             <HeartHandshake className="h-4 w-4 text-accent-cyan" />
@@ -1193,7 +1193,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               ) : isSocialMedia ? (
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient Social Glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-[#E11D48]/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -1237,7 +1237,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 2: Analytics */}
-                      <div className="absolute bottom-[15%] right-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_35s_linear_infinite]">
+                      <div className="absolute bottom-[15%] end-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_35s_linear_infinite]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-brand-blue/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-blue/10">
                             <BarChart className="h-4 w-4 text-brand-blue" />
@@ -1250,7 +1250,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 3: Viral Reach */}
-                      <div className="absolute bottom-[15%] left-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_35s_linear_infinite]">
+                      <div className="absolute bottom-[15%] start-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_35s_linear_infinite]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-accent-cyan/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent-cyan/10">
                             <TrendingUp className="h-4 w-4 text-accent-cyan" />
@@ -1278,7 +1278,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               ) : isDigitalMarketing ? (
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient Funnel Glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-[#14B8A6]/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -1353,7 +1353,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               ) : isDataEntry ? (
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient Data Glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-indigo-500/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -1396,7 +1396,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 2: OCR Extraction */}
-                      <div className="absolute bottom-[15%] right-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite]">
+                      <div className="absolute bottom-[15%] end-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-brand-blue/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-blue/10">
                             <ScanLine className="h-4 w-4 text-brand-blue" />
@@ -1409,7 +1409,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 3: Validation */}
-                      <div className="absolute bottom-[15%] left-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite]">
+                      <div className="absolute bottom-[15%] start-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_40s_linear_infinite]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-emerald-400/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-400/10">
                             <TextSelect className="h-4 w-4 text-emerald-400" />
@@ -1436,7 +1436,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               ) : isDomainEmail ? (
-                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pr-8">
+                <div className="relative h-full min-h-[450px] w-full flex items-center justify-center lg:justify-end lg:pe-8">
                   {/* Ambient Domain Glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-accent-cyan/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -1480,7 +1480,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 2: MX Filtering */}
-                      <div className="absolute bottom-[15%] right-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_30s_linear_infinite_reverse]">
+                      <div className="absolute bottom-[15%] end-[-5%] -translate-x-1/2 translate-y-1/2 animate-[spin_30s_linear_infinite_reverse]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-[#14B8A6]/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#14B8A6]/10">
                             <Filter className="h-4 w-4 text-[#14B8A6]" />
@@ -1493,7 +1493,7 @@ const ServicePage = () => {
                       </div>
 
                       {/* Node 3: Encrypted Mailbox */}
-                      <div className="absolute bottom-[15%] left-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_30s_linear_infinite_reverse]">
+                      <div className="absolute bottom-[15%] start-[5%] -translate-x-1/2 translate-y-1/2 animate-[spin_30s_linear_infinite_reverse]">
                         <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#111C2D]/95 px-4 py-2.5 shadow-xl backdrop-blur-md transition-all hover:border-accent-cyan/40">
                           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent-cyan/10">
                             <MailCheck className="h-4 w-4 text-accent-cyan" />
@@ -1520,7 +1520,7 @@ const ServicePage = () => {
                 // Original Executive Overview Layout for other services
                 <div className="relative overflow-hidden rounded-xl border border-white/5 bg-[#0B1521] p-8 md:p-10 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.6)] h-full lg:scale-105 origin-top-left transition-transform duration-500">
                   <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent" />
-                  <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-white/5 to-transparent" />
+                  <div className="absolute inset-y-0 end-0 w-px bg-gradient-to-b from-transparent via-white/5 to-transparent" />
 
                   <div className="mb-8 flex items-center justify-between border-b border-white/5 pb-5">
                     <div className="text-xs font-bold uppercase tracking-[0.2em] text-white/40">
@@ -1541,11 +1541,11 @@ const ServicePage = () => {
                     <div className="grid gap-4 mt-8 pt-6 border-t border-white/5">
                       <div className="flex items-end justify-between">
                         <p className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-white/40">Audit Readiness Target</p>
-                        <p className="font-mono text-2xl font-black text-white text-right leading-none">11 Wks</p>
+                        <p className="font-mono text-2xl font-black text-white text-end leading-none">11 Wks</p>
                       </div>
                       <div className="flex items-end justify-between">
                         <p className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-white/40">Operational Cost Impact</p>
-                        <p className="font-mono text-2xl font-black text-white text-right leading-none">22% Red.</p>
+                        <p className="font-mono text-2xl font-black text-white text-end leading-none">22% Red.</p>
                       </div>
                     </div>
                   </div>
@@ -1590,7 +1590,7 @@ const ServicePage = () => {
             </div>
 
             {/* Right Column */}
-            <div className="lg:col-span-7 flex flex-col gap-6 lg:pl-10">
+            <div className="lg:col-span-7 flex flex-col gap-6 lg:ps-10">
               {(isItConsulting ? failureRisks : service.challenges).map((item, i) => (
                 <motion.div
                   key={i}
@@ -1600,7 +1600,7 @@ const ServicePage = () => {
                   variants={fadeIn}
                   className="group relative overflow-hidden rounded-xl border border-white/10 bg-base p-6 md:p-8 transition-all duration-500 hover:-translate-y-1 hover:border-white/20 shadow-[0_15px_30px_-10px_rgba(0,0,0,0.5)]"
                 >
-                  <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-brand-blue to-accent-cyan opacity-40 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="absolute start-0 top-0 h-full w-1 bg-gradient-to-b from-brand-blue to-accent-cyan opacity-40 transition-opacity duration-500 group-hover:opacity-100" />
                   <h3 className="mb-3 text-lg font-bold tracking-tight text-white font-heading">{item.title}</h3>
                   <p className="text-sm md:text-base font-medium leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{item.desc}</p>
                 </motion.div>
@@ -1625,7 +1625,7 @@ const ServicePage = () => {
               const Icon = solutionIcons[i % solutionIcons.length];
               return (
                 <div key={i} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-surface-1 p-8 md:p-10 transition-all duration-500 hover:border-white/20 hover:bg-[#12314F]">
-                  <div className="absolute right-0 top-0 -mr-8 -mt-8 opacity-[0.03] transition-opacity duration-500 group-hover:opacity-[0.08]">
+                  <div className="absolute end-0 top-0 -mr-8 -mt-8 opacity-[0.03] transition-opacity duration-500 group-hover:opacity-[0.08]">
                     <Icon className="h-64 w-64 text-white" />
                   </div>
                   <div className="relative z-10">
@@ -1725,13 +1725,13 @@ const ServicePage = () => {
           </div>
 
           <div className="relative mt-8">
-            <div className="absolute left-6 top-0 hidden h-full w-px bg-white/10 sm:block lg:hidden" />
-            <div className="absolute left-0 right-0 top-12 hidden h-px w-full bg-white/10 lg:block" />
+            <div className="absolute start-6 top-0 hidden h-full w-px bg-white/10 sm:block lg:hidden" />
+            <div className="absolute start-0 end-0 top-12 hidden h-px w-full bg-white/10 lg:block" />
 
             <div className="grid gap-8 sm:gap-12 lg:grid-cols-5 lg:gap-8">
               {deliverySteps.map((step, i) => (
-                <div key={step.step} className="group relative z-10 flex flex-col items-start lg:items-center lg:text-center pl-16 sm:pl-20 lg:pl-0">
-                  <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-base text-lg font-black text-white transition-colors duration-500 group-hover:border-accent-cyan group-hover:text-accent-cyan lg:relative lg:mb-6 lg:h-24 lg:w-24 lg:text-3xl lg:shadow-[0_0_30px_rgba(34,211,238,0.1)]">
+                <div key={step.step} className="group relative z-10 flex flex-col items-start lg:items-center lg:text-center ps-16 sm:ps-20 lg:ps-0">
+                  <div className="absolute start-0 top-0 flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-base text-lg font-black text-white transition-colors duration-500 group-hover:border-accent-cyan group-hover:text-accent-cyan lg:relative lg:mb-6 lg:h-24 lg:w-24 lg:text-3xl lg:shadow-[0_0_30px_rgba(34,211,238,0.1)]">
                     <span className="opacity-40 transition-opacity duration-500 group-hover:opacity-100">{'0' + (i + 1)}</span>
                   </div>
                   <h3 className="mb-3 mt-1 text-lg font-bold tracking-tight text-white font-heading lg:mt-0">{step.step}</h3>
@@ -1861,7 +1861,7 @@ const ServicePage = () => {
               <Link to="/contact">
                 <span className="relative z-10 flex items-center">
                   {isItConsulting ? "Schedule Executive Session" : t('nav.bookConsultation')}
-                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="ms-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-dark to-brand-blue opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               </Link>

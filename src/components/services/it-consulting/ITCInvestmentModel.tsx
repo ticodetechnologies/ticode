@@ -99,9 +99,9 @@ const ITCInvestmentModel = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0">
 
                         {/* Left Side: Inputs */}
-                        <div className="lg:col-span-7 bg-[#111F2E] rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none border border-white/5 p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                        <div className="lg:col-span-7 bg-[#111F2E] rounded-t-3xl lg:rounded-s$1-3xl lg:rounded-tr-none border border-white/5 p-8 md:p-12 shadow-2xl relative overflow-hidden">
                             {/* Inner glow line */}
-                            <div className="absolute top-0 bottom-0 right-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden lg:block" />
+                            <div className="absolute top-0 bottom-0 end-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden lg:block" />
 
                             <h3 className="text-xl font-bold text-white tracking-tight font-heading mb-10 flex items-center gap-3">
                                 <Cpu className="h-5 w-5 text-[#00D1B2]" />
@@ -169,7 +169,7 @@ const ITCInvestmentModel = () => {
                                     </div>
                                     <div className="relative h-2 w-full bg-black/30 rounded-full overflow-hidden mb-2">
                                         <div
-                                            className="absolute top-0 left-0 h-full bg-[#2F6BFF] rounded-full group-hover:shadow-[0_0_10px_rgba(47,107,255,0.5)] transition-shadow duration-300"
+                                            className="absolute top-0 start-0 h-full bg-[#2F6BFF] rounded-full group-hover:shadow-[0_0_10px_rgba(47,107,255,0.5)] transition-shadow duration-300"
                                             style={{ width: `${((duration - 1) / 11) * 100}%` }}
                                         />
                                         <input
@@ -179,7 +179,7 @@ const ITCInvestmentModel = () => {
                                             step="1"
                                             value={duration}
                                             onChange={(e) => setDuration(Number(e.target.value))}
-                                            className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
+                                            className="absolute top-0 start-0 w-full h-full opacity-0 cursor-pointer"
                                         />
                                     </div>
                                 </div>
@@ -187,7 +187,7 @@ const ITCInvestmentModel = () => {
                         </div>
 
                         {/* Right Side: Output Pricing Panel */}
-                        <div className="lg:col-span-5 bg-[#0B1623] rounded-b-3xl lg:rounded-r-3xl border border-white/5 p-8 md:p-12 relative overflow-hidden flex flex-col justify-center">
+                        <div className="lg:col-span-5 bg-[#0B1623] rounded-b-3xl lg:rounded-e$1-3xl border border-white/5 p-8 md:p-12 relative overflow-hidden flex flex-col justify-center">
 
                             {/* Radial Backdrop for numbers */}
                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(47,107,255,0.1)_0%,transparent_70%)] pointer-events-none" />

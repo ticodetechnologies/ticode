@@ -100,7 +100,7 @@ const ITCCaseStudy = () => {
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center pointer-events-none opacity-10 mix-blend-luminosity grayscale" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#02080D] via-[#0B1623]/80 to-[#02080D] pointer-events-none" />
 
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 h-[800px] w-[800px] rounded-full bg-[#2F6BFF]/5 blur-[150px] pointer-events-none" />
+            <div className="absolute end-0 top-1/2 -translate-y-1/2 h-[800px] w-[800px] rounded-full bg-[#2F6BFF]/5 blur-[150px] pointer-events-none" />
 
             <div className="container-tight relative z-10">
                 <div className="case-element mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-10">
@@ -118,7 +118,7 @@ const ITCCaseStudy = () => {
                         className="group hidden md:inline-flex items-center text-sm font-bold uppercase tracking-wider text-white/50 hover:text-white transition-colors"
                     >
                         View Full Archive
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="ms-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                 </div>
 
@@ -174,7 +174,7 @@ const ITCCaseStudy = () => {
                     <div className="case-element lg:col-span-5 relative flex flex-col justify-center rounded-3xl bg-gradient-to-br from-[#111F2E] to-[#0B1623] border border-white/5 p-10 md:p-14 overflow-hidden shadow-2xl">
 
                         {/* Dramatic Lighting Effect */}
-                        <div className="absolute top-0 right-0 h-full w-full bg-[radial-gradient(circle_at_100%_0%,rgba(0,209,178,0.05)_0%,transparent_60%)] pointer-events-none" />
+                        <div className="absolute top-0 end-0 h-full w-full bg-[radial-gradient(circle_at_100%_0%,rgba(0,209,178,0.05)_0%,transparent_60%)] pointer-events-none" />
 
                         {/* Client Blueprint Silhouette */}
                         <Building className="absolute -bottom-10 -right-10 h-64 w-64 text-white opacity-[0.02] -rotate-12 pointer-events-none" />
@@ -199,7 +199,7 @@ const ITCCaseStudy = () => {
                         className="inline-flex items-center justify-center w-full rounded-full border border-white/10 bg-white/5 py-4 text-xs font-bold uppercase tracking-widest text-white hover:bg-white/10 hover:border-white/20 transition-all"
                     >
                         View Full Archive
-                        <ArrowRight className="ml-3 h-4 w-4" />
+                        <ArrowRight className="ms-3 h-4 w-4" />
                     </Link>
                 </div>
             </div>

@@ -108,7 +108,7 @@ const ITCFinalCta = () => {
 
                         <span className="relative z-10 flex items-center drop-shadow-md">
                             Initiate Engagement
-                            <ArrowRight className="ml-3 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
+                            <ArrowRight className="ms-3 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
                         </span>
                     </Link>
 

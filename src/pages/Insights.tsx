@@ -154,10 +154,10 @@ const Insights = () => {
                   <div className="absolute inset-2 border border-brand-blue/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
                   <Compass className="w-8 h-8 text-brand-blue relative z-10 animate-pulse" />
                 </div>
-                <div className="absolute top-[20%] left-[8%] w-10 h-10 rounded-full border border-emerald-500/30 flex items-center justify-center bg-emerald-500/5 backdrop-blur-sm">
+                <div className="absolute top-[20%] start-[8%] w-10 h-10 rounded-full border border-emerald-500/30 flex items-center justify-center bg-emerald-500/5 backdrop-blur-sm">
                   <Lightbulb className="w-4 h-4 text-emerald-400" />
                 </div>
-                <div className="absolute bottom-[20%] right-[8%] w-12 h-12 rounded-full border border-[#8B5CF6]/30 flex items-center justify-center bg-[#8B5CF6]/5 backdrop-blur-sm">
+                <div className="absolute bottom-[20%] end-[8%] w-12 h-12 rounded-full border border-[#8B5CF6]/30 flex items-center justify-center bg-[#8B5CF6]/5 backdrop-blur-sm">
                   <TerminalSquare className="w-5 h-5 text-[#8B5CF6]" />
                 </div>
               </div>

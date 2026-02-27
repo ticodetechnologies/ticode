@@ -52,7 +52,7 @@ const LuxuryChallenges = ({ industry }: Props) => {
 
     return (
         <section ref={containerRef} className="relative bg-[#F8FAFC] py-24 md:py-32 border-b border-slate-200">
-            <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-brand-blue/5 blur-[120px] pointer-events-none" />
+            <div className="absolute top-0 end-0 h-[500px] w-[500px] rounded-full bg-brand-blue/5 blur-[120px] pointer-events-none" />
 
             <div className="container-tight relative z-10">
                 <div className="mb-16 md:mb-20 flex flex-col items-center text-center">
@@ -75,7 +75,7 @@ const LuxuryChallenges = ({ industry }: Props) => {
                             className="challenge-card group relative flex flex-col gap-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 md:p-10 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-xl"
                         >
                             {/* Accent Top Border mimicking the reference style */}
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-blue/20 to-transparent transition-colors group-hover:via-brand-blue" />
+                            <div className="absolute top-0 start-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-blue/20 to-transparent transition-colors group-hover:via-brand-blue" />
 
                             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 transition-colors duration-300 group-hover:bg-brand-blue/5">
                                 {icons[index % icons.length]}

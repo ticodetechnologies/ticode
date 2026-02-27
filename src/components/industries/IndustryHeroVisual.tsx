@@ -60,9 +60,9 @@ const FinanceVisual: FC = () => {
                     </div>
                 </div>
                 <div className="flex-1 p-8 flex flex-col justify-end gap-2 relative">
-                    <div className="absolute top-8 left-8 right-8 h-px bg-slate-100"></div>
-                    <div className="absolute top-1/3 left-8 right-8 h-px bg-slate-100"></div>
-                    <div className="absolute top-2/3 left-8 right-8 h-px bg-slate-100"></div>
+                    <div className="absolute top-8 start-8 end-8 h-px bg-slate-100"></div>
+                    <div className="absolute top-1/3 start-8 end-8 h-px bg-slate-100"></div>
+                    <div className="absolute top-2/3 start-8 end-8 h-px bg-slate-100"></div>
 
                     <div className="flex items-end justify-between gap-2 h-48 relative z-10 w-full px-2">
                         {[40, 60, 45, 85, 70, 95].map((height, i) => (
@@ -480,7 +480,7 @@ const RealEstateVisual: FC = () => {
                 <div className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-3">Live Virtual Tour</div>
                 <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center shrink-0">
-                        <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-brand-blue border-b-[6px] border-b-transparent ml-1"></div>
+                        <div className="w-0 h-0 border-t-[6px] border-t-transparent border-s-[10px] border-s-brand-blue border-b-[6px] border-b-transparent ms-1"></div>
                     </div>
                     <div>
                         <div className="text-lg font-black text-slate-900">42 Viewers</div>
@@ -517,9 +517,9 @@ const RetailVisual: FC = () => {
                     <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Omnichannel Dashboard</div>
                 </div>
                 <div className="flex-1 p-8 flex flex-col justify-end gap-2 relative">
-                    <div className="absolute top-8 left-8 right-8 h-px bg-slate-100"></div>
-                    <div className="absolute top-1/3 left-8 right-8 h-px bg-slate-100"></div>
-                    <div className="absolute top-2/3 left-8 right-8 h-px bg-slate-100"></div>
+                    <div className="absolute top-8 start-8 end-8 h-px bg-slate-100"></div>
+                    <div className="absolute top-1/3 start-8 end-8 h-px bg-slate-100"></div>
+                    <div className="absolute top-2/3 start-8 end-8 h-px bg-slate-100"></div>
                     <div className="flex items-end justify-between gap-3 h-48 relative z-10 w-full px-4">
                         {[50, 65, 40, 90, 75].map((height, i) => (
                             <div key={i} className="w-[15%] retail-bar bg-gradient-to-t from-brand-blue to-cyan-400 rounded-t-lg opacity-90" style={{ height: `${height}%` }}></div>
@@ -535,7 +535,7 @@ const RetailVisual: FC = () => {
                     </div>
                     <div>
                         <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Live Checkout</div>
-                        <div className="text-xl font-black text-slate-900">2,481<span className="text-xs text-slate-400 font-medium ml-1">Orders/hr</span></div>
+                        <div className="text-xl font-black text-slate-900">2,481<span className="text-xs text-slate-400 font-medium ms-1">Orders/hr</span></div>
                     </div>
                 </div>
             </div>
@@ -584,9 +584,9 @@ const SupplyChainVisual: FC = () => {
                     <svg className="absolute inset-0 w-full h-full" style={{ strokeDasharray: '4,4' }}>
                         <path className="sc-path" d="M 50,200 Q 150,50 250,150 T 400,100" fill="none" stroke="#60A5FA" strokeWidth="2" strokeDashoffset="24" />
                     </svg>
-                    <div className="sc-node absolute top-[190px] left-[40px] w-5 h-5 bg-brand-blue rounded-full border-[4px] border-white shadow-md"></div>
-                    <div className="sc-node absolute top-[140px] left-[240px] w-6 h-6 bg-indigo-500 rounded-full border-[4px] border-white shadow-md"></div>
-                    <div className="sc-node absolute top-[90px] left-[390px] w-5 h-5 bg-emerald-400 rounded-full border-[4px] border-white shadow-md"></div>
+                    <div className="sc-node absolute top-[190px] start-[40px] w-5 h-5 bg-brand-blue rounded-full border-[4px] border-white shadow-md"></div>
+                    <div className="sc-node absolute top-[140px] start-[240px] w-6 h-6 bg-indigo-500 rounded-full border-[4px] border-white shadow-md"></div>
+                    <div className="sc-node absolute top-[90px] start-[390px] w-5 h-5 bg-emerald-400 rounded-full border-[4px] border-white shadow-md"></div>
                 </div>
             </div>
             <div className="sc-float sc-card absolute -right-6 top-16 bg-slate-800 rounded-2xl p-4 border border-slate-700 shadow-2xl w-56 z-20">
@@ -594,7 +594,7 @@ const SupplyChainVisual: FC = () => {
                     <Box className="w-5 h-5 text-indigo-400" />
                     <span className="text-white text-sm font-bold">RFID Scan Rate</span>
                 </div>
-                <div className="text-2xl font-black text-white">99.8% <span className="text-[10px] text-emerald-400 font-bold ml-1 uppercase tracking-widest">Accuracy</span></div>
+                <div className="text-2xl font-black text-white">99.8% <span className="text-[10px] text-emerald-400 font-bold ms-1 uppercase tracking-widest">Accuracy</span></div>
             </div>
             <div className="sc-card sc-float absolute -left-8 bottom-24 bg-white rounded-2xl p-4 border border-slate-200 shadow-xl w-56 z-30" style={{ animationDelay: '0.3s' }}>
                 <div className="flex items-center gap-3">
@@ -634,7 +634,7 @@ const TransportationVisual: FC = () => {
             <div className="tr-main absolute inset-4 bg-white/90 backdrop-blur-xl rounded-3xl border border-slate-200 shadow-2xl overflow-hidden z-10">
                 {/* Map Background Mockup */}
                 <div className="absolute inset-0 bg-[#E8F0FE] opacity-40"></div>
-                <div className="absolute top-[30%] left-[20%] w-[60%] h-[40%] border-4 border-slate-300 rounded-full opacity-20"></div>
+                <div className="absolute top-[30%] start-[20%] w-[60%] h-[40%] border-4 border-slate-300 rounded-full opacity-20"></div>
 
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="relative">
@@ -647,7 +647,7 @@ const TransportationVisual: FC = () => {
                     </div>
                 </div>
 
-                <div className="absolute top-6 left-6 right-6 flex justify-between">
+                <div className="absolute top-6 start-6 end-6 flex justify-between">
                     <div className="bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-md border border-slate-200 text-xs font-bold text-slate-700 shadow-sm flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-emerald-500"></div> Fleet Active
                     </div>
@@ -772,7 +772,7 @@ const InsuranceVisual: FC = () => {
                         <div className="w-1/2 h-2 bg-slate-200 rounded-full"></div>
 
                         {/* Scanning Laser */}
-                        <div className="ins-scan absolute top-0 left-0 w-full h-1 bg-brand-blue shadow-[0_0_8px_rgba(45,107,255,1)] z-10"></div>
+                        <div className="ins-scan absolute top-0 start-0 w-full h-1 bg-brand-blue shadow-[0_0_8px_rgba(45,107,255,1)] z-10"></div>
                         <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/10 to-transparent mix-blend-multiply placeholder-gray-500"></div>
                     </div>
                 </div>
@@ -792,7 +792,7 @@ const InsuranceVisual: FC = () => {
                 <div className="text-slate-400 text-xs font-bold mb-2">Auto-Settlement Rate</div>
                 <div className="flex items-end gap-2 mb-2">
                     <div className="text-3xl font-black text-slate-900 leading-none">68%</div>
-                    <div className="text-emerald-500 text-sm font-bold flex items-center"><TrendingUp className="w-3 h-3 mr-0.5" /> +14%</div>
+                    <div className="text-emerald-500 text-sm font-bold flex items-center"><TrendingUp className="w-3 h-3 me-0.5" /> +14%</div>
                 </div>
             </div>
         </div>
@@ -959,7 +959,7 @@ const SportsVisual: FC = () => {
                         <div className="text-2xl font-black text-emerald-400">128K</div>
                     </div>
                     <div className="spt-stat col-span-2 bg-brand-blue/10 border border-brand-blue/30 rounded-xl p-4 text-center mt-2 flex items-center justify-between">
-                        <div className="text-left">
+                        <div className="text-start">
                             <div className="text-brand-blue text-[10px] font-bold uppercase tracking-widest mb-0.5">Fan Engagement Score</div>
                             <div className="text-white text-lg font-bold">Trending High</div>
                         </div>

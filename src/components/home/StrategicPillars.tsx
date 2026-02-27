@@ -7,48 +7,36 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const pillars = [
+const basePillars = [
     {
         id: "ai-strategy",
         icon: <Brain className="h-5 w-5 text-brand-blue" />,
-        title: "Sovereign AI Subsystems",
-        outcome: "Deploy localized, proprietary LLMs for secure enterprise workflows.",
         metricValue: 74,
         metricPrefix: "",
         metricSuffix: "%",
-        metricText: "Faster Data Retrieval",
         metricDecimals: 0,
         isStaticString: false,
-        governance: "100% On-Premise GCC Hosting",
         link: "/ai-solutions",
         delay: 0
     },
     {
         id: "cloud-infrastructure",
         icon: <Server className="h-5 w-5 text-accent-cyan" />,
-        title: "Resilient Cloud Architecture",
-        outcome: "Architect zero-trust, high-availability multi-cloud environments.",
         metricValue: 99.999,
         metricPrefix: "",
         metricSuffix: "%",
-        metricText: "Service Uptime",
         metricDecimals: 3,
         isStaticString: false,
-        governance: "ISO 27001 Compliant Framework",
         link: "/services/cloud-infrastructure",
         delay: 0.1
     },
     {
         id: "data-governance",
         icon: <Database className="h-5 w-5 text-brand-blue" />,
-        title: "Executive Data Lakes",
-        outcome: "Centralize corporate data for unified boardroom analytics and reporting.",
         metricValue: 0,
         metricPrefix: "",
         metricSuffix: "",
-        metricText: "Single Source of Truth",
         isStaticString: true,
-        governance: "End-to-End Encryption Layer",
         link: "/services/data-analytics",
         delay: 0.2
     },
@@ -58,6 +46,20 @@ const StrategicPillars = () => {
     const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
     const counterRefs = useRef<(HTMLSpanElement | null)[]>([]);
+
+    const translatedPillars = t("home.pillars.items", { returnObjects: true }) as any[];
+
+    // Combine base metric data (numbers, prefixes, links) with translated labels
+    const pillars = basePillars.map((base, index) => {
+        const translation = (translatedPillars && translatedPillars[index]) || {};
+        return {
+            ...base,
+            title: translation.title,
+            outcome: translation.outcome,
+            metricText: translation.metricText,
+            governance: translation.governance,
+        };
+    });
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -124,12 +126,14 @@ const StrategicPillars = () => {
                         <div className="mb-6 flex items-center gap-3 w-max">
                             <span className="h-2 w-2 rounded-full bg-accent-cyan" />
                             <span className="text-xs font-bold tracking-widest text-slate-300 uppercase font-mono">
-                                What We Deliver
+                                {t("home.pillars.badge")}
                             </span>
                         </div>
                         <h2 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-5xl leading-tight pb-2">
-                            Enterprise Capabilities <br className="hidden lg:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent-cyan">Designed for Outcomes.</span>
+                            {t("home.pillars.title")} <br className="hidden lg:block" />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent-cyan">
+                                {t("home.pillars.titleHighlight")}
+                            </span>
                         </h2>
                         <p className="mt-6 text-lg font-medium text-slate-400 max-w-2xl leading-relaxed">
                             {t(
@@ -146,10 +150,10 @@ const StrategicPillars = () => {
                             key={pillar.id}
                             className="pillar-anim-card group relative flex flex-col justify-between bg-[#111C2D]/80 backdrop-blur-md border border-white/10 rounded-[2rem] p-8 md:p-10 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_-20px_rgba(0,194,255,0.15)] hover:border-brand-blue/40 overflow-hidden"
                         >
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-blue to-accent-cyan opacity-0 group-hover:opacity-100 transform -translate-x-full group-hover:translate-x-0 transition-all duration-700 ease-in-out" />
+                            <div className="absolute top-0 start-0 w-full h-1 bg-gradient-to-r from-brand-blue to-accent-cyan opacity-0 group-hover:opacity-100 transform -translate-x-full group-hover:translate-x-0 transition-all duration-700 ease-in-out" />
 
                             {/* Inner ambient glow on hover */}
-                            <div className="absolute top-0 right-0 w-48 h-48 bg-brand-blue/10 rounded-full blur-[60px] group-hover:bg-accent-cyan/15 transition-colors duration-700 pointer-events-none" />
+                            <div className="absolute top-0 end-0 w-48 h-48 bg-brand-blue/10 rounded-full blur-[60px] group-hover:bg-accent-cyan/15 transition-colors duration-700 pointer-events-none" />
 
                             <div className="relative z-10">
                                 <div className="mb-8 inline-flex bg-brand-blue/10 border border-brand-blue/20 rounded-xl p-4 text-accent-cyan transition-colors group-hover:bg-brand-blue/20">
@@ -166,7 +170,7 @@ const StrategicPillars = () => {
                             <div className="relative z-10 mt-12 space-y-5 border-t border-white/5 pt-8 transition-colors group-hover:border-white/10">
                                 <div className="group-hover:bg-white/[0.03] -mx-4 px-4 py-3 rounded-xl transition-colors">
                                     <div className="text-xs uppercase font-semibold tracking-widest text-slate-500 font-mono group-hover:text-accent-cyan transition-colors">
-                                        Measurable Impact
+                                        {t("home.pillars.measurableImpact")}
                                     </div>
                                     <div className="mt-2 text-3xl font-bold font-mono text-white flex flex-col sm:flex-row sm:items-baseline gap-2 tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-slate-300 transition-all">
                                         {pillar.isStaticString ? (
@@ -174,7 +178,7 @@ const StrategicPillars = () => {
                                         ) : (
                                             <>
                                                 <span>
-                                                    <span className="text-slate-500 text-xl font-medium mr-0.5">{pillar.metricPrefix}</span>
+                                                    <span className="text-slate-500 text-xl font-medium me-0.5">{pillar.metricPrefix}</span>
                                                     <span
                                                         ref={(el) => (counterRefs.current[index] = el)}
                                                         data-target={pillar.metricValue}
@@ -182,7 +186,7 @@ const StrategicPillars = () => {
                                                     >
                                                         0
                                                     </span>
-                                                    <span className="text-slate-500 text-xl font-medium ml-0.5">{pillar.metricSuffix}</span>
+                                                    <span className="text-slate-500 text-xl font-medium ms-0.5">{pillar.metricSuffix}</span>
                                                 </span>
                                                 <span className="text-sm font-sans font-medium text-slate-500 tracking-normal hidden md:inline-block group-hover:text-slate-300">
                                                     {pillar.metricText}
@@ -198,7 +202,7 @@ const StrategicPillars = () => {
                                 </div>
                                 <div className="pt-2">
                                     <div className="text-xs uppercase font-semibold tracking-widest text-slate-500 font-mono">
-                                        Execution Standard
+                                        {t("home.pillars.executionStandard")}
                                     </div>
                                     <div className="mt-1 text-sm font-medium text-slate-300">
                                         {pillar.governance}
@@ -210,7 +214,7 @@ const StrategicPillars = () => {
                                 to={pillar.link}
                                 className="mt-10 inline-flex items-center justify-center w-full px-4 py-3.5 bg-brand-blue/10 border border-brand-blue/30 text-white hover:text-white rounded-[1rem] text-sm font-bold tracking-wide transition-all group-hover:bg-brand-blue group-hover:border-brand-blue group-hover:shadow-[0_4px_14px_0_rgba(47,107,255,0.39)]"
                             >
-                                Explore Details
+                                {t("home.pillars.exploreDetails")}
                             </Link>
                         </div>
                     ))}

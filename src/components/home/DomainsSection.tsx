@@ -7,45 +7,25 @@ import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const industriesData = [
+const baseIndustriesData = [
     {
         id: "finance",
-        title: "Financial Services",
-        subtitle: "Secure Transactions",
-        description:
-            "Modernize core banking architectures, deploy fraud-detection AI, and ensure absolute compliance with GCC financial regulations.",
         icon: <Landmark className="h-8 w-8 text-brand-blue/70 transition-colors group-hover:text-brand-blue" />,
-        features: ["Fraud Detection", "Legacy Modernization", "Regulatory Compliance"],
         link: "/industries"
     },
     {
         id: "healthcare",
-        title: "Healthcare",
-        subtitle: "Data Privacy & Care",
-        description:
-            "Unify patient data systems, integrate predictive health AI, and architect resilient infrastructure resistant to zero-day threats.",
         icon: <HeartPulse className="h-8 w-8 text-brand-blue/70 transition-colors group-hover:text-brand-blue" />,
-        features: ["Data Unification", "Predictive Care", "Zero-Trust Security"],
         link: "/industries"
     },
     {
         id: "government",
-        title: "Public Sector",
-        subtitle: "Sovereign Infrastructure",
-        description:
-            "Engineer massive-scale digital public infrastructure with guaranteed data sovereignty and localized operational control.",
         icon: <Building2 className="h-8 w-8 text-brand-blue/70 transition-colors group-hover:text-brand-blue" />,
-        features: ["Digital Identity", "Sovereign Cloud", "Citizen Portals"],
         link: "/industries"
     },
     {
         id: "energy",
-        title: "Energy & Utilities",
-        subtitle: "Industrial IoT",
-        description:
-            "Automate critical grid operations, secure industrial control systems (ICS), and deploy predictive maintenance intelligence.",
         icon: <Zap className="h-8 w-8 text-brand-blue/70 transition-colors group-hover:text-brand-blue" />,
-        features: ["Grid Automation", "ICS Security", "Predictive Maintenance"],
         link: "/industries"
     }
 ];
@@ -54,6 +34,19 @@ const DomainsSection = () => {
     const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
     const gridRef = useRef<HTMLDivElement>(null);
+
+    const translatedDomains = t("home.domains.items", { returnObjects: true }) as any[];
+
+    const industriesData = baseIndustriesData.map((base, index) => {
+        const translation = (translatedDomains && translatedDomains[index]) || {};
+        return {
+            ...base,
+            title: translation.title,
+            subtitle: translation.subtitle,
+            description: translation.description,
+            features: translation.features || [],
+        };
+    });
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -104,11 +97,11 @@ const DomainsSection = () => {
                         <div className="domain-anim-el mb-8 flex items-center gap-3 w-max">
                             <span className="h-2 w-2 rounded-full bg-accent-cyan" />
                             <span className="text-xs font-bold tracking-widest text-slate-300 uppercase font-mono">
-                                Industries We Serve
+                                {t("home.domains.badge")}
                             </span>
                         </div>
                         <h2 className="domain-anim-el text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-5xl leading-tight pb-2">
-                            Sector-Specific <br className="hidden md:block" /> Intelligence.
+                            {t("home.domains.title")}
                         </h2>
                     </div>
                 </div>
@@ -119,13 +112,13 @@ const DomainsSection = () => {
                         <Link
                             key={industry.id}
                             to={industry.link}
-                            className="domain-anim-card group flex flex-col justify-between bg-[#0E1A2B] p-10 md:p-14 transition-colors hover:bg-[#111C2D] relative overflow-hidden"
+                            className="domain-anim-card group flex flex-col justify-between bg-[#0E1A2B] p-6 md:p-14 transition-colors hover:bg-[#111C2D] relative overflow-hidden"
                         >
                             {/* Gradient Border top on Hover */}
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-blue to-accent-cyan transform scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100 z-20" />
+                            <div className="absolute top-0 start-0 w-full h-1 bg-gradient-to-r from-brand-blue to-accent-cyan transform scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100 z-20" />
 
                             {/* Inner ambient glow */}
-                            <div className="absolute top-0 right-0 w-48 h-48 bg-brand-blue/10 rounded-full blur-[60px] group-hover:bg-accent-cyan/15 transition-colors duration-700 pointer-events-none z-0" />
+                            <div className="absolute top-0 end-0 w-48 h-48 bg-brand-blue/10 rounded-full blur-[60px] group-hover:bg-accent-cyan/15 transition-colors duration-700 pointer-events-none z-0" />
 
                             <div className="relative z-10 mb-10 flex items-start justify-between">
                                 <div className="inline-flex p-4 rounded-2xl bg-white/[0.02] ring-1 ring-white/10 ring-inset shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] transition-all duration-300 group-hover:bg-brand-blue/10 group-hover:ring-brand-blue/30 group-hover:shadow-[0_0_20px_rgba(47,107,255,0.15)]">

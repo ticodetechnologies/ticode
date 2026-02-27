@@ -31,7 +31,7 @@ const AIDiffSection = () => {
       <div ref={sectionRef} className="container-tight relative grid gap-12 lg:grid-cols-2 lg:items-center">
         <div className="text-start">
           <div className="relative">
-            <div className="pointer-events-none absolute -top-8 left-0 h-28 w-40 heading-glow" />
+            <div className="pointer-events-none absolute -top-8 start-0 h-28 w-40 heading-glow" />
             <p className="text-sm uppercase tracking-[0.3em] text-white/60">{t("home.aiStory.label")}</p>
             <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-white font-heading">
               {t("home.aiStory.title")}
@@ -64,7 +64,7 @@ const AIDiffSection = () => {
               alt={t("home.aiStory.imageAlt")}
               className="h-full w-full object-cover"
             />
-            <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-[rgba(5,12,28,0.82)] p-6 backdrop-blur">
+            <div className="absolute bottom-6 start-6 end-6 rounded-2xl bg-[rgba(5,12,28,0.82)] p-6 backdrop-blur">
               <p className="text-sm uppercase tracking-[0.3em] text-white/60">{t("home.aiStory.impactLabel")}</p>
               <p className="mt-2 text-2xl font-semibold tracking-tight text-white font-heading">
                 {t("home.aiStory.impactText")}

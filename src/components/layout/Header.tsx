@@ -58,7 +58,7 @@ const Header = () => {
     )}>
       {children}
       <span className={cn(
-        "absolute -bottom-1 left-1.5 right-1.5 h-[2px] transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100",
+        "absolute -bottom-1 start-1.5 end-1.5 h-[2px] transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100",
         "bg-brand-blue",
         isActive ? "scale-x-100" : "scale-x-0"
       )}></span>
@@ -165,7 +165,7 @@ const Header = () => {
           {title}
           <ChevronDown className={cn("w-3.5 h-3.5 group-hover:rotate-180 transition-all duration-300", (isScrolled || isLightHero) ? "text-slate-400 group-hover:text-brand-blue" : "text-slate-400 group-hover:text-white")} />
           <span className={cn(
-            "absolute -bottom-1 left-0 right-5 h-[2px] transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100",
+            "absolute -bottom-1 start-0 end-5 h-[2px] transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100",
             (isScrolled || isLightHero) ? "bg-brand-blue" : "bg-accent-cyan",
             isActive ? "scale-x-100" : "scale-x-0"
           )}></span>
@@ -173,13 +173,13 @@ const Header = () => {
 
         {/* Mega Menu Dropdown */}
         <div className={cn(
-          "absolute top-full left-0 pt-6 -mt-4 transition-all duration-300 w-[1140px] max-w-[calc(100vw-2rem)]",
+          "absolute top-full start-0 pt-6 -mt-4 transition-all duration-300 w-[1140px] max-w-[calc(100vw-2rem)]",
           activeDropdown === title ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"
         )}>
-          <div className="bg-[#0B1623]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex text-left relative before:absolute before:-top-2 before:left-0 before:w-full before:h-4 before:bg-transparent">
+          <div className="bg-[#0B1623]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex text-start relative before:absolute before:-top-2 before:start-0 before:w-full before:h-4 before:bg-transparent">
 
             {/* Panel 1: Service Clusters (Left Sidebar) */}
-            <div className="w-[240px] bg-[#070D15]/80 p-6 border-r border-white/5 flex flex-col">
+            <div className="w-[240px] bg-[#070D15]/80 p-6 border-e border-white/5 flex flex-col">
               <h3 className="text-[10px] font-bold text-slate-500 tracking-widest uppercase mb-4">Service Clusters</h3>
               <div className="flex flex-col gap-1">
                 {serviceClusters.map((cluster) => (
@@ -187,7 +187,7 @@ const Header = () => {
                     key={cluster.id}
                     onMouseEnter={() => setActiveCluster(cluster.id)}
                     className={cn(
-                      "text-left px-3 py-2.5 rounded-lg text-[13px] font-semibold transition-all flex items-center justify-between group",
+                      "text-start px-3 py-2.5 rounded-lg text-[13px] font-semibold transition-all flex items-center justify-between group",
                       activeCluster === cluster.id ? "text-white bg-brand-blue/10 border border-brand-blue/20" : "text-slate-400 hover:text-slate-200 hover:bg-white/5 border border-transparent"
                     )}
                   >
@@ -232,7 +232,7 @@ const Header = () => {
                         </div>
                         <h4 className="text-[14px] font-semibold text-slate-200 group-hover:text-white transition-colors">{item.label}</h4>
                       </div>
-                      <p className="text-[12px] text-slate-500 pl-11 leading-snug group-hover:text-slate-400 transition-colors relative z-10">{item.description}</p>
+                      <p className="text-[12px] text-slate-500 ps-11 leading-snug group-hover:text-slate-400 transition-colors relative z-10">{item.description}</p>
                     </div>
                   </Link>
                 ))}
@@ -246,12 +246,12 @@ const Header = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
               className={cn(
-                "w-[300px] bg-gradient-to-br border-l border-white/5 p-6 flex flex-col items-start relative overflow-hidden",
+                "w-[300px] bg-gradient-to-br border-s border-white/5 p-6 flex flex-col items-start relative overflow-hidden",
                 currentCluster.featured.colors
               )}
             >
               {/* Abstract Animated Backgrounds */}
-              <div className={cn("absolute top-0 right-0 w-64 h-64 blur-[80px] rounded-full pointer-events-none transition-colors duration-700", currentCluster.featured.blurs)} />
+              <div className={cn("absolute top-0 end-0 w-64 h-64 blur-[80px] rounded-full pointer-events-none transition-colors duration-700", currentCluster.featured.blurs)} />
               <div className={cn("absolute -bottom-20 -left-20 w-48 h-48 blur-[80px] rounded-full pointer-events-none transition-colors duration-700", currentCluster.featured.accent)} />
 
               <h3 className={cn("text-[10px] font-bold tracking-widest uppercase mb-4 mt-1 relative z-10 flex items-center gap-2", currentCluster.featured.dot.replace('bg-', 'text-'))}>
@@ -328,8 +328,7 @@ const Header = () => {
         industries: [
           { label: "Healthcare", href: "/industries/healthcare", description: "Telemedicine platforms and secure EHR systems.", icon: <Stethoscope className="w-5 h-5 text-brand-blue" /> },
           { label: "Education & EdTech", href: "/industries/education", description: "Virtual classrooms and personalized learning algorithms.", icon: <GraduationCap className="w-5 h-5 text-brand-blue" /> },
-          { label: "Sports & Fitness", href: "/industries/sports", description: "Performance analytics and fan engagement apps.", icon: <Dumbbell className="w-5 h-5 text-brand-blue" /> },
-          { label: "Oil & Gas", href: "/industries/oil-gas", description: "IoT monitoring and predictive maintenance.", icon: <Droplet className="w-5 h-5 text-brand-blue" /> }
+          { label: "Sports & Fitness", href: "/industries/sports", description: "Performance analytics and fan engagement apps.", icon: <Dumbbell className="w-5 h-5 text-brand-blue" /> }
         ],
         featured: {
           tag: "Innovation Report",
@@ -378,7 +377,7 @@ const Header = () => {
           {title}
           <ChevronDown className={cn("w-3.5 h-3.5 group-hover:rotate-180 transition-all duration-300", (isScrolled || isLightHero) ? "text-slate-400 group-hover:text-brand-blue" : "text-slate-400 group-hover:text-white")} />
           <span className={cn(
-            "absolute -bottom-1 left-0 right-5 h-[2px] transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100",
+            "absolute -bottom-1 start-0 end-5 h-[2px] transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100",
             (isScrolled || isLightHero) ? "bg-brand-blue" : "bg-accent-cyan",
             isActive ? "scale-x-100" : "scale-x-0"
           )}></span>
@@ -386,13 +385,13 @@ const Header = () => {
 
         {/* Mega Menu Dropdown */}
         <div className={cn(
-          "absolute top-full left-0 pt-6 -mt-4 transition-all duration-300 w-[1140px] max-w-full",
+          "absolute top-full start-0 pt-6 -mt-4 transition-all duration-300 w-[1140px] max-w-[calc(100vw-2rem)]",
           activeDropdown === title ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"
         )}>
-          <div className="bg-[#0B1623]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex text-left relative before:absolute before:-top-2 before:left-0 before:w-full before:h-4 before:bg-transparent">
+          <div className="bg-[#0B1623]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex text-start relative before:absolute before:-top-2 before:start-0 before:w-full before:h-4 before:bg-transparent">
 
             {/* Panel 1: Industry Clusters (Left Sidebar) */}
-            <div className="w-[240px] bg-[#070D15]/80 p-6 border-r border-white/5 flex flex-col">
+            <div className="w-[240px] bg-[#070D15]/80 p-6 border-e border-white/5 flex flex-col">
               <h3 className="text-[10px] font-bold text-slate-500 tracking-widest uppercase mb-4">Focus Sectors</h3>
               <div className="flex flex-col gap-1">
                 {industryClusters.map((cluster) => (
@@ -400,7 +399,7 @@ const Header = () => {
                     key={cluster.id}
                     onMouseEnter={() => setActiveIndustryCluster(cluster.id)}
                     className={cn(
-                      "text-left px-3 py-2.5 rounded-lg text-[13px] font-semibold transition-all flex items-center justify-between group",
+                      "text-start px-3 py-2.5 rounded-lg text-[13px] font-semibold transition-all flex items-center justify-between group",
                       activeIndustryCluster === cluster.id ? "text-white bg-brand-blue/10 border border-brand-blue/20" : "text-slate-400 hover:text-slate-200 hover:bg-white/5 border border-transparent"
                     )}
                   >
@@ -448,7 +447,7 @@ const Header = () => {
                         </div>
                         <h4 className="text-[14px] font-semibold text-slate-200 group-hover:text-white transition-colors">{item.label}</h4>
                       </div>
-                      <p className="text-[12px] text-slate-500 pl-11 leading-snug group-hover:text-slate-400 transition-colors relative z-10">{item.description}</p>
+                      <p className="text-[12px] text-slate-500 ps-11 leading-snug group-hover:text-slate-400 transition-colors relative z-10">{item.description}</p>
                     </div>
                   </Link>
                 ))}
@@ -462,12 +461,12 @@ const Header = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
               className={cn(
-                "w-[300px] bg-gradient-to-br border-l border-white/5 p-6 flex flex-col items-start relative overflow-hidden",
+                "w-[300px] bg-gradient-to-br border-s border-white/5 p-6 flex flex-col items-start relative overflow-hidden",
                 currentCluster.featured.colors
               )}
             >
               {/* Abstract Animated Backgrounds */}
-              <div className={cn("absolute top-0 right-0 w-64 h-64 blur-[80px] rounded-full pointer-events-none transition-colors duration-700", currentCluster.featured.blurs)} />
+              <div className={cn("absolute top-0 end-0 w-64 h-64 blur-[80px] rounded-full pointer-events-none transition-colors duration-700", currentCluster.featured.blurs)} />
               <div className={cn("absolute -bottom-20 -left-20 w-48 h-48 blur-[80px] rounded-full pointer-events-none transition-colors duration-700", currentCluster.featured.accent)} />
 
               <h3 className={cn("text-[10px] font-bold tracking-widest uppercase mb-4 mt-1 relative z-10 flex items-center gap-2", currentCluster.featured.dot.replace('bg-', 'text-'))}>
@@ -500,7 +499,7 @@ const Header = () => {
     <div
       className={cn(
         "relative group px-1 py-1 text-[13px] tracking-wide font-semibold transition-colors cursor-pointer flex items-center gap-1",
-        (isScrolled || isLightHero) ? "text-slate-600 hover:text-brand-blue" : "text-slate-600 hover:text-brand-blue",
+        (isScrolled || isLightHero) ? "text-slate-600 hover:text-brand-blue" : "text-slate-300 hover:text-white",
         isActive && "text-brand-blue"
       )}
       onMouseEnter={() => setActiveDropdown(title)}
@@ -508,11 +507,11 @@ const Header = () => {
     >
       {title}
       <ChevronDown className="w-3 h-3 opacity-70 group-hover:rotate-180 transition-transform" />
-      <span className={cn("absolute -bottom-1 left-0 w-0 h-[2px] transition-all duration-300 group-hover:w-full", "bg-brand-blue", isActive ? "w-full" : "w-0")}></span>
+      <span className={cn("absolute -bottom-1 start-0 w-0 h-[2px] transition-all duration-300 group-hover:w-full", "bg-brand-blue", isActive ? "w-full" : "w-0")}></span>
 
       {/* Dropdown Menu */}
       <div className={cn(
-        "absolute top-full left-0 pt-6 transition-all duration-300",
+        "absolute top-full start-0 pt-6 transition-all duration-300",
         columns > 1 ? "w-[500px]" : "w-48",
         activeDropdown === title ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"
       )}>
@@ -537,9 +536,8 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // For pages with a massive dark hero, delay the white header until scrolled past it
-      const isDarkHeroPage = location.pathname === '/' || location.pathname === '/ai-solutions' || location.pathname === '/case-studies' || location.pathname === '/insights' || location.pathname === '/about';
-      const scrollThreshold = isDarkHeroPage ? window.innerHeight * 0.8 : 20;
+      // Trigger scrolled state (white header) immediately upon scroll
+      const scrollThreshold = 20;
       setIsScrolled(window.scrollY > scrollThreshold);
     };
     window.addEventListener('scroll', handleScroll);
@@ -550,7 +548,7 @@ const Header = () => {
 
   return (
     <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b",
+      "fixed top-0 start-0 end-0 z-50 transition-all duration-500 border-b",
       isScrolled
         ? "py-4 bg-white/90 backdrop-blur-xl saturate-150 border-slate-200/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
         : "py-6 bg-transparent border-transparent"
@@ -558,7 +556,7 @@ const Header = () => {
       <div className="container-tight relative flex h-16 items-center justify-between lg:h-20">
         {/* Logo */}
         <Link to="/" className={cn(
-          "flex items-center gap-2 shrink-0 pr-4 lg:pr-8 transition-all hover:opacity-80",
+          "flex items-center gap-2 shrink-0 pe-4 lg:pe-8 transition-all hover:opacity-80",
           !isScrolled && !isLightHero && "brightness-0 invert"
         )}>
           <Logo />
@@ -584,19 +582,23 @@ const Header = () => {
         </div>
 
         {/* Right Side */}
-        <div className="flex items-center gap-6">
-          <div className={cn("flex items-center gap-4 border-r pr-6 mr-1", (isScrolled || isLightHero) ? "border-slate-200" : "border-white/10")}>
-            <button
-              onClick={toggleLanguage}
-              className={cn(
-                "flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] tracking-wide font-bold transition-all",
-                (isScrolled || isLightHero) ? "text-slate-500 hover:text-brand-blue hover:bg-brand-blue/5" : "text-slate-300 hover:text-white hover:bg-white/5"
-              )}
-            >
-              <Globe className="w-3.5 h-3.5" />
-              <span>{t('nav.langToggle')}</span>
-            </button>
-          </div>
+        <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
+          <button
+            onClick={toggleLanguage}
+            aria-label={isRTL ? 'Switch to English' : 'التبديل إلى العربية'}
+            className={cn(
+              "flex items-center justify-center gap-1.5 rounded-full transition-all text-[12px] tracking-wide font-bold",
+              "h-9 w-9 sm:h-auto sm:w-auto sm:px-3 sm:py-1.5 shrink-0",
+              (isScrolled || isLightHero)
+                ? "text-brand-blue bg-brand-blue/10 hover:bg-brand-blue/20"
+                : "text-slate-300 hover:text-white hover:bg-white/5"
+            )}
+          >
+            <Globe className="w-4 h-4 sm:w-3.5 sm:h-3.5 shrink-0" />
+            <span className="hidden sm:inline-block">{t('nav.langToggle')}</span>
+          </button>
+
+          <div className={cn("w-px h-5 shrink-0", (isScrolled || isLightHero) ? "bg-slate-200" : "bg-white/10")} />
 
           <motion.div
             animate={{ x: position.x, y: position.y }}
@@ -623,6 +625,9 @@ const Header = () => {
           <button
             className={cn("lg:hidden transition-colors", (isScrolled || isLightHero) ? "text-slate-800 hover:text-brand-blue" : "text-slate-300 hover:text-white")}
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
           >
             {mobileOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
           </button>
@@ -646,7 +651,7 @@ const Header = () => {
                 <ChevronDown className={cn("w-4 h-4 transition-transform text-slate-500", activeDropdown === 'services' && "rotate-180")} />
               </div>
               {activeDropdown === 'services' && (
-                <div className="flex flex-col gap-2 mt-3 pl-4 border-l border-slate-200">
+                <div className="flex flex-col gap-2 mt-3 ps-4 border-s border-slate-200">
                   <Link to="/services/it-consulting" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>IT Consulting</Link>
                   <Link to="/services/ai-agents" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>AI Agents & Voice AI</Link>
                   <Link to="/services/software-development" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>Software Development</Link>
@@ -675,14 +680,13 @@ const Header = () => {
                 <ChevronDown className={cn("w-4 h-4 transition-transform", activeDropdown === 'industries' && "rotate-180")} />
               </div>
               {activeDropdown === 'industries' && (
-                <div className="flex flex-col gap-2 mt-3 pl-4 border-l border-slate-200">
+                <div className="flex flex-col gap-2 mt-3 ps-4 border-s border-slate-200">
                   <Link to="/industries/fashion" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>Fashion</Link>
                   <Link to="/industries/education" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>Education</Link>
                   <Link to="/industries/marketing" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>Marketing</Link>
                   <Link to="/industries/retail" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>Retail</Link>
                   <Link to="/industries/supply-chain" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>Supply Chain</Link>
                   <Link to="/industries/insurance" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>Insurance</Link>
-                  <Link to="/industries/oil-gas" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>Oil and Gas</Link>
                   <Link to="/industries/sports" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>Sports</Link>
                   <Link to="/industries/healthcare" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>Healthcare</Link>
                   <Link to="/industries/real-estate" className="text-sm font-medium text-slate-500 hover:text-brand-blue" onClick={() => setMobileOpen(false)}>Real Estate</Link>
@@ -701,6 +705,9 @@ const Header = () => {
             </Link>
             <Link to="/about" className="block rounded-md px-4 py-3 text-[15px] font-semibold text-slate-700 hover:text-brand-blue hover:bg-slate-50" onClick={() => setMobileOpen(false)}>
               {t('nav.about')}
+            </Link>
+            <Link to="/insights" className="block rounded-md px-4 py-3 text-[15px] font-semibold text-slate-700 hover:text-brand-blue hover:bg-slate-50" onClick={() => setMobileOpen(false)}>
+              {t('nav.insights')}
             </Link>
             <Link to="/contact" className="block rounded-md px-4 py-3 text-[15px] font-semibold text-slate-700 hover:text-brand-blue hover:bg-slate-50" onClick={() => setMobileOpen(false)}>
               {t('nav.contact')}

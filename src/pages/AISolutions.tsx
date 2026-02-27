@@ -142,7 +142,7 @@ const AISolutions = () => {
           <div className="container relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16 h-full px-6">
 
             {/* Left: Text Content */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-center text-left">
+            <div className="w-full lg:w-1/2 flex flex-col justify-center text-start">
               <div className="hero-badge inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest mb-8 self-start">
                 <Network className="w-3.5 h-3.5" />
                 {t('pages.aiSolutions.label')}
@@ -183,13 +183,13 @@ const AISolutions = () => {
                 </div>
 
                 {/* Floating Satellites */}
-                <div className="absolute top-[10%] left-[20%] w-12 h-12 bg-white/5 border border-white/10 backdrop-blur-md rounded-xl flex items-center justify-center shadow-xl">
+                <div className="absolute top-[10%] start-[20%] w-12 h-12 bg-white/5 border border-white/10 backdrop-blur-md rounded-xl flex items-center justify-center shadow-xl">
                   <Sparkles className="w-5 h-5 text-amber-400" />
                 </div>
-                <div className="absolute bottom-[20%] left-[10%] w-14 h-14 bg-white/5 border border-white/10 backdrop-blur-md rounded-xl flex items-center justify-center shadow-xl">
+                <div className="absolute bottom-[20%] start-[10%] w-14 h-14 bg-white/5 border border-white/10 backdrop-blur-md rounded-xl flex items-center justify-center shadow-xl">
                   <Layers className="w-6 h-6 text-emerald-400" />
                 </div>
-                <div className="absolute top-[30%] right-[5%] w-16 h-16 bg-white/5 border border-brand-blue/30 backdrop-blur-md rounded-xl flex items-center justify-center shadow-[0_0_30px_rgba(45,107,255,0.2)]">
+                <div className="absolute top-[30%] end-[5%] w-16 h-16 bg-white/5 border border-brand-blue/30 backdrop-blur-md rounded-xl flex items-center justify-center shadow-[0_0_30px_rgba(45,107,255,0.2)]">
                   <Bot className="w-6 h-6 text-white" />
                 </div>
               </div>

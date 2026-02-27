@@ -104,7 +104,7 @@ const LuxuryFinalCta = ({ industry }: Props) => {
 
                         <span className="relative z-10 flex items-center tracking-wide">
                             Initiate Intelligence
-                            <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
+                            <ArrowRight className="ms-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
                         </span>
                     </Link>
                 </div>

@@ -44,7 +44,7 @@ const CaseStudiesSection = () => {
                 className="h-full w-full object-cover contrast-110 transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(5,12,28,0.96)] via-[rgba(5,12,28,0.55)] to-[rgba(5,12,28,0.25)] transition-opacity duration-300 group-hover:opacity-90" />
-              <div className="absolute top-6 right-6 rounded-full bg-emerald-500/20 px-4 py-2 text-xs uppercase tracking-[0.25em] text-emerald-100">
+              <div className="absolute top-6 end-6 rounded-full bg-emerald-500/20 px-4 py-2 text-xs uppercase tracking-[0.25em] text-emerald-100">
                 {t("home.caseStudies.impactLabel")}
               </div>
               <div className="absolute inset-x-6 bottom-6 space-y-3">

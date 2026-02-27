@@ -16,21 +16,21 @@ const Footer = () => {
   ];
 
   const serviceLinks = [
-    { to: '/services/it-consulting', label: 'IT Consulting' },
-    { to: '/services/ai-machine-learning', label: 'AI & ML' },
-    { to: '/services/software-development', label: 'Software Dev' },
-    { to: '/services/cloud-infrastructure', label: 'Cloud & Infra' },
-    { to: '/services/digital-marketing', label: 'Digital Marketing' },
-    { to: '/services/data-analytics', label: 'Data & Analytics' },
+    { to: '/services/it-consulting', label: t('nav.serviceLinks.itConsulting') },
+    { to: '/services/ai-machine-learning', label: t('nav.serviceLinks.aiMachineLearning') },
+    { to: '/services/software-development', label: t('nav.serviceLinks.softwareDevelopment') },
+    { to: '/services/cloud-infrastructure', label: t('nav.serviceLinks.cloudInfrastructure') },
+    { to: '/services/digital-marketing', label: t('nav.serviceLinks.digitalMarketing') },
+    { to: '/services/data-analytics', label: t('nav.serviceLinks.dataAnalytics') },
   ];
 
   const industryLinksData = [
-    { to: '/industries/finance', label: 'Finance' },
-    { to: '/industries/healthcare', label: 'Healthcare' },
-    { to: '/industries/retail', label: 'Retail' },
-    { to: '/industries/education', label: 'Education' },
-    { to: '/industries/real-estate', label: 'Real Estate' },
-    { to: '/industries/transportation', label: 'Transportation' },
+    { to: '/industries/finance', label: t('nav.industryLinks.finance') },
+    { to: '/industries/healthcare', label: t('nav.industryLinks.healthcare') },
+    { to: '/industries/retail', label: t('nav.industryLinks.retail') },
+    { to: '/industries/education', label: t('nav.industryLinks.education') },
+    { to: '/industries/real-estate', label: t('nav.industryLinks.realEstate') },
+    { to: '/industries/transportation', label: t('nav.industryLinks.transportation') },
   ];
 
   return (
@@ -44,11 +44,10 @@ const Footer = () => {
       <div className="container-tight relative z-10 pb-8 pt-12 md:pt-16">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5 xl:gap-10 max-w-7xl mx-auto">
           {/* Brand & Positioning */}
-          <div className="lg:col-span-2 flex flex-col pr-0 lg:pr-8">
+          <div className="lg:col-span-2 flex flex-col pe-0 lg:pe-8">
             <Logo className="mb-6" />
             <p className="max-w-sm text-sm font-medium leading-[1.8] text-white/50 mb-8">
-              Sovereign IT & AI Transformation Partner serving Kuwait & the GCC.
-              Engineering enterprise-grade digital infrastructure.
+              {t('footer.description', 'Sovereign IT & AI Transformation Partner serving Kuwait & the GCC. Engineering enterprise-grade digital infrastructure.')}
             </p>
 
             <div className="space-y-4 mb-10">
@@ -56,7 +55,7 @@ const Footer = () => {
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/[0.02] border border-white/5 group-hover:bg-brand-blue/10 group-hover:border-brand-blue/20 transition-colors">
                   <MapPin className="h-3.5 w-3.5 text-brand-blue group-hover:text-accent-cyan" />
                 </div>
-                <span>Kuwait City, Kuwait</span>
+                <span>{t('footer.location', 'Kuwait City, Kuwait')}</span>
               </div>
               <div className="flex items-center gap-4 text-sm text-white/60 font-mono group">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/[0.02] border border-white/5 group-hover:bg-brand-blue/10 group-hover:border-brand-blue/20 transition-colors">
@@ -68,17 +67,17 @@ const Footer = () => {
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/[0.02] border border-white/5 group-hover:bg-brand-blue/10 group-hover:border-brand-blue/20 transition-colors">
                   <Phone className="h-3.5 w-3.5 text-brand-blue group-hover:text-accent-cyan" />
                 </div>
-                <span dir="ltr" className="hover:text-white cursor-pointer transition-colors">+965 XXXXXXXX</span>
+                <span dir="ltr" className="hover:text-white cursor-pointer transition-colors">+965 2200 0000</span>
               </div>
             </div>
 
             {/* Social Media Links */}
             <div className="mt-auto flex items-center gap-4">
-              <span className="text-xs font-bold uppercase tracking-widest text-white/30 font-mono mr-2">Connect</span>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.02] border border-white/5 text-white/40 transition-all duration-300 hover:bg-brand-blue/10 hover:border-brand-blue/30 hover:text-accent-cyan hover:-translate-y-1 hover:shadow-[0_5px_15px_-5px_rgba(47,107,255,0.3)]">
+              <span className="text-xs font-bold uppercase tracking-widest text-white/30 font-mono me-2">{t('footer.connect', 'Connect')}</span>
+              <a href="https://www.linkedin.com/company/ticodetech" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.02] border border-white/5 text-white/40 transition-all duration-300 hover:bg-brand-blue/10 hover:border-brand-blue/30 hover:text-accent-cyan hover:-translate-y-1 hover:shadow-[0_5px_15px_-5px_rgba(47,107,255,0.3)]">
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.02] border border-white/5 text-white/40 transition-all duration-300 hover:bg-brand-blue/10 hover:border-brand-blue/30 hover:text-accent-cyan hover:-translate-y-1 hover:shadow-[0_5px_15px_-5px_rgba(47,107,255,0.3)]">
+              <a href="https://www.instagram.com/ticodetech" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.02] border border-white/5 text-white/40 transition-all duration-300 hover:bg-brand-blue/10 hover:border-brand-blue/30 hover:text-accent-cyan hover:-translate-y-1 hover:shadow-[0_5px_15px_-5px_rgba(47,107,255,0.3)]">
                 <Instagram className="h-4 w-4" />
               </a>
             </div>
@@ -91,7 +90,7 @@ const Footer = () => {
               {quickLinks.map((link) => (
                 <li key={link.to}>
                   <Link to={link.to} className="group flex items-center text-sm font-medium text-white/50 transition-all duration-300 hover:text-white">
-                    <span className="w-0 overflow-hidden transition-all duration-300 group-hover:w-4 group-hover:mr-2 text-accent-cyan opacity-0 group-hover:opacity-100 hidden sm:inline-block">▸</span>
+                    <span className="w-0 overflow-hidden transition-all duration-300 group-hover:w-4 group-hover:me-2 text-accent-cyan opacity-0 group-hover:opacity-100 hidden sm:inline-block">▸</span>
                     {link.label}
                   </Link>
                 </li>
@@ -106,7 +105,7 @@ const Footer = () => {
               {serviceLinks.map((link) => (
                 <li key={link.to}>
                   <Link to={link.to} className="group flex items-center text-sm font-medium text-white/50 transition-all duration-300 hover:text-white">
-                    <span className="w-0 overflow-hidden transition-all duration-300 group-hover:w-4 group-hover:mr-2 text-accent-cyan opacity-0 group-hover:opacity-100 hidden sm:inline-block">▸</span>
+                    <span className="w-0 overflow-hidden transition-all duration-300 group-hover:w-4 group-hover:me-2 text-accent-cyan opacity-0 group-hover:opacity-100 hidden sm:inline-block">▸</span>
                     {link.label}
                   </Link>
                 </li>
@@ -121,7 +120,7 @@ const Footer = () => {
               {industryLinksData.map((link) => (
                 <li key={link.to}>
                   <Link to={link.to} className="group flex items-center text-sm font-medium text-white/50 transition-all duration-300 hover:text-white">
-                    <span className="w-0 overflow-hidden transition-all duration-300 group-hover:w-4 group-hover:mr-2 text-accent-cyan opacity-0 group-hover:opacity-100 hidden sm:inline-block">▸</span>
+                    <span className="w-0 overflow-hidden transition-all duration-300 group-hover:w-4 group-hover:me-2 text-accent-cyan opacity-0 group-hover:opacity-100 hidden sm:inline-block">▸</span>
                     {link.label}
                   </Link>
                 </li>

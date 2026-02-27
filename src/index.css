@@ -107,12 +107,32 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
   }
 
   [dir="rtl"] body,
   body[dir="rtl"],
   .rtl {
     font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  /* 
+   * Auto-directionality for untranslated text:
+   * Prevents English text punctuation and alignment from breaking when the page is set to RTL mode.
+   * "plaintext" evaluates string content to determine text direction on a per-element basis.
+   */
+  [dir="rtl"] p,
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4,
+  [dir="rtl"] h5,
+  [dir="rtl"] h6,
+  [dir="rtl"] span,
+  [dir="rtl"] .font-mono,
+  [dir="rtl"] .hero-anim-item {
+    unicode-bidi: plaintext;
+    text-align: start;
   }
 }
 

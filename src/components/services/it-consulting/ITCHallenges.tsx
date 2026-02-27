@@ -2,46 +2,54 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { AlertTriangle, ServerCrash, Unlock, Users } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const challenges = [
+const baseChallenges = [
     {
+        id: "strategy",
         icon: Users,
-        title: "Strategy-Execution Disconnect",
-        desc: "Digital programs launch without a governance chain from board priorities to portfolio decisions, creating drift and stalled outcomes.",
         target: 40,
         prefix: "",
         suffix: "%",
-        metricLabel: "Efficiency Leakage",
         isCritical: false
     },
     {
+        id: "architecture",
         icon: ServerCrash,
-        title: "Architecture Debt Compounding",
-        desc: "Legacy constraints and fragmented platforms erode security, inflate OPEX, and slow decision cycles.",
         target: 2,
         prefix: "$",
         suffix: "M+",
-        metricLabel: "Capital Waste",
         isCritical: false
     },
     {
+        id: "compliance",
         icon: Unlock,
-        title: "Compliance & Governance Exposure",
-        desc: "Navigating complex regulatory requirements across GCC jurisdictions without an audit-ready framework.",
         target: 0,
         prefix: "",
         suffix: "",
-        textValue: "Critical",
-        metricLabel: "Exposure Level",
         isCritical: true
     }
 ];
 
 const ITCHallenges = () => {
+    const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
     const metricRefs = useRef<(HTMLSpanElement | null)[]>([]);
+
+    const translatedItems = t("home.itChallenges.items", { returnObjects: true }) as any[];
+
+    const challenges = baseChallenges.map((base, index) => {
+        const translation = (translatedItems && translatedItems[index]) || {};
+        return {
+            ...base,
+            title: translation.title || "",
+            desc: translation.desc || "",
+            metricLabel: translation.metricLabel || "",
+            textValue: translation.textValue
+        };
+    });
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -94,22 +102,22 @@ const ITCHallenges = () => {
             {/* Background texture */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:48px_48px] pointer-events-none opacity-50" />
 
-            <div className="absolute top-1/2 left-0 h-[600px] w-[600px] -translate-y-1/2 -translate-x-1/2 rounded-full bg-[#2F6BFF]/5 blur-[120px] pointer-events-none" />
+            <div className="absolute top-1/2 start-0 h-[600px] w-[600px] -translate-y-1/2 -translate-x-1/2 rounded-full bg-[#2F6BFF]/5 blur-[120px] pointer-events-none" />
 
             <div className="container-tight relative z-10">
                 <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-10 border-b border-white/5 pb-10">
                     <div className="max-w-2xl">
                         <div className="mb-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#36E0FF]">
                             <AlertTriangle className="h-4 w-4" />
-                            Systemic Deficits
+                            {t("home.itChallenges.badge")}
                         </div>
                         <h2 className="font-heading text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.1]">
-                            The Cost of Passive <br className="hidden md:block" />
-                            <span className="text-white/50">Digital Governance.</span>
+                            {t("home.itChallenges.title")} <br className="hidden md:block" />
+                            <span className="text-white/50">{t("home.itChallenges.titleHighlight")}</span>
                         </h2>
                     </div>
                     <div className="max-w-sm text-white/75 font-medium leading-[1.6]">
-                        Without authoritative digital frameworks, organizations face compounding operational decay and stalled transformation outcomes.
+                        {t("home.itChallenges.subtext")}
                     </div>
                 </div>
 
@@ -119,10 +127,10 @@ const ITCHallenges = () => {
                         return (
                             <div
                                 key={idx}
-                                className="risk-panel group relative flex flex-col md:flex-row items-start md:items-center justify-between gap-8 overflow-hidden rounded-2xl border border-white/10 bg-[#0B1F33] p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 hover:border-[#2F6BFF]/50 hover:shadow-[0_20px_40px_-10px_rgba(43,179,255,0.15)]"
+                                className="risk-panel group relative flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 overflow-hidden rounded-2xl border border-white/10 bg-[#0B1F33] p-6 md:p-10 transition-all duration-500 hover:-translate-y-2 hover:border-[#2F6BFF]/50 hover:shadow-[0_20px_40px_-10px_rgba(43,179,255,0.15)]"
                             >
                                 {/* Left Glowing Accent Line */}
-                                <div className="absolute left-0 top-0 h-full w-1 bg-[#2F6BFF] opacity-0 transition-opacity duration-500 group-hover:opacity-100 shadow-[0_0_20px_#36E0FF]" />
+                                <div className="absolute start-0 top-0 h-full w-1 bg-[#2F6BFF] opacity-0 transition-opacity duration-500 group-hover:opacity-100 shadow-[0_0_20px_#36E0FF]" />
 
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#2F6BFF]/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none" />
 
@@ -141,7 +149,7 @@ const ITCHallenges = () => {
                                 </div>
 
                                 {/* Right Side Animated Risk Metric */}
-                                <div className="relative z-10 w-full md:w-auto overflow-hidden self-stretch md:self-auto flex items-center md:border-l border-white/10 md:pl-10">
+                                <div className="relative z-10 w-full md:w-auto overflow-hidden self-stretch md:self-auto flex items-center md:border-s border-white/10 md:ps-10">
                                     <div className="flex flex-col transition-all duration-500 md:translate-x-8 md:opacity-50 group-hover:translate-x-0 group-hover:opacity-100">
                                         <div className={`text-[0.65rem] font-bold uppercase tracking-[0.2em] ${challenge.isCritical ? "text-red-500 drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]" : "text-[#36E0FF] drop-shadow-[0_0_10px_rgba(54,224,255,0.8)]"} mb-2 font-sans`}>
                                             {challenge.metricLabel}

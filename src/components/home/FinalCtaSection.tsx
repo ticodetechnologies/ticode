@@ -65,14 +65,14 @@ const FinalCtaSection = () => {
         <div className="mb-10 inline-flex items-center gap-3 w-max">
           <span className="h-2 w-2 rounded-full bg-accent-cyan animate-pulse" />
           <span className="text-xs font-bold tracking-widest text-slate-300 uppercase font-mono">
-            Execution Ready
+            {t("home.finalCta.badge", "Execution Ready")}
           </span>
         </div>
 
         <h2 className="text-5xl md:text-7xl lg:text-[7.5rem] font-extrabold tracking-tighter text-white leading-[1.1] max-w-5xl mx-auto mb-8 font-sans">
-          Accelerate Your
-          <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent-cyan">Enterprise.</span>
+          {t("home.finalCta.title", "Accelerate Your")}
+          <br className="hidden md:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent-cyan"> {t("home.finalCta.titleHighlight", "Enterprise.")}</span>
         </h2>
 
         <p className="mt-6 text-lg font-medium text-slate-400 max-w-2xl mx-auto leading-relaxed mb-16">

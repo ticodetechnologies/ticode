@@ -1,43 +1,42 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// We'll map these statically configured options with the translated labels
+type BaseMetricType = {
+    id: string;
+    value: number;
+    prefix: string;
+    suffix: string;
+    isFloat?: boolean;
+};
+
+const baseMetrics: BaseMetricType[] = [
+    { id: "efficiency", value: 19, prefix: "+", suffix: "%" },
+    { id: "speed", value: 1.7, prefix: "", suffix: "x", isFloat: true },
+    { id: "cost", value: 27, prefix: "-", suffix: "%" },
+];
+
 const OutcomeMetrics = () => {
+    const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
     const metricsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-    const metrics = [
-        {
-            id: "efficiency",
-            value: 19,
-            prefix: "+",
-            suffix: "%",
-            label: "Enterprise Efficiency Yield",
-            before: "Fragmented Operations",
-            after: "Unified Sovereign Architecture"
-        },
-        {
-            id: "speed",
-            value: 1.7,
-            prefix: "",
-            suffix: "x",
-            label: "Speed to Market Acceleration",
-            isFloat: true,
-            before: "Legacy Deployment Cycles",
-            after: "Accelerated Digital Ecosystems"
-        },
-        {
-            id: "cost",
-            value: 27,
-            prefix: "-",
-            suffix: "%",
-            label: "Infrastructure Cost Reduction",
-            before: "Compounding Tech Debt",
-            after: "Optimized Cloud Spend"
-        },
-    ];
+    const translatedMetrics = t("home.metrics.items", { returnObjects: true }) as any[];
+
+    // Combine base metric data (numbers, prefixes) with translated labels
+    const metrics = baseMetrics.map((base, index) => {
+        const translation = translatedMetrics[index] || {};
+        return {
+            ...base,
+            label: translation.label,
+            before: translation.before,
+            after: translation.after,
+        };
+    });
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -106,7 +105,7 @@ const OutcomeMetrics = () => {
                     <div className="mb-6 inline-flex items-center gap-3 w-max">
                         <span className="h-2 w-2 rounded-full bg-brand-blue" />
                         <span className="text-xs font-bold tracking-widest text-white/50 uppercase font-mono">
-                            Verified Executive Impact
+                            {t("home.metrics.verifiedImpact")}
                         </span>
                     </div>
                 </div>
@@ -125,9 +124,9 @@ const OutcomeMetrics = () => {
                             <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-brand-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                             <div className="flex items-baseline justify-center text-[5rem] lg:text-[7rem] font-bold tracking-tighter text-white leading-none group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-accent-cyan transition-all duration-500 font-mono relative z-10">
-                                <span className="text-white/30 text-4xl lg:text-5xl mr-1 font-medium font-sans">{metric.prefix}</span>
+                                <span className="text-white/30 text-4xl lg:text-5xl me-1 font-medium font-sans">{metric.prefix}</span>
                                 <span className="metric-number">0</span>
-                                <span className="text-white/30 text-4xl lg:text-5xl ml-2 font-medium font-sans">{metric.suffix}</span>
+                                <span className="text-white/30 text-4xl lg:text-5xl ms-2 font-medium font-sans">{metric.suffix}</span>
                             </div>
 
                             <div className="mt-6 text-lg font-bold text-white max-w-[200px] leading-snug relative z-10 mx-auto transition-colors group-hover:text-accent-cyan">
@@ -136,14 +135,14 @@ const OutcomeMetrics = () => {
 
                             {/* Before / After Metrics Strip */}
                             <div className="mt-8 w-full mx-auto opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-out border-t border-white/5 pt-6 relative z-10">
-                                <div className="flex flex-col gap-4 text-left">
+                                <div className="flex flex-col gap-4 text-start">
                                     <div className="flex flex-col justify-center">
-                                        <span className="text-[10px] uppercase font-bold tracking-widest text-white/30 mb-0.5 font-mono">Status: Legacy</span>
+                                        <span className="text-[10px] uppercase font-bold tracking-widest text-white/30 mb-0.5 font-mono">{t("home.metrics.statusLegacy")}</span>
                                         <span className="text-sm font-medium text-white/40 line-through decoration-white/20">{metric.before}</span>
                                     </div>
                                     <div className="flex flex-col justify-center">
                                         <span className="text-[10px] uppercase font-bold tracking-widest text-brand-blue mb-0.5 font-mono flex items-center gap-2">
-                                            Status: Sovereign
+                                            {t("home.metrics.statusSovereign")}
                                             <span className="relative flex h-1.5 w-1.5">
                                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-blue opacity-75"></span>
                                                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-blue"></span>

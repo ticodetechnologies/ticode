@@ -1,6 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
 import CursorGlow from '../ui/CursorGlow';
+import FloatingContact from './FloatingContact';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -9,6 +10,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
+      <FloatingContact />
     </div>
   );
 };

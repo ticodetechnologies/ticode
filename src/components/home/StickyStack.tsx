@@ -6,39 +6,22 @@ import { Cpu, ShieldAlert, Workflow, ArrowRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const panelsData = [
-    {
-        id: "ai",
-        title: "AI Strategy & Deployment",
-        subtitle: "Sovereign Intelligence Models",
-        description:
-            "Design, train, and deploy private AI models hosted within GCC borders, ensuring zero data leakage while accelerating cognitive enterprise capabilities.",
-        icon: <Cpu className="h-8 w-8 text-brand-blue" />,
-        features: ["Private LLM Deployment", "Agentic Workflows", "Predictive Analytics"],
-    },
-    {
-        id: "cloud",
-        title: "Cloud Infrastructure",
-        subtitle: "Zero-Trust Architecture",
-        description:
-            "Architect multi-cloud, high-availability networks designed for absolute redundancy, scale, and compliance with national cybersecurity frameworks.",
-        icon: <Workflow className="h-8 w-8 text-brand-blue" />,
-        features: ["Multi-Cloud Orchestration", "Disaster Recovery", "Infrastructure as Code"],
-    },
-    {
-        id: "governance",
-        title: "Data Governance",
-        subtitle: "Immutable Compliance",
-        description:
-            "Institute executive data lakes with end-to-end encryption, centralizing fragmented data silos into a single, board-ready source of truth.",
-        icon: <ShieldAlert className="h-8 w-8 text-brand-blue" />,
-        features: ["Master Data Management", "Data Localization", "Real-time Compliance"],
-    },
-];
+const iconMap = {
+    ai: <Cpu className="h-8 w-8 text-brand-blue" />,
+    cloud: <Workflow className="h-8 w-8 text-brand-blue" />,
+    governance: <ShieldAlert className="h-8 w-8 text-brand-blue" />,
+};
 
 const StickyStack = () => {
     const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
+
+    const translatedPanels = t("home.stack.panels", { returnObjects: true }) as any[];
+
+    const panelsData = (translatedPanels || []).map((panel) => ({
+        ...panel,
+        icon: iconMap[panel.id as keyof typeof iconMap],
+    }));
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -72,10 +55,10 @@ const StickyStack = () => {
         <section className="bg-surface-1 py-12 lg:py-24" ref={containerRef}>
             <div className="container-tight mb-16 max-w-3xl text-center">
                 <h2 className="font-heading text-3xl font-bold tracking-tight text-white md:text-5xl">
-                    Enterprise Transformation Domains.
+                    {t("home.stack.title")}
                 </h2>
                 <p className="mt-6 text-lg text-text-primary/60">
-                    {t("home.stack.subtext", "Core pillars of sovereign organizational change.")}
+                    {t("home.stack.subtext")}
                 </p>
             </div>
 
@@ -83,7 +66,7 @@ const StickyStack = () => {
                 {panelsData.map((panel, idx) => (
                     <div
                         key={panel.id}
-                        className={`sticky-panel flex h-[70vh] min-h-[500px] w-full items-center justify-center pt-[10vh] ${idx !== panelsData.length - 1 ? "absolute top-0 left-0" : "relative"
+                        className={`sticky-panel flex h-[70vh] min-h-[500px] w-full items-center justify-center pt-[10vh] ${idx !== panelsData.length - 1 ? "absolute top-0 start-0" : "relative"
                             }`}
                         style={{ zIndex: idx }}
                     >
@@ -102,15 +85,15 @@ const StickyStack = () => {
                                     {panel.description}
                                 </p>
                                 <button className="group inline-flex items-center text-sm font-semibold text-white transition-colors hover:text-brand-blue">
-                                    Review Capabilities
-                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                    {t("home.stack.reviewCapabilities")}
+                                    <ArrowRight className="ms-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </button>
                             </div>
 
                             <div className="mt-10 md:mt-0 md:w-5/12">
                                 <div className="flex flex-col gap-4 rounded-xl border border-white/5 bg-surface-2 p-6">
                                     <div className="text-xs font-semibold uppercase tracking-wide text-text-muted mb-2">
-                                        Key Implementations
+                                        {t("home.stack.keyImplementations")}
                                     </div>
                                     {panel.features.map((feature, i) => (
                                         <div

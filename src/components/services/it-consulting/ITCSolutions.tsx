@@ -86,10 +86,10 @@ const ITCSolutions = () => {
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00D1B2]/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-pulse -z-10 transition-opacity duration-700 pointer-events-none" />
 
                                 {/* Glowing Top-Right Dot */}
-                                <div className="absolute top-8 right-8 h-1.5 w-1.5 rounded-full bg-[#00D1B2] opacity-0 group-hover:opacity-100 shadow-[0_0_12px_#00D1B2] transition-all duration-700 pointer-events-none" />
+                                <div className="absolute top-8 end-8 h-1.5 w-1.5 rounded-full bg-[#00D1B2] opacity-0 group-hover:opacity-100 shadow-[0_0_12px_#00D1B2] transition-all duration-700 pointer-events-none" />
 
                                 {/* AI Pulse Ring */}
-                                <div className="absolute top-1/2 right-0 h-48 w-48 -translate-y-1/2 translate-x-1/2 rounded-full border border-[#2F6BFF]/0 transition-all duration-700 scale-50 opacity-0 group-hover:scale-150 group-hover:border-[#2F6BFF]/10 group-hover:opacity-100 group-hover:bg-[radial-gradient(circle_at_center,rgba(47,107,255,0.05)_0%,transparent_70%)] pointer-events-none" />
+                                <div className="absolute top-1/2 end-0 h-48 w-48 -translate-y-1/2 translate-x-1/2 rounded-full border border-[#2F6BFF]/0 transition-all duration-700 scale-50 opacity-0 group-hover:scale-150 group-hover:border-[#2F6BFF]/10 group-hover:opacity-100 group-hover:bg-[radial-gradient(circle_at_center,rgba(47,107,255,0.05)_0%,transparent_70%)] pointer-events-none" />
 
                                 <div className="relative z-10 flex flex-col items-start">
                                     <div className="mb-8 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#2F6BFF]/20 to-transparent border border-[#2F6BFF]/30 text-[#00D1B2] transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(0,209,178,0.2)]">
@@ -99,7 +99,7 @@ const ITCSolutions = () => {
                                     <h3 className="mb-4 text-2xl font-black tracking-tight text-white font-heading relative inline-block group-hover:text-[#00D1B2] transition-colors duration-500">
                                         {sol.title}
                                         {/* Animated Underline Reveal */}
-                                        <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-gradient-to-r from-[#2F6BFF] to-[#00D1B2] transition-all duration-500 group-hover:w-full" />
+                                        <span className="absolute -bottom-2 start-0 h-[2px] w-0 bg-gradient-to-r from-[#2F6BFF] to-[#00D1B2] transition-all duration-500 group-hover:w-full" />
                                     </h3>
 
                                     <p className="mt-2 text-base font-medium leading-[1.7] text-white/60 group-hover:text-white transition-colors duration-500 font-sans">

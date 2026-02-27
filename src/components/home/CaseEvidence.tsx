@@ -4,10 +4,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const CaseEvidence = () => {
+    const { t } = useTranslation();
     const containerRef = useRef<HTMLElement>(null);
     const cardRef = useRef<HTMLDivElement>(null);
 
@@ -59,19 +61,19 @@ const CaseEvidence = () => {
                             <div className="mb-8 inline-flex items-center gap-3 w-max">
                                 <span className="h-2 w-2 rounded-full bg-brand-blue" />
                                 <span className="text-xs font-bold tracking-widest text-white/50 uppercase font-mono">
-                                    Objective Proof
+                                    {t("home.evidence.badge")}
                                 </span>
                             </div>
                             <h2 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-5xl pb-2">
-                                Verified Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent-cyan">Impact.</span>
+                                {t("home.evidence.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent-cyan">{t("home.evidence.titleHighlight")}</span>
                             </h2>
                         </div>
                         <Link
                             to="/case-studies"
                             className="group hidden items-center text-sm font-bold text-white/60 transition-colors hover:text-brand-blue md:flex uppercase tracking-widest font-mono"
                         >
-                            Access Full Archive
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            {t("home.evidence.accessArchive")}
+                            <ArrowRight className="ms-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                     </div>
 
@@ -80,7 +82,7 @@ const CaseEvidence = () => {
                         className="flex flex-col lg:flex-row border border-white/10 bg-[#0B1521] overflow-hidden rounded-[2rem] shadow-[0_20px_40px_-20px_rgba(47,107,255,0.15)] group/card"
                     >
                         {/* Visual Side */}
-                        <div className="relative w-full lg:w-2/5 min-h-[400px] bg-[#071018] border-b lg:border-b-0 lg:border-r border-white/10 flex flex-col items-center justify-center p-8 overflow-hidden">
+                        <div className="relative w-full lg:w-2/5 min-h-[400px] bg-[#071018] border-b lg:border-b-0 lg:border-e border-white/10 flex flex-col items-center justify-center p-8 overflow-hidden">
                             {/* Decorative Background */}
                             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-[0.03] mix-blend-overlay scale-105 transition-transform duration-1000 group-hover/card:scale-100 grayscale"></div>
                             <div className="absolute inset-0 bg-gradient-to-t from-[#071018] via-transparent to-[#071018]/50 pointer-events-none"></div>
@@ -90,7 +92,7 @@ const CaseEvidence = () => {
                                 <div className="flex items-center justify-between mb-8">
                                     <div className="flex items-center gap-2">
                                         <ShieldCheck className="w-4 h-4 text-white/40" />
-                                        <span className="text-[10px] font-bold uppercase tracking-widest text-white/50 font-mono">Network State</span>
+                                        <span className="text-[10px] font-bold uppercase tracking-widest text-white/50 font-mono">{t("home.evidence.networkState")}</span>
                                     </div>
                                     <span className="relative flex h-2 w-2">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-blue opacity-75"></span>
@@ -101,8 +103,8 @@ const CaseEvidence = () => {
                                 {/* Before */}
                                 <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-white/5 pb-4 mb-4 gap-2">
                                     <div>
-                                        <div className="text-[10px] uppercase font-bold tracking-widest text-white/40 mb-1 font-mono">State: Legacy</div>
-                                        <div className="text-sm font-medium text-white/50">Query Res</div>
+                                        <div className="text-[10px] uppercase font-bold tracking-widest text-white/40 mb-1 font-mono">{t("home.evidence.stateLegacy")}</div>
+                                        <div className="text-sm font-medium text-white/50">{t("home.evidence.queryRes")}</div>
                                     </div>
                                     <div className="font-mono text-2xl text-white/40 line-through decoration-white/20">
                                         4,250ms
@@ -112,8 +114,8 @@ const CaseEvidence = () => {
                                 {/* After */}
                                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 pt-2">
                                     <div>
-                                        <div className="text-[10px] uppercase font-bold tracking-widest text-brand-blue mb-1 font-mono">State: Sovereign</div>
-                                        <div className="text-sm font-bold text-white">Query Res</div>
+                                        <div className="text-[10px] uppercase font-bold tracking-widest text-brand-blue mb-1 font-mono">{t("home.evidence.stateSovereign")}</div>
+                                        <div className="text-sm font-bold text-white">{t("home.evidence.queryRes")}</div>
                                     </div>
                                     <div className="font-mono text-4xl font-bold text-white tracking-tight">
                                         12<span className="text-xl text-white/50 font-sans">ms</span>
@@ -125,16 +127,16 @@ const CaseEvidence = () => {
                         {/* Content Side */}
                         <div className="flex flex-col justify-center p-8 lg:p-14 w-full lg:w-3/5 bg-[#0B1521] relative">
                             {/* Quote Icon watermark */}
-                            <div className="absolute top-10 right-10 text-[120px] font-serif leading-none text-white/[0.02] select-none pointer-events-none">
+                            <div className="absolute top-10 end-10 text-[120px] font-serif leading-none text-white/[0.02] select-none pointer-events-none">
                                 "
                             </div>
 
                             <div className="mb-4 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/50 font-mono">
-                                Extract: Board Protocol Memo
+                                {t("home.evidence.extract")}
                             </div>
-                            <blockquote className="mb-12 border-l-4 border-brand-blue pl-6 py-2 relative z-10">
+                            <blockquote className="mb-12 border-s-4 border-brand-blue ps-6 py-2 relative z-10">
                                 <p className="text-xl md:text-2xl leading-[1.6] text-white font-bold">
-                                    "The velocity of digital transformation requires an infrastructure that can scale with absolute security. Ticode engineered that foundation."
+                                    {t("home.evidence.quote")}
                                 </p>
                             </blockquote>
 
@@ -144,15 +146,15 @@ const CaseEvidence = () => {
                                         340<span className="text-white/50 font-sans text-3xl md:text-4xl">%</span>
                                     </div>
                                     <div className="mt-2 text-xs font-semibold uppercase tracking-widest text-white/50 font-mono">
-                                        Operational Yield
+                                        {t("home.evidence.operationalYield")}
                                     </div>
                                 </div>
                                 <div className="group/metric">
                                     <div className="text-4xl md:text-5xl font-bold font-mono text-white tracking-tighter group-hover/metric:text-transparent group-hover/metric:bg-clip-text group-hover/metric:bg-gradient-to-r group-hover/metric:from-brand-blue group-hover/metric:to-accent-cyan transition-all">
-                                        Zero
+                                        {t("home.evidence.zero")}
                                     </div>
                                     <div className="mt-2 text-xs font-semibold uppercase tracking-widest text-white/50 font-mono">
-                                        Data Exfiltration Risk
+                                        {t("home.evidence.dataExfiltrationRisk")}
                                     </div>
                                 </div>
                             </div>
@@ -166,9 +168,9 @@ const CaseEvidence = () => {
                                     />
                                 </div>
                                 <div>
-                                    <div className="font-bold text-lg text-white tracking-tight">Ibrahim Al-Rashid</div>
+                                    <div className="font-bold text-lg text-white tracking-tight">{t("home.evidence.testimonialName")}</div>
                                     <div className="text-xs font-bold text-white/50 uppercase tracking-wider mt-1 font-mono">
-                                        Chief Technology Officer, <br className="md:hidden" /> Top-Tier GCC Bank
+                                        {t("home.evidence.testimonialRole")}
                                     </div>
                                 </div>
                             </div>
@@ -182,7 +184,7 @@ const CaseEvidence = () => {
                             className="w-full bg-gradient-to-r from-brand-blue to-accent-cyan text-white hover:opacity-90 rounded-[1rem] py-6 h-auto tracking-wide font-bold text-sm shadow-[0_4px_14px_0_rgba(47,107,255,0.39)]"
                         >
                             <Link to="/case-studies">
-                                Access Full Archive <ArrowRight className="ml-2 h-4 w-4" />
+                                {t("home.evidence.accessFullArchiveBtn")} <ArrowRight className="ms-2 h-4 w-4" />
                             </Link>
                         </Button>
                     </div>

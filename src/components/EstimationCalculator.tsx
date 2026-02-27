@@ -48,7 +48,7 @@ const EstimationCalculator = ({ fields, baseRate }: Props) => {
 
   return (
     <div id="calculator" className="relative overflow-hidden rounded-2xl border border-white/10 bg-surface-1 p-8 sm:p-12 shadow-2xl">
-      <div className="absolute top-0 right-0 p-6 flex justify-end pointer-events-none">
+      <div className="absolute top-0 end-0 p-6 flex justify-end pointer-events-none">
         <div className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/20">
           Internal Estimation Engine // Secure
         </div>
@@ -98,11 +98,11 @@ const EstimationCalculator = ({ fields, baseRate }: Props) => {
 
       <div className="mt-12 md:mt-16 rounded-xl border border-white/5 bg-base p-8 md:p-10 relative overflow-hidden group">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.05)_0%,transparent_80%)] opacity-0 transition-opacity duration-1000 group-hover:opacity-100" />
-        <p className="text-[0.70rem] font-bold uppercase tracking-[0.2em] text-white/40 mb-4 text-center md:text-left">
+        <p className="text-[0.70rem] font-bold uppercase tracking-[0.2em] text-white/40 mb-4 text-center md:text-start">
           Projected Capital Allocation Range
         </p>
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <p className="font-mono text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] text-white drop-shadow-md relative z-10 text-center md:text-left">
+          <p className="font-mono text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] text-white drop-shadow-md relative z-10 text-center md:text-start">
             {estimate.isValid ? `$${estimate.low.toLocaleString()} - $${estimate.high.toLocaleString()}` : 'Validating Input...'}
           </p>
           <Button

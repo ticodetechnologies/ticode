@@ -88,7 +88,7 @@ const EstimateSection = () => {
           {/* The Instrument Interface */}
           <div className="relative bg-[#0B1623]/80 backdrop-blur-xl border border-brand-blue/10 rounded-2xl p-8 md:p-12 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.6)] overflow-hidden group">
 
-            <div className="absolute top-0 left-0 w-full h-1 bg-[#1F2937]">
+            <div className="absolute top-0 start-0 w-full h-1 bg-[#1F2937]">
               <div
                 className="h-full bg-brand-blue transition-all duration-300 ease-out shadow-[0_0_15px_rgba(47,107,255,0.6)]"
                 style={{ width: `${(investment / 1000) * 100}%` }}
@@ -105,9 +105,9 @@ const EstimateSection = () => {
                       Capital Allocation (k$)
                     </label>
                     <div className="text-4xl font-bold text-white font-mono flex items-center min-w-[140px] justify-end">
-                      <span className="text-slate-500 mr-2">$</span>
+                      <span className="text-slate-500 me-2">$</span>
                       <span ref={counterRef}>250</span>
-                      <span className="text-slate-500 ml-1 font-sans">k</span>
+                      <span className="text-slate-500 ms-1 font-sans">k</span>
                     </div>
                   </div>
 
@@ -172,7 +172,7 @@ const EstimateSection = () => {
                     >
                       <span className="relative z-10 flex items-center">
                         {t('calculator.cta', 'Secure Transformation Scope')}
-                        <ArrowRight className="ml-3 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="ms-3 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </span>
                     </Link>
                   </div>
