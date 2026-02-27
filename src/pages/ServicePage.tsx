@@ -158,11 +158,12 @@ const ServicePage = () => {
   return (
     <>
       <SEOHead
-        title={`${service.title} | Ticode Technologies`}
+        title={`${service.title} Kuwait | Ticode Technologies`}
         description={service.summary}
         path={`/services/${service.slug}`}
         schemaType="Service"
         serviceName={service.title}
+        faqs={service.faqs}
       />
 
       <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-base pt-32 lg:pt-40 pb-16 lg:pb-24 border-b border-white/5">

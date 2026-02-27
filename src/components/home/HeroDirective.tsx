@@ -18,6 +18,8 @@ const HeroDirective = () => {
     const { t } = useTranslation();
     const containerRef = useRef<HTMLDivElement>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    // timerKey resets the auto-advance interval when user clicks an item manually
+    const [timerKey, setTimerKey] = useState(0);
 
     const showcaseItemsRaw = t("home.hero.telemetry", { returnObjects: true }) as any[];
     const iconsMap = [Activity, Brain, ShieldCheck, Cloud, Globe, Cpu];
@@ -27,12 +29,18 @@ const HeroDirective = () => {
         icon: iconsMap[index % iconsMap.length],
     }));
 
+    const handleItemClick = (idx: number) => {
+        setCurrentIndex(idx);
+        setTimerKey(k => k + 1); // reset the interval countdown
+    };
+
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % showcaseItems.length);
-        }, 4000); // 4 seconds per item
+        }, 4000);
         return () => clearInterval(timer);
-    }, []);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [timerKey]);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -76,7 +84,10 @@ const HeroDirective = () => {
         <section className="relative flex min-h-[100dvh] items-center overflow-hidden bg-base pt-16 lg:pt-20 pb-8 lg:pb-12 font-sans border-b border-white/5">
             {/* Soft background grid texture */}
             <div className="absolute inset-0 texture-grid-navy mix-blend-overlay" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/10 rounded-full blur-[150px] pointer-events-none" />
+            {/* Animated ambient radial glows */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/10 rounded-full blur-[150px] pointer-events-none animate-[pulse_8s_ease-in-out_infinite]" />
+            <div className="absolute -top-32 -left-20 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-[120px] pointer-events-none animate-[pulse_12s_ease-in-out_2s_infinite]" />
+            <div className="absolute -bottom-20 right-0 w-[400px] h-[400px] bg-brand-blue/8 rounded-full blur-[100px] pointer-events-none animate-[pulse_10s_ease-in-out_4s_infinite]" />
 
             <div className="container-tight relative z-10 w-full" ref={containerRef}>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center pt-2 lg:pt-4">
@@ -101,10 +112,10 @@ const HeroDirective = () => {
                             </span>
                         </h1>
 
-                        <p className="hero-anim-item mt-4 max-w-xl text-lg text-slate-300 leading-relaxed font-medium">
+                        <p className="hero-anim-item mt-4 max-w-lg text-lg text-slate-300 leading-relaxed font-medium">
                             {t(
                                 "home.hero.subtext",
-                                "Delivering elite IT consulting, strategic AI implementation, and structurally sound digital transformations for GCC market leaders."
+                                "Kuwait-headquartered. Board-level IT consulting and AI for the GCC's most demanding enterprises."
                             )}
                         </p>
 
@@ -119,9 +130,23 @@ const HeroDirective = () => {
                                 <span className="font-medium whitespace-nowrap">{t('home.hero.badge2', '100+ Enterprise Deployments')}</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm text-slate-300">
-                                <CheckCircle2 className="w-4 h-4 text-[#005EED]" />
-                                <span className="font-medium whitespace-nowrap">{t('home.hero.badge3', 'Zero Data Breaches')}</span>
+                                <ShieldCheck className="w-4 h-4 text-[#005EED]" />
+                                <span className="font-medium whitespace-nowrap">{t('home.hero.badge3', 'ISO 27001 Certified')}</span>
                             </div>
+                        </div>
+
+                        {/* Social Proof — Trusted-by line */}
+                        <div className="hero-anim-item mt-4 flex items-center gap-2.5 relative z-20">
+                            <div className="flex items-center -space-x-1.5">
+                                {['KF', 'ZN', 'NB', 'AR'].map((abbr, i) => (
+                                    <div key={i} className="w-6 h-6 rounded-full bg-gradient-to-br from-brand-blue/40 to-accent-cyan/20 border border-white/10 flex items-center justify-center text-[8px] font-bold text-white/60 font-mono">
+                                        {abbr}
+                                    </div>
+                                ))}
+                            </div>
+                            <span className="text-xs text-slate-400 font-medium">
+                                {t('home.hero.trustedBy', 'Trusted by KFH, Zain, NBK, Aramco & 96+ GCC enterprises')}
+                            </span>
                         </div>
 
                         <div className="hero-anim-item mt-8 flex flex-wrap items-center gap-4 relative z-20">
@@ -139,18 +164,16 @@ const HeroDirective = () => {
                             {/* Secondary CTA */}
                             <Link
                                 to="/ai-solutions"
-                                className="group inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-bold tracking-wide text-white transition-all bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 whitespace-nowrap"
+                                className="group inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-sm font-semibold tracking-wide text-slate-300 transition-all duration-300 hover:text-white border border-white/10 hover:border-white/25 whitespace-nowrap"
                             >
-                                <span className="flex items-center">
-                                    <Brain className="me-3 h-4 w-4 text-[#005EED]" />
-                                    {t('home.hero.ctaSecondary', 'Explore AI Capabilities')}
-                                </span>
+                                <Brain className="h-4 w-4 text-slate-500 group-hover:text-brand-blue transition-colors" />
+                                {t('home.hero.ctaSecondary', 'Explore AI Capabilities')}
                             </Link>
                         </div>
 
-                        {/* Clean Data Strip */}
-                        <div className="hero-anim-item mt-8 overflow-hidden w-full relative border-t border-white/5 pt-5 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                            <div className="authority-strip-track flex w-max items-center gap-16 text-sm uppercase tracking-wider text-slate-400 font-medium">
+                        {/* Clean Data Strip — ps-8 ensures first item is not clipped by the fade mask */}
+                        <div className="hero-anim-item mt-8 overflow-hidden w-full relative border-t border-white/5 pt-5 [mask-image:linear-gradient(to_right,transparent_0%,black_15%,black_85%,transparent_100%)]">
+                            <div className="authority-strip-track flex w-max items-center gap-16 ps-8 text-sm uppercase tracking-wider text-slate-400 font-medium">
                                 <div className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-brand-blue" /> {t('home.hero.strip1', 'GCC Compliance')}</div>
                                 <div className="w-1.5 h-1.5 rounded-full bg-slate-700" />
                                 <div className="flex items-center gap-3"><Activity className="w-4 h-4 text-brand-blue" /> {t('home.hero.strip2', 'Board-Level Advisory')}</div>
@@ -199,7 +222,7 @@ const HeroDirective = () => {
                                         <motion.div
                                             key={idx}
                                             layout
-                                            onClick={() => setCurrentIndex(idx)}
+                                            onClick={() => handleItemClick(idx)}
                                             className={`relative flex flex-col rounded-xl border cursor-pointer transition-all duration-500 overflow-hidden group/item
                                                 ${isActive
                                                     ? 'bg-gradient-to-r from-brand-blue/10 via-[#11223A]/40 to-transparent border-brand-blue/40 shadow-[inset_0px_0px_20px_rgba(47,107,255,0.15)] p-4'

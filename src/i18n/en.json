@@ -1,16 +1,17 @@
 {
   "home": {
     "hero": {
-      "systemActive": "System Operational / GCC Node Active",
+      "systemActive": "Headquarters: Kuwait City · GCC Node Active",
       "headlinePrefix": "Board-Level Digital",
       "headlineMain": "Transformation",
       "headlineSuffix": "For Risk-Resilient Enterprises.",
-      "subtext": "Delivering elite IT consulting, strategic AI implementation, and structurally sound digital transformations for GCC market leaders.",
+      "subtext": "Kuwait-headquartered. Board-level IT consulting and AI for the GCC's most demanding enterprises.",
       "ctaPrimary": "Start Your Transformation",
       "ctaSecondary": "Explore AI Capabilities",
       "badge1": "$200M+ Client Value Delivered",
       "badge2": "100+ Enterprise Deployments",
-      "badge3": "Zero Data Breaches",
+      "badge3": "ISO 27001 Certified",
+      "trustedBy": "Trusted by KFH, Zain, NBK, Aramco & 96+ GCC enterprises",
       "strip1": "GCC Compliance",
       "strip2": "Board-Level Advisory",
       "strip3": "ISO Certified Standards",
@@ -58,21 +59,21 @@
       "items": [
         {
           "id": "efficiency",
-          "label": "Enterprise Efficiency Yield",
-          "before": "Fragmented Operations",
-          "after": "Unified Sovereign Architecture"
+          "label": "Average Efficiency Uplift",
+          "before": "Fragmented Operations — 3–5 disconnected systems avg",
+          "after": "Unified Architecture — single board-ready operations view"
         },
         {
           "id": "speed",
-          "label": "Speed to Market Acceleration",
-          "before": "Legacy Deployment Cycles",
-          "after": "Accelerated Digital Ecosystems"
+          "label": "Faster Decision Cycle",
+          "before": "Legacy Deployment Cycles — weeks per change",
+          "after": "Accelerated Digital Ecosystems — hours to production"
         },
         {
           "id": "cost",
-          "label": "Infrastructure Cost Reduction",
-          "before": "Compounding Tech Debt",
-          "after": "Optimized Cloud Spend"
+          "label": "OPEX Reduction Delivered",
+          "before": "Compounding Tech Debt — rising annually",
+          "after": "Optimized Cloud Spend — auditable savings"
         }
       ]
     },
@@ -173,8 +174,8 @@
       ]
     },
     "domains": {
-      "badge": "Industries We Serve",
-      "title": "Sector-Specific Intelligence.",
+      "badge": "Kuwait & GCC Industries",
+      "title": "Industries We Transform.",
       "items": [
         {
           "id": "finance",
@@ -231,27 +232,27 @@
         {
           "id": "discovery",
           "title": "Discovery",
-          "desc": "Audit technical debt and map organizational risk."
+          "desc": "Full audit of technical debt, organizational risk, vendor landscape, and regulatory exposure. Outputs include an IT Health Score, risk register, cost baseline, and a board-ready diagnostic briefing. Duration: 4–6 weeks."
         },
         {
           "id": "strategy",
           "title": "Strategy",
-          "desc": "Blueprint architectures aligned with GCC directives."
+          "desc": "Blueprint enterprise IT architectures and a 3-year technology roadmap aligned to Kuwait Vision 2035, CBK, and board priorities. Stakeholder sessions ensure C-suite alignment before a single execution decision is made. Duration: 4–6 weeks."
         },
         {
           "id": "implementation",
           "title": "Implementation",
-          "desc": "Deploy environments with zero business disruption."
+          "desc": "Deploy cloud, AI, and enterprise systems with zero business disruption using phased rollouts and feature-flag governance. Every milestone is tracked against KPIs defined in the strategy phase. Duration: 8–16 weeks per initiative."
         },
         {
           "id": "optimization",
           "title": "Optimization",
-          "desc": "Fine-tune workloads for maximum operational yield."
+          "desc": "Continuous performance tuning across cloud spend, AI model accuracy, and system throughput — targeting verified OPEX reduction. Monthly board-ready optimization reports delivered throughout. Duration: Ongoing."
         },
         {
           "id": "support",
           "title": "Governance",
-          "desc": "Continuous sovereign oversight and infrastructure security."
+          "desc": "Permanent board-level IT governance: quarterly technology risk dashboards, vendor performance reviews, portfolio reallocation governance, and PDPL/CBK compliance monitoring. IT accountability is built into the board operating rhythm. Duration: Permanent retainer option."
         }
       ]
     },

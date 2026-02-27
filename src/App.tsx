@@ -20,6 +20,15 @@ const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
+const KuwaitITConsultingPage = lazy(() => import("./pages/KuwaitITConsultingPage"));
+
+// Kuwait IT Consulting Content Cluster — Category Dominance
+const ITConsultingCostKuwait = lazy(() => import("./pages/insights/ITConsultingCostKuwait"));
+const ChooseITConsultantKuwait = lazy(() => import("./pages/insights/ChooseITConsultantKuwait"));
+const BoardLevelITGovernance = lazy(() => import("./pages/insights/BoardLevelITGovernance"));
+const ITConsultingVsCIOKuwait = lazy(() => import("./pages/insights/ITConsultingVsCIOKuwait"));
+const ITStrategyFrameworkKuwait = lazy(() => import("./pages/insights/ITStrategyFrameworkKuwait"));
+const BestITConsultingFirmsKuwait = lazy(() => import("./pages/insights/BestITConsultingFirmsKuwait"));
 
 const queryClient = new QueryClient();
 
@@ -50,6 +59,15 @@ const App = () => (
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
+                {/* GCC Country Landing Pages — Phase 3 SEO Expansion */}
+                <Route path="/kuwait/it-consulting" element={<KuwaitITConsultingPage />} />
+                {/* Kuwait IT Topic Cluster — Category Dominance */}
+                <Route path="/insights/it-consulting-cost-kuwait" element={<ITConsultingCostKuwait />} />
+                <Route path="/insights/how-to-choose-it-consultant-kuwait" element={<ChooseITConsultantKuwait />} />
+                <Route path="/insights/board-level-it-governance-kuwait" element={<BoardLevelITGovernance />} />
+                <Route path="/insights/it-consulting-vs-inhouse-cio-kuwait" element={<ITConsultingVsCIOKuwait />} />
+                <Route path="/insights/it-strategy-framework-kuwait" element={<ITStrategyFrameworkKuwait />} />
+                <Route path="/insights/best-it-consulting-firms-kuwait" element={<BestITConsultingFirmsKuwait />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>

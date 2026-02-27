@@ -15,9 +15,9 @@ type BaseMetricType = {
 };
 
 const baseMetrics: BaseMetricType[] = [
-    { id: "efficiency", value: 19, prefix: "+", suffix: "%" },
-    { id: "speed", value: 1.7, prefix: "", suffix: "x", isFloat: true },
-    { id: "cost", value: 27, prefix: "-", suffix: "%" },
+    { id: "efficiency", value: 34, prefix: "+", suffix: "%" },
+    { id: "speed", value: 2.3, prefix: "", suffix: "x", isFloat: true },
+    { id: "cost", value: 25, prefix: "-", suffix: "%" },
 ];
 
 const OutcomeMetrics = () => {
