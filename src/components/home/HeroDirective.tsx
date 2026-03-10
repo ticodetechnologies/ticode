@@ -81,7 +81,7 @@ const HeroDirective = () => {
     }, []);
 
     return (
-        <section className="relative flex min-h-[100dvh] items-center overflow-hidden bg-base pt-16 lg:pt-20 pb-8 lg:pb-12 font-sans border-b border-white/5">
+        <section className="relative flex min-h-[100dvh] items-center overflow-hidden bg-base pt-28 lg:pt-32 pb-8 lg:pb-12 font-sans border-b border-white/5">
             {/* Soft background grid texture */}
             <div className="absolute inset-0 texture-grid-navy mix-blend-overlay" />
             {/* Animated ambient radial glows */}
@@ -149,11 +149,11 @@ const HeroDirective = () => {
                             </span>
                         </div>
 
-                        <div className="hero-anim-item mt-8 flex flex-wrap items-center gap-4 relative z-20">
+                        <div className="hero-anim-item mt-8 flex flex-col sm:flex-row items-center sm:items-start gap-4 relative z-20 w-full">
                             {/* Primary CTA */}
                             <Link
                                 to="/contact"
-                                className="group relative overflow-hidden inline-flex items-center justify-center bg-[#005EED] hover:bg-[#004dc2] px-8 py-4 rounded-full text-sm font-bold tracking-wide text-white transition-all shadow-[0_4px_14px_0_rgba(0,94,237,0.39)] hover:shadow-[0_6px_20px_rgba(0,94,237,0.23)] hover:-translate-y-0.5 whitespace-nowrap"
+                                className="group relative w-full sm:w-auto overflow-hidden inline-flex items-center justify-center bg-[#005EED] hover:bg-[#004dc2] px-8 py-4 rounded-full text-sm font-bold tracking-wide text-white transition-all shadow-[0_4px_14px_0_rgba(0,94,237,0.39)] hover:shadow-[0_6px_20px_rgba(0,94,237,0.23)] hover:-translate-y-0.5 whitespace-nowrap"
                             >
                                 <span className="relative z-10 flex items-center">
                                     {t("home.hero.ctaPrimary", "Start Your Transformation")}
@@ -164,7 +164,7 @@ const HeroDirective = () => {
                             {/* Secondary CTA */}
                             <Link
                                 to="/ai-solutions"
-                                className="group inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-sm font-semibold tracking-wide text-slate-300 transition-all duration-300 hover:text-white border border-white/10 hover:border-white/25 whitespace-nowrap"
+                                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-sm font-semibold tracking-wide text-slate-300 transition-all duration-300 hover:text-white border border-white/10 hover:border-white/25 whitespace-nowrap"
                             >
                                 <Brain className="h-4 w-4 text-slate-500 group-hover:text-brand-blue transition-colors" />
                                 {t('home.hero.ctaSecondary', 'Explore AI Capabilities')}
