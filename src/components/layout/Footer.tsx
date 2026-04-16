@@ -77,7 +77,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/company/ticodetech" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.02] border border-white/5 text-white/40 transition-all duration-300 hover:bg-brand-blue/10 hover:border-brand-blue/30 hover:text-accent-cyan hover:-translate-y-1 hover:shadow-[0_5px_15px_-5px_rgba(47,107,255,0.3)]">
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a href="https://www.instagram.com/ticodetech" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.02] border border-white/5 text-white/40 transition-all duration-300 hover:bg-brand-blue/10 hover:border-brand-blue/30 hover:text-accent-cyan hover:-translate-y-1 hover:shadow-[0_5px_15px_-5px_rgba(47,107,255,0.3)]">
+              <a href="https://www.instagram.com/ticodetechnologies/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.02] border border-white/5 text-white/40 transition-all duration-300 hover:bg-brand-blue/10 hover:border-brand-blue/30 hover:text-accent-cyan hover:-translate-y-1 hover:shadow-[0_5px_15px_-5px_rgba(47,107,255,0.3)]">
                 <Instagram className="h-4 w-4" />
               </a>
             </div>

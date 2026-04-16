@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslation } from "react-i18next";
 import { Landmark, HeartPulse, Building2, Zap, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/hooks/useLanguage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,6 +33,7 @@ const baseIndustriesData = [
 
 const DomainsSection = () => {
     const { t } = useTranslation();
+    const { isRTL } = useLanguage();
     const containerRef = useRef<HTMLDivElement>(null);
     const gridRef = useRef<HTMLDivElement>(null);
 
@@ -115,7 +117,7 @@ const DomainsSection = () => {
                             className="domain-anim-card group flex flex-col justify-between bg-[#0E1A2B] p-6 md:p-14 transition-colors hover:bg-[#111C2D] relative overflow-hidden"
                         >
                             {/* Gradient Border top on Hover */}
-                            <div className="absolute top-0 start-0 w-full h-1 bg-gradient-to-r from-brand-blue to-accent-cyan transform scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100 z-20" />
+                            <div className={`absolute top-0 start-0 w-full h-1 bg-gradient-to-r from-brand-blue to-accent-cyan transform scale-x-0 ${isRTL ? 'origin-right' : 'origin-left'} transition-transform duration-500 ease-out group-hover:scale-x-100 z-20`} />
 
                             {/* Inner ambient glow */}
                             <div className="absolute top-0 end-0 w-48 h-48 bg-brand-blue/10 rounded-full blur-[60px] group-hover:bg-accent-cyan/15 transition-colors duration-700 pointer-events-none z-0" />

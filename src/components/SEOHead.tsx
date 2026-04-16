@@ -62,7 +62,8 @@ const SEOHead = ({
         },
         address: {
           '@type': 'PostalAddress',
-          addressLocality: 'Kuwait City',
+          streetAddress: 'Khalid Ibn Al Waleed Street, Aljazi Tower, Mezzanine 1, Office 7',
+          addressLocality: 'Sharq, Kuwait City',
           addressRegion: 'Al Asimah',
           addressCountry: 'KW',
         },

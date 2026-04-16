@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Fingerprint, Zap, Shield, Sparkles } from "lucide-react";
 import type { IndustryData } from "@/data/industries";
+import { useLanguage } from "@/hooks/useLanguage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const LuxurySolutions = ({ industry }: Props) => {
+    const { isRTL } = useLanguage();
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -60,7 +62,7 @@ const LuxurySolutions = ({ industry }: Props) => {
                             key={index}
                             className="solution-card group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-xl cursor-default"
                         >
-                            <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-brand-blue to-accent-cyan scale-x-0 transition-transform duration-500 origin-left group-hover:scale-x-100" />
+                            <div className={`absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-brand-blue to-accent-cyan scale-x-0 transition-transform duration-500 ${isRTL ? 'origin-right' : 'origin-left'} group-hover:scale-x-100`} />
 
                             <div className="relative z-10">
                                 <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 border border-slate-100 transition-colors duration-300 group-hover:bg-brand-blue/5">

@@ -99,7 +99,7 @@ const FinalCtaSection = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/10 via-accent-cyan/10 to-brand-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     <div className="absolute top-0 inset-x-0 mx-auto w-3/4 h-[2px] bg-gradient-to-r from-transparent via-accent-cyan to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 shadow-[0_0_15px_rgba(0,194,255,0.8)]" />
 
-                    <span className="relative z-10 text-base font-bold tracking-widest uppercase font-mono">
+                    <span className="relative z-10 text-white text-base font-bold tracking-widest uppercase font-mono">
                         {t("home.finalCta.primaryCta", "Initiate Strategic Engagement")}
                     </span>
 

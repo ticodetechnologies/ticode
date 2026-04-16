@@ -58,7 +58,8 @@ const Header = () => {
     )}>
       {children}
       <span className={cn(
-        "absolute -bottom-1 start-1.5 end-1.5 h-[2px] transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100",
+        "absolute -bottom-1 start-1.5 end-1.5 h-[2px] transition-all duration-300 transform scale-x-0 group-hover:scale-x-100",
+        isRTL ? "origin-right" : "origin-left",
         "bg-brand-blue",
         isActive ? "scale-x-100" : "scale-x-0"
       )}></span>
@@ -165,7 +166,8 @@ const Header = () => {
           {title}
           <ChevronDown className={cn("w-3.5 h-3.5 group-hover:rotate-180 transition-all duration-300", (isScrolled || isLightHero) ? "text-slate-400 group-hover:text-brand-blue" : "text-slate-400 group-hover:text-white")} />
           <span className={cn(
-            "absolute -bottom-1 start-0 end-5 h-[2px] transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100",
+            "absolute -bottom-1 start-0 end-5 h-[2px] transition-all duration-300 transform scale-x-0 group-hover:scale-x-100",
+            isRTL ? "origin-right" : "origin-left",
             (isScrolled || isLightHero) ? "bg-brand-blue" : "bg-accent-cyan",
             isActive ? "scale-x-100" : "scale-x-0"
           )}></span>
@@ -252,7 +254,7 @@ const Header = () => {
             >
               {/* Abstract Animated Backgrounds */}
               <div className={cn("absolute top-0 end-0 w-64 h-64 blur-[80px] rounded-full pointer-events-none transition-colors duration-700", currentCluster.featured.blurs)} />
-              <div className={cn("absolute -bottom-20 -left-20 w-48 h-48 blur-[80px] rounded-full pointer-events-none transition-colors duration-700", currentCluster.featured.accent)} />
+              <div className={cn("absolute -bottom-20 -start-20 w-48 h-48 blur-[80px] rounded-full pointer-events-none transition-colors duration-700", currentCluster.featured.accent)} />
 
               <h3 className={cn("text-[10px] font-bold tracking-widest uppercase mb-4 mt-1 relative z-10 flex items-center gap-2", currentCluster.featured.dot.replace('bg-', 'text-'))}>
                 <span className={cn("w-1.5 h-1.5 rounded-full animate-pulse", currentCluster.featured.dot)}></span>
@@ -377,7 +379,8 @@ const Header = () => {
           {title}
           <ChevronDown className={cn("w-3.5 h-3.5 group-hover:rotate-180 transition-all duration-300", (isScrolled || isLightHero) ? "text-slate-400 group-hover:text-brand-blue" : "text-slate-400 group-hover:text-white")} />
           <span className={cn(
-            "absolute -bottom-1 start-0 end-5 h-[2px] transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100",
+            "absolute -bottom-1 start-0 end-5 h-[2px] transition-all duration-300 transform scale-x-0 group-hover:scale-x-100",
+            isRTL ? "origin-right" : "origin-left",
             (isScrolled || isLightHero) ? "bg-brand-blue" : "bg-accent-cyan",
             isActive ? "scale-x-100" : "scale-x-0"
           )}></span>
@@ -467,7 +470,7 @@ const Header = () => {
             >
               {/* Abstract Animated Backgrounds */}
               <div className={cn("absolute top-0 end-0 w-64 h-64 blur-[80px] rounded-full pointer-events-none transition-colors duration-700", currentCluster.featured.blurs)} />
-              <div className={cn("absolute -bottom-20 -left-20 w-48 h-48 blur-[80px] rounded-full pointer-events-none transition-colors duration-700", currentCluster.featured.accent)} />
+              <div className={cn("absolute -bottom-20 -start-20 w-48 h-48 blur-[80px] rounded-full pointer-events-none transition-colors duration-700", currentCluster.featured.accent)} />
 
               <h3 className={cn("text-[10px] font-bold tracking-widest uppercase mb-4 mt-1 relative z-10 flex items-center gap-2", currentCluster.featured.dot.replace('bg-', 'text-'))}>
                 <span className={cn("w-1.5 h-1.5 rounded-full animate-pulse", currentCluster.featured.dot)}></span>

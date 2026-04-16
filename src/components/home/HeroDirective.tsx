@@ -43,6 +43,7 @@ const HeroDirective = () => {
     }, [timerKey]);
 
     useEffect(() => {
+        const rtl = document.documentElement.dir === 'rtl';
         const ctx = gsap.context(() => {
             gsap.fromTo(
                 ".hero-anim-item",
@@ -59,7 +60,7 @@ const HeroDirective = () => {
 
             gsap.fromTo(
                 ".hero-metrics-panel",
-                { opacity: 0, x: 40 },
+                { opacity: 0, x: rtl ? -40 : 40 },
                 {
                     opacity: 1,
                     x: 0,
@@ -70,9 +71,10 @@ const HeroDirective = () => {
             );
 
             gsap.to(".authority-strip-track", {
-                xPercent: -50,
+                xPercent: rtl ? 50 : -50,
                 ease: "none",
                 duration: 40,
+                delay: 1.5,
                 repeat: -1
             });
         }, containerRef);
@@ -86,8 +88,8 @@ const HeroDirective = () => {
             <div className="absolute inset-0 texture-grid-navy mix-blend-overlay" />
             {/* Animated ambient radial glows */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/10 rounded-full blur-[150px] pointer-events-none animate-[pulse_8s_ease-in-out_infinite]" />
-            <div className="absolute -top-32 -left-20 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-[120px] pointer-events-none animate-[pulse_12s_ease-in-out_2s_infinite]" />
-            <div className="absolute -bottom-20 right-0 w-[400px] h-[400px] bg-brand-blue/8 rounded-full blur-[100px] pointer-events-none animate-[pulse_10s_ease-in-out_4s_infinite]" />
+            <div className="absolute -top-32 -start-20 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-[120px] pointer-events-none animate-[pulse_12s_ease-in-out_2s_infinite]" />
+            <div className="absolute -bottom-20 end-0 w-[400px] h-[400px] bg-brand-blue/8 rounded-full blur-[100px] pointer-events-none animate-[pulse_10s_ease-in-out_4s_infinite]" />
 
             <div className="container-tight relative z-10 w-full" ref={containerRef}>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center pt-2 lg:pt-4">
@@ -120,10 +122,10 @@ const HeroDirective = () => {
                         </p>
 
                         {/* Trust Badges Row */}
-                        <div className="hero-anim-item mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 relative z-20">
-                            <div className="flex items-center gap-2 text-sm text-slate-300">
-                                <CheckCircle2 className="w-4 h-4 text-[#005EED]" />
-                                <span className="font-medium whitespace-nowrap">{t('home.hero.badge1', '$200M+ Client Value Delivered')}</span>
+                        <div className="hero-anim-item mt-6 flex flex-wrap items-center gap-x-4 gap-y-3 relative z-20">
+                            <div className="flex items-center gap-2 text-sm text-white font-semibold bg-brand-blue/15 border border-brand-blue/30 rounded-full px-3 py-1">
+                                <CheckCircle2 className="w-4 h-4 text-accent-cyan shrink-0" />
+                                <span className="whitespace-nowrap">{t('home.hero.badge1', '$200M+ Client Value Delivered')}</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm text-slate-300">
                                 <CheckCircle2 className="w-4 h-4 text-[#005EED]" />
@@ -155,6 +157,8 @@ const HeroDirective = () => {
                                 to="/contact"
                                 className="group relative w-full sm:w-auto overflow-hidden inline-flex items-center justify-center bg-[#005EED] hover:bg-[#004dc2] px-8 py-4 rounded-full text-sm font-bold tracking-wide text-white transition-all shadow-[0_4px_14px_0_rgba(0,94,237,0.39)] hover:shadow-[0_6px_20px_rgba(0,94,237,0.23)] hover:-translate-y-0.5 whitespace-nowrap"
                             >
+                                {/* Shimmer sweep on hover */}
+                                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out bg-gradient-to-r from-transparent via-white/25 to-transparent skew-x-12 pointer-events-none" />
                                 <span className="relative z-10 flex items-center">
                                     {t("home.hero.ctaPrimary", "Start Your Transformation")}
                                     <ArrowRight className="ms-3 h-4 w-4 transition-transform group-hover:translate-x-1" />
