@@ -94,14 +94,14 @@ const TransformationCollapse = () => {
     return (
         <section
             ref={containerRef}
-            className="relative overflow-hidden bg-base py-32 font-sans border-b border-slate-200"
+            className="relative overflow-hidden bg-base py-20 font-sans border-b border-slate-200"
         >
             <div className="container-tight relative z-10 w-full">
-                <div className="text-center mb-20">
+                <div className="text-center mb-12">
                     <div className="collapse-anim-item mx-auto mb-6 flex items-center justify-center gap-3 w-max">
                         <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
                         </span>
                         <span className="text-xs font-bold tracking-[0.1em] text-slate-500 uppercase font-mono">
                             {t("home.risk.badge")}
@@ -117,7 +117,7 @@ const TransformationCollapse = () => {
                     {collapseModules.map((module, index) => (
                         <div
                             key={module.id}
-                            className="collapse-anim-item collapse-card group relative flex flex-col justify-between bg-white border border-slate-200 rounded-[1.5rem] p-8 transition-all duration-400 ease-out hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(47,107,255,0.15)] hover:border-brand-blue/40 overflow-hidden cursor-default"
+                            className="collapse-anim-item collapse-card group relative flex flex-col justify-between bg-white border border-slate-200 rounded-[1.5rem] p-6 transition-all duration-400 ease-out hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(47,107,255,0.15)] hover:border-brand-blue/40 overflow-hidden cursor-default"
                         >
                             <div className="absolute top-0 start-0 w-full h-1 bg-gradient-to-r from-brand-blue to-accent-cyan opacity-0 group-hover:opacity-100 transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-out" />
 
@@ -125,7 +125,7 @@ const TransformationCollapse = () => {
                                 <h3 className="text-xl font-bold tracking-tight text-slate-900 mb-4 group-hover:text-brand-blue transition-colors duration-300">
                                     {module.title}
                                 </h3>
-                                <p className="text-sm font-medium leading-relaxed text-slate-600 mb-8 min-h-[60px]">
+                                <p className="text-sm font-medium leading-relaxed text-slate-600 mb-5 min-h-[48px]">
                                     {module.impact}
                                 </p>
                             </div>
@@ -134,8 +134,8 @@ const TransformationCollapse = () => {
                                 <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2 flex items-center gap-2 font-mono">
                                     {module.isCritical && (
                                         <span className="relative flex h-2 w-2">
-                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
                                         </span>
                                     )}
                                     {t("home.risk.riskMetric")}
@@ -143,7 +143,7 @@ const TransformationCollapse = () => {
 
                                 <div className="text-4xl font-mono font-bold tracking-tight text-slate-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-blue group-hover:to-accent-cyan transition-all duration-300">
                                     {module.metricText ? (
-                                        <span className="text-red-500/90 group-hover:text-red-500 transition-colors drop-shadow-sm">{module.metricText}</span>
+                                        <span className="text-amber-500/90 group-hover:text-amber-500 transition-colors drop-shadow-sm">{module.metricText}</span>
                                     ) : (
                                         <>
                                             <span className="text-slate-400/80 text-2xl me-1">{module.metricPrefix}</span>

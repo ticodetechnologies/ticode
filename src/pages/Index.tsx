@@ -2,14 +2,15 @@ import SEOHead from '@/components/SEOHead';
 import HeroDirective from '@/components/home/HeroDirective';
 import GEOPositionStrip from '@/components/home/GEOPositionStrip';
 import TrustedLogos from '@/components/home/TrustedLogos';
+import ClientProofSection from '@/components/home/ClientProofSection';
 import ITCHallenges from '@/components/services/it-consulting/ITCHallenges';
 import StrategicPillars from '@/components/home/StrategicPillars';
 import DomainsSection from '@/components/home/DomainsSection';
 import OutcomeMetrics from '@/components/home/OutcomeMetrics';
 import DeliveryFramework from '@/components/home/DeliveryFramework';
 import HomepageInsightsStrip from '@/components/home/HomepageInsightsStrip';
-import CaseEvidence from '@/components/home/CaseEvidence';
 import FinalCtaSection from '@/components/home/FinalCtaSection';
+import AnswerEngineSection, { homeAeoFaqs } from '@/components/home/AnswerEngineSection';
 
 const Index = () => {
   return (
@@ -19,17 +20,19 @@ const Index = () => {
         description="Enterprise-grade IT consulting, AI solutions, software development, and digital transformation for Kuwait and GCC businesses. Custom AI, cloud infrastructure, and intelligent automation."
         path="/"
         schemaType="Organization"
+        faqs={homeAeoFaqs}
       />
       <HeroDirective />
       <GEOPositionStrip />
       <TrustedLogos />
+      <ClientProofSection />
       <ITCHallenges />
       <StrategicPillars />
       <DomainsSection />
       <OutcomeMetrics />
       <DeliveryFramework />
       <HomepageInsightsStrip />
-      <CaseEvidence />
+      <AnswerEngineSection />
       <FinalCtaSection />
     </>
   );

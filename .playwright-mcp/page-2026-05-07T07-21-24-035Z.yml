@@ -1,0 +1,154 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - link "Ticode Technologies" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Ticode Technologies" [ref=e8]
+        - generic [ref=e9]:
+          - button "التبديل إلى العربية" [ref=e10] [cursor=pointer]:
+            - img [ref=e11]
+            - generic [ref=e14]: العربية
+          - button "Toggle navigation menu" [ref=e16] [cursor=pointer]:
+            - img [ref=e17]
+    - main [ref=e18]
+    - contentinfo [ref=e21]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - img "Ticode Technologies" [ref=e28]
+            - paragraph [ref=e29]: Enterprise-grade IT, AI, and digital transformation solutions for Kuwait and the GCC region.
+            - generic [ref=e30]:
+              - generic [ref=e31]:
+                - img [ref=e33]
+                - generic [ref=e36]: Sharq, Kuwait City
+              - generic [ref=e37]:
+                - img [ref=e39]
+                - generic [ref=e42] [cursor=pointer]: executive@ticodetech.com
+              - generic [ref=e43]:
+                - img [ref=e45]
+                - generic [ref=e47] [cursor=pointer]: +965 2200 0000
+            - generic [ref=e48]:
+              - generic [ref=e49]: Connect
+              - link "LinkedIn" [ref=e50] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/ticodetech
+                - img [ref=e51]
+              - link "Instagram" [ref=e55] [cursor=pointer]:
+                - /url: https://www.instagram.com/ticodetechnologies/
+                - img [ref=e56]
+          - generic [ref=e59]:
+            - heading "Quick Links" [level=4] [ref=e60]
+            - list [ref=e61]:
+              - listitem [ref=e62]:
+                - link "▸ Home" [ref=e63] [cursor=pointer]:
+                  - /url: /
+                  - generic: ▸
+                  - text: Home
+              - listitem [ref=e64]:
+                - link "▸ About" [ref=e65] [cursor=pointer]:
+                  - /url: /about
+                  - generic: ▸
+                  - text: About
+              - listitem [ref=e66]:
+                - link "▸ AI Solutions" [ref=e67] [cursor=pointer]:
+                  - /url: /ai-solutions
+                  - generic: ▸
+                  - text: AI Solutions
+              - listitem [ref=e68]:
+                - link "▸ Case Studies" [ref=e69] [cursor=pointer]:
+                  - /url: /case-studies
+                  - generic: ▸
+                  - text: Case Studies
+              - listitem [ref=e70]:
+                - link "▸ Insights" [ref=e71] [cursor=pointer]:
+                  - /url: /insights
+                  - generic: ▸
+                  - text: Insights
+              - listitem [ref=e72]:
+                - link "▸ Contact" [ref=e73] [cursor=pointer]:
+                  - /url: /contact
+                  - generic: ▸
+                  - text: Contact
+          - generic [ref=e74]:
+            - heading "Services" [level=4] [ref=e75]
+            - list [ref=e76]:
+              - listitem [ref=e77]:
+                - link "▸ IT Consulting" [ref=e78] [cursor=pointer]:
+                  - /url: /services/it-consulting
+                  - generic: ▸
+                  - text: IT Consulting
+              - listitem [ref=e79]:
+                - link "▸ AI & Machine Learning" [ref=e80] [cursor=pointer]:
+                  - /url: /services/ai-machine-learning
+                  - generic: ▸
+                  - text: AI & Machine Learning
+              - listitem [ref=e81]:
+                - link "▸ Software Development" [ref=e82] [cursor=pointer]:
+                  - /url: /services/software-development
+                  - generic: ▸
+                  - text: Software Development
+              - listitem [ref=e83]:
+                - link "▸ Cloud & Infrastructure" [ref=e84] [cursor=pointer]:
+                  - /url: /services/cloud-infrastructure
+                  - generic: ▸
+                  - text: Cloud & Infrastructure
+              - listitem [ref=e85]:
+                - link "▸ Digital Marketing" [ref=e86] [cursor=pointer]:
+                  - /url: /services/digital-marketing
+                  - generic: ▸
+                  - text: Digital Marketing
+              - listitem [ref=e87]:
+                - link "▸ Data & Analytics" [ref=e88] [cursor=pointer]:
+                  - /url: /services/data-analytics
+                  - generic: ▸
+                  - text: Data & Analytics
+          - generic [ref=e89]:
+            - heading "Industries" [level=4] [ref=e90]
+            - list [ref=e91]:
+              - listitem [ref=e92]:
+                - link "▸ Finance" [ref=e93] [cursor=pointer]:
+                  - /url: /industries/finance
+                  - generic: ▸
+                  - text: Finance
+              - listitem [ref=e94]:
+                - link "▸ Healthcare" [ref=e95] [cursor=pointer]:
+                  - /url: /industries/healthcare
+                  - generic: ▸
+                  - text: Healthcare
+              - listitem [ref=e96]:
+                - link "▸ Retail" [ref=e97] [cursor=pointer]:
+                  - /url: /industries/retail
+                  - generic: ▸
+                  - text: Retail
+              - listitem [ref=e98]:
+                - link "▸ Education" [ref=e99] [cursor=pointer]:
+                  - /url: /industries/education
+                  - generic: ▸
+                  - text: Education
+              - listitem [ref=e100]:
+                - link "▸ Real Estate" [ref=e101] [cursor=pointer]:
+                  - /url: /industries/real-estate
+                  - generic: ▸
+                  - text: Real Estate
+              - listitem [ref=e102]:
+                - link "▸ Transportation" [ref=e103] [cursor=pointer]:
+                  - /url: /industries/transportation
+                  - generic: ▸
+                  - text: Transportation
+        - generic [ref=e104]:
+          - paragraph [ref=e105]: © 2026 Ticode Technologies. All rights reserved.
+          - generic [ref=e106]:
+            - link "Privacy Policy" [ref=e107] [cursor=pointer]:
+              - /url: /privacy
+            - link "Terms of Service" [ref=e108] [cursor=pointer]:
+              - /url: /terms
+    - generic [ref=e109]:
+      - button "Get a Call Back" [ref=e110] [cursor=pointer]:
+        - generic [ref=e111]: Get a Call Back
+        - img [ref=e112]
+      - link [ref=e114] [cursor=pointer]:
+        - /url: https://wa.me/96541103254
+        - img [ref=e115]

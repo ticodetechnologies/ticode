@@ -23,6 +23,17 @@ interface SEOProps {
 
 const BASE_URL = 'https://www.ticodetech.com';
 
+const serviceCatalog = [
+  'IT Consulting',
+  'AI & Machine Learning',
+  'AI Agents & Voice AI',
+  'Software Development',
+  'Cloud & Infrastructure',
+  'Data & Analytics',
+  'Digital Marketing',
+  'Network Solutions',
+];
+
 const SEOHead = ({
   title,
   description,
@@ -93,6 +104,8 @@ const SEOHead = ({
           'IT Consulting',
           'Digital Transformation',
           'Artificial Intelligence',
+          'Answer Engine Optimization',
+          'Generative Engine Optimization',
           'Cloud Infrastructure',
           'Enterprise Software Development',
           'Data Analytics',
@@ -106,6 +119,22 @@ const SEOHead = ({
           dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
           opens: '09:00',
           closes: '18:00',
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Enterprise technology services',
+          itemListElement: serviceCatalog.map((name) => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name,
+              provider: { '@id': `${BASE_URL}/#organization` },
+              areaServed: [
+                { '@type': 'Country', name: 'Kuwait' },
+                { '@type': 'AdministrativeArea', name: 'GCC' },
+              ],
+            },
+          })),
         },
         sameAs: [],
       },
@@ -195,6 +224,28 @@ const SEOHead = ({
   };
 
   // ── Article Schema (for insights/blog pages) ──
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': schemaType === 'Service' || schemaType === 'Organization' ? 'WebPage' : schemaType,
+    '@id': `${canonical}#webpage`,
+    url: canonical,
+    name: title.split(' | ')[0],
+    description,
+    isPartOf: { '@id': `${BASE_URL}/#website` },
+    publisher: { '@id': `${BASE_URL}/#organization` },
+    inLanguage: currentLang === 'ar' ? 'ar' : 'en',
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: imageUrl,
+    },
+    about: [
+      { '@type': 'Thing', name: 'IT consulting' },
+      { '@type': 'Thing', name: 'Enterprise AI' },
+      { '@type': 'Place', name: 'Kuwait' },
+      { '@type': 'AdministrativeArea', name: 'GCC' },
+    ],
+  };
+
   const articleSchema =
     type === 'article'
       ? {
@@ -204,6 +255,7 @@ const SEOHead = ({
         description,
         author: { '@id': `${BASE_URL}/#organization` },
         publisher: { '@id': `${BASE_URL}/#organization` },
+        mainEntityOfPage: { '@id': `${canonical}#webpage` },
         datePublished: datePublished ?? today,
         dateModified: dateModified ?? today,
         inLanguage: currentLang === 'ar' ? 'ar' : 'en',
@@ -243,10 +295,8 @@ const SEOHead = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
 
-      {/* Hreflang — distinct URLs when language differs */}
+      {/* Hreflang */}
       <link rel="alternate" hrefLang="en" href={`${BASE_URL}${path}`} />
-      <link rel="alternate" hrefLang="ar-KW" href={`${BASE_URL}/ar${path}`} />
-      <link rel="alternate" hrefLang="ar" href={`${BASE_URL}/ar${path}`} />
       <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}${path}`} />
 
       {/* Geo Tags — Kuwait City anchor */}
@@ -262,6 +312,7 @@ const SEOHead = ({
 
       {/* Schemas */}
       <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
       {serviceSchema && (
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>

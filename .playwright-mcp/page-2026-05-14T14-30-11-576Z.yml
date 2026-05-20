@@ -1,0 +1,325 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - link "Ticode Technologies" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Ticode Technologies" [ref=e8]
+        - navigation [ref=e10]:
+          - link "Home" [ref=e11] [cursor=pointer]:
+            - /url: /
+            - text: Home
+          - generic [ref=e13] [cursor=pointer]:
+            - generic [ref=e14]:
+              - text: Services
+              - img [ref=e15]
+            - generic:
+              - generic:
+                - generic:
+                  - heading "Service Clusters" [level=3]
+                  - generic:
+                    - button "AI & Automation":
+                      - text: AI & Automation
+                      - img
+                    - button "Engineering":
+                      - text: Engineering
+                      - img
+                    - button "Digital Strategy":
+                      - text: Digital Strategy
+                      - img
+                    - button "Enterprise Solutions":
+                      - text: Enterprise Solutions
+                      - img
+                - generic:
+                  - generic:
+                    - heading "Featured Capabilities" [level=3]
+                    - link "View All Services":
+                      - /url: /services
+                      - text: View All Services
+                      - img
+                  - generic:
+                    - link "AI & Machine Learning Predictive models and advanced algorithms.":
+                      - /url: /services/ai-machine-learning
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - heading "AI & Machine Learning" [level=4]
+                        - paragraph: Predictive models and advanced algorithms.
+                    - link "AI Agents & Voice AI Intelligent conversational agents and automation.":
+                      - /url: /services/ai-agents
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - heading "AI Agents & Voice AI" [level=4]
+                        - paragraph: Intelligent conversational agents and automation.
+                    - link "Intelligent Systems & Automation Streamlining operations with smart systems.":
+                      - /url: /services/intelligent-systems
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - heading "Intelligent Systems & Automation" [level=4]
+                        - paragraph: Streamlining operations with smart systems.
+                    - link "Data & Analytics Actionable insights from your enterprise data.":
+                      - /url: /services/data-analytics
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - heading "Data & Analytics" [level=4]
+                        - paragraph: Actionable insights from your enterprise data.
+                - generic:
+                  - heading "Executive Briefing" [level=3]: Executive Briefing
+                  - generic:
+                    - heading "The Future of AI in Enterprise" [level=4]
+                    - paragraph: Discover how leading organizations are integrating sovereign AI infrastructure to drive unprecedented efficiency.
+                    - generic:
+                      - button "Read Report":
+                        - text: Read Report
+                        - img
+                      - button "Book Strategy Call"
+          - generic [ref=e17] [cursor=pointer]:
+            - generic [ref=e18]:
+              - text: Industries
+              - img [ref=e19]
+            - generic:
+              - generic:
+                - generic:
+                  - heading "Focus Sectors" [level=3]
+                  - generic:
+                    - button "Finance & Legal":
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Finance & Legal
+                      - img
+                    - button "Retail & Supply":
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Retail & Supply
+                      - img
+                    - button "Health & Science":
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Health & Science
+                      - img
+                    - button "Creative & Media":
+                      - generic:
+                        - generic:
+                          - img
+                        - text: Creative & Media
+                      - img
+                - generic:
+                  - generic:
+                    - heading "Specialized Domains" [level=3]
+                    - link "View All Industries":
+                      - /url: /industries
+                      - text: View All Industries
+                      - img
+                  - generic:
+                    - link "Finance & Banking Secure, compliant Fintech infrastructure.":
+                      - /url: /industries/finance
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - heading "Finance & Banking" [level=4]
+                        - paragraph: Secure, compliant Fintech infrastructure.
+                    - link "Insurance Risk modeling and claim automation.":
+                      - /url: /industries/insurance
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - heading "Insurance" [level=4]
+                        - paragraph: Risk modeling and claim automation.
+                    - link "Legal Business Case management and eDiscovery systems.":
+                      - /url: /industries/legal
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - heading "Legal Business" [level=4]
+                        - paragraph: Case management and eDiscovery systems.
+                    - link "Real Estate Proptech platforms and smart building integrations.":
+                      - /url: /industries/real-estate
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                          - heading "Real Estate" [level=4]
+                        - paragraph: Proptech platforms and smart building integrations.
+                - generic:
+                  - heading "Security Whitepaper" [level=3]: Security Whitepaper
+                  - generic:
+                    - heading "Zero-Trust Architecture" [level=4]
+                    - paragraph: Read our comprehensive guide on securing financial data using modern zero-trust principles.
+                    - generic:
+                      - button "Download PDF":
+                        - text: Download PDF
+                        - img
+                      - button "Book Strategy Call"
+          - link "AI Solutions" [ref=e21] [cursor=pointer]:
+            - /url: /ai-solutions
+            - text: AI Solutions
+          - link "Case Studies" [ref=e22] [cursor=pointer]:
+            - /url: /case-studies
+            - text: Case Studies
+          - link "Insights" [ref=e23] [cursor=pointer]:
+            - /url: /insights
+            - text: Insights
+          - link "About" [ref=e24] [cursor=pointer]:
+            - /url: /about
+            - text: About
+        - button "التبديل إلى العربية" [ref=e26] [cursor=pointer]:
+          - img [ref=e27]
+          - generic [ref=e30]: العربية
+    - main [ref=e32]
+    - contentinfo [ref=e35]:
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - img "Ticode Technologies" [ref=e42]
+            - paragraph [ref=e43]: Enterprise-grade IT, AI, and digital transformation solutions for Kuwait and the GCC region.
+            - generic [ref=e44]:
+              - generic [ref=e45]:
+                - img [ref=e47]
+                - generic [ref=e50]: Sharq, Kuwait City
+              - generic [ref=e51]:
+                - img [ref=e53]
+                - generic [ref=e56] [cursor=pointer]: executive@ticodetech.com
+              - generic [ref=e57]:
+                - img [ref=e59]
+                - generic [ref=e61] [cursor=pointer]: +965 2200 0000
+            - generic [ref=e62]:
+              - generic [ref=e63]: Connect
+              - link "LinkedIn" [ref=e64] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/ticodetech
+                - img [ref=e65]
+              - link "Instagram" [ref=e69] [cursor=pointer]:
+                - /url: https://www.instagram.com/ticodetechnologies/
+                - img [ref=e70]
+          - generic [ref=e73]:
+            - heading "Quick Links" [level=4] [ref=e74]
+            - list [ref=e75]:
+              - listitem [ref=e76]:
+                - link "▸ Home" [ref=e77] [cursor=pointer]:
+                  - /url: /
+                  - generic: ▸
+                  - text: Home
+              - listitem [ref=e78]:
+                - link "▸ About" [ref=e79] [cursor=pointer]:
+                  - /url: /about
+                  - generic: ▸
+                  - text: About
+              - listitem [ref=e80]:
+                - link "▸ AI Solutions" [ref=e81] [cursor=pointer]:
+                  - /url: /ai-solutions
+                  - generic: ▸
+                  - text: AI Solutions
+              - listitem [ref=e82]:
+                - link "▸ Case Studies" [ref=e83] [cursor=pointer]:
+                  - /url: /case-studies
+                  - generic: ▸
+                  - text: Case Studies
+              - listitem [ref=e84]:
+                - link "▸ Insights" [ref=e85] [cursor=pointer]:
+                  - /url: /insights
+                  - generic: ▸
+                  - text: Insights
+              - listitem [ref=e86]:
+                - link "▸ Contact" [ref=e87] [cursor=pointer]:
+                  - /url: /contact
+                  - generic: ▸
+                  - text: Contact
+          - generic [ref=e88]:
+            - heading "Services" [level=4] [ref=e89]
+            - list [ref=e90]:
+              - listitem [ref=e91]:
+                - link "▸ IT Consulting" [ref=e92] [cursor=pointer]:
+                  - /url: /services/it-consulting
+                  - generic: ▸
+                  - text: IT Consulting
+              - listitem [ref=e93]:
+                - link "▸ AI & Machine Learning" [ref=e94] [cursor=pointer]:
+                  - /url: /services/ai-machine-learning
+                  - generic: ▸
+                  - text: AI & Machine Learning
+              - listitem [ref=e95]:
+                - link "▸ Software Development" [ref=e96] [cursor=pointer]:
+                  - /url: /services/software-development
+                  - generic: ▸
+                  - text: Software Development
+              - listitem [ref=e97]:
+                - link "▸ Cloud & Infrastructure" [ref=e98] [cursor=pointer]:
+                  - /url: /services/cloud-infrastructure
+                  - generic: ▸
+                  - text: Cloud & Infrastructure
+              - listitem [ref=e99]:
+                - link "▸ Digital Marketing" [ref=e100] [cursor=pointer]:
+                  - /url: /services/digital-marketing
+                  - generic: ▸
+                  - text: Digital Marketing
+              - listitem [ref=e101]:
+                - link "▸ Data & Analytics" [ref=e102] [cursor=pointer]:
+                  - /url: /services/data-analytics
+                  - generic: ▸
+                  - text: Data & Analytics
+          - generic [ref=e103]:
+            - heading "Industries" [level=4] [ref=e104]
+            - list [ref=e105]:
+              - listitem [ref=e106]:
+                - link "▸ Finance" [ref=e107] [cursor=pointer]:
+                  - /url: /industries/finance
+                  - generic: ▸
+                  - text: Finance
+              - listitem [ref=e108]:
+                - link "▸ Healthcare" [ref=e109] [cursor=pointer]:
+                  - /url: /industries/healthcare
+                  - generic: ▸
+                  - text: Healthcare
+              - listitem [ref=e110]:
+                - link "▸ Retail" [ref=e111] [cursor=pointer]:
+                  - /url: /industries/retail
+                  - generic: ▸
+                  - text: Retail
+              - listitem [ref=e112]:
+                - link "▸ Education" [ref=e113] [cursor=pointer]:
+                  - /url: /industries/education
+                  - generic: ▸
+                  - text: Education
+              - listitem [ref=e114]:
+                - link "▸ Real Estate" [ref=e115] [cursor=pointer]:
+                  - /url: /industries/real-estate
+                  - generic: ▸
+                  - text: Real Estate
+              - listitem [ref=e116]:
+                - link "▸ Transportation" [ref=e117] [cursor=pointer]:
+                  - /url: /industries/transportation
+                  - generic: ▸
+                  - text: Transportation
+        - generic [ref=e118]:
+          - paragraph [ref=e119]: © 2026 Ticode Technologies. All rights reserved.
+          - generic [ref=e120]:
+            - link "Privacy Policy" [ref=e121] [cursor=pointer]:
+              - /url: /privacy
+            - link "Terms of Service" [ref=e122] [cursor=pointer]:
+              - /url: /terms
+    - link [ref=e124] [cursor=pointer]:
+      - /url: https://wa.me/96541103254
+      - img [ref=e125]

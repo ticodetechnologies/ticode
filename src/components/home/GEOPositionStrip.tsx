@@ -24,7 +24,7 @@ const GEOPositionStrip = () => {
                         <MapPin className="h-3.5 w-3.5 shrink-0 text-accent-cyan" />
                         <span>
                             <span className="font-semibold text-white">Headquartered in Kuwait City</span>
-                            {' '}— serving enterprises across the GCC since 2018
+                            {' '}— serving enterprises across the GCC
                         </span>
                     </motion.div>
                     <div className="hidden md:block h-4 w-px bg-white/10" />

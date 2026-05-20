@@ -1,17 +1,17 @@
 {
   "home": {
     "hero": {
-      "systemActive": "Headquarters: Kuwait City · GCC Node Active",
-      "headlinePrefix": "Board-Level Digital",
-      "headlineMain": "Transformation",
-      "headlineSuffix": "For Risk-Resilient Enterprises.",
-      "subtext": "Kuwait-headquartered. Board-level IT consulting and AI for the GCC's most demanding enterprises.",
-      "ctaPrimary": "Start Your Transformation",
-      "ctaSecondary": "Explore AI Capabilities",
-      "badge1": "$200M+ Client Value Delivered",
-      "badge2": "100+ Enterprise Deployments",
+      "systemActive": "Kuwait City HQ · Serving regulated GCC teams",
+      "headlinePrefix": "Enterprise AI, Cloud",
+      "headlineMain": "& IT Strategy",
+      "headlineSuffix": "For Regulated GCC Organizations.",
+      "subtext": "We help executive teams modernize legacy systems, reduce technology risk, and launch secure AI programs with board-level accountability.",
+      "ctaPrimary": "Book a Strategy Call",
+      "ctaSecondary": "View Case Evidence",
+      "badge1": "Kuwait-based advisory",
+      "badge2": "Enterprise delivery teams",
       "badge3": "ISO 27001 Certified",
-      "trustedBy": "Trusted by KFH, Zain, NBK, Aramco & 96+ GCC enterprises",
+      "trustedBy": "Selected work across banking, telecom, public sector, logistics, and energy environments",
       "strip1": "GCC Compliance",
       "strip2": "Board-Level Advisory",
       "strip3": "ISO Certified Standards",
@@ -53,58 +53,58 @@
       ]
     },
     "metrics": {
-      "verifiedImpact": "Verified Executive Impact",
+      "verifiedImpact": "Measured Engagement Outcomes",
       "statusLegacy": "Status: Legacy",
       "statusSovereign": "Status: Sovereign",
       "items": [
         {
           "id": "efficiency",
-          "label": "Average Efficiency Uplift",
-          "before": "Fragmented Operations — 3–5 disconnected systems avg",
-          "after": "Unified Architecture — single board-ready operations view"
+          "label": "Efficiency Uplift Identified",
+          "before": "Fragmented operations across disconnected systems",
+          "after": "Unified reporting and cleaner ownership model"
         },
         {
           "id": "speed",
           "label": "Faster Decision Cycle",
-          "before": "Legacy Deployment Cycles — weeks per change",
-          "after": "Accelerated Digital Ecosystems — hours to production"
+          "before": "Legacy decision cycles measured in weeks",
+          "after": "Prioritized roadmap with accountable delivery gates"
         },
         {
           "id": "cost",
-          "label": "OPEX Reduction Delivered",
-          "before": "Compounding Tech Debt — rising annually",
-          "after": "Optimized Cloud Spend — auditable savings"
+          "label": "OPEX Reduction Path",
+          "before": "Compounding tech debt and vendor overlap",
+          "after": "Auditable cost-control and modernization plan"
         }
       ]
     },
     "pillars": {
       "badge": "What We Deliver",
-      "title": "Enterprise Capabilities",
-      "titleHighlight": "Designed for Outcomes.",
+      "title": "Capabilities Clients",
+      "titleHighlight": "Actually Buy.",
       "measurableImpact": "Measurable Impact",
       "executionStandard": "Execution Standard",
       "exploreDetails": "Explore Details",
       "items": [
         {
           "id": "ai-strategy",
-          "title": "Sovereign AI Subsystems",
-          "outcome": "Deploy localized, proprietary LLMs for secure enterprise workflows.",
-          "metricText": "Faster Data Retrieval",
-          "governance": "100% On-Premise GCC Hosting"
+          "title": "Enterprise AI Readiness",
+          "outcome": "Identify secure AI use cases, data requirements, and rollout constraints before implementation spend.",
+          "metricText": "Discovery-to-roadmap clarity",
+          "governance": "Data residency and access-control review"
         },
         {
           "id": "cloud-infrastructure",
-          "title": "Resilient Cloud Architecture",
-          "outcome": "Architect zero-trust, high-availability multi-cloud environments.",
-          "metricText": "Service Uptime",
-          "governance": "ISO 27001 Compliant Framework"
+          "title": "Cloud & Infrastructure Modernization",
+          "outcome": "Rationalize cloud, network, and platform decisions into a secure architecture roadmap.",
+          "metricText": "Architecture reliability target",
+          "governance": "ISO 27001-aligned control framework"
         },
         {
           "id": "data-governance",
-          "title": "Executive Data Lakes",
-          "outcome": "Centralize corporate data for unified boardroom analytics and reporting.",
-          "metricText": "Single Source of Truth",
-          "governance": "End-to-End Encryption Layer"
+          "title": "Executive Data & Reporting",
+          "outcome": "Turn fragmented operational data into reporting workflows leaders can actually use.",
+          "metricText": "Single source of truth",
+          "governance": "Encryption, ownership, and audit trail design"
         }
       ]
     },
@@ -175,13 +175,13 @@
     },
     "domains": {
       "badge": "Kuwait & GCC Industries",
-      "title": "Industries We Transform.",
+      "title": "Where We Create Leverage.",
       "items": [
         {
           "id": "finance",
           "title": "Financial Services",
           "subtitle": "Secure Transactions",
-          "description": "Modernize core banking architectures, deploy fraud-detection AI, and ensure absolute compliance with GCC financial regulations.",
+          "description": "Modernize core systems, improve risk visibility, and prepare secure AI workflows for regulated financial teams.",
           "features": [
             "Fraud Detection",
             "Legacy Modernization",
@@ -192,7 +192,7 @@
           "id": "healthcare",
           "title": "Healthcare",
           "subtitle": "Data Privacy & Care",
-          "description": "Unify patient data systems, integrate predictive health AI, and architect resilient infrastructure resistant to zero-day threats.",
+          "description": "Unify patient and operational data, improve resilience, and define safer routes to AI-assisted workflows.",
           "features": [
             "Data Unification",
             "Predictive Care",
@@ -203,7 +203,7 @@
           "id": "government",
           "title": "Public Sector",
           "subtitle": "Sovereign Infrastructure",
-          "description": "Engineer massive-scale digital public infrastructure with guaranteed data sovereignty and localized operational control.",
+          "description": "Plan citizen-facing platforms, data sovereignty controls, and delivery governance for public-sector modernization.",
           "features": [
             "Digital Identity",
             "Sovereign Cloud",
@@ -214,7 +214,7 @@
           "id": "energy",
           "title": "Energy & Utilities",
           "subtitle": "Industrial IoT",
-          "description": "Automate critical grid operations, secure industrial control systems (ICS), and deploy predictive maintenance intelligence.",
+          "description": "Secure operational technology, improve asset visibility, and prioritize automation with measurable business cases.",
           "features": [
             "Grid Automation",
             "ICS Security",
@@ -225,8 +225,8 @@
     },
     "delivery": {
       "badge": "Methodology",
-      "title": "Execution Framework.",
-      "subtext": "A structured, board-approved timeline for implementing robust digital transformations.",
+      "title": "How Engagements Move.",
+      "subtext": "A practical path from current-state clarity to controlled implementation, without forcing a large transformation commitment too early.",
       "phase": "Phase",
       "steps": [
         {
@@ -282,53 +282,108 @@
       "button": "Schedule Technical Audit"
     },
     "itChallenges": {
-      "badge": "Systemic Deficits",
-      "title": "The Cost of Passive",
-      "titleHighlight": "Digital Governance.",
-      "subtext": "Without authoritative digital frameworks, organizations face compounding operational decay and stalled transformation outcomes.",
+      "badge": "Why Clients Call",
+      "title": "The problems are usually",
+      "titleHighlight": "already visible.",
+      "subtext": "Most enterprise technology failures are not caused by a lack of tools. They come from unclear ownership, fragmented architecture, and decisions that never reach execution.",
       "items": [
         {
           "title": "Strategy-Execution Disconnect",
-          "desc": "Digital programs launch without a governance chain from board priorities to portfolio decisions, creating drift and stalled outcomes.",
+          "desc": "Digital initiatives launch without a clear chain from board priorities to portfolio decisions, creating drift and stalled outcomes.",
           "metricLabel": "Efficiency Leakage"
         },
         {
           "title": "Architecture Debt Compounding",
-          "desc": "Legacy constraints and fragmented platforms erode security, inflate OPEX, and slow decision cycles.",
+          "desc": "Legacy constraints and fragmented platforms erode security, inflate operating cost, and slow decision cycles.",
           "metricLabel": "Capital Waste"
         },
         {
           "title": "Compliance & Governance Exposure",
-          "desc": "Navigating complex regulatory requirements across GCC jurisdictions without an audit-ready framework.",
+          "desc": "Teams navigate GCC regulatory requirements without a clear control model, owner map, or audit-ready evidence trail.",
           "textValue": "Critical",
           "metricLabel": "Exposure Level"
         }
       ]
     },
     "finalCta": {
-      "badge": "Execution Ready",
-      "title": "Accelerate Your",
-      "titleHighlight": "Enterprise.",
-      "subtitle": "Transform your operational capacity with our strategic IT and comprehensive AI solutions.",
-      "primaryCta": "Initiate Strategic Engagement"
+      "badge": "First Consultation",
+      "title": "Map the next",
+      "titleHighlight": "90 days.",
+      "subtitle": "Book a focused strategy call. We will review your current technology constraints, identify the highest-value modernization path, and recommend the next practical step.",
+      "primaryCta": "Book a Strategy Call"
     },
     "trust": {
-      "label": "Trusted By",
+      "label": "Enterprise Context",
       "title": "Enterprise leaders who demand measurable outcomes.",
       "subtitle": "We deliver mission-critical transformation programs for finance, telecom, energy, and public sector organizations across the GCC.",
       "logos": [
-        "Kuwait Finance House",
-        "Ooredoo",
-        "Gulf Bank",
-        "Zain",
-        "NBK",
-        "Saudi Aramco",
-        "Etisalat",
-        "STC",
-        "PIF",
-        "Agility",
-        "Mubadala",
-        "DP World"
+        "Banking",
+        "Telecom",
+        "Public Sector",
+        "Healthcare",
+        "Energy",
+        "Logistics",
+        "Insurance",
+        "Real Estate",
+        "Retail"
+      ]
+    },
+    "proof": {
+      "badge": "Client Evidence",
+      "title": "Proof before",
+      "titleHighlight": "promises.",
+      "subtitle": "Enterprise buyers do not need more buzzwords. They need to see the problem, the architecture response, the operational result, and the governance model behind it.",
+      "table": {
+        "buyer": "Buyer",
+        "problem": "Problem",
+        "solution": "Response",
+        "result": "Result"
+      },
+      "items": [
+        {
+          "buyer": "Tier-1 GCC bank",
+          "problem": "Risk, operations, and reporting data spread across disconnected legacy systems.",
+          "solution": "Unified data layer, executive reporting workflow, and secure integration plan.",
+          "result": "Board-ready operating view and faster risk review cycles.",
+          "note": "Confidential engagement"
+        },
+        {
+          "buyer": "Healthcare operator",
+          "problem": "Patient data and operational systems lacked a clear modernization path.",
+          "solution": "Secure platform roadmap, zero-trust architecture, and phased delivery governance.",
+          "result": "Cleaner data ownership and a safer route to AI-assisted care operations.",
+          "note": "Regulated workflow"
+        },
+        {
+          "buyer": "Logistics enterprise",
+          "problem": "Manual tracking and fragmented vendor systems slowed operational decisions.",
+          "solution": "Cloud architecture, integration blueprint, and KPI-led delivery plan.",
+          "result": "More visible operations and clearer cost-control levers.",
+          "note": "GCC operations"
+        }
+      ],
+      "trust": {
+        "local": {
+          "title": "Kuwait presence",
+          "copy": "Regional context, local meetings, Arabic and English delivery."
+        },
+        "neutral": {
+          "title": "Vendor-neutral",
+          "copy": "Recommendations are based on fit, not reseller incentives."
+        },
+        "response": {
+          "title": "Fast first step",
+          "copy": "Initial executive response within one business day."
+        }
+      },
+      "call": {
+        "title": "What happens in the first consultation",
+        "cta": "Request an IT Assessment"
+      },
+      "steps": [
+        "Current-state review",
+        "Risk and opportunity map",
+        "Next-step recommendation"
       ]
     },
     "aiStory": {

@@ -53,8 +53,8 @@ const Header = () => {
   const NavLink = ({ to, children, isActive = false }: { to: string, children: React.ReactNode, isActive?: boolean }) => (
     <Link to={to} className={cn(
       "relative group px-1.5 py-1 text-[13px] tracking-wide font-semibold transition-colors whitespace-nowrap",
-      (isScrolled || isLightHero) ? "text-slate-600 hover:text-brand-blue" : "text-slate-300 hover:text-white",
-      isActive && ((isScrolled || isLightHero) ? "text-brand-blue" : "text-accent-cyan")
+      (isLightHero) ? "text-slate-600 hover:text-brand-blue" : "text-slate-300 hover:text-white",
+      isActive && ((isLightHero) ? "text-brand-blue" : "text-accent-cyan")
     )}>
       {children}
       <span className={cn(
@@ -156,19 +156,19 @@ const Header = () => {
       <div
         className={cn(
           "h-full flex items-center group px-1 text-[13px] tracking-wide font-semibold transition-colors cursor-pointer",
-          (isScrolled || isLightHero) ? "text-slate-600 hover:text-brand-blue" : "text-slate-300 hover:text-white",
-          isActive && ((isScrolled || isLightHero) ? "text-brand-blue" : "text-accent-cyan")
+          (isLightHero) ? "text-slate-600 hover:text-brand-blue" : "text-slate-300 hover:text-white",
+          isActive && ((isLightHero) ? "text-brand-blue" : "text-accent-cyan")
         )}
         onMouseEnter={() => setActiveDropdown(title)}
         onMouseLeave={() => setActiveDropdown(null)}
       >
         <span className="relative flex items-center gap-1.5 whitespace-nowrap">
           {title}
-          <ChevronDown className={cn("w-3.5 h-3.5 group-hover:rotate-180 transition-all duration-300", (isScrolled || isLightHero) ? "text-slate-400 group-hover:text-brand-blue" : "text-slate-400 group-hover:text-white")} />
+          <ChevronDown className={cn("w-3.5 h-3.5 group-hover:rotate-180 transition-all duration-300", (isLightHero) ? "text-slate-400 group-hover:text-brand-blue" : "text-slate-400 group-hover:text-white")} />
           <span className={cn(
             "absolute -bottom-1 start-0 end-5 h-[2px] transition-all duration-300 transform scale-x-0 group-hover:scale-x-100",
             isRTL ? "origin-right" : "origin-left",
-            (isScrolled || isLightHero) ? "bg-brand-blue" : "bg-accent-cyan",
+            (isLightHero) ? "bg-brand-blue" : "bg-accent-cyan",
             isActive ? "scale-x-100" : "scale-x-0"
           )}></span>
         </span>
@@ -369,19 +369,19 @@ const Header = () => {
       <div
         className={cn(
           "h-full flex items-center group px-1 text-[13px] tracking-wide font-semibold transition-colors cursor-pointer",
-          (isScrolled || isLightHero) ? "text-slate-600 hover:text-brand-blue" : "text-slate-300 hover:text-white",
-          isActive && ((isScrolled || isLightHero) ? "text-brand-blue" : "text-accent-cyan")
+          (isLightHero) ? "text-slate-600 hover:text-brand-blue" : "text-slate-300 hover:text-white",
+          isActive && ((isLightHero) ? "text-brand-blue" : "text-accent-cyan")
         )}
         onMouseEnter={() => setActiveDropdown(title)}
         onMouseLeave={() => setActiveDropdown(null)}
       >
         <span className="relative flex items-center gap-1.5 whitespace-nowrap">
           {title}
-          <ChevronDown className={cn("w-3.5 h-3.5 group-hover:rotate-180 transition-all duration-300", (isScrolled || isLightHero) ? "text-slate-400 group-hover:text-brand-blue" : "text-slate-400 group-hover:text-white")} />
+          <ChevronDown className={cn("w-3.5 h-3.5 group-hover:rotate-180 transition-all duration-300", (isLightHero) ? "text-slate-400 group-hover:text-brand-blue" : "text-slate-400 group-hover:text-white")} />
           <span className={cn(
             "absolute -bottom-1 start-0 end-5 h-[2px] transition-all duration-300 transform scale-x-0 group-hover:scale-x-100",
             isRTL ? "origin-right" : "origin-left",
-            (isScrolled || isLightHero) ? "bg-brand-blue" : "bg-accent-cyan",
+            (isLightHero) ? "bg-brand-blue" : "bg-accent-cyan",
             isActive ? "scale-x-100" : "scale-x-0"
           )}></span>
         </span>
@@ -502,7 +502,7 @@ const Header = () => {
     <div
       className={cn(
         "relative group px-1 py-1 text-[13px] tracking-wide font-semibold transition-colors cursor-pointer flex items-center gap-1",
-        (isScrolled || isLightHero) ? "text-slate-600 hover:text-brand-blue" : "text-slate-300 hover:text-white",
+        (isLightHero) ? "text-slate-600 hover:text-brand-blue" : "text-slate-300 hover:text-white",
         isActive && "text-brand-blue"
       )}
       onMouseEnter={() => setActiveDropdown(title)}
@@ -552,22 +552,22 @@ const Header = () => {
   return (
     <header className={cn(
       "fixed top-0 start-0 end-0 z-50 transition-all duration-500 border-b",
-      isScrolled
-        ? "py-4 bg-white/90 backdrop-blur-xl saturate-150 border-slate-200/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
-        : "py-6 bg-transparent border-transparent"
+      isScrolled && isLightHero  ? "py-4 bg-white/90 backdrop-blur-xl saturate-150 border-slate-200/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
+        : isScrolled             ? "py-4 bg-[#080F1C]/95 backdrop-blur-xl border-white/[0.08] shadow-[0_8px_40px_rgba(0,0,0,0.5)]"
+                                 : "py-6 bg-transparent border-transparent"
     )}>
       <div className="container-tight relative flex h-16 items-center justify-between lg:h-20">
         {/* Logo */}
         <Link to="/" className={cn(
           "flex items-center gap-2 shrink-0 pe-4 lg:pe-8 transition-all hover:opacity-80",
-          !isScrolled && !isLightHero && "brightness-0 invert"
+          !isLightHero && "brightness-0 invert"
         )}>
           <Logo />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex flex-1 justify-center h-full px-4">
-          <nav className="h-full flex items-center gap-6 xl:gap-8 shrink-0">
+        <div className="hidden md:flex flex-1 justify-center h-full px-4">
+          <nav className="h-full flex items-center gap-3 lg:gap-5 xl:gap-8 shrink-0">
             <NavLink to="/" isActive={isCurrentPath('/')}>{t('nav.home')}</NavLink>
             <ServicesMegaMenu
               title={t('nav.services')}
@@ -592,7 +592,7 @@ const Header = () => {
             className={cn(
               "flex items-center justify-center gap-1.5 rounded-full transition-all text-[12px] tracking-wide font-bold",
               "h-9 w-9 sm:h-auto sm:w-auto sm:px-3 sm:py-1.5 shrink-0",
-              (isScrolled || isLightHero)
+              (isLightHero)
                 ? "text-brand-blue bg-brand-blue/10 hover:bg-brand-blue/20"
                 : "text-slate-300 hover:text-white hover:bg-white/5"
             )}
@@ -601,7 +601,7 @@ const Header = () => {
             <span className="hidden sm:inline-block">{t('nav.langToggle')}</span>
           </button>
 
-          <div className={cn("w-px h-5 shrink-0", (isScrolled || isLightHero) ? "bg-slate-200" : "bg-white/10")} />
+          <div className={cn("w-px h-5 shrink-0", (isLightHero) ? "bg-slate-200" : "bg-white/10")} />
 
           <motion.div
             animate={{ x: position.x, y: position.y }}
@@ -614,19 +614,20 @@ const Header = () => {
               onMouseLeave={handleMouseLeave}
               onClick={() => navigate('/contact')}
               className={cn(
-                "relative overflow-hidden group rounded-full px-7 py-5 font-bold text-[13px] tracking-wider transition-all border border-transparent bg-brand-blue text-white",
-                "shadow-[0_4px_14px_0_rgba(47,107,255,0.39)] hover:shadow-[0_6px_20px_rgba(47,107,255,0.23)] hover:-translate-y-0.5"
+                "relative overflow-hidden group rounded-full px-6 py-5 font-bold text-[13px] tracking-wider transition-all duration-300 hover:-translate-y-0.5",
+                (isLightHero)
+                  ? "border border-brand-blue/50 text-brand-blue bg-brand-blue/8 hover:bg-brand-blue hover:text-white hover:border-brand-blue shadow-none hover:shadow-[0_4px_14px_rgba(47,107,255,0.3)]"
+                  : "border border-white/20 text-white bg-white/[0.06] hover:bg-white/[0.14] hover:border-white/35"
               )}
             >
               <span className="relative z-10 flex items-center gap-2">
                 {t('nav.bookConsultation')}
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </span>
-              <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-r from-blue-600 to-brand-blue pointer-events-none" />
             </Button>
           </motion.div>
           <button
-            className={cn("lg:hidden transition-colors", (isScrolled || isLightHero) ? "text-slate-800 hover:text-brand-blue" : "text-slate-300 hover:text-white")}
+            className={cn("md:hidden transition-colors", (isLightHero) ? "text-slate-800 hover:text-brand-blue" : "text-slate-300 hover:text-white")}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation menu"
             aria-expanded={mobileOpen}

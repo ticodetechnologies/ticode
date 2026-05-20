@@ -1,20 +1,11 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-
-const logos = [
-    "Kuwait Finance House",
-    "Gulf Bank",
-    "Ooredoo",
-    "Zain",
-    "Saudi Aramco",
-    "PIF",
-    "Etisalat",
-    "NBK",
-    "Agility"
-];
+import { useTranslation } from "react-i18next";
 
 const TrustedLogos = () => {
+    const { t } = useTranslation();
     const scrollRef = useRef<HTMLDivElement>(null);
+    const logos = t("home.trust.logos", { returnObjects: true }) as string[];
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -31,26 +22,30 @@ const TrustedLogos = () => {
     }, []);
 
     return (
-        <div className="w-full bg-[#0A111A] border-b border-white/5 py-8 overflow-hidden relative" ref={scrollRef}>
-            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#0A111A] to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#0A111A] to-transparent z-10 pointer-events-none" />
+        <div className="w-full bg-[#0A111A] border-y border-white/[0.07] py-7 overflow-hidden relative" ref={scrollRef}>
+            {/* Edge fade masks */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0A111A] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0A111A] to-transparent z-10 pointer-events-none" />
 
-            <div className="container-tight flex flex-col md:flex-row items-center gap-6">
+            <div className="container-tight flex flex-col md:flex-row items-center gap-8">
                 <div className="shrink-0 flex items-center gap-3">
-                    <span className="text-xs font-bold uppercase tracking-widest text-slate-400 font-mono bg-white/5 px-3 py-1.5 rounded-md border border-white/10">Trusted By</span>
+                    <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-slate-500 font-mono whitespace-nowrap">
+                        {t("home.trust.label")}
+                    </span>
+                    <div className="hidden md:block w-px h-5 bg-white/10" />
                 </div>
 
-                <div className="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
-                    <div className="logo-track flex items-center gap-12 sm:gap-16 w-max">
+                <div className="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+                    <div className="logo-track flex items-center gap-14 sm:gap-20 w-max">
                         {/* First Set */}
                         {logos.map((logo, idx) => (
-                            <span key={`logo-1-${idx}`} className="text-xl sm:text-2xl font-black tracking-tighter text-white/20 whitespace-nowrap transition-colors hover:text-white/60 cursor-default">
+                            <span key={`logo-1-${idx}`} className="text-base sm:text-lg font-black tracking-tight text-white/40 whitespace-nowrap transition-colors duration-300 hover:text-white/75 cursor-default uppercase">
                                 {logo}
                             </span>
                         ))}
                         {/* Duplicate for seamless looping */}
                         {logos.map((logo, idx) => (
-                            <span key={`logo-2-${idx}`} className="text-xl sm:text-2xl font-black tracking-tighter text-white/20 whitespace-nowrap transition-colors hover:text-white/60 cursor-default">
+                            <span key={`logo-2-${idx}`} className="text-base sm:text-lg font-black tracking-tight text-white/40 whitespace-nowrap transition-colors duration-300 hover:text-white/75 cursor-default uppercase">
                                 {logo}
                             </span>
                         ))}

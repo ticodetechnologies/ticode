@@ -1,286 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- ===================== CORE PAGES ===================== -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.ticodetech.com/</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ticodetech.com/"/>
-    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://www.ticodetech.com/ar/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ticodetech.com/"/>
   </url>
   <url>
     <loc>https://www.ticodetech.com/about</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ticodetech.com/about"/>
-    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://www.ticodetech.com/ar/about"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ticodetech.com/about"/>
   </url>
   <url>
     <loc>https://www.ticodetech.com/ai-solutions</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ticodetech.com/ai-solutions"/>
-    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://www.ticodetech.com/ar/ai-solutions"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ticodetech.com/ai-solutions"/>
   </url>
   <url>
     <loc>https://www.ticodetech.com/case-studies</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ticodetech.com/insights</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ticodetech.com/contact</loc>
-    <lastmod>2026-02-27</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ticodetech.com/privacy</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.ticodetech.com/terms</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
-  <!-- ===================== SERVICES ===================== -->
-  <url>
-    <loc>https://www.ticodetech.com/services/it-consulting</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ticodetech.com/services/it-consulting"/>
-    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://www.ticodetech.com/ar/services/it-consulting"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ticodetech.com/services/it-consulting"/>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/ai-machine-learning</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ticodetech.com/services/ai-machine-learning"/>
-    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://www.ticodetech.com/ar/services/ai-machine-learning"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ticodetech.com/services/ai-machine-learning"/>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/ai-agents</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ticodetech.com/services/ai-agents"/>
-    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://www.ticodetech.com/ar/services/ai-agents"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ticodetech.com/services/ai-agents"/>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/intelligent-systems</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/software-development</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/cloud-infrastructure</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/data-analytics</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/digital-marketing</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/social-media</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/it-staffing</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/project-management</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/software-testing</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/network-solutions</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/domain-email</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/services/data-entry</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
+  <url><loc>https://www.ticodetech.com/services/it-consulting</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://www.ticodetech.com/services/ai-machine-learning</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.ticodetech.com/services/ai-agents</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.ticodetech.com/services/intelligent-systems</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ticodetech.com/services/software-development</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ticodetech.com/services/cloud-infrastructure</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ticodetech.com/services/data-analytics</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ticodetech.com/services/digital-marketing</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ticodetech.com/services/social-media</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://www.ticodetech.com/services/it-staffing</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://www.ticodetech.com/services/project-management</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://www.ticodetech.com/services/software-testing</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://www.ticodetech.com/services/network-solutions</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ticodetech.com/services/domain-email</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://www.ticodetech.com/services/data-entry</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
-  <!-- ===================== INDUSTRIES ===================== -->
-  <url>
-    <loc>https://www.ticodetech.com/industries/finance</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/industries/healthcare</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/industries/real-estate</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/industries/retail</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/industries/education</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/industries/fashion</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/industries/sports</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/industries/marketing</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/industries/transportation</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/industries/supply-chain</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/industries/insurance</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/industries/legal</loc>
-    <lastmod>2026-02-27</lastmod>
-    <priority>0.6</priority>
-  </url>
+  <url><loc>https://www.ticodetech.com/industries/finance</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ticodetech.com/industries/healthcare</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ticodetech.com/industries/real-estate</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ticodetech.com/industries/retail</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ticodetech.com/industries/education</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://www.ticodetech.com/industries/fashion</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.ticodetech.com/industries/sports</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.ticodetech.com/industries/marketing</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.ticodetech.com/industries/transportation</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://www.ticodetech.com/industries/supply-chain</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://www.ticodetech.com/industries/insurance</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://www.ticodetech.com/industries/legal</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
-  <!-- ===================== GCC COUNTRY PAGES (Phase 3) ===================== -->
-  <url>
-    <loc>https://www.ticodetech.com/kuwait/it-consulting</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ticodetech.com/kuwait/it-consulting"/>
-    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://www.ticodetech.com/ar/kuwait/it-consulting"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ticodetech.com/kuwait/it-consulting"/>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/kuwait/digital-transformation</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/kuwait/ai-solutions</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/kuwait/data-governance</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/saudi-arabia/it-consulting</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/saudi-arabia/digital-transformation</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/uae/it-consulting</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/uae/digital-transformation</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/qatar/it-consulting</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/bahrain/it-consulting</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ticodetech.com/oman/it-consulting</loc>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
+  <url><loc>https://www.ticodetech.com/kuwait/it-consulting</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://www.ticodetech.com/insights/it-consulting-cost-kuwait</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.ticodetech.com/insights/how-to-choose-it-consultant-kuwait</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.ticodetech.com/insights/board-level-it-governance-kuwait</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.ticodetech.com/insights/it-consulting-vs-inhouse-cio-kuwait</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ticodetech.com/insights/it-strategy-framework-kuwait</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ticodetech.com/insights/best-it-consulting-firms-kuwait</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 </urlset>

@@ -1,0 +1,35 @@
+# Ticode Technologies
+
+> Kuwait-based enterprise technology company providing IT consulting, AI solutions, cloud infrastructure, software development, data analytics, and digital transformation for regulated GCC organizations.
+
+## Core Pages
+
+- [Homepage](https://www.ticodetech.com/): Company positioning, services, proof, and consultation path.
+- [IT Consulting Kuwait](https://www.ticodetech.com/services/it-consulting): Board-level IT consulting, governance, risk, and enterprise modernization.
+- [AI Solutions](https://www.ticodetech.com/ai-solutions): Enterprise AI capabilities, AI agents, machine learning, automation, and data workflows.
+- [Case Studies](https://www.ticodetech.com/case-studies): Examples of enterprise transformation outcomes.
+- [Insights](https://www.ticodetech.com/insights): IT consulting, AI, governance, and transformation guides for Kuwait and GCC buyers.
+- [Contact](https://www.ticodetech.com/contact): Consultation request and company contact details.
+
+## Services
+
+- [AI & Machine Learning](https://www.ticodetech.com/services/ai-machine-learning)
+- [AI Agents & Voice AI](https://www.ticodetech.com/services/ai-agents)
+- [Software Development](https://www.ticodetech.com/services/software-development)
+- [Cloud & Infrastructure](https://www.ticodetech.com/services/cloud-infrastructure)
+- [Data & Analytics](https://www.ticodetech.com/services/data-analytics)
+- [Digital Marketing](https://www.ticodetech.com/services/digital-marketing)
+- [Network Solutions](https://www.ticodetech.com/services/network-solutions)
+
+## Entity Facts
+
+- Name: Ticode Technologies
+- Location: Sharq, Kuwait City, Kuwait
+- Region served: Kuwait and GCC
+- Languages: English and Arabic
+- Primary buyers: Enterprise executives, technology leaders, operations leaders, and regulated-sector teams
+- Core topics: IT consulting, enterprise AI, cloud infrastructure, software development, data analytics, digital transformation, governance, cybersecurity, GCC compliance
+
+## Answer Summary
+
+Ticode Technologies helps regulated GCC organizations modernize legacy systems, reduce technology risk, and launch secure AI and cloud programs with board-level accountability. Engagements usually begin with a current-state review, risk and opportunity map, and a recommended 90-day action plan.

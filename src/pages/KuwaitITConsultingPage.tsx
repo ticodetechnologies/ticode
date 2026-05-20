@@ -83,8 +83,8 @@ const failureRisks = [
 
 const services = [
     { icon: Building2, title: 'IT Strategy & Governance', description: 'Board-aligned IT roadmaps with governance frameworks, portfolio investment controls, and audit-ready executive reporting. Aligned with Kuwait Vision 2035 national priorities and CBK regulatory obligations.', link: '/services/it-consulting' },
-    { icon: TrendingUp, title: 'Digital Transformation Advisory', description: 'End-to-end transformation programs from enterprise assessment through execution delivery. Kuwait-specific regulatory alignment, Arabic language change management, and board-level accountability structures.', link: '/kuwait/digital-transformation' },
-    { icon: Cpu, title: 'AI Solutions Kuwait', description: 'Enterprise AI and machine learning deployment with Arabic NLP, sovereign GCC hosting options, and governance-first implementation. Predictive analytics, intelligent automation, and conversational AI.', link: '/kuwait/ai-solutions' },
+    { icon: TrendingUp, title: 'Digital Transformation Advisory', description: 'End-to-end transformation programs from enterprise assessment through execution delivery. Kuwait-specific regulatory alignment, Arabic language change management, and board-level accountability structures.', link: '/services/it-consulting' },
+    { icon: Cpu, title: 'AI Solutions Kuwait', description: 'Enterprise AI and machine learning deployment with Arabic NLP, sovereign GCC hosting options, and governance-first implementation. Predictive analytics, intelligent automation, and conversational AI.', link: '/ai-solutions' },
     { icon: Globe2, title: 'Cloud Infrastructure & Migration', description: 'GCC-compliant cloud migration with Kuwait PDPL data residency controls across AWS Bahrain, Azure UAE, and GCP. FinOps governance to achieve 20–40% cloud cost reduction.', link: '/services/cloud-infrastructure' },
     { icon: ShieldCheck, title: 'Compliance & Regulatory Controls', description: 'CBK, PDPL, Kuwait MoCI, and sector-specific regulatory alignment built into every IT governance engagement. Audit-ready documentation and defensible control frameworks.', link: '/services/it-consulting' },
     { icon: BarChart3, title: 'Data & Analytics Strategy', description: 'Enterprise data strategy, governance frameworks, and BI implementation. Real-time executive dashboards and predictive analytics for Kuwait enterprise decision-making.', link: '/services/data-analytics' },
@@ -141,8 +141,8 @@ const kuwaitContext = [
 
 const internalLinks = [
     { label: 'IT Consulting Services', href: '/services/it-consulting', desc: 'Full enterprise IT consulting service overview' },
-    { label: 'Digital Transformation Kuwait', href: '/kuwait/digital-transformation', desc: 'Kuwait Vision 2035 aligned transformation programs' },
-    { label: 'AI Solutions Kuwait', href: '/kuwait/ai-solutions', desc: 'Enterprise AI deployment for Kuwait enterprises' },
+    { label: 'Digital Transformation Kuwait', href: '/services/it-consulting', desc: 'Kuwait Vision 2035 aligned transformation programs' },
+    { label: 'AI Solutions Kuwait', href: '/ai-solutions', desc: 'Enterprise AI deployment for Kuwait enterprises' },
     { label: 'Data & Analytics', href: '/services/data-analytics', desc: 'Enterprise data strategy and business intelligence' },
     { label: 'Cloud Infrastructure', href: '/services/cloud-infrastructure', desc: 'GCC-compliant cloud migration and management' },
     { label: 'Contact Ticode', href: '/contact', desc: 'Initiate a confidential board-level engagement' },
